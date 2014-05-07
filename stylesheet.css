@@ -1,0 +1,10 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400);
+body {
+	font-family: Ubuntu, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+	background: rgb(236, 240, 241);
+}
+
+@media screen and (max-width: 600px){
+}
