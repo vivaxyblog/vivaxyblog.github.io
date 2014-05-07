@@ -1,1 +1,3 @@
-baseurl: //vivaxy.tk
+baseurl: 
+host: localhost
+port: 4000

@@ -2,6 +2,7 @@
 body {
 	font-family: Ubuntu, Helvetica, sans-serif;
 	margin: 0px;
+	padding: 20px;
 	background: rgb(236, 240, 241);
 }
 a {
