@@ -1,2 +1,1 @@
-vivaxyblog.github.io
-====================
+# [vivaxy.tk](http://vivaxy.tk)
