@@ -4,6 +4,6 @@ title: vivaxy
 ---
 <ul>
 {% for page_ in site.posts %}
-<li>{{ page_.date | date_to_string }} <a href="{{ site.baseurl }}{{ page_.url }}">{{ page_.title }}</a></li>
+<li><em>{{ page_.date | date_to_string }} </em> <a href="{{ site.baseurl }}{{ page_.url }}"> {{ page_.title }}</a></li>
 {% endfor %}
 </ul>

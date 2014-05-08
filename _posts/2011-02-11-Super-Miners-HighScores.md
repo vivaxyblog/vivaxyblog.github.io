@@ -4,6 +4,8 @@ title: Super Miners HighScores 的修改
 ---
 #{{ page.title }}
 
+----------
+
 记录文件:`*/Private/A0000BF4/hiscores*.dat`
 
 用16进制打开，aa表示没有字符，作为分隔符。
@@ -70,5 +72,7 @@ title: Super Miners HighScores 的修改
     000000a0h: D2 D3 AA AA AA AA AA AA AA AA AA AA AA AA AA AA 
     000000b0h: AE AA AA AA D2 D3 AA AA AA AA AA AA AA AA AA AA 
     000000c0h: AA AA AA AA AF AA AA AA
-	
+
+----------
+
 *{{ page.date | date_to_string }}*
