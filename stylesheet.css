@@ -15,6 +15,12 @@ a:hover {
 }
 ul {
 	list-style: none;
+	line-height: 50px;
+}
+.footer {
+	color: rgb(52, 73, 94);
+	font-size: 16px;
+	padding: 
 }
 @media screen and (max-width: 600px){
 }

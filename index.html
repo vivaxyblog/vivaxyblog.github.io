@@ -1,21 +1,9 @@
 ---
+layout: default
+title: vivaxy
 ---
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link type="text/css" rel="stylesheet" href="/stylesheet.css" />
-<link rel="shortcut icon" href="/x.png">
-<title>my blog</title>
-</head>
-<body>
-<h2>articles</h2>
-	<ul>
+<ul>
 {% for post in site.posts %}
-<li style="line-height: 50px;">{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
-	</ul>
-</body>
-<script type="text/javascript" charset="utf-8" src="/ga.js"></script>
-</html>
+</ul>
