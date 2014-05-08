@@ -1,12 +1,25 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:400);
 body {
-	font-family: Ubuntu, Helvetica, sans-serif;
 	margin: 0px;
-	padding: 20px;
+	padding: 2%;
 	background: rgb(236, 240, 241);
-	font-size: 18px;
+}
+p {
+	font-family: Ubuntu, Helvetica, sans-serif;
+	font-size: 16px;
+}
+code {
+	font-size: 15px;
+	background: rgb(255, 255, 255);
+	box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+}
+span {
+	font-family: Ubuntu, Helvetica, sans-serif;
+	font-size: 16px;
 }
 a {
+	font-family: Ubuntu, Helvetica, sans-serif;
+	font-size: 18px;
 	color: rgb(231, 76, 60);
 	transition: color 0.5s;
 }
@@ -15,7 +28,9 @@ a:hover {
 }
 ul {
 	list-style: none;
-	line-height: 50px;
+	line-height: 36px;
+	margin: 0px;
+	padding: 0px;
 }
 .footer {
 	color: rgb(52, 73, 94);
@@ -26,10 +41,4 @@ ul {
 	color: rgb(52, 73, 94);
 	font-size: 15px;
 	font-style: italic;
-}
-code {
-	background: rgb(255, 255, 255);
-	box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
-}
-@media screen and (max-width: 600px){
 }
