@@ -4,7 +4,7 @@ body {
 	margin: 0px;
 	padding: 20px;
 	background: rgb(236, 240, 241);
-	font-size: 16px;
+	font-size: 18px;
 }
 a {
 	color: rgb(231, 76, 60);
@@ -19,8 +19,13 @@ ul {
 }
 .footer {
 	color: rgb(52, 73, 94);
-	font-size: 16px;
+	font-size: 15px;
 	padding: 
+}
+.date {
+	color: rgb(52, 73, 94);
+	font-size: 15px;
+	font-style: italic;
 }
 @media screen and (max-width: 600px){
 }
