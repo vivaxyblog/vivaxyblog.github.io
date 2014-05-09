@@ -8,10 +8,11 @@ p {
 	font-family: Ubuntu, Helvetica, sans-serif;
 	font-size: 16px;
 }
-code {
+pre {
 	font-size: 15px;
 	background: rgb(255, 255, 255);
 	box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+	padding: 0px 10px;
 }
 span {
 	font-family: Ubuntu, Helvetica, sans-serif;
