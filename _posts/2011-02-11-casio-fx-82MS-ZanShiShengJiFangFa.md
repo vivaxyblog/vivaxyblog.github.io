@@ -1,6 +1,6 @@
 ---
 layout: post
-title: casio fx-82MS暂时升级方法
+title: casio fx-82MS 暂时升级方法
 ---
 
 按shift + 7 + on，按4次shift，如果左边显示25，则输入组合13，如果左边显示20，则输入组合53。
