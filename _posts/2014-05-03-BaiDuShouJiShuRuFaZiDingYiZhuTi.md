@@ -13,7 +13,9 @@ title: 百度手机输入法自定义主题
 
 [点我下载][1]
 
-**过程**
+----------
+
+**制作**
 
 [下载百度官方皮肤编辑器][2]
 
@@ -51,6 +53,13 @@ title: 百度手机输入法自定义主题
 
 改好后用zip格式压缩，改后缀为`.bds`。
 
+----------
+
+**参考资料**
+
+[百度手机输入法皮肤教程][4]
+
   [1]: http://pan.baidu.com/s/1qWNOQ5m
   [2]: http://r6.mo.baidu.com/web/is/index/
   [3]: http://pan.baidu.com/share/link?uk=3321957458&shareid=1043105502#dir/path=/cmg%E8%81%AA%E6%98%8E%E7%8B%97%E7%99%BE%E5%BA%A6%E6%89%8B%E6%9C%BA%E8%BE%93%E5%85%A5%E6%B3%95%E7%9A%AE%E8%82%A4/2013%E5%B9%B412%E6%9C%8817%E6%97%A5/T926---26%E9%94%AE%2bT9%E4%B9%9D%E5%AE%AB%E6%A0%BC%E5%B8%83%E5%B1%80/%E9%BB%91%E7%99%BD%E5%AF%86%E9%9B%86%E6%8C%89%E9%94%AE
+  [4]: http://tieba.baidu.com/p/2038495547
