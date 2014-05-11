@@ -21,13 +21,13 @@ title: 搭建博客
 
 **发布Github页面**
 
-[Github][7]上注册用户，假设用户名为*username*。或者用户创建organization，记组织名为*username*。
+[Github][7]上注册用户，假设用户名为`username`。或者用户创建organization，记组织名为`username`。
 
 用户或者组织发布页面有两种方式：
 
-- 创建新的repository，名称为*username*.github.io，把页面放入master分支中，页面地址为：*username*.github.io。
+- 创建新的repository，名称为`username`.github.io，把页面放入master分支中，页面地址为：`username`.github.io。
 
-- 创建新的repository，假设名称为*repo*，在该repository下新建gh-pages分支，把页面放入其中，页面地址为*username*.github.io/*repo*。
+- 创建新的repository，假设名称为`repo`，在该repository下新建gh-pages分支，把页面放入其中，页面地址为`username`.github.io/`repo`。
 
 登录[GitHub Windows][2]，clone repository。
 资源管理器中找到repository文件目录，新建index.html，写入文字后保存。
@@ -51,7 +51,7 @@ title: 搭建博客
 
 在github项目根目录下添加文件，文件名为CNAME，内容为你的域名。
 
-*域名可以带和不带www.，如果在CNAME中配置的是带有www.的域名，那么在dnspod中也要配置带有www.的域名*
+<span style="color:grey">域名可以带和不带www.，如果在CNAME中配置的是带有www.的域名，那么在dnspod中也要配置带有www.的域名。</span>
 
 一段时间后，dns才能生效。dns和github页面都生效后，访问申请的域名，便能显示github中的页面了。
 
@@ -73,7 +73,7 @@ title: 搭建博客
 
 观测无误后，就能上传发布到github上了。
 
-*本地Jekyll会编译出_site目录，这个不需要上传github，添加到.gitignore中即可。*
+<span style="color:grey">本地Jekyll会编译出_site目录，这个不需要上传github，添加到.gitignore中即可。</span>
 
 <br />
 
