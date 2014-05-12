@@ -29,9 +29,9 @@ title: 搭建博客
 
 - 创建新的repository，假设名称为`repo`，在该repository下新建gh-pages分支，把页面放入其中，页面地址为`username`.github.io/`repo`。
 
-登录[GitHub Windows][2]，clone repository。
+使用[GitHub Windows][2]，clone repository。
 资源管理器中找到repository文件目录，新建index.html，写入文字后保存。
-在GitHub Windows中commit，snyc，几分钟后，便能通过github地址访问页面了。
+在GitHub Windows中commit，sync，几分钟后，便能通过github地址访问页面了。
 
 <br />
 
