@@ -2,9 +2,9 @@
 body {
 	margin: 0px;
 	background: rgb(230, 230, 230);
+	font-family: Ubuntu, Microsoft YaHei, Helvetica, sans-serif;
 }
 p {
-	font-family: Ubuntu, Microsoft YaHei, Helvetica, sans-serif;
 	font-size: 16px;
 	margin: 10px;
 	line-height: 24px;
@@ -28,22 +28,13 @@ h1 {
 	font-weight: bold;
 	text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
 }
-pre {
-	font-size: 15px;
-	background: rgb(200, 200, 200);
-	box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
-	padding: 0px 10px;
-}
-code {
-	font-size: 15px;
-	background: rgb(200, 200, 200);
+pre,code {
+	color: rgb(52, 152, 219);
 }
 span {
-	font-family: Ubuntu, Helvetica, sans-serif;
 	font-size: 16px;
 }
 a {
-	font-family: Ubuntu, Helvetica, sans-serif;
 	color: rgb(231, 76, 60);
 	transition: color 0.5s;
 }
@@ -58,6 +49,9 @@ a:hover {
 	font-size: 16px;
 	font-size: 24px;
 }
+.articlelist li {
+	margin: 0px;
+}
 .body {
 	margin: 50px 10%;
 	padding: 10px 2%;
@@ -71,7 +65,10 @@ a:hover {
 .date {
 	color: rgb(100, 100, 100);
 	font-size: 15px;
-	font-style: italic;
+	margin: 0px 10px;
+}
+.rem {
+	color: rgb(150, 150, 150);
 }
 @media screen and (max-width: 960px) {
 	.body {
@@ -79,5 +76,23 @@ a:hover {
 		padding: 10px 0px;
 		background: white;
 		box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+	}
+	.date {
+		display: block;
+		line-height: 15px;
+		margin-left: 60px;
+	}
+	.articlelist a {
+		font-size: 18px;
+		margin-left: 20px;
+	}
+	.articlelist .date {
+		margin-left: 10px;
+	}
+	h1 {
+		margin: 0px 50px;
+	}
+	.ds-thread {
+		margin: 0px 10px;
 	}
 }

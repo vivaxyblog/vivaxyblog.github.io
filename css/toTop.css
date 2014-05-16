@@ -1,0 +1,9 @@
+#toTop{
+	position:fixed;
+	_position:absolute;
+	right:0px;
+	bottom:0px;
+	_top:expression(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-40);
+	cursor:pointer;
+	display:none;
+}

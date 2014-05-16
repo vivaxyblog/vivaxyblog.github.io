@@ -51,7 +51,7 @@ title: 搭建博客
 
 在github项目根目录下添加文件，文件名为CNAME，内容为你的域名。
 
-<span style="color:grey">域名可以带和不带www.，如果在CNAME中配置的是带有www.的域名，那么在dnspod中也要配置带有www.的域名。</span>
+<span class="rem">域名可以带和不带www.，如果在CNAME中配置的是带有www.的域名，那么在dnspod中也要配置带有www.的域名。</span>
 
 一段时间后，dns才能生效。dns和github页面都生效后，访问申请的域名，便能显示github中的页面了。
 
@@ -73,7 +73,7 @@ title: 搭建博客
 
 观测无误后，就能上传发布到github上了。
 
-<span style="color:grey">本地Jekyll会编译出_site目录，这个不需要上传github，添加到.gitignore中即可。</span>
+<span class="rem">本地Jekyll会编译出_site目录，这个不需要上传github，添加到.gitignore中即可。</span>
 
 <br />
 
