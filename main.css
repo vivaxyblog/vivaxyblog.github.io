@@ -1,13 +1,17 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:400);
 body {
-	margin: 2%;
-	background: rgb(236, 240, 241);
+	margin: 0px;
+	background: rgb(230, 230, 230);
 }
 p {
 	font-family: Ubuntu, Microsoft YaHei, Helvetica, sans-serif;
 	font-size: 16px;
 	margin: 10px;
 	line-height: 24px;
+}
+h1 {
+	margin: 50px;
+	display: inline-block;
 }
 strong {
 	font-size: 24px;
@@ -49,7 +53,7 @@ a {
 a:hover {
 	color: rgb(192, 57, 43);
 }
-.articles {
+.articlelist {
 	list-style: none;
 	line-height: 36px;
 	margin: 0px;
@@ -57,11 +61,11 @@ a:hover {
 	font-size: 16px;
 	font-size: 24px;
 }
-.content {
-	margin: 10px 2%;
-	padding: 1px 2%;
+.body {
+	margin: 50px 10%;
+	padding: 10px 2%;
 	background: white;
-	box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
 }
 .footer {
 	color: rgb(52, 73, 94);
@@ -71,4 +75,12 @@ a:hover {
 	color: rgb(52, 73, 94);
 	font-size: 15px;
 	font-style: italic;
+}
+@media screen and (max-width: 960px) {
+	.body {
+		margin: 10px 0px;
+		padding: 10px 0px;
+		background: white;
+		box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+	}
 }
