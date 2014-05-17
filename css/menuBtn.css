@@ -2,10 +2,10 @@
 	z-index: 999;
 	line-height: 50px;
 	font-size: 24px;
+	text-align: center;
 	cursor: pointer;
 	color: rgb(255,255,255);
 	text-shadow: 0px 0px 1px rgba(255,255,255,0.5);
-	text-align: center;
 	position: fixed;
 	background: rgb(231, 76, 60);
 	box-shadow: 0px 0px 1px rgba(231, 76, 60 ,0.5);
@@ -16,6 +16,7 @@
 	display: block;
 	right: 0px;
 	bottom: 0px;
+	outline: none;
 }
 .menuBtnOpen {
 	transform: rotate(45deg);

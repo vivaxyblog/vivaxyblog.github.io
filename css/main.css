@@ -90,7 +90,7 @@ a:hover {
 		height: 36px;
 		line-height: 36px;
 		background: rgb(231, 76, 60);
-		box-shadow: 0px 0px 1px rgba(0,0,0,0.5);
+		box-shadow: 0px 0px 1px rgba(231, 76, 60 ,0.5);
 		color: rgba(255, 255, 255, 1);
 		text-shadow: 0px 0px 1px rgba(255,255,255,0.5);
 		transition: background 0.5s;
