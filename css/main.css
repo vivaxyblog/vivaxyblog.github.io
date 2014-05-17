@@ -1,5 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:400);
 body {
+	width: 100%;
+	height: 100%;
 	margin: 0px;
 	background: rgb(230, 230, 230);
 	font-family: Ubuntu, Microsoft YaHei, Helvetica, sans-serif;
@@ -19,7 +21,7 @@ ol {
 	list-style: octal;
 }
 li {
-	margin: 4px 0px 4px 30px;
+	margin: 0px 0px 0px 30px;
 }
 h1 {
 	margin: 50px;

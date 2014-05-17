@@ -1,0 +1,28 @@
+.menuBtn {
+	line-height: 50px;
+	font-size: 24px;
+	cursor: pointer;
+	color: rgb(255,255,255);
+	text-align: center;
+	position: fixed;
+	background: rgb(231, 76, 60);
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+	transition: all 0.5s;
+	display: block;
+	right: 0px;
+	bottom: 0px;
+}
+.menuBtnOpen {
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-ms-transform:rotate(7deg);
+	-moz-transform:rotate(7deg);
+}
+.menuBtnTop {
+	bottom: 50px;
+}
+.menuBtnBack {
+	right: 50px;
+}
