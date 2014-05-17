@@ -37,20 +37,21 @@ span {
 a {
 	color: rgb(231, 76, 60);
 	transition: color 0.5s;
+	text-decoration: none;
 }
 a:hover {
 	color: rgb(192, 57, 43);
+	text-decoration: underline;
 }
 .articlelist {
 	list-style: none;
-	line-height: 36px;
 	margin: 0px;
 	padding: 0px;
 	font-size: 16px;
 	font-size: 24px;
 }
 .articlelist li {
-	margin: 0px;
+	margin: 5px 0px;
 }
 .body {
 	margin: 50px 10%;
@@ -83,8 +84,21 @@ a:hover {
 		margin-left: 60px;
 	}
 	.articlelist a {
+		display: block;
+		height: 36px;
+		line-height: 36px;
+		background: rgb(231, 76, 60);
+		box-shadow: 0px 0px 1px rgba(0,0,0,0.5);
+		color: rgba(255, 255, 255, 1);
+		text-shadow: 0px 0px 1px rgba(255,255,255,0.5);
+		transition: background 0.5s;
 		font-size: 18px;
-		margin-left: 20px;
+		margin: 0px 20px;
+		padding: 0px 10px;
+	}
+	.articlelist a:hover {
+		background: rgb(192, 57, 43);
+		text-decoration: none;
 	}
 	.articlelist .date {
 		margin-left: 10px;
