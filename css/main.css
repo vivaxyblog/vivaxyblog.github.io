@@ -49,6 +49,10 @@ a:hover {
 	background: rgb(231, 76, 60);
 	color: rgb(255, 255, 255);
 }
+div::selection {
+	background: rgba(0, 0, 0, 0);
+	color: rgb(255, 255, 255);
+}
 .articlelist {
 	list-style: none;
 	margin: 0px;
@@ -64,6 +68,14 @@ a:hover {
 	padding: 10px 2%;
 	background: white;
 	box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+	overflow: auto;
+}
+.main {
+	width: 62%;
+	float: left;
+}
+.widget {
+	float: right;
 }
 .footer {
 	color: rgb(100, 100, 100);
@@ -76,6 +88,9 @@ a:hover {
 }
 .rem {
 	color: rgb(150, 150, 150);
+}
+.hr {
+	clear: both;
 }
 @media screen and (max-width: 960px) {
 	.body {
@@ -114,5 +129,12 @@ a:hover {
 	}
 	.ds-thread {
 		margin: 0px 10px;
+	}
+	.main {
+		width: 100%;
+	}
+	.widget {
+		margin: 10px;
+		float: left;
 	}
 }
