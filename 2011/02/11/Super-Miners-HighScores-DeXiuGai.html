@@ -3,27 +3,34 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link type="text/css" rel="stylesheet" href="/css/reset.css" />
-<link type="text/css" rel="stylesheet" href="/css/main.css" />
-<link type="text/css" rel="stylesheet" href="/css/menuBtn.css" />
-<link rel="shortcut icon" href="/css/x.png">
+<link type="text/css" rel="stylesheet" href="/main/reset.css" />
+<link type="text/css" rel="stylesheet" href="/main/main.css" />
+<link type="text/css" rel="stylesheet" href="/menubutton/menuBtn.css" />
+<link rel="shortcut icon" href="/main/x.png">
+<script type="text/javascript" src="/syntaxhighlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="/syntaxhighlighter/scripts/shBrushPlain.js"></script>
+<link type="text/css" rel="stylesheet" href="/syntaxhighlighter/styles/shCore.css"/>
 <title>Super Miners HighScores 的修改</title>
 </head>
 <body>
 <div class="body">
 	<div class="main">
-		<div class="title">
+		<script type="text/javascript">SyntaxHighlighter.all();</script>
+<div class="title">
 	<h1>Super Miners HighScores 的修改</h1>
 	<span class="date">11 Feb 2011</span>
 </div>
 <div class="content">
-	<p>记录文件:<code>*/Private/A0000BF4/hiscores*.dat</code></p>
+	<p>记录文件：</p>
+
+<pre class="brush: plain;">*/Private/A0000BF4/hiscores*.dat</pre>
 
 <p>用16进制打开，aa表示没有字符，作为分隔符。</p>
 
 <p>姓名区域的字母对应于16进制数的关系如下：</p>
 
-<pre><code>a cb
+<pre class="brush: plain;">
+a cb
 b c8
 c c9
 d ce
@@ -49,11 +56,12 @@ w dd
 x d2
 y d3
 z d0
-</code></pre>
+</pre>
 
 <p>分数时间区域10进制数字和16进制数字的关系如下：</p>
 
-<pre><code>0 a
+<pre class="brush: plain;">
+0 a
 1 b
 2 8
 3 9
@@ -69,11 +77,12 @@ z d0
 13 7
 14 4
 15 5
-</code></pre>
+</pre>
 
 <p>最后贴一个完美记录：</p>
 
-<pre><code>00000010h: AA AA AA AA D2 D3 AA AA AA AA AA AA AA AA AA AA 
+<pre class="brush: plain;">
+00000010h: AA AA AA AA D2 D3 AA AA AA AA AA AA AA AA AA AA 
 00000020h: 54 55 55 AA AA AA AA AA D2 D3 AA AA AA AA AA AA 
 00000030h: AA AA AA AA 57 55 55 AA AA AA AA AA D2 D3 AA AA 
 00000040h: AA AA AA AA AA AA AA AA 56 55 55 AA AA AA AA AA 
@@ -85,12 +94,12 @@ z d0
 000000a0h: D2 D3 AA AA AA AA AA AA AA AA AA AA AA AA AA AA 
 000000b0h: AE AA AA AA D2 D3 AA AA AA AA AA AA AA AA AA AA 
 000000c0h: AA AA AA AA AF AA AA AA
-</code></pre>
+</pre>
 
 </div>
 <!-- 多说 start -->
 <div class="ds-thread" data-title="Super Miners HighScores 的修改" data-url=""></div>
-<script type="text/javascript" charset="utf-8" src="/js/duoshuo.js"></script>
+<script type="text/javascript" charset="utf-8" src="/duoshuo/duoshuo.js"></script>
 <!-- 多说  end  -->
 	</div>
 	<div class="widget">
@@ -105,7 +114,7 @@ z d0
 	<div id="menuBtn" class="menuBtn">＋</div>
 </div>
 </body>
-<script type="text/javascript" charset="utf-8" src="/js/ga.js"></script>
-<script type="text/javascript" charset="utf-8" src="/js/ba.js"></script>
-<script type="text/javascript" charset="utf-8" src="/js/menuBtn.js"></script>
+<script type="text/javascript" charset="utf-8" src="/analysis/ga.js"></script>
+<script type="text/javascript" charset="utf-8" src="/analysis/ba.js"></script>
+<script type="text/javascript" charset="utf-8" src="/menubutton/menuBtn.js"></script>
 </html>
