@@ -55,6 +55,10 @@ a.card:hover .date {
 	text-align: center;
 	margin: 10px 0px;
 }
+*::selection {
+	background: rgb(231, 76, 60);
+	color: rgb(255, 255, 255);
+}
 @media screen and (max-width: 800px) {
 	.container {
 		width: 100%;
