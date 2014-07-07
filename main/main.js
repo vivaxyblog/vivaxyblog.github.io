@@ -40,13 +40,13 @@ var START_EV = mobileCheck() ? 'touchstart' : 'mousedown',
     },
 //    按下
     START_FUNC = function(e){
-        mouseStartX = mobileCheck() ? e.touches.item(0).clientX : e.clientX;
-        mouseStartY = mobileCheck() ? e.touches.item(0).clientY : e.clientY;
+        mouseStartX = mobileCheck() ? e.touches[0].clientX : e.clientX;
+        mouseStartY = mobileCheck() ? e.touches[0].clientY : e.clientY;
     },
 //    移动
     MOVE_FUNC = function(e){
-        mouseX = mobileCheck() ? e.touches.item(0).clientX : e.clientX;
-        mouseY = mobileCheck() ? e.touches.item(0).clientY : e.clientY;
+        mouseX = mobileCheck() ? e.touches[0].clientX : e.clientX;
+        mouseY = mobileCheck() ? e.touches[0].clientY : e.clientY;
     },
 //    松开
     END_FUNC = function(e){

@@ -63,6 +63,7 @@ a.card:hover .date {
 /* post */
 h1 {
 	font-size: 18px;
+	text-align: center;
 }
 p {
 	font-size: 15px;
@@ -75,4 +76,10 @@ a {
 a:hover {
 	color: rgb(192, 57, 43);
 	text-decoration: underline;
+}
+.card .title .date {
+	float: right;
+}
+.content {
+	clear: both;
 }
