@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link type="text/css" rel="stylesheet" href="/main/main.css" />
+<link rel="shortcut icon" href="/main/x.png">
+<title>百度手机输入法自定义主题</title>
+</head>
+<body>
+<div class="container" id="postContent">
+	<div class="card">
+		<div class="title">
+			<h1>百度手机输入法自定义主题</h1>
+			<p class="date">03 May 2014</p>
+		</div>
+		<div class="content">
+			<p>根据ejiepe的cmgt926黑白修改。</p>
+
+<p><img style="height:200px;" src="/img/2014-05-03-baidu-input-custom-theme-1.jpg" /></p>
+
+<p><img style="height:200px;" src="/img/2014-05-03-baidu-input-custom-theme-2.jpg" /></p>
+
+<p>复制到/sdcard/baidu/ime/skins/，在皮肤中启用。</p>
+
+<p><a href="http://pan.baidu.com/s/1qWNOQ5m">点我下载</a></p>
+
+<p><br /></p>
+
+<p><strong>制作</strong></p>
+
+<p><a href="http://r6.mo.baidu.com/web/is/index/">下载百度官方皮肤编辑器</a></p>
+
+<p><a href="http://pan.baidu.com/share/link?uk=3321957458&amp;shareid=1043105502#dir/path=/cmg%E8%81%AA%E6%98%8E%E7%8B%97%E7%99%BE%E5%BA%A6%E6%89%8B%E6%9C%BA%E8%BE%93%E5%85%A5%E6%B3%95%E7%9A%AE%E8%82%A4/2013%E5%B9%B412%E6%9C%8817%E6%97%A5/T926---26%E9%94%AE%2bT9%E4%B9%9D%E5%AE%AB%E6%A0%BC%E5%B8%83%E5%B1%80/%E9%BB%91%E7%99%BD%E5%AF%86%E9%9B%86%E6%8C%89%E9%94%AE">下载cmgt926黑白.bds</a></p>
+
+<p>用百度官方皮肤编辑器修改好按键后打包，会导致输入键码时键盘与cmg原先的设定不同，因此只好手动解压和打包。</p>
+
+<p>用解压软件解压cmgt926黑白.bds。</p>
+
+<p>修改Info.txt</p>
+
+<pre class="brush: plain;">
+Name=vivaxy@20140503
+Style=default
+SupportPlatform=A
+Author=vivaxy
+MinImeCode=1
+</pre>
+
+<pre class="brush: plain;">
+prot #竖屏键盘
+land #横屏键盘
+</pre>
+
+<pre class="brush: plain;">
+py_26.ini #拼音26键
+en_26.ini #英文小写26键
+en_26s.ini #英文大写26键
+</pre>
+
+<pre class="brush: plain;">
+FORE_STYLE=387,248 #显示的切片图片id
+POS_TYPE=7,3 #切片图片的位置
+VIEW_RECT=194,4,93,96 #按键位置和大小
+</pre>
+
+<pre class="brush: plain;">
+UP #上滑
+DOWN #下滑
+LEFT #左滑
+RIGHT #右滑
+CENTER #短按
+HOLDSYM #长按出现候选列表
+</pre>
+
+<p>改好后用zip格式压缩，改后缀为<code>.bds</code>。</p>
+
+<p><br /></p>
+
+<p><strong>参考资料</strong></p>
+
+<p><a href="http://tieba.baidu.com/p/2038495547">百度手机输入法皮肤教程</a></p>
+
+
+		</div>
+		<!-- 多说 start -->
+		<div class="ds-thread" data-title="百度手机输入法自定义主题" data-url=""></div>
+		<script type="text/javascript" charset="utf-8" src="/duoshuo/duoshuo.js"></script>
+		<!-- 多说  end  -->
+		<script type="text/javascript" src="/syntaxhighlighter/scripts/shCore.js"></script>
+		<script type="text/javascript" src="/syntaxhighlighter/scripts/shBrushPlain.js"></script>
+		<link type="text/css" rel="stylesheet" href="/syntaxhighlighter/styles/shCore.css"/>
+		<script type="text/javascript">SyntaxHighlighter.all();</script>
+	</div>
+	<a href="/" class="card">
+        <div class="date">© Copyright 2014 by vivaxy - Powered by Jekyll</div>
+    </a>
+</div>
+<div class="container right-container" id="plugIn">
+    <div class="plugins">
+        <script type="text/javascript" src="http://jf.revolvermaps.com/2/4.js?i=5blqpgw0lyn&amp;m=0&amp;h=128&amp;c=ff0000&amp;r=0" async="async"></script>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript" charset="utf-8" src="/analysis/ga.js"></script>
+<script type="text/javascript" charset="utf-8" src="/analysis/ba.js"></script>
+<script type="text/javascript" charset="utf-8" src="/main/main.js"></script>
+</html>
