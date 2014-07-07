@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link type="text/css" rel="stylesheet" href="/main/main.css" />
+<link rel="shortcut icon" href="/main/x.png">
+<title>Post Feedback on Github Issue from Android Applications</title>
+</head>
+<body>
+<div class="container" id="postContent">
+	<div class="card">
+		<div class="title">
+			<h1>Post Feedback on Github Issue from Android Applications</h1>
+			<span class="date">27 Jun 2014</span>
+		</div>
+		<div class="content">
+			<p><strong>Create an github account.</strong></p>
+
+<p>Visit <a href="github.com">github.com</a>.</p>
+
+<p><strong>Create a new authorization.</strong></p>
+
+<p>See <a href="https://developer.github.com/v3/oauth_authorizations/#create-a-new-authorization">https://developer.github.com/v3/oauth_authorizations/#create-a-new-authorization</a>.</p>
+
+<pre class="brush: plain;">
+# Enter YOURUSERNAME.
+$ curl -u "YOURUSERNAME" -X POST -d '{"note":"feedback"}' https://api.github.com/authorizations
+# Enter YOURPASSWORD.
+</pre>
+
+<p>Response:</p>
+
+<pre class="brush: plain;">
+{
+  "id": *******,
+  "url": "https://api.github.com/authorizations/*******",
+  "app": {
+    "name": "feedback (API)",
+    "url": "https://developer.github.com/v3/oauth_authorizations/",
+    "client_id": "00000000000000000000"
+  },
+  "token": "YOURTOKEN",
+  "note": "feedback",
+  "note_url": null,
+  "created_at": "2014-06-27T01:49:33Z",
+  "updated_at": "2014-06-27T01:49:33Z",
+  "scopes": [
+  ]
+}
+</pre>
+
+<p><strong>Setup generated token</strong></p>
+
+<p>Account settings &gt; <a href="https://github.com/settings/applications">Applications</a> &gt; Personal access tokens &gt; Edit &gt; Select scopes: public_repo &gt; Update token</p>
+
+<p><strong>Post an issue using curl command line.</strong></p>
+
+<pre class="brush: plain;">
+# Enter YOURTOKEN USERNAME REPONAME.
+# Repository user could be different from the previous authorised user, and it is safer to be different.
+$ curl -X POST -u YOURTOKEN:x-oauth-basic -H "Content-Type: application/x-www-form-urlencoded" -d '{"title":"test token"}' https://api.github.com/repos/USERNAME/REPONAME/issues
+</pre>
+
+<p><strong>Add code to your android application.</strong></p>
+
+<pre class="brush: plain;">
+public Boolean sendFeedback(String content) throws Exception {
+
+    // String systemInfo = new SystemInfo().getSysInfoString();
+
+    // See https://developer.github.com/v3/issues/#create-an-issue.
+    // Replace USERNAME REPONAME with your project owner repo.
+    String url = "https://api.github.com/repos/USERNAME/REPONAME/issues";
+
+    // Post a http request in json.
+    HttpPost httppost = new HttpPost(url);
+    JSONObject para = new JSONObject();
+    para.put("title", content);
+    // para.put("body", "Feedback from Android device.\n" + systemInfo);
+
+    // Set StringEntity to HTTP.UTF_8 in case of Chinese garbled.
+    StringEntity se = new StringEntity(para.toString(), HTTP.UTF_8);
+    httppost.setEntity(se);
+
+    // Replace YOURTOKEN with your generated token;
+    httppost.setHeader("Authorization", "token YOURTOKEN");
+    httppost.setHeader("Accept", "application/json");
+
+    // Content-type must be set as application/x-www-form-urlencoded.
+    // And add charset=UTF-8 in case of Chinese garbled.
+    httppost.setHeader("Content-type", "application/x-www-form-urlencoded; charset=UTF-8");
+
+    // Read response.
+    // If exceptions throwed or false returned, submittal fails.
+    HttpResponse response = new DefaultHttpClient().execute(httppost);
+    Log.v("-------", "getStatusCode: " + response.getStatusLine().getStatusCode());
+    if (response.getStatusLine().getStatusCode() == 201) {
+        Log.v("-------", "response: " + EntityUtils.toString(response.getEntity()));
+        return true;
+    } else return false;
+}
+</pre>
+
+<p><strong>Http post should be in a new thread apart of current activity.</strong></p>
+
+<pre class="brush: plain;">
+// Add a runnable to start your post.
+Runnable runnable = new Runnable() {
+    @Override
+    public void run() {
+        TextView tv = (TextView) findViewById(R.id.feedback_container);
+        try {
+            Boolean success = fu.sendFeedback(tv.getText().toString());
+
+            // Toast not made in current activity thread should be added to the looper.
+            Looper.prepare();
+            if (success) Toast.makeText(HomeActivity.ha, R.string.feedback_success, Toast.LENGTH_LONG).show();
+            else Toast.makeText(HomeActivity.ha, R.string.feedback_error, Toast.LENGTH_LONG).show();
+            Looper.loop();
+        } catch (Exception e) {
+            Looper.prepare();
+            Toast.makeText(HomeActivity.ha, R.string.feedback_error, Toast.LENGTH_LONG).show();
+            Looper.loop();
+            e.printStackTrace();
+        }
+    }
+};
+</pre>
+
+<p><strong>Call this in current activity to start your post.</strong></p>
+
+<pre class="brush: plain;">
+new Thread(runnable).start();
+</pre>
+
+<p><strong>Use github commit message to close issues.</strong></p>
+
+<p><a href="https://help.github.com/articles/closing-issues-via-commit-messages">fix #ISSUEID</a></p>
+
+		</div>
+		<!-- 多说 start -->
+		<div class="ds-thread" data-title="Post Feedback on Github Issue from Android Applications" data-url=""></div>
+		<script type="text/javascript" charset="utf-8" src="/duoshuo/duoshuo.js"></script>
+		<!-- 多说  end  -->
+		<script type="text/javascript" src="/syntaxhighlighter/scripts/shCore.js"></script>
+		<script type="text/javascript" src="/syntaxhighlighter/scripts/shBrushPlain.js"></script>
+		<link type="text/css" rel="stylesheet" href="/syntaxhighlighter/styles/shCore.css"/>
+		<script type="text/javascript">SyntaxHighlighter.all();</script>
+	</div>
+	<a class="card">
+        <div class="date">© Copyright 2014 by vivaxy - Powered by Jekyll</div>
+    </a>
+</div>
+<div class="container right-container" id="plugIn">
+    <div class="plugins">
+        <script type="text/javascript" src="http://jf.revolvermaps.com/2/4.js?i=5blqpgw0lyn&amp;m=0&amp;h=128&amp;c=ff0000&amp;r=0" async="async"></script>
+    </div>
+</div>
+<div>
+	<div id="menuBtnTop" class="menuBtn">↑</div>
+	<div id="menuBtnBack" class="menuBtn">←</div>
+	<div id="menuBtn" class="menuBtn">＋</div>
+	<link type="text/css" rel="stylesheet" href="/menubutton/menuBtn.css" />
+	<script type="text/javascript" charset="utf-8" src="/menubutton/menuBtn.js"></script>
+</div>
+
+</body>
+<script type="text/javascript" charset="utf-8" src="/analysis/ga.js"></script>
+<script type="text/javascript" charset="utf-8" src="/analysis/ba.js"></script>
+<script type="text/javascript" charset="utf-8" src="/main/main.js"></script>
+</html>

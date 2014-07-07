@@ -1,0 +1,78 @@
+@font-face {
+	font-family: Ubuntu;
+	src: url(Ubuntu-R.ttf);
+}
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: rgb(230, 230, 230);
+	font-family: Ubuntu, Microsoft YaHei, Helvetica, sans-serif;
+}
+.container {
+	position: relative;
+	width: 800px;
+	margin: 0 auto;
+	transition: width 0.5s, transform 0.5s;
+	-webkit-transition: width 0.5s, -webkit-transform 0.5s;
+}
+.left-container {
+	transform: rotateY(-90deg) translate3d(-100%, 0, 0);
+	-webkit-transform: rotateY(-90deg) translate3d(-100%, 0, 0);
+}
+.right-container {
+	transform: rotateY(90deg) translate3d(100%, 0, 0);
+	-webkit-transform: rotateY(90deg) translate3d(100%, 0, 0);
+}
+.card {
+	display: block;
+	margin: 10px 0px;
+	padding: 20px 20px 20px 20px;
+	background: rgb(255, 255, 255);
+	box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+	font-size: 18px;
+	outline: none;
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+	transition: background 0.5s, color 0.5s;
+	word-wrap: break-word;
+}
+a.card:hover {
+	background: rgb(192, 57, 43);
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+.card .date {
+	color: rgb(100, 100, 100);
+	font-size: 15px;
+	transition: color 0.5s;
+}
+a.card:hover .date {
+	color: rgb(255, 255, 255);
+}
+.plugins {
+	text-align: center;
+	margin: 10px 0px;
+}
+@media screen and (max-width: 800px) {
+	.container {
+		width: 100%;
+	}
+}
+/* post */
+h1 {
+	font-size: 18px;
+}
+p {
+	font-size: 15px;
+}
+a {
+	color: rgb(231, 76, 60);
+	transition: color 0.5s;
+	text-decoration: none;
+}
+a:hover {
+	color: rgb(192, 57, 43);
+	text-decoration: underline;
+}
