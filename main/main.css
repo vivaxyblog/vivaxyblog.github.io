@@ -132,11 +132,7 @@ h1 {
 	text-align: center;
 }
 p {
-	font-size: 14px;
-}
-strong {
 	font-size: 15px;
-	line-height: 48px;
 }
 a {
 	color: rgb(231, 76, 60);
@@ -146,6 +142,9 @@ a {
 a:hover {
 	color: rgb(192, 57, 43);
 	text-decoration: underline;
+}
+ul {
+	list-style: disc;
 }
 /* fonts */
 @font-face {

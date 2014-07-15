@@ -21,6 +21,8 @@
 
 <p>Visit <a href="github.com">github.com</a>.</p>
 
+<p><br /></p>
+
 <p><strong>Create a new authorization.</strong></p>
 
 <p>See <a href="https://developer.github.com/v3/oauth_authorizations/#create-a-new-authorization">https://developer.github.com/v3/oauth_authorizations/#create-a-new-authorization</a>.</p>
@@ -52,9 +54,13 @@ $ curl -u "YOURUSERNAME" -X POST -d '{"note":"feedback"}' https://api.github.com
 }
 </pre>
 
+<p><br /></p>
+
 <p><strong>Setup generated token</strong></p>
 
 <p>Account settings &gt; <a href="https://github.com/settings/applications">Applications</a> &gt; Personal access tokens &gt; Edit &gt; Select scopes: public_repo &gt; Update token</p>
+
+<p><br /></p>
 
 <p><strong>Post an issue using curl command line.</strong></p>
 
@@ -63,6 +69,8 @@ $ curl -u "YOURUSERNAME" -X POST -d '{"note":"feedback"}' https://api.github.com
 # Repository user could be different from the previous authorised user, and it is safer to be different.
 $ curl -X POST -u YOURTOKEN:x-oauth-basic -H "Content-Type: application/x-www-form-urlencoded" -d '{"title":"test token"}' https://api.github.com/repos/USERNAME/REPONAME/issues
 </pre>
+
+<p><br /></p>
 
 <p><strong>Add code to your android application.</strong></p>
 
@@ -104,6 +112,8 @@ public Boolean sendFeedback(String content) throws Exception {
 }
 </pre>
 
+<p><br /></p>
+
 <p><strong>Http post should be in a new thread apart of current activity.</strong></p>
 
 <pre class="brush: plain;">
@@ -130,11 +140,15 @@ Runnable runnable = new Runnable() {
 };
 </pre>
 
+<p><br /></p>
+
 <p><strong>Call this in current activity to start your post.</strong></p>
 
 <pre class="brush: plain;">
 new Thread(runnable).start();
 </pre>
+
+<p><br /></p>
 
 <p><strong>Use github commit message to close issues.</strong></p>
 
