@@ -27,7 +27,7 @@
 
 <p>See <a href="https://developer.github.com/v3/oauth_authorizations/#create-a-new-authorization">https://developer.github.com/v3/oauth_authorizations/#create-a-new-authorization</a>.</p>
 
-<pre class="brush: plain;">
+<pre>
 # Enter YOURUSERNAME.
 $ curl -u "YOURUSERNAME" -X POST -d '{"note":"feedback"}' https://api.github.com/authorizations
 # Enter YOURPASSWORD.
@@ -35,7 +35,7 @@ $ curl -u "YOURUSERNAME" -X POST -d '{"note":"feedback"}' https://api.github.com
 
 <p>Response:</p>
 
-<pre class="brush: plain;">
+<pre>
 {
   "id": *******,
   "url": "https://api.github.com/authorizations/*******",
@@ -64,7 +64,7 @@ $ curl -u "YOURUSERNAME" -X POST -d '{"note":"feedback"}' https://api.github.com
 
 <p><strong>Post an issue using curl command line.</strong></p>
 
-<pre class="brush: plain;">
+<pre>
 # Enter YOURTOKEN USERNAME REPONAME.
 # Repository user could be different from the previous authorised user, and it is safer to be different.
 $ curl -X POST -u YOURTOKEN:x-oauth-basic -H "Content-Type: application/x-www-form-urlencoded" -d '{"title":"test token"}' https://api.github.com/repos/USERNAME/REPONAME/issues
@@ -74,7 +74,7 @@ $ curl -X POST -u YOURTOKEN:x-oauth-basic -H "Content-Type: application/x-www-fo
 
 <p><strong>Add code to your android application.</strong></p>
 
-<pre class="brush: plain;">
+<pre>
 public Boolean sendFeedback(String content) throws Exception {
 
     // String systemInfo = new SystemInfo().getSysInfoString();
@@ -116,7 +116,7 @@ public Boolean sendFeedback(String content) throws Exception {
 
 <p><strong>Http post should be in a new thread apart of current activity.</strong></p>
 
-<pre class="brush: plain;">
+<pre>
 // Add a runnable to start your post.
 Runnable runnable = new Runnable() {
     @Override
@@ -144,7 +144,7 @@ Runnable runnable = new Runnable() {
 
 <p><strong>Call this in current activity to start your post.</strong></p>
 
-<pre class="brush: plain;">
+<pre>
 new Thread(runnable).start();
 </pre>
 
@@ -161,10 +161,6 @@ new Thread(runnable).start();
 	<div class="ds-thread" data-title="Post Feedback on Github Issue from Android Applications" data-url=""></div>
 	<script type="text/javascript" charset="utf-8" src="/duoshuo/duoshuo.js"></script>
 	<!-- 多说  end  -->
-	<script type="text/javascript" src="/syntaxhighlighter/scripts/shCore.js"></script>
-	<script type="text/javascript" src="/syntaxhighlighter/scripts/shBrushPlain.js"></script>
-	<link type="text/css" rel="stylesheet" href="/syntaxhighlighter/styles/shCore.css"/>
-	<script type="text/javascript">SyntaxHighlighter.all();</script>
 </div>
 
 	<a href="#" class="card hover-top">

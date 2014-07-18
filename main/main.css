@@ -146,6 +146,19 @@ a:hover {
 ul {
 	list-style: disc;
 }
+pre, code {
+	border-radius: 3px;
+	background-color: rgb(255, 255, 255);
+	border: solid 1px rgb(200,200,200);
+	color: rgb(231, 76, 60);
+	font-family: Consolas, Courier, monospace !important;
+	font-size: 14px;
+	padding: 0 5px;
+}
+pre {
+	padding: 10px;
+}
+}
 /* fonts */
 @font-face {
 	font-family: Ubuntu;
