@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <link rel="shortcut icon" href="/css/x.png">
+    <link type="text/css" rel="stylesheet" href="/css/main.css"/>
+    <title>Setup Gulp Livereload</title>
+</head>
+<body>
+<div class="container">
+    <a href="/" class="card hover-left">
+	<div class="content">
+		<h1>Setup Gulp Livereload</h1>
+		<div class="date">30 Nov 2014</div>
+	</div>
+	<div class="icon-arrow-left"></div>
+</a>
+<div class="card">
+	<div class="content">
+		<p><strong>Gulp</strong></p>
+
+<p><a href="http://gulpjs.com/">Gulp</a> is a new build tool for web developers.</p>
+
+<p><br /></p>
+
+<p><strong>Livereload</strong></p>
+
+<p><a href="http://livereload.com/">Livereload</a> can reload pages when changes detected.</p>
+
+<p><a href="https://www.npmjs.org/package/grunt-livereload">Grunt livereload</a>.</p>
+
+<p><br /></p>
+
+<p><strong>Install gulp livereload</strong></p>
+
+<ol>
+  <li>
+    <p>Install chrome extension. <a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei">link</a></p>
+  </li>
+  <li>
+    <p>Install npm module. <code>npm install --save-dev gulp-livereload</code></p>
+  </li>
+</ol>
+
+<p><strong>Setup livereload with gulp watch</strong></p>
+
+<ol>
+  <li>
+    <p>Edit gulpfile.js</p>
+
+    <pre><code> // import gulp
+ var gulp = require('gulp');
+ // import some module else
+ var shell = require('gulp-shell');
+ // import livereload
+ var livereload = require('gulp-livereload');
+ // set path
+ var paths = {
+     src: 'src/*',
+     des: 'bin-debug/*/*.js'
+ };
+ // set build task
+ gulp.task('build', shell.task('egret build'));
+ // set watch task
+ gulp.task('watch', function() {
+     // when files in paths.src changed, build task will be triggered
+     gulp.watch(paths.src, ['build']);
+     // start livereload listener
+     // a server will be started, livereload chrome extension will connect this server.
+     livereload.listen();
+     // when files in paths.des changed, trigger livereload, and this will trigger reload on chrome pages
+     // here we don't use source files, because typescript changes need to be compiled to javascript, then changes take effect
+     gulp.watch(paths.des).on('change', livereload.changed);
+ });
+ // set server task
+ gulp.task('run', shell.task('egret startserver'));
+</code></pre>
+  </li>
+  <li>
+    <p>Open pages in chrome.</p>
+  </li>
+  <li>
+    <p>Click livereload extension, and when the hollow circle becomes solid, it works.</p>
+  </li>
+  <li>
+    <p>Now we edit some files, save it, pages reload automatically! WebStorm will save file auto, so changes take effect when typing.</p>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<p><strong>Problems</strong></p>
+
+<p>When destination files compiled one by one, livereload will be triggered each time! How to solve it?</p>
+
+<p><br /></p>
+
+<p><strong>Reference</strong></p>
+
+<p><a href="https://www.npmjs.org/package/gulp-livereload">Gulp Livereload</a></p>
+
+
+	</div>
+</div>
+<div class="card">
+	<!-- 多说 start -->
+	<div class="ds-thread" data-title="Setup Gulp Livereload" data-url=""></div>
+	<script type="text/javascript" charset="utf-8" src="/js/duoshuo/duoshuo.js"></script>
+	<!-- 多说  end  -->
+</div>
+
+    <a href="javascript:document.body.scrollIntoView(true);" class="card hover-top">
+        <div class="content">
+            <div class="date">© Copyright 2014 by vivaxy - Powered by Jekyll</div>
+        </div>
+    </a>
+</div>
+</body>
+<script type="text/javascript" charset="utf-8" src="/js/analysis/ga.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/analysis/ba.js"></script>
+</html>
