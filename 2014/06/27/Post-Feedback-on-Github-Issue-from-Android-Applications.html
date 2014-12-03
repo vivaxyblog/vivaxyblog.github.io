@@ -27,16 +27,14 @@
 
 <p>See <a href="https://developer.github.com/v3/oauth_authorizations/#create-a-new-authorization">https://developer.github.com/v3/oauth_authorizations/#create-a-new-authorization</a>.</p>
 
-<p><code>
-# Enter YOURUSERNAME.
+<pre><code># Enter YOURUSERNAME.
 $ curl -u "YOURUSERNAME" -X POST -d '{"note":"feedback"}' https://api.github.com/authorizations
 # Enter YOURPASSWORD.
-</code></p>
+</code></pre>
 
 <p>Response:</p>
 
-<p><code>
-{
+<pre><code>{
   "id": *******,
   "url": "https://api.github.com/authorizations/*******",
   "app": {
@@ -52,7 +50,7 @@ $ curl -u "YOURUSERNAME" -X POST -d '{"note":"feedback"}' https://api.github.com
   "scopes": [
   ]
 }
-</code></p>
+</code></pre>
 
 <h2 id="setup-generated-token">Setup generated token</h2>
 
@@ -60,81 +58,78 @@ $ curl -u "YOURUSERNAME" -X POST -d '{"note":"feedback"}' https://api.github.com
 
 <h2 id="post-an-issue-using-curl-command-line">Post an issue using curl command line.</h2>
 
-<p><code>
-# Enter YOURTOKEN USERNAME REPONAME.
+<pre><code># Enter YOURTOKEN USERNAME REPONAME.
 # Repository user could be different from the previous authorised user, and it is safer to be different.
 $ curl -X POST -u YOURTOKEN:x-oauth-basic -H "Content-Type: application/x-www-form-urlencoded" -d '{"title":"test token"}' https://api.github.com/repos/USERNAME/REPONAME/issues
-</code></p>
+</code></pre>
 
 <h2 id="add-code-to-your-android-application">Add code to your android application.</h2>
 
-<p>```
-public Boolean sendFeedback(String content) throws Exception {</p>
+<pre><code>public Boolean sendFeedback(String content) throws Exception {
 
-<pre><code>// String systemInfo = new SystemInfo().getSysInfoString();
+    // String systemInfo = new SystemInfo().getSysInfoString();
 
-// See https://developer.github.com/v3/issues/#create-an-issue.
-// Replace USERNAME REPONAME with your project owner repo.
-String url = "https://api.github.com/repos/USERNAME/REPONAME/issues";
+    // See https://developer.github.com/v3/issues/#create-an-issue.
+    // Replace USERNAME REPONAME with your project owner repo.
+    String url = "https://api.github.com/repos/USERNAME/REPONAME/issues";
 
-// Post a http request in json.
-HttpPost httppost = new HttpPost(url);
-JSONObject para = new JSONObject();
-para.put("title", content);
-// para.put("body", "Feedback from Android device.\n" + systemInfo);
+    // Post a http request in json.
+    HttpPost httppost = new HttpPost(url);
+    JSONObject para = new JSONObject();
+    para.put("title", content);
+    // para.put("body", "Feedback from Android device.\n" + systemInfo);
 
-// Set StringEntity to HTTP.UTF_8 in case of Chinese garbled.
-StringEntity se = new StringEntity(para.toString(), HTTP.UTF_8);
-httppost.setEntity(se);
+    // Set StringEntity to HTTP.UTF_8 in case of Chinese garbled.
+    StringEntity se = new StringEntity(para.toString(), HTTP.UTF_8);
+    httppost.setEntity(se);
 
-// Replace YOURTOKEN with your generated token;
-httppost.setHeader("Authorization", "token YOURTOKEN");
-httppost.setHeader("Accept", "application/json");
+    // Replace YOURTOKEN with your generated token;
+    httppost.setHeader("Authorization", "token YOURTOKEN");
+    httppost.setHeader("Accept", "application/json");
 
-// Content-type must be set as application/x-www-form-urlencoded.
-// And add charset=UTF-8 in case of Chinese garbled.
-httppost.setHeader("Content-type", "application/x-www-form-urlencoded; charset=UTF-8");
+    // Content-type must be set as application/x-www-form-urlencoded.
+    // And add charset=UTF-8 in case of Chinese garbled.
+    httppost.setHeader("Content-type", "application/x-www-form-urlencoded; charset=UTF-8");
 
-// Read response.
-// If exceptions throwed or false returned, submittal fails.
-HttpResponse response = new DefaultHttpClient().execute(httppost);
-Log.v("-------", "getStatusCode: " + response.getStatusLine().getStatusCode());
-if (response.getStatusLine().getStatusCode() == 201) {
-    Log.v("-------", "response: " + EntityUtils.toString(response.getEntity()));
-    return true;
-} else return false; } ```
+    // Read response.
+    // If exceptions throwed or false returned, submittal fails.
+    HttpResponse response = new DefaultHttpClient().execute(httppost);
+    Log.v("-------", "getStatusCode: " + response.getStatusLine().getStatusCode());
+    if (response.getStatusLine().getStatusCode() == 201) {
+        Log.v("-------", "response: " + EntityUtils.toString(response.getEntity()));
+        return true;
+    } else return false;
+}
 </code></pre>
 
 <h2 id="http-post-should-be-in-a-new-thread-apart-of-current-activity">Http post should be in a new thread apart of current activity.</h2>
 
-<p>```
-// Add a runnable to start your post.
+<pre><code>// Add a runnable to start your post.
 Runnable runnable = new Runnable() {
     @Override
     public void run() {
         TextView tv = (TextView) findViewById(R.id.feedback_container);
         try {
-            Boolean success = fu.sendFeedback(tv.getText().toString());</p>
+            Boolean success = fu.sendFeedback(tv.getText().toString());
 
-<pre><code>        // Toast not made in current activity thread should be added to the looper.
-        Looper.prepare();
-        if (success) Toast.makeText(HomeActivity.ha, R.string.feedback_success, Toast.LENGTH_LONG).show();
-        else Toast.makeText(HomeActivity.ha, R.string.feedback_error, Toast.LENGTH_LONG).show();
-        Looper.loop();
-    } catch (Exception e) {
-        Looper.prepare();
-        Toast.makeText(HomeActivity.ha, R.string.feedback_error, Toast.LENGTH_LONG).show();
-        Looper.loop();
-        e.printStackTrace();
+            // Toast not made in current activity thread should be added to the looper.
+            Looper.prepare();
+            if (success) Toast.makeText(HomeActivity.ha, R.string.feedback_success, Toast.LENGTH_LONG).show();
+            else Toast.makeText(HomeActivity.ha, R.string.feedback_error, Toast.LENGTH_LONG).show();
+            Looper.loop();
+        } catch (Exception e) {
+            Looper.prepare();
+            Toast.makeText(HomeActivity.ha, R.string.feedback_error, Toast.LENGTH_LONG).show();
+            Looper.loop();
+            e.printStackTrace();
+        }
     }
-} }; ```
+};
 </code></pre>
 
 <h2 id="call-this-in-current-activity-to-start-your-post">Call this in current activity to start your post.</h2>
 
-<p><code>
-new Thread(runnable).start();
-</code></p>
+<p><code>new Thread(runnable).start();</code></p>
 
 <h2 id="use-github-commit-message-to-close-issues">Use github commit message to close issues.</h2>
 

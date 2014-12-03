@@ -167,7 +167,7 @@ ul {
     list-style: disc;
 }
 
-pre, code {
+code {
     border-radius: 3px;
     background-color: rgb(255, 255, 255);
     border: solid 1px rgb(200, 200, 200);
@@ -176,14 +176,9 @@ pre, code {
     padding: 0 5px;
 }
 
-pre {
-    padding: 10px;
-}
-
-pre code {
+.prettyprint code {
     border: 0;
 }
-
 /* fonts */
 @font-face {
     font-family: 'Ubuntu';
