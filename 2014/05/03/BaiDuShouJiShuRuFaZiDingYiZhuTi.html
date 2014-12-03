@@ -21,17 +21,15 @@
 	<div class="content">
 		<p>根据ejiepe的cmgt926黑白修改。</p>
 
-<p><img style="height:200px;" src="/img/2014-05-03-baidu-input-custom-theme-1.jpg" /></p>
+<p><img src="/img/2014-05-03-baidu-input-custom-theme-1.jpg" alt="1" /></p>
 
-<p><img style="height:200px;" src="/img/2014-05-03-baidu-input-custom-theme-2.jpg" /></p>
+<p><img src="/img/2014-05-03-baidu-input-custom-theme-2.jpg" alt="2" /></p>
 
-<p>复制到/sdcard/baidu/ime/skins/，在皮肤中启用。</p>
+<p>复制到<code>/sdcard/baidu/ime/skins/</code>，在皮肤中启用。</p>
 
 <p><a href="http://pan.baidu.com/s/1qWNOQ5m">点我下载</a></p>
 
-<p><br /></p>
-
-<p><strong>制作</strong></p>
+<h2 id="section">制作</h2>
 
 <p><a href="http://r6.mo.baidu.com/web/is/index/">下载百度官方皮肤编辑器</a></p>
 
@@ -39,49 +37,47 @@
 
 <p>用百度官方皮肤编辑器修改好按键后打包，会导致输入键码时键盘与cmg原先的设定不同，因此只好手动解压和打包。</p>
 
-<p>用解压软件解压cmgt926黑白.bds。</p>
+<p>用解压软件解压<code>cmgt926黑白.bds</code>。</p>
 
-<p>修改Info.txt</p>
+<p>修改<code>Info.txt</code></p>
 
-<pre>
+<p><code>
 Name=vivaxy@20140503
 Style=default
 SupportPlatform=A
 Author=vivaxy
 MinImeCode=1
-</pre>
+</code></p>
 
-<pre>
+<p><code>
 prot #竖屏键盘
 land #横屏键盘
-</pre>
+</code></p>
 
-<pre>
+<p><code>
 py_26.ini #拼音26键
 en_26.ini #英文小写26键
 en_26s.ini #英文大写26键
-</pre>
+</code></p>
 
-<pre>
+<p><code>
 FORE_STYLE=387,248 #显示的切片图片id
 POS_TYPE=7,3 #切片图片的位置
 VIEW_RECT=194,4,93,96 #按键位置和大小
-</pre>
+</code></p>
 
-<pre>
+<p><code>
 UP #上滑
 DOWN #下滑
 LEFT #左滑
 RIGHT #右滑
 CENTER #短按
 HOLDSYM #长按出现候选列表
-</pre>
+</code></p>
 
 <p>改好后用zip格式压缩，改后缀为<code>.bds</code>。</p>
 
-<p><br /></p>
-
-<p><strong>参考资料</strong></p>
+<h2 id="section-1">参考资料</h2>
 
 <p><a href="http://tieba.baidu.com/p/2038495547">百度手机输入法皮肤教程</a></p>
 

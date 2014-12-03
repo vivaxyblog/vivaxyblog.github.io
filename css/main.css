@@ -17,11 +17,10 @@ body {
 
 .card {
     display: block;
-    margin: 10px 0px;
-    padding: 20px 20px 20px 20px;
+    margin: 20px 0;
+    padding: 20px 40px;
     background: rgb(255, 255, 255);
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
-    font-size: 18px;
     outline: none;
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -38,7 +37,6 @@ a.card:hover {
 
 .card .date {
     color: rgb(100, 100, 100);
-    font-size: 15px;
     transition: color 0.5s;
 }
 
@@ -143,16 +141,15 @@ a.card:hover .date {
     .container {
         width: 100%;
     }
+    .card {
+        padding: 10px 20px;
+        margin: 10px 0;
+    }
 }
 
 /* post */
 h1 {
-    font-size: 18px;
     text-align: center;
-}
-
-p {
-    font-size: 15px;
 }
 
 a {
@@ -176,7 +173,6 @@ pre, code {
     border: solid 1px rgb(200, 200, 200);
     color: rgb(231, 76, 60);
     font-family: Consolas, Courier, monospace !important;
-    font-size: 14px;
     padding: 0 5px;
 }
 
@@ -191,7 +187,7 @@ pre code {
 /* fonts */
 @font-face {
     font-family: 'Ubuntu';
-    src: url('Ubuntu-R.ttf');
+    src: url('Ubuntu-L.ttf');
     font-weight: normal;
     font-style: normal;
 }
