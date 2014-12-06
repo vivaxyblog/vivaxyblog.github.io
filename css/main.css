@@ -75,7 +75,6 @@ a.card:hover .date {
     font-size: 32px;
     font-family: "icomoon";
     content: "\e603";
-    speak: none;
     line-height: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -168,12 +167,8 @@ ul {
 }
 
 code {
-    border-radius: 3px;
-    background-color: rgb(255, 255, 255);
-    border: solid 1px rgb(200, 200, 200);
     color: rgb(231, 76, 60);
     font-family: Consolas, Courier, monospace !important;
-    padding: 0 5px;
 }
 
 .prettyprint code {
