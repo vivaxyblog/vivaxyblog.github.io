@@ -7,7 +7,7 @@ var del = require('del');
 var shell = require('gulp-shell');
 
 var paths = {
-    clean1: ['index.html', 'css', 'img', 'js', '2011', '2014', '2015'],
+    clean1: ['index.html', 'css', 'image', 'js', '2011', '2014', '2015'],
     clean2: ['_site']
 };
 

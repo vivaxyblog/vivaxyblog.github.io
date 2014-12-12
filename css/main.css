@@ -118,7 +118,6 @@ a.card:hover .date {
     font-size: 32px;
     font-family: "icomoon";
     content: "\e600";
-    speak: none;
     line-height: 15px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -174,6 +173,18 @@ code {
 .prettyprint code {
     border: 0;
 }
+
+img {
+    max-width: 100%;
+}
+
+blockquote {
+    padding: 16px;
+    overflow: auto;
+    background-color: #f7f7f7;
+    border-radius: 3px;
+}
+
 /* fonts */
 @font-face {
     font-family: 'Ubuntu';
