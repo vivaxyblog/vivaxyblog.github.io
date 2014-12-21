@@ -11,9 +11,10 @@ var paths = {
     clean2: ['_site']
 };
 
-var cmd = 'cp -r ./_site/* ./';
+var cmd1 = 'cp -r ./_site/* ./';
+var cmd2 = 'git add *';
 
-gulp.task('move', ['clean1'], shell.task(cmd));
+gulp.task('move', ['clean1'], shell.task(cmd1));
 
 gulp.task('clean1', function(cb){
     return del(paths.clean1, cb);
@@ -21,6 +22,8 @@ gulp.task('clean1', function(cb){
 
 gulp.task('serve', shell.task('jekyll serve'));
 
-gulp.task('default', ['move'], function(cb){
+gulp.task('clean2', ['move'], function(cb){
     return del(paths.clean2, cb);
 });
+
+gulp.task('default', ['clean2'], shell.task(cmd2));
