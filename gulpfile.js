@@ -12,7 +12,7 @@ var paths = {
 };
 
 var cmd1 = 'cp -r ./_site/* ./';
-var cmd2 = 'git add *';
+var cmd2 = 'git add image/* js/* css/* 2011/* 2014/*';
 
 gulp.task('move', ['clean1'], shell.task(cmd1));
 
@@ -22,7 +22,7 @@ gulp.task('clean1', function(cb){
 
 gulp.task('serve', shell.task('jekyll serve'));
 
-gulp.task('clean2', ['move'], function(cb){
+gulp.task('default', ['move'], function(cb){
     return del(paths.clean2, cb);
 });
 
