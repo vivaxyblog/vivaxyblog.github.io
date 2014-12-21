@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <link rel="shortcut icon" href="/css/x.png">
+    <link type="text/css" rel="stylesheet" href="/css/main.css"/>
+    <link type="text/css" rel="stylesheet" href="/css/syntax.css"/>
+    <title>百度手机输入法自定义主题</title>
+</head>
+<body>
+<div class="container">
+    <a href="/" class="card hover-left">
+	<div class="content">
+		<h1>百度手机输入法自定义主题</h1>
+		<div class="date">03 May 2014</div>
+	</div>
+	<div class="icon-arrow-left"></div>
+</a>
+<div class="card">
+	<div class="content">
+		<p>根据ejiepe的cmgt926黑白修改。</p>
+
+<p><img src="/image/2014-05-03-baidu-input-custom-theme/en.jpg" alt="en" /></p>
+
+<p><img src="/image/2014-05-03-baidu-input-custom-theme/ch.jpg" alt="ch" /></p>
+
+<p>复制到<code>/sdcard/baidu/ime/skins/</code>，在皮肤中启用。</p>
+
+<p><a href="http://pan.baidu.com/s/1qWNOQ5m">点我下载</a></p>
+
+<h2 id="section">制作</h2>
+
+<p><a href="http://r6.mo.baidu.com/web/is/index/">下载百度官方皮肤编辑器</a></p>
+
+<p><a href="http://pan.baidu.com/share/link?uk=3321957458&amp;shareid=1043105502#dir/path=/cmg%E8%81%AA%E6%98%8E%E7%8B%97%E7%99%BE%E5%BA%A6%E6%89%8B%E6%9C%BA%E8%BE%93%E5%85%A5%E6%B3%95%E7%9A%AE%E8%82%A4/2013%E5%B9%B412%E6%9C%8817%E6%97%A5/T926---26%E9%94%AE%2bT9%E4%B9%9D%E5%AE%AB%E6%A0%BC%E5%B8%83%E5%B1%80/%E9%BB%91%E7%99%BD%E5%AF%86%E9%9B%86%E6%8C%89%E9%94%AE">下载cmgt926黑白.bds</a></p>
+
+<p>用百度官方皮肤编辑器修改好按键后打包，会导致输入键码时键盘与cmg原先的设定不同，因此只好手动解压和打包。</p>
+
+<p>用解压软件解压<code>cmgt926黑白.bds</code>。</p>
+
+<p>修改<code>Info.txt</code></p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">Name=vivaxy@20140503
+    Style=default
+    SupportPlatform=A
+    Author=vivaxy
+    MinImeCode=1
+
+    prot #竖屏键盘
+    land #横屏键盘
+
+    py_26.ini #拼音26键
+    en_26.ini #英文小写26键
+    en_26s.ini #英文大写26键
+
+    FORE_STYLE=387,248 #显示的切片图片id
+    POS_TYPE=7,3 #切片图片的位置
+    VIEW_RECT=194,4,93,96 #按键位置和大小
+
+    UP #上滑
+    DOWN #下滑
+    LEFT #左滑
+    RIGHT #右滑
+    CENTER #短按
+    HOLDSYM #长按出现候选列表</code></pre></div>
+
+<p>改好后用zip格式压缩，改后缀为<code>.bds</code>。</p>
+
+<h2 id="section-1">参考资料</h2>
+
+<p><a href="http://tieba.baidu.com/p/2038495547">百度手机输入法皮肤教程</a></p>
+
+
+	</div>
+</div>
+<div class="card">
+	<!-- 多说 start -->
+	<div class="ds-thread" data-title="百度手机输入法自定义主题" data-url=""></div>
+	<script type="text/javascript" charset="utf-8" src="/js/duoshuo/duoshuo.js"></script>
+	<!-- 多说  end  -->
+</div>
+
+    <a href="javascript:document.body.scrollIntoView(true);" class="card hover-top">
+        <div class="content">
+            <div class="date">© Copyright 2014 by vivaxy - Powered by Jekyll</div>
+        </div>
+    </a>
+</div>
+</body>
+<script type="text/javascript" charset="utf-8" src="/js/analysis/ba.js"></script>
+</html>
