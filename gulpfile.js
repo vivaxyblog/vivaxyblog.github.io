@@ -22,7 +22,7 @@ gulp.task('clean1', function(cb){
 
 gulp.task('serve', shell.task('jekyll serve'));
 
-gulp.task('default', ['move'], function(cb){
+gulp.task('clean2', ['move'], function(cb){
     return del(paths.clean2, cb);
 });
 
