@@ -47,31 +47,31 @@
 </ol>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// import gulp</span>
-        <span class="kd">var</span> <span class="nx">gulp</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;gulp&#39;</span><span class="p">);</span>
-        <span class="c1">// import some module else</span>
-        <span class="kd">var</span> <span class="nx">shell</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;gulp-shell&#39;</span><span class="p">);</span>
-        <span class="c1">// import livereload</span>
-        <span class="kd">var</span> <span class="nx">livereload</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;gulp-livereload&#39;</span><span class="p">);</span>
-        <span class="c1">// set path</span>
-        <span class="kd">var</span> <span class="nx">paths</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;src/*&#39;</span><span class="p">,</span>
-            <span class="nx">des</span><span class="o">:</span> <span class="s1">&#39;bin-debug/*/*.js&#39;</span>
-        <span class="p">};</span>
-        <span class="c1">// set build task</span>
-        <span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;build&#39;</span><span class="p">,</span> <span class="nx">shell</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;egret build&#39;</span><span class="p">));</span>
-        <span class="c1">// set watch task</span>
-        <span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;watch&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-            <span class="c1">// when files in paths.src changed, build task will be triggered</span>
-            <span class="nx">gulp</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">src</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;build&#39;</span><span class="p">]);</span>
-            <span class="c1">// start livereload listener</span>
-            <span class="c1">// a server will be started, livereload chrome extension will connect this server.</span>
-            <span class="nx">livereload</span><span class="p">.</span><span class="nx">listen</span><span class="p">();</span>
-            <span class="c1">// when files in paths.des changed, trigger livereload, and this will trigger reload on chrome pages</span>
-            <span class="c1">// here we don&#39;t use source files, because typescript changes need to be compiled to javascript, then changes take effect</span>
-            <span class="nx">gulp</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">des</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;change&#39;</span><span class="p">,</span> <span class="nx">livereload</span><span class="p">.</span><span class="nx">changed</span><span class="p">);</span>
-        <span class="p">});</span>
-        <span class="c1">// set server task</span>
-        <span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;run&#39;</span><span class="p">,</span> <span class="nx">shell</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;egret startserver&#39;</span><span class="p">));</span></code></pre></div>
+<span class="kd">var</span> <span class="nx">gulp</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;gulp&#39;</span><span class="p">);</span>
+<span class="c1">// import some module else</span>
+<span class="kd">var</span> <span class="nx">shell</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;gulp-shell&#39;</span><span class="p">);</span>
+<span class="c1">// import livereload</span>
+<span class="kd">var</span> <span class="nx">livereload</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;gulp-livereload&#39;</span><span class="p">);</span>
+<span class="c1">// set path</span>
+<span class="kd">var</span> <span class="nx">paths</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;src/*&#39;</span><span class="p">,</span>
+    <span class="nx">des</span><span class="o">:</span> <span class="s1">&#39;bin-debug/*/*.js&#39;</span>
+<span class="p">};</span>
+<span class="c1">// set build task</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;build&#39;</span><span class="p">,</span> <span class="nx">shell</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;egret build&#39;</span><span class="p">));</span>
+<span class="c1">// set watch task</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;watch&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// when files in paths.src changed, build task will be triggered</span>
+    <span class="nx">gulp</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">src</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;build&#39;</span><span class="p">]);</span>
+    <span class="c1">// start livereload listener</span>
+    <span class="c1">// a server will be started, livereload chrome extension will connect this server.</span>
+    <span class="nx">livereload</span><span class="p">.</span><span class="nx">listen</span><span class="p">();</span>
+    <span class="c1">// when files in paths.des changed, trigger livereload, and this will trigger reload on chrome pages</span>
+    <span class="c1">// here we don&#39;t use source files, because typescript changes need to be compiled to javascript, then changes take effect</span>
+    <span class="nx">gulp</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">des</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;change&#39;</span><span class="p">,</span> <span class="nx">livereload</span><span class="p">.</span><span class="nx">changed</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="c1">// set server task</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;run&#39;</span><span class="p">,</span> <span class="nx">shell</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;egret startserver&#39;</span><span class="p">));</span></code></pre></div>
 
 <ol>
   <li>

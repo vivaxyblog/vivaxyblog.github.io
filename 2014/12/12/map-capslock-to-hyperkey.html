@@ -68,20 +68,20 @@
 <p>打开<code>karabiner</code>，选择<code>Misc &amp; uninstall</code>，<code>Open private xml</code>，把以下的xml贴进去。可以将<code>F19</code>改为<code>ctrl+shift+command+opt</code>。</p>
 
 <div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
-    <span class="nt">&lt;root&gt;</span>
-    	<span class="nt">&lt;item&gt;</span>
-    		<span class="nt">&lt;name&gt;</span>F19 to F19<span class="nt">&lt;/name&gt;</span>
-    		<span class="nt">&lt;appendix&gt;</span>(F19 to Hyper (ctrl+shift+cmd+opt) + F19 Only, F19)<span class="nt">&lt;/appendix&gt;</span>
-    		<span class="nt">&lt;identifier&gt;</span>private.f192f19<span class="nt">&lt;/identifier&gt;</span>
-    		<span class="nt">&lt;autogen&gt;</span>
-    			--KeyOverlaidModifier--
-    			KeyCode::F19,
-    			KeyCode::COMMAND_L,
-    			ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
-    			KeyCode::F19
-    		<span class="nt">&lt;/autogen&gt;</span>
-    	<span class="nt">&lt;/item&gt;</span>
-    <span class="nt">&lt;/root&gt;</span></code></pre></div>
+<span class="nt">&lt;root&gt;</span>
+	<span class="nt">&lt;item&gt;</span>
+		<span class="nt">&lt;name&gt;</span>F19 to F19<span class="nt">&lt;/name&gt;</span>
+		<span class="nt">&lt;appendix&gt;</span>(F19 to Hyper (ctrl+shift+cmd+opt) + F19 Only, F19)<span class="nt">&lt;/appendix&gt;</span>
+		<span class="nt">&lt;identifier&gt;</span>private.f192f19<span class="nt">&lt;/identifier&gt;</span>
+		<span class="nt">&lt;autogen&gt;</span>
+			--KeyOverlaidModifier--
+			KeyCode::F19,
+			KeyCode::COMMAND_L,
+			ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+			KeyCode::F19
+		<span class="nt">&lt;/autogen&gt;</span>
+	<span class="nt">&lt;/item&gt;</span>
+<span class="nt">&lt;/root&gt;</span></code></pre></div>
 
 <p>保存后，到<code>Change Key</code>的标签，点击<code>ReloadXML</code>，即可生效。</p>
 
