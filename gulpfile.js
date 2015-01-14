@@ -20,10 +20,16 @@ gulp.task('clean1', function(cb){
     return del(paths.clean1, cb);
 });
 
-gulp.task('serve', shell.task('jekyll serve'));
-
 gulp.task('clean2', ['move'], function(cb){
     return del(paths.clean2, cb);
 });
 
+/**
+ * default task
+ */
 gulp.task('default', ['clean2'], shell.task(cmd2));
+
+/**
+ * start server
+ */
+gulp.task('serve', shell.task('jekyll serve'));

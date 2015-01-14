@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <link rel="shortcut icon" href="/css/x.png">
+    <link type="text/css" rel="stylesheet" href="/css/main.css"/>
+    <link type="text/css" rel="stylesheet" href="/css/syntax.css"/>
+    <title>前端规范</title>
+</head>
+<body>
+<div class="container">
+    <a href="/" class="card hover-left">
+	<div class="content">
+		<h1>前端规范</h1>
+		<div class="date">14 Jan 2015</div>
+	</div>
+	<div class="icon-arrow-left"></div>
+</a>
+<div class="card">
+	<div class="content">
+		<h3 id="section">说明</h3>
+
+<p>前端规范是前端开发团队遵循和约定的代码书写规范。</p>
+
+<p>规范为参考规范，不全是硬性要求，部分硬性约定见下一条书写规范。</p>
+
+<p>提高代码的规范性和可维护性，让所有代码都是有规可循的，并且能够得到沉淀，减少重复劳动。</p>
+
+<h3 id="section-1">目录结构</h3>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">.
+├── index.html        入口页
+├── js/               js
+│   ├── lib/          js库
+│   └── main.js       js入口
+└── css/              css
+    ├── lib/          css库
+    ├── image/        图片
+    └── main.css      主css</code></pre></div>
+
+<h3 id="section-2">文件格式</h3>
+
+<ul>
+  <li>文本文件： UTF-8(无BOM)编码</li>
+</ul>
+
+<h3 id="html">html</h3>
+
+<ul>
+  <li>
+    <p>css文件引用<code>&lt;link type="text/css" rel="stylesheet" href="..."&gt;</code>放置于<code>&lt;/head&gt;</code>前，不使用<code>&lt;style&gt;</code></p>
+  </li>
+  <li>
+    <p>js文件引用<code>&lt;script type="text/javascript" src="..."&gt;&lt;/script&gt;</code>放置于<code>&lt;/body&gt;</code>前，不使用<code>&lt;script&gt;</code></p>
+  </li>
+  <li>
+    <p>css样式附着于<code>class="..."</code>，不使用<code>style="..."</code></p>
+  </li>
+  <li>
+    <p>js操作句柄附着于<code>class="j-xxx"</code></p>
+  </li>
+  <li>
+    <p>绑定的数据使用<code>data-xxx="..."</code></p>
+  </li>
+  <li>
+    <p>文件头采用html5标准<code>&lt;!DOCTYPE html&gt;</code></p>
+  </li>
+  <li>
+    <p>特殊符号采用<a href="http://www.w3school.com.cn/tags/html_ref_entities.html">HTML符号实体</a></p>
+  </li>
+  <li>
+    <p>标签一律由<code>/</code>关闭，如：<code>&lt;div&gt;&lt;/div&gt;</code>，<code>&lt;br /&gt;</code>，<code>&lt;hr /&gt;</code>，中间有空格</p>
+  </li>
+  <li>
+    <p>采用双引号</p>
+  </li>
+</ul>
+
+<h3 id="js">js</h3>
+
+<ul>
+  <li>
+    <p>避免使用全局变量</p>
+  </li>
+  <li>
+    <p>语句结束使用<code>;</code></p>
+  </li>
+  <li>
+    <p>采用单引号</p>
+  </li>
+  <li>
+    <p>用变量形式申明函数</p>
+  </li>
+  <li>
+    <p>变量在使用前必须通过 <code>var</code> 定义</p>
+  </li>
+</ul>
+
+<h3 id="css">css</h3>
+
+<ul>
+  <li>在可以使用缩写的情况下，尽量使用属性缩写，如：</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* good */</span>
+<span class="nc">.post</span> <span class="p">{</span>
+    <span class="k">font</span><span class="o">:</span> <span class="m">12px</span><span class="o">/</span><span class="m">1</span><span class="o">.</span><span class="m">5</span> <span class="n">arial</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* bad */</span>
+<span class="nc">.post</span> <span class="p">{</span>
+    <span class="k">font-family</span><span class="o">:</span> <span class="n">arial</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="o">:</span> <span class="m">12px</span><span class="p">;</span>
+    <span class="k">line-height</span><span class="o">:</span> <span class="m">1</span><span class="o">.</span><span class="m">5</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<ul>
+  <li>属性书写顺序：同一 rule set 下的属性在书写时，应按功能进行分组，并以 Formatting Model（布局方式、位置） &gt; Box Model（尺寸） &gt; Typographic（文本相关） &gt; Visual（视觉效果） 的顺序书写，以提高代码的可读性。</li>
+</ul>
+
+<blockquote>
+  <p>Formatting Model 相关属性包括：position / top / right / bottom / left / float / display / overflow 等</p>
+
+  <p>Box Model 相关属性包括：border / margin / padding / width / height 等</p>
+
+  <p>Typographic 相关属性包括：font / line-height / text-align / word-wrap 等</p>
+
+  <p>Visual 相关属性包括：background / color / transition / list-style 等</p>
+
+  <p>另外，如果包含 content 属性，应放在最前面。</p>
+</blockquote>
+
+<ul>
+  <li>url() 函数中的路径不加引号，如：</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
+    <span class="k">background</span><span class="o">:</span> <span class="sx">url(bg.png)</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<ul>
+  <li>长度为 0 时须省略单位</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* good */</span>
+<span class="nt">body</span> <span class="p">{</span>
+    <span class="k">padding</span><span class="o">:</span> <span class="m">0</span> <span class="m">5px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* bad */</span>
+<span class="nt">body</span> <span class="p">{</span>
+    <span class="k">padding</span><span class="o">:</span> <span class="m">0px</span> <span class="m">5px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<ul>
+  <li>颜色值可以缩写时，必须使用缩写形式，如：</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* good */</span>
+<span class="nc">.success</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="o">:</span> <span class="m">#aca</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* bad */</span>
+<span class="nc">.success</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="o">:</span> <span class="m">#aaccaa</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<ul>
+  <li>
+    <p>颜色值不允许使用命名色值，如：<code>black</code>，<code>green</code></p>
+  </li>
+  <li>
+    <p>采用双引号</p>
+  </li>
+</ul>
+
+<h3 id="section-3">行内空格</h3>
+
+<ul>
+  <li><code>选择器</code> 与 <code>{</code> 之间必须包含空格，如：</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.selector</span> <span class="p">{</span>
+<span class="p">}</span></code></pre></div>
+
+<ul>
+  <li><code>属性名</code> 与之后的 <code>:</code> 之间不允许包含空格，如：</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">margin</span><span class="o">:</span> <span class="nt">0</span><span class="o">;</span></code></pre></div>
+
+<ul>
+  <li>
+    <p>行结尾添加<code>;</code></p>
+  </li>
+  <li>
+    <p><code>,</code>前没有空格，后面有空格，如：</p>
+  </li>
+</ul>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">font-family</span><span class="o">:</span> <span class="nt">Arial</span><span class="o">,</span> <span class="nt">sans-serif</span><span class="o">;</span></code></pre></div>
+
+<h3 id="section-4">注释</h3>
+
+<ul>
+  <li>
+    <p><code>/* css 注释 */</code></p>
+  </li>
+  <li>
+    <p><code>&lt;!-- html 注释 --&gt;</code></p>
+  </li>
+  <li>
+    <p><code>// js 单行注释</code></p>
+  </li>
+  <li>
+    <p>js 文档</p>
+  </li>
+</ul>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="cm">/**</span>
+<span class="cm"> * bla</span>
+<span class="cm"> * foo</span>
+<span class="cm"> * bar</span>
+<span class="cm"> * @file 文件说明</span>
+<span class="cm"> * @author 开发者姓名(开发者邮箱)</span>
+<span class="cm"> * @since 新建时间</span>
+<span class="cm"> * @modified 修改时间</span>
+<span class="cm"> * @namespace 命名空间</span>
+<span class="cm"> * @class //标记类</span>
+<span class="cm"> * @extends 描述继承关系</span>
+<span class="cm"> * @param {string} p1 参数1的说明</span>
+<span class="cm"> * @return 返回值描述</span>
+<span class="cm"> * @inner //标记内部函数，外部无法访问</span>
+<span class="cm"> * @override //重写父类中的方法</span>
+<span class="cm"> * @event 事件描述</span>
+<span class="cm"> * @fires Select#change 广播事件</span>
+<span class="cm"> * @const //标记常量</span>
+<span class="cm"> * @type {string} //变量类型</span>
+<span class="cm"> */</span></code></pre></div>
+
+<h3 id="section-5">命名规范</h3>
+
+<ul>
+  <li>
+    <p>英文小写字母+数字或连接符-，用在文件夹，文件，样式名中，如：<code>mengniu-m-20131230</code>，<code>dp-share.0.0.1.js</code>，<code>app-pop.0.0.7.min.js</code>，<code>top-box</code>，<code>box-list-item-1</code></p>
+  </li>
+  <li>
+    <p>小写开头的<a href="http://zh.wikipedia.org/wiki/%E9%A7%9D%E5%B3%B0%E5%BC%8F%E5%A4%A7%E5%B0%8F%E5%AF%AB">驼峰式</a>，用在js中表示变量，如：<code>topBox</code>，<code>topBoxList</code>，<code>footerCopyright</code></p>
+  </li>
+  <li>
+    <p>大写开头的<a href="http://zh.wikipedia.org/wiki/%E9%A7%9D%E5%B3%B0%E5%BC%8F%E5%A4%A7%E5%B0%8F%E5%AF%AB">驼峰式</a>，用在js中表示构造器函数，如：<code>SuperMBox</code></p>
+  </li>
+  <li>
+    <p>方法内的私有变量加前缀<code>_</code></p>
+  </li>
+</ul>
+
+<p>需要表意明确</p>
+
+<h3 id="section-6">缩进</h3>
+
+<ul>
+  <li>
+    <p>css，html，xml采用4个空格</p>
+  </li>
+  <li>
+    <p>js，json采用2个空格</p>
+  </li>
+</ul>
+
+<h3 id="section-7">外部链接中的协议可以省略</h3>
+
+<p><code>&lt;script type="text/javascript" src="//www.google.com/some.js"&gt;&lt;/script&gt;</code></p>
+
+<p><code>background: url(//baidu.com/img/bg.png) no-repeat 0 0;</code></p>
+
+<h3 id="section-8">版本</h3>
+
+<ul>
+  <li>版本格式：主版本号.次版本号.修订号</li>
+</ul>
+
+<ol>
+  <li>
+    <p>主版本号：当你做了不兼容的API 修改，</p>
+  </li>
+  <li>
+    <p>次版本号：当你做了向下兼容的功能性新增，</p>
+  </li>
+  <li>
+    <p>修订号：当你做了向下兼容的问题修正。</p>
+  </li>
+</ol>
+
+<p>先行版本号及版本编译信息可以加到“主版本号.次版本号.修订号”的后面，作为延伸。</p>
+
+<h2 id="section-9">参考</h2>
+
+<ul>
+  <li>
+    <p><a href="http://zh.wikipedia.org/wiki/%E5%8C%88%E7%89%99%E5%88%A9%E5%91%BD%E5%90%8D%E6%B3%95">匈牙利命名法</a></p>
+  </li>
+  <li>
+    <p><a href="http://front-end-standards.com/">前端规范</a></p>
+  </li>
+  <li>
+    <p><a href="http://segmentfault.com/blog/jslite/1190000002460968">css编码规范</a></p>
+  </li>
+  <li>
+    <p><a href="http://segmentfault.com/blog/jslite/1190000002460897">JavaScript编码规范 1</a></p>
+  </li>
+  <li>
+    <p><a href="http://segmentfault.com/blog/jslite/1190000002460944">JavaScript编码规范 2</a></p>
+  </li>
+  <li>
+    <p><a href="http://segmentfault.com/blog/news/1190000000410316">最流行的JavaScript代码规范</a></p>
+  </li>
+  <li>
+    <p><a href="http://semver.org/lang/zh-CN/">语义化版本2.0.0</a></p>
+  </li>
+</ul>
+
+	</div>
+</div>
+<div class="card">
+	<!-- 多说 start -->
+	<div class="ds-thread" data-title="前端规范" data-url=""></div>
+	<script type="text/javascript" charset="utf-8" src="/js/duoshuo/duoshuo.js"></script>
+	<!-- 多说  end  -->
+</div>
+
+    <a href="javascript:document.body.scrollIntoView(true);" class="card hover-top">
+        <div class="content">
+            <div class="date">© Copyright 2014 by vivaxy - Powered by Jekyll</div>
+        </div>
+    </a>
+</div>
+</body>
+<script type="text/javascript" charset="utf-8" src="/js/analysis/ba.js"></script>
+</html>
