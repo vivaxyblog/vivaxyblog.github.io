@@ -45,14 +45,18 @@
   <li>文本文件： UTF-8(无BOM)编码</li>
 </ul>
 
+<h3 id="section-3">压缩和合并</h3>
+
+<p>js,css,html,png需要合并和压缩</p>
+
 <h3 id="html">html</h3>
 
 <ul>
   <li>
-    <p>css文件引用<code>&lt;link type="text/css" rel="stylesheet" href="..."&gt;</code>放置于<code>&lt;/head&gt;</code>前，不使用<code>&lt;style&gt;</code></p>
+    <p>css文件引用<code>&lt;link type="text/css" rel="stylesheet" href="..."&gt;</code>放置于<code>&lt;/head&gt;</code>前，不使用<code>&lt;style&gt;</code>，便于使用缓存</p>
   </li>
   <li>
-    <p>js文件引用<code>&lt;script type="text/javascript" src="..."&gt;&lt;/script&gt;</code>放置于<code>&lt;/body&gt;</code>前，不使用<code>&lt;script&gt;</code></p>
+    <p>js文件引用<code>&lt;script type="text/javascript" src="..."&gt;&lt;/script&gt;</code>放置于<code>&lt;/body&gt;</code>前，不使用<code>&lt;script&gt;</code>，便于使用缓存</p>
   </li>
   <li>
     <p>css样式附着于<code>class="..."</code>，不使用<code>style="..."</code></p>
@@ -94,6 +98,24 @@
   </li>
   <li>
     <p>变量在使用前必须通过 <code>var</code> 定义</p>
+  </li>
+  <li>
+    <p>js改变样式时：尽量改变Class而不是Style，使用classList代替className</p>
+  </li>
+  <li>
+    <p>缓存DOM选择，每次选择都要计算。</p>
+  </li>
+  <li>
+    <p>缓存列表.length，每次选择都要计算。</p>
+  </li>
+  <li>
+    <p>使用requestAnimationFrame动画代替setTimeout</p>
+  </li>
+  <li>
+    <p>使用Canvas动画 5个元素以内使用css动画，5个以上使用Canvas动画</p>
+  </li>
+  <li>
+    <p>优先使用CSS3动画</p>
   </li>
 </ul>
 
@@ -174,9 +196,18 @@
   <li>
     <p>采用双引号</p>
   </li>
+  <li>
+    <p>CSS动画只用 （-webkit- 无前缀）两种即可</p>
+  </li>
+  <li>
+    <p>其它前缀为 -webkit- -moz- -ms- 无前缀 四种</p>
+  </li>
+  <li>
+    <p>无前缀应放在最后</p>
+  </li>
 </ul>
 
-<h3 id="section-3">行内空格</h3>
+<h3 id="section-4">行内空格</h3>
 
 <ul>
   <li><code>选择器</code> 与 <code>{</code> 之间必须包含空格，如：</li>
@@ -202,7 +233,7 @@
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">font-family</span><span class="o">:</span> <span class="nt">Arial</span><span class="o">,</span> <span class="nt">sans-serif</span><span class="o">;</span></code></pre></div>
 
-<h3 id="section-4">注释</h3>
+<h3 id="section-5">注释</h3>
 
 <ul>
   <li>
@@ -240,7 +271,9 @@
 <span class="cm"> * @type {string} //变量类型</span>
 <span class="cm"> */</span></code></pre></div>
 
-<h3 id="section-5">命名规范</h3>
+<p>参见JSDoc</p>
+
+<h3 id="section-6">命名规范</h3>
 
 <ul>
   <li>
@@ -259,7 +292,7 @@
 
 <p>需要表意明确</p>
 
-<h3 id="section-6">缩进</h3>
+<h3 id="section-7">缩进</h3>
 
 <ul>
   <li>
@@ -270,13 +303,13 @@
   </li>
 </ul>
 
-<h3 id="section-7">外部链接中的协议可以省略</h3>
+<h3 id="section-8">外部链接中的协议可以省略</h3>
 
 <p><code>&lt;script type="text/javascript" src="//www.google.com/some.js"&gt;&lt;/script&gt;</code></p>
 
 <p><code>background: url(//baidu.com/img/bg.png) no-repeat 0 0;</code></p>
 
-<h3 id="section-8">版本</h3>
+<h3 id="section-9">版本</h3>
 
 <ul>
   <li>版本格式：主版本号.次版本号.修订号</li>
@@ -296,7 +329,58 @@
 
 <p>先行版本号及版本编译信息可以加到“主版本号.次版本号.修订号”的后面，作为延伸。</p>
 
-<h2 id="section-9">参考</h2>
+<h3 id="section-10">接口</h3>
+
+<ul>
+  <li>
+    <p>取数据的接口用<code>GET</code>，提交数据的接口使用<code>POST</code></p>
+  </li>
+  <li>
+    <p>需要及时更新的数据，使用<code>GET</code>方法，在参数后添加时间戳<code>&amp;_={timestamp}</code></p>
+  </li>
+</ul>
+
+<h3 id="section-11">图片</h3>
+
+<ul>
+  <li>
+    <p>避免重设图片大小，重设图片大小是指在页面、CSS、JavaScript等中多次重置图片大小，多次重设图片大小会引发图片的多次重绘，影响性能。</p>
+  </li>
+  <li>
+    <p>图片尽量避免使用DataURL，DataURL图片没有使用图片的压缩算法文件会变大，并且要解码后再渲染，加载慢耗时长。</p>
+  </li>
+  <li>
+    <p>使用srcset</p>
+  </li>
+  <li>
+    <p>使用css,svg,iconfont代替图片</p>
+  </li>
+  <li>
+    <p>mobile端图片宽度不大于640</p>
+  </li>
+  <li>
+    <p>图片格式：webP优于JPG，PNG8优于GIF</p>
+  </li>
+</ul>
+
+<h3 id="section-12">性能</h3>
+
+<ol>
+  <li>
+    <p>mobile端三秒种渲染完成首屏，首屏加载3秒完成或使用Loading，基于联通3G网络平均338KB/s(2.71Mb/s），所以首屏资源不应超过1014KB</p>
+  </li>
+  <li>
+    <p>减少HTTP请求，首次加载同时请求数不能超过4个。手机浏览器同时响应请求为4个请求（Android支持4个，iOS 5后可支持6个）。</p>
+  </li>
+  <li>
+    <p>使用缓存。可以减少向服务器的请求数，节省加载时间，所以所有静态资源都要在服务器端设置缓存，并且尽量使用长Cache（长Cache资源的更新可使用时间戳）</p>
+  </li>
+  <li>
+    <p>异步加载第三方资源：第三方资源不可控会影响页面的加载和显示，因此要异步加载第三方资源。</p>
+  </li>
+</ol>
+
+<h2 id="section-13">参考</h2>
 
 <ul>
   <li>
@@ -319,6 +403,12 @@
   </li>
   <li>
     <p><a href="http://semver.org/lang/zh-CN/">语义化版本2.0.0</a></p>
+  </li>
+  <li>
+    <p><a href="http://usejsdoc.org/index.html">JSDoc</a></p>
+  </li>
+  <li>
+    <p><a href="http://isux.tencent.com/h5-performance.html">移动H5前端性能优化指南</a></p>
   </li>
 </ul>
 
