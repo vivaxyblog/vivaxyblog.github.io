@@ -5,23 +5,27 @@
 var gulp = require('gulp');
 var del = require('del');
 var shell = require('gulp-shell');
+var fs = require('fs');
 
 var paths = {
-    clean1: ['index.html', 'css', 'image', 'js', '2011', '2014', '2015'],
-    clean2: ['_site']
+  clean1: ['index.html', 'css', 'image', 'js', '2011', '2014', '2015'],
+  clean2: ['_site']
 };
 
 var cmd1 = 'cp -r ./_site/* ./';
 var cmd2 = 'git add image/* js/* css/* 2011/* 2014/*';
 
-gulp.task('move', ['clean1'], shell.task(cmd1));
-
-gulp.task('clean1', function(cb){
+gulp.task('clean1', function (cb) {
+  fs.open(paths.clean2[0], 'r', function (err, fd) {
+    if (err) return err;
     return del(paths.clean1, cb);
+  });
 });
 
-gulp.task('clean2', ['move'], function(cb){
-    return del(paths.clean2, cb);
+gulp.task('move', ['clean1'], shell.task(cmd1));
+
+gulp.task('clean2', ['move'], function (cb) {
+  return del(paths.clean2, cb);
 });
 
 /**
@@ -29,7 +33,3 @@ gulp.task('clean2', ['move'], function(cb){
  */
 gulp.task('default', ['clean2'], shell.task(cmd2));
 
-/**
- * start server
- */
-gulp.task('serve', shell.task('jekyll serve'));
