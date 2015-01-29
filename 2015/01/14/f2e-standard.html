@@ -292,6 +292,38 @@
 
 <p>需要表意明确</p>
 
+<h3 id="git">git分支</h3>
+
+<ul>
+  <li>主要分支，长期存在</li>
+</ul>
+
+<ol>
+  <li>
+    <p>主分支：<code>master</code>，用于发布到ppe和线上</p>
+  </li>
+  <li>
+    <p>开发分支：<code>develop</code>，可交付的代码，用于持续集成的构建，nightly-build</p>
+  </li>
+</ol>
+
+<p>当开发分支足够稳定时，就讲改动合并到<code>master</code>上，并且打上标签<code>tag</code>，标签名称为发布的版本号</p>
+
+<p>可以用于长期绑定在beta上</p>
+
+<ul>
+  <li>辅助分支，生命周期短暂</li>
+</ul>
+
+<ol>
+  <li>
+    <p>特性分支：从开发分支上分出，并最终合并入开发分支。特性分支用于开发一个新特性。以<code>feature-xxx</code>的方式命名</p>
+  </li>
+  <li>
+    <p>紧急修复分支：从主分支上分出，并最终合并入开发分支和主分支。分支以<code>hotfix-xxx</code>的方式命名</p>
+  </li>
+</ol>
+
 <h3 id="section-7">缩进</h3>
 
 <ul>
