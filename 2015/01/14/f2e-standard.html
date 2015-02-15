@@ -13,7 +13,7 @@
     <a href="/" class="card hover-left">
 	<div class="content">
 		<h1>前端规范</h1>
-		<div class="date">14 Jan 2015</div>
+		<div class="date">2015-01-14</div>
 	</div>
 	<div class="icon-arrow-left"></div>
 </a>
@@ -21,11 +21,9 @@
 	<div class="content">
 		<h3 id="section">说明</h3>
 
-<p>前端规范是前端开发团队遵循和约定的代码书写规范。</p>
+<p>前端规范是前端开发团队遵循和约定的代码书写规范</p>
 
-<p>规范为参考规范，不全是硬性要求，部分硬性约定见下一条书写规范。</p>
-
-<p>提高代码的规范性和可维护性，让所有代码都是有规可循的，并且能够得到沉淀，减少重复劳动。</p>
+<p>遵循本规范可以提高代码的可读性和可维护性，让所有代码都是有规可循的</p>
 
 <h3 id="section-1">目录结构</h3>
 
@@ -65,7 +63,11 @@
 
 <p>js,css,html,png需要合并和压缩</p>
 
-<h3 id="section-4">通用书写格式</h3>
+<h3 id="section-4">代码风格</h3>
+
+<blockquote>
+
+</blockquote>
 
 <ul>
   <li>
@@ -114,7 +116,7 @@
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span></code></pre></div>
 
 <ul>
-  <li><code>函数名</code> 与 <code>(</code> 之间有空格，如：</li>
+  <li><code>控制语句</code>和声明的<code>函数名</code> 与 <code>(</code> 之间有空格，用于区分函数的调用，如：</li>
 </ul>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
@@ -122,6 +124,25 @@
 <span class="p">}</span></code></pre></div>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">}</span></code></pre></div>
+
+<ul>
+  <li><code>代码块</code> ， <code>{}</code> 中的 <code>{</code> 要在行末，而不是行首，如：</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s1">&#39;bar&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>js会自动插入分号，当如下情况时，<code>return</code>值是<code>undefined</code></p>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;bar&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
 <span class="p">}</span></code></pre></div>
 
 <ul>
@@ -492,6 +513,9 @@
   </li>
   <li>
     <p><a href="http://zh.wikipedia.org/wiki/%E9%A7%9D%E5%B3%B0%E5%BC%8F%E5%A4%A7%E5%B0%8F%E5%AF%AB">驼峰式</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/CMCM-F2E/fe-standards">猎豹移动前端编码规范</a></p>
   </li>
 </ul>
 

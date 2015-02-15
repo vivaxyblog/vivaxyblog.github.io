@@ -23,7 +23,7 @@ body {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     outline: none;
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(51, 51, 51);
     transition: background 0.5s, color 0.5s;
     word-wrap: break-word;
     overflow: hidden;
@@ -40,7 +40,7 @@ a.card:hover {
     transition: color 0.5s;
 }
 
-a.card:hover .date {
+a.card:hover h2, a.card:hover h1, a.card:hover .date {
     color: rgb(192, 57, 43);
 }
 
@@ -151,12 +151,18 @@ code {
 }
 
 /* post */
+/* main title */
 h1 {
     text-align: center;
+    font-weight: 100;
+    color: rgb(0, 0, 0);
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* page title */
+h2, h3, h4, h5, h6 {
+    margin-top: 30px;
     font-weight: 100;
+    color: rgb(0, 0, 0);
 }
 
 a {

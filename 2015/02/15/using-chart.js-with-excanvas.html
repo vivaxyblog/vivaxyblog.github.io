@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <link rel="shortcut icon" href="/css/x.png">
+    <link type="text/css" rel="stylesheet" href="/css/main.css"/>
+    <link type="text/css" rel="stylesheet" href="/css/syntax.css"/>
+    <title>使用excanvas实现chart.js在IE7~8的兼容</title>
+</head>
+<body>
+<div class="container">
+    <a href="/" class="card hover-left">
+	<div class="content">
+		<h1>使用excanvas实现chart.js在IE7~8的兼容</h1>
+		<div class="date">2015-02-15</div>
+	</div>
+	<div class="icon-arrow-left"></div>
+</a>
+<div class="card">
+	<div class="content">
+		<p><a href="http://www.chartjs.org/">chart.js</a>在IE8及以下的浏览器上不兼容canvas，可以使用<a href="https://code.google.com/p/explorercanvas/">ExplorerCanvas</a>做兼容性的替代。</p>
+
+<h2 id="section">兼容性检测</h2>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">canvasSupported</span> <span class="o">=</span> <span class="o">!!</span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;canvas&#39;</span><span class="p">).</span><span class="nx">getContext</span><span class="p">;</span></code></pre></div>
+
+<h2 id="excanvas">excanvas的使用要求</h2>
+
+<p>excanvas的例子中是这样使用的：</p>
+
+<ul>
+  <li>
+    <p>在html的<code>&lt;head&gt;&lt;/head&gt;</code>内引入所有的js</p>
+  </li>
+  <li>
+    <p>在html中的<code>&lt;body&gt;</code>的<code>onload</code>上绑定canvas绘图的初始方法</p>
+  </li>
+</ul>
+
+<p>经过测试，发现：</p>
+
+<ul>
+  <li><code>canvas</code>标签必须写在excanvas初始方法之后，即：canvas必须在excanvas初始完成后生成</li>
+</ul>
+
+<h2 id="canvas">动态添加canvas</h2>
+
+<p>js写在页面最下方的情况下，只能采用动态添加canvas的方法。</p>
+
+<p>尝试在页面原先的canvas的地方移除并且再添加一个长的一模一样的canvas。</p>
+
+<p>然后调用<code>G_vmlCanvasManager.initElement(canvasNew);</code>初始化canvas。</p>
+
+<p>之后就可以正常使用canvas了，包括canvas中的rgba颜色！</p>
+
+<p>如果发现报错：<code>对象不支持“measureText”属性或方法</code>，那么请使用最新的<a href="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js">excanvas</a>。</p>
+
+<h2 id="section-1">参考资料</h2>
+
+<p><a href="http://stackoverflow.com/questions/1635419/excanvas-for-dynamically-created-canvas-elements">Excanvas for dynamically created canvas elements</a></p>
+
+<p><a href="https://github.com/nnnick/Chart.js/issues/477">Error on IE7 and IE8, Object doesn’t support property or method ‘measureText’</a></p>
+
+	</div>
+</div>
+<div class="card">
+	<!-- 多说 start -->
+	<div class="ds-thread" data-title="使用excanvas实现chart.js在IE7~8的兼容" data-url=""></div>
+	<script type="text/javascript" charset="utf-8" src="/js/duoshuo/duoshuo.js"></script>
+	<!-- 多说  end  -->
+</div>
+
+    <a href="javascript:document.body.scrollIntoView(true);" class="card hover-top">
+        <div class="content">
+            <div class="date">© Copyright 2014 by vivaxy - Powered by Jekyll</div>
+        </div>
+    </a>
+</div>
+</body>
+<script type="text/javascript" charset="utf-8" src="/js/analysis/ba.js"></script>
+</html>
