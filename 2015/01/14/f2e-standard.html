@@ -29,57 +29,122 @@
 
 <p><em>斜体表示推荐做法，不做强制规定</em></p>
 
-<h3 id="section-1">目录结构</h3>
+<h3 id="section-1">目录</h3>
 
-<p>单个html</p>
-
-<div class="highlight"><pre><code class="language-text" data-lang="text">.
-├── index.html        入口页
-├── js/               js
-│   ├── lib/          js库
-│   └── main.js       js入口
-└── css/              css
-    ├── lib/          css库
-    ├── image/        图片
-    └── main.css      主css</code></pre></div>
-
-<p>多个html</p>
-
-<div class="highlight"><pre><code class="language-text" data-lang="text">.
-├── html/
-│   ├── welcome.html  页面1
-│   └── main.html     页面2
-├── js/               js
-│   ├── lib/          js库
-│   └── main.js       js入口
-└── css/              css
-    ├── lib/          css库
-    ├── image/        图片
-    └── main.css      主css</code></pre></div>
-
-<h3 id="section-2">文件格式</h3>
-
-<ul>
-  <li>文本文件： UTF-8(无BOM)编码</li>
-</ul>
-
-<h3 id="section-3"><em>压缩和合并</em></h3>
-
-<p>根据项目架构，js, css, html, png需要合并和压缩</p>
-
-<h3 id="section-4">代码风格</h3>
-
-<ul>
+<ol>
   <li>
-    <p>html, js, css等一律采用4个空格缩进</p>
+    <p><a href="#1">代码风格</a></p>
+
+    <p>1.1 <a href="#1.1">缩进</a></p>
+
+    <p>1.2 <a href="#1.2">引号</a></p>
+
+    <p>1.3 <a href="#1.3">语句结尾<code>;</code></a></p>
+
+    <p>1.4 <a href="#1.4"><code>{</code>前空格</a></p>
+
+    <p>1.5 <a href="#1.5"><code>:</code>前空格</a></p>
+
+    <p>1.6 <a href="#1.6"><code>,</code>前空格</a></p>
+
+    <p>1.7 <a href="#1.7"><code>(</code>前空格</a></p>
+
+    <p>1.8 <a href="#1.8"><code>{</code>在行末</a></p>
   </li>
   <li>
-    <p>html, json中的引号采用双引号，js中的引号采用单引号</p>
+    <p><a href="#2">html</a></p>
+
+    <p>2.1 <a href="#2.1">文件头</a></p>
+
+    <p>2.2 <a href="#2.2">js和css文件的引用</a></p>
+
+    <p>2.3 <a href="#2.3">js和css句柄的使用</a></p>
+
+    <p>2.4 <a href="#2.4">标签关闭</a></p>
+
+    <p>2.5 <a href="#2.5">特殊符号</a></p>
   </li>
   <li>
-    <p><code>{</code> 之间必须包含空格，如：</p>
+    <p><a href="#3">js</a></p>
+
+    <p>3.1 <a href="#3.1">全局变量</a></p>
+
+    <p>3.2 <a href="#3.2">函数的声明方式</a></p>
+
+    <p>3.3 <a href="#3.3">变量的声明方式</a></p>
+
+    <p>3.4 <a href="#3.4">变量的命名</a></p>
+
+    <p>3.5 <a href="#3.5">其他</a></p>
   </li>
-</ul>
+  <li>
+    <p><a href="#4">css</a></p>
+
+    <p>4.1 <a href="#4.1">浏览器前缀</a></p>
+
+    <p>4.2 <a href="#4.2">单位</a></p>
+
+    <p>4.3 <a href="#4.3">颜色</a></p>
+
+    <p>4.4 <a href="#4.4"><em>缩写</em></a></p>
+
+    <p>4.5 <a href="#4.5"><em>属性书写顺序</em></a></p>
+  </li>
+  <li>
+    <p><a href="#5">文件及目录</a></p>
+
+    <p>5.1 <a href="#5.1">结构</a></p>
+
+    <p>5.2 <a href="#5.2">文件格式</a></p>
+
+    <p>5.3 <a href="#5.3"><em>压缩和合并</em></a></p>
+  </li>
+  <li>
+    <p><a href="#6">命名</a></p>
+  </li>
+  <li>
+    <p><a href="#7">注释</a></p>
+  </li>
+  <li>
+    <p><a href="#8">git分支</a></p>
+  </li>
+  <li>
+    <p><a href="#9">版本号</a></p>
+  </li>
+  <li>
+    <p><a href="#10">接口</a></p>
+  </li>
+  <li>
+    <p><a href="#11">图片</a></p>
+  </li>
+  <li>
+    <p><a href="#12"><em>性能</em></a></p>
+  </li>
+</ol>
+
+<h3 id="a-name1a-1-"><a name="1"></a> 1 代码风格</h3>
+
+<h4 id="a-name11a-11-"><a name="1.1"></a> 1.1 缩进</h4>
+
+<p>html, js, css等一律采用4个空格缩进</p>
+
+<h4 id="a-name12a-12-"><a name="1.2"></a> 1.2 引号</h4>
+
+<p>html, json中的引号采用双引号<code>"</code>，同时，js中的引号采用单引号<code>'</code></p>
+
+<h4 id="a-name13a-13-"><a name="1.3"></a> 1.3 语句结尾<code>;</code></h4>
+
+<p>js，css语句结尾添加 <code>;</code> ，如：</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">margin</span><span class="o">:</span> <span class="nt">0</span><span class="o">;</span></code></pre></div>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">bar</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">foo</span><span class="o">:</span> <span class="mi">0</span>
+<span class="p">};</span></code></pre></div>
+
+<h4 id="a-name14a-14-"><a name="1.4"></a> 1.4 <code>{</code>前空格</h4>
+
+<p>css, js中，<code>{</code> 之间必须包含空格，如：</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.selector</span> <span class="p">{</span>
 <span class="p">}</span></code></pre></div>
@@ -90,9 +155,9 @@
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
 <span class="p">}</span></code></pre></div>
 
-<ul>
-  <li><code>属性名</code>，<code>对象</code> 与之后的 <code>:</code> 之间不包含空格， <code>:</code> 与之后的值之间包含空格，如：</li>
-</ul>
+<h4 id="a-name15a-15-"><a name="1.5"></a> 1.5 <code>:</code>前空格</h4>
+
+<p>css, js中，<code>属性名</code>，<code>对象</code> 与之后的 <code>:</code> 之间不包含空格， <code>:</code> 与之后的值之间包含空格，如：</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">margin</span><span class="o">:</span> <span class="nt">0</span><span class="o">;</span></code></pre></div>
 
@@ -100,27 +165,23 @@
     <span class="nx">foo</span><span class="o">:</span> <span class="mi">0</span>
 <span class="p">}</span></code></pre></div>
 
-<ul>
-  <li>js，css语句结尾添加 <code>;</code> ，如：</li>
-</ul>
+<h4 id="a-name16a-16-"><a name="1.6"></a> 1.6 <code>,</code>前空格</h4>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">margin</span><span class="o">:</span> <span class="nt">0</span><span class="o">;</span></code></pre></div>
-
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">bar</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">foo</span><span class="o">:</span> <span class="mi">0</span>
-<span class="p">};</span></code></pre></div>
-
-<ul>
-  <li>多个值 <code>,</code> 前没有空格，后面有空格，如：</li>
-</ul>
+<p>多个值 <code>,</code> 前没有空格，后面有空格，如：</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">font-family</span><span class="o">:</span> <span class="nt">Arial</span><span class="o">,</span> <span class="nt">sans-serif</span><span class="o">;</span></code></pre></div>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span></code></pre></div>
 
-<ul>
-  <li><code>控制语句</code>和声明的<code>函数名</code> 与 <code>(</code> 之间有空格，用于区分函数的调用，如：</li>
-</ul>
+<p><code>[]</code> ， <code>()</code> 中的值，开头没有空格， <code>,</code> 前没有空格， <code>,</code> 后一个空格，最后没有空格，如：</p>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">arg1</span><span class="p">,</span> <span class="nx">arg2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s1">&#39;bar&#39;</span><span class="p">;</span>
+<span class="p">};</span></code></pre></div>
+
+<h4 id="a-name17a-17-"><a name="1.7"></a> 1.7 <code>(</code>前空格</h4>
+
+<p><code>控制语句</code>和声明的<code>函数名</code> 与 <code>(</code> 之间有空格，用于区分函数的调用，如：</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
     <span class="k">return</span> <span class="s1">&#39;bar&#39;</span><span class="p">;</span>
@@ -129,14 +190,14 @@
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
 <span class="p">}</span></code></pre></div>
 
-<ul>
-  <li><code>代码块</code> ， <code>{}</code> 中的 <code>{</code> 要在行末，而不是行首，如：</li>
-</ul>
+<h4 id="a-name18a-18-"><a name="1.8"></a> 1.8 <code>{</code>在行末</h4>
+
+<p><code>代码块</code> ， <code>{}</code> 中的 <code>{</code> 要在行末，而不是行首，如：</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// good</span>
 <span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
     <span class="k">return</span> <span class="p">{</span>
-        <span class="s1">&#39;bar&#39;</span> <span class="o">:</span> <span class="mi">0</span>
+        <span class="nx">bar</span> <span class="o">:</span> <span class="mi">0</span>
     <span class="p">};</span>
 <span class="p">}</span></code></pre></div>
 
@@ -146,74 +207,55 @@
 <span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
     <span class="k">return</span>
     <span class="p">{</span>
-        <span class="s1">&#39;bar&#39;</span> <span class="o">:</span> <span class="mi">0</span>
+        <span class="nx">bar</span> <span class="o">:</span> <span class="mi">0</span>
     <span class="p">};</span>
 <span class="p">}</span></code></pre></div>
 
-<ul>
-  <li><code>[]</code> ， <code>()</code> 中的值，开头没有空格， <code>,</code> 前没有空格， <code>,</code> 后一个空格，最后没有空格，如：</li>
-</ul>
+<h3 id="a-name2a-2-html"><a name="2"></a> 2 html</h3>
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">arg1</span><span class="p">,</span> <span class="nx">arg2</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="s1">&#39;bar&#39;</span><span class="p">;</span>
-<span class="p">};</span></code></pre></div>
+<h4 id="a-name21a-21-"><a name="2.1"></a> 2.1 文件头</h4>
 
-<ul>
-  <li>文件名，文件夹名，项目名，html，css样式名中连接单词使用 <code>-</code> 不使用大写字母，不使用数字开头，如：</li>
-</ul>
+<p>文件头采用html5标准<code>&lt;!DOCTYPE html&gt;</code></p>
 
-<p><code>dp-share.0.0.1.js</code>，<code>box-list-item-1</code>，<code>mengniu-m-20131230</code>，<code>.top-box</code></p>
+<h4 id="a-name22a-22-jscss"><a name="2.2"></a> 2.2 js和css文件的引用</h4>
 
-<ul>
-  <li>js中连接单词使用驼峰式的变量命名方法，不使用数字开头，数字之间采用 <code>_</code> ，如：</li>
-</ul>
+<p>css文件引用<code>&lt;link type="text/css" rel="stylesheet" href="..."&gt;</code>放置于<code>&lt;/head&gt;</code>前，不使用<code>&lt;style&gt;</code>，便于使用缓存</p>
 
-<p><code>dpShare</code>，<code>boxListItem1</code>，<code>boxListItem1_2</code></p>
+<p>js文件引用<code>&lt;script type="text/javascript" src="..."&gt;&lt;/script&gt;</code>放置于<code>&lt;/body&gt;</code>前，不使用<code>&lt;script&gt;</code>，便于使用缓存</p>
 
-<h3 id="html">html</h3>
+<h4 id="a-name23a-23-jscss"><a name="2.3"></a> 2.3 js和css句柄的使用</h4>
 
-<ul>
-  <li>
-    <p>css文件引用<code>&lt;link type="text/css" rel="stylesheet" href="..."&gt;</code>放置于<code>&lt;/head&gt;</code>前，不使用<code>&lt;style&gt;</code>，便于使用缓存</p>
-  </li>
-  <li>
-    <p>js文件引用<code>&lt;script type="text/javascript" src="..."&gt;&lt;/script&gt;</code>放置于<code>&lt;/body&gt;</code>前，不使用<code>&lt;script&gt;</code>，便于使用缓存</p>
-  </li>
-  <li>
-    <p>css样式附着于<code>class="..."</code>，不使用<code>style="..."</code></p>
-  </li>
-  <li>
-    <p>js操作句柄附着于<code>class="J_xxx"</code></p>
-  </li>
-  <li>
-    <p>绑定的数据使用<code>data-xxx="..."</code></p>
-  </li>
-  <li>
-    <p>文件头采用html5标准<code>&lt;!DOCTYPE html&gt;</code></p>
-  </li>
-  <li>
-    <p>不用关闭的标签一律不加<code>/</code>，如：<code>&lt;br&gt;</code>，<code>&lt;hr&gt;</code>，<code>&lt;input&gt;</code></p>
-  </li>
-  <li>
-    <p>特殊符号采用<a href="http://www.w3school.com.cn/tags/html_ref_entities.html">HTML符号实体</a></p>
-  </li>
-</ul>
+<p>css样式附着于<code>class="..."</code>，不使用<code>style="..."</code></p>
 
-<h3 id="js">js</h3>
+<p>js操作句柄附着于<code>class="J_xxx"</code></p>
+
+<p>绑定的数据使用<code>data-xxx="..."</code></p>
+
+<h4 id="a-name24a-24-"><a name="2.4"></a> 2.4 标签关闭</h4>
+
+<p>不用关闭的标签一律不加<code>/</code>，如：<code>&lt;br&gt;</code>，<code>&lt;hr&gt;</code>，<code>&lt;input&gt;</code></p>
+
+<h4 id="a-name25a-25-"><a name="2.5"></a> 2.5 特殊符号</h4>
+
+<p>特殊符号采用<a href="http://www.w3school.com.cn/tags/html_ref_entities.html">HTML符号实体</a></p>
+
+<h3 id="a-name3a-3-js"><a name="3"></a> 3 js</h3>
+
+<h4 id="a-name31a-31-"><a name="3.1"></a> 3.1 全局变量</h4>
+
+<p>避免使用全局变量</p>
+
+<h4 id="a-name32a-32-"><a name="3.2"></a> 3.2 函数的声明方式</h4>
+
+<p>用变量形式申明函数，而不是<code>function</code></p>
+
+<h4 id="a-name33a-33-"><a name="3.3"></a> 3.3 变量的声明方式</h4>
+
+<p>变量在使用前必须通过 <code>var</code> 定义</p>
+
+<h4 id="a-name34a-34-"><a name="3.4"></a> 3.4 变量的命名</h4>
 
 <ul>
-  <li>
-    <p>避免使用全局变量</p>
-  </li>
-  <li>
-    <p>用变量形式申明函数</p>
-  </li>
-  <li>
-    <p>变量在使用前必须通过 <code>var</code> 定义</p>
-  </li>
-  <li>
-    <p>构造函数内部的 <code>this</code> 别名采用 <code>_this</code></p>
-  </li>
   <li>
     <p>小写开头表示变量，如：<code>topBox</code>，<code>topBoxList</code>，<code>footerCopyright</code></p>
   </li>
@@ -227,11 +269,16 @@
     <p>方法内的私有变量加前缀 <code>_</code></p>
   </li>
   <li>
-    <p><em><code>'use strict'</code> 严格模式</em></p>
+    <p>构造函数内部的 <code>this</code> 别名采用 <code>_this</code></p>
   </li>
   <li>
     <p>jQuery选择器选择的变量使用 <code>$</code> 开头</p>
   </li>
+</ul>
+
+<h4 id="a-name35a-35-"><a name="3.5"></a> 3.5 其他</h4>
+
+<ul>
   <li>
     <p>js改变样式时：尽量改变class而不是style，手机端使用classList代替className</p>
   </li>
@@ -240,6 +287,9 @@
   </li>
   <li>
     <p>缓存列表<code>.length</code>，每次选择都要计算。</p>
+  </li>
+  <li>
+    <p><em><code>'use strict'</code> 严格模式</em></p>
   </li>
   <li>
     <p><em>使用canvas动画时，5个元素以内使用css动画，5个以上使用canvas动画</em></p>
@@ -252,54 +302,22 @@
   </li>
 </ul>
 
-<h3 id="css">css</h3>
+<h3 id="a-name4a-4-css"><a name="4"></a> 4 css</h3>
 
-<ul>
-  <li><em>在可以使用缩写的情况下，尽量使用属性缩写，减少代码量，如：</em></li>
-</ul>
+<h4 id="a-name41a-41-"><a name="4.1"></a> 4.1 浏览器前缀</h4>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* good */</span>
-<span class="nc">.post</span> <span class="p">{</span>
-    <span class="k">font</span><span class="o">:</span> <span class="m">12px</span><span class="o">/</span><span class="m">1</span><span class="o">.</span><span class="m">5</span> <span class="n">arial</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span>
-<span class="p">}</span>
+<p>浏览器前缀列表按照下面的顺序</p>
 
-<span class="c">/* bad */</span>
-<span class="nc">.post</span> <span class="p">{</span>
-    <span class="k">font-family</span><span class="o">:</span> <span class="n">arial</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span>
-    <span class="k">font-size</span><span class="o">:</span> <span class="m">12px</span><span class="p">;</span>
-    <span class="k">line-height</span><span class="o">:</span> <span class="m">1</span><span class="o">.</span><span class="m">5</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.selected</span> <span class="p">{</span>
+    <span class="o">-</span><span class="n">ms</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">translate</span><span class="p">(</span><span class="m">-4px</span><span class="o">,</span> <span class="m">-4px</span><span class="p">);</span>
+    <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">translate</span><span class="p">(</span><span class="m">-4px</span><span class="o">,</span> <span class="m">-4px</span><span class="p">);</span>
+    <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">translate</span><span class="p">(</span><span class="m">-4px</span><span class="o">,</span> <span class="m">-4px</span><span class="p">);</span>
+    <span class="n">transform</span><span class="o">:</span> <span class="n">translate</span><span class="p">(</span><span class="m">-4px</span><span class="o">,</span> <span class="m">-4px</span><span class="p">);</span>
 <span class="p">}</span></code></pre></div>
 
-<ul>
-  <li><em>属性书写顺序：同一 rule set 下的属性在书写时，应按功能进行分组，并以 Formatting Model（布局方式、位置） &gt; Box Model（尺寸） &gt; Typographic（文本相关） &gt; Visual（视觉效果） 的顺序书写，以提高代码的可读性。</em></li>
-</ul>
+<h4 id="a-name42a-42-"><a name="4.2"></a> 4.2 单位</h4>
 
-<blockquote>
-  <p>Formatting Model 相关属性包括：position / top / right / bottom / left / float / display / overflow 等</p>
-
-  <p>Box Model 相关属性包括：border / margin / padding / width / height 等</p>
-
-  <p>Typographic 相关属性包括：font / line-height / text-align / word-wrap 等</p>
-
-  <p>Visual 相关属性包括：background / color / transition / list-style 等</p>
-
-  <p>另外，如果包含 content 属性，应放在最前面。</p>
-</blockquote>
-
-<blockquote>
-  <ul>
-    <li>url() 函数中的路径不加引号，如：</li>
-  </ul>
-
-  <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="o">&gt;</span> <span class="nt">body</span> <span class="p">{</span>
-<span class="o">&gt;</span>     <span class="k">background</span><span class="o">:</span> <span class="sx">url(bg.png)</span><span class="p">;</span>
-<span class="o">&gt;</span> <span class="p">}</span>
-<span class="o">&gt;</span></code></pre></div>
-</blockquote>
-
-<ul>
-  <li>长度为 0 时须省略单位</li>
-</ul>
+<p>长度为 0 时须省略单位</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* good */</span>
 <span class="nt">body</span> <span class="p">{</span>
@@ -310,6 +328,8 @@
 <span class="nt">body</span> <span class="p">{</span>
     <span class="k">padding</span><span class="o">:</span> <span class="m">0px</span> <span class="m">5px</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
+
+<h4 id="a-name43a-43-"><a name="4.3"></a> 4.3 颜色</h4>
 
 <ul>
   <li>颜色值可以缩写时，必须使用缩写形式，如：</li>
@@ -340,22 +360,113 @@
 <span class="p">}</span></code></pre></div>
 
 <ul>
-  <li>
-    <p>颜色值不允许使用命名色值，如：<code>black</code>，<code>green</code></p>
-  </li>
-  <li>
-    <p>浏览器前缀列表按照下面的顺序</p>
-  </li>
+  <li>颜色值不允许使用命名色值，如：<code>black</code>，<code>green</code></li>
 </ul>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.selected</span> <span class="p">{</span>
-    <span class="o">-</span><span class="n">ms</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">translate</span><span class="p">(</span><span class="m">-4px</span><span class="o">,</span> <span class="m">-4px</span><span class="p">);</span>
-    <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">translate</span><span class="p">(</span><span class="m">-4px</span><span class="o">,</span> <span class="m">-4px</span><span class="p">);</span>
-    <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">translate</span><span class="p">(</span><span class="m">-4px</span><span class="o">,</span> <span class="m">-4px</span><span class="p">);</span>
-    <span class="n">transform</span><span class="o">:</span> <span class="n">translate</span><span class="p">(</span><span class="m">-4px</span><span class="o">,</span> <span class="m">-4px</span><span class="p">);</span>
+<h4 id="a-name44a-44-"><a name="4.4"></a> 4.4 <em>缩写</em></h4>
+
+<p>推荐，不要求</p>
+
+<p>在可以使用缩写的情况下，尽量使用属性缩写，减少代码量，如：</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* good */</span>
+<span class="nc">.post</span> <span class="p">{</span>
+    <span class="k">font</span><span class="o">:</span> <span class="m">12px</span><span class="o">/</span><span class="m">1</span><span class="o">.</span><span class="m">5</span> <span class="n">arial</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* bad */</span>
+<span class="nc">.post</span> <span class="p">{</span>
+    <span class="k">font-family</span><span class="o">:</span> <span class="n">arial</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="o">:</span> <span class="m">12px</span><span class="p">;</span>
+    <span class="k">line-height</span><span class="o">:</span> <span class="m">1</span><span class="o">.</span><span class="m">5</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
-<h3 id="section-5">注释</h3>
+<h4 id="a-name45a-45-"><a name="4.5"></a> 4.5 <em>属性书写顺序</em></h4>
+
+<p>推荐，不要求</p>
+
+<p>属性书写顺序：同一 rule set 下的属性在书写时，应按功能进行分组，并以 Formatting Model（布局方式、位置） &gt; Box Model（尺寸） &gt; Typographic（文本相关） &gt; Visual（视觉效果） 的顺序书写，以提高代码的可读性。</p>
+
+<blockquote>
+  <p>Formatting Model 相关属性包括：position / top / right / bottom / left / float / display / overflow 等</p>
+
+  <p>Box Model 相关属性包括：border / margin / padding / width / height 等</p>
+
+  <p>Typographic 相关属性包括：font / line-height / text-align / word-wrap 等</p>
+
+  <p>Visual 相关属性包括：background / color / transition / list-style 等</p>
+
+  <p>另外，如果包含 content 属性，应放在最前面。</p>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li>url() 函数中的路径不加引号，如：</li>
+  </ul>
+
+  <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="o">&gt;</span> <span class="nt">body</span> <span class="p">{</span>
+<span class="o">&gt;</span>     <span class="k">background</span><span class="o">:</span> <span class="sx">url(bg.png)</span><span class="p">;</span>
+<span class="o">&gt;</span> <span class="p">}</span>
+<span class="o">&gt;</span></code></pre></div>
+</blockquote>
+
+<h3 id="a-name5a-5-"><a name="5"></a> 5 文件及目录</h3>
+
+<h4 id="a-name51a-51-"><a name="5.1"></a> 5.1 结构</h4>
+
+<p>单个html</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">.
+├── index.html        入口页
+├── js/               js
+│   ├── lib/          js库
+│   └── main.js       js入口
+└── css/              css
+    ├── lib/          css库
+    ├── image/        图片
+    └── main.css      主css</code></pre></div>
+
+<p>多个html</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">.
+├── html/
+│   ├── welcome.html  页面1
+│   └── main.html     页面2
+├── js/               js
+│   ├── lib/          js库
+│   └── main.js       js入口
+└── css/              css
+    ├── lib/          css库
+    ├── image/        图片
+    └── main.css      主css</code></pre></div>
+
+<h4 id="a-name52a-52-"><a name="5.2"></a> 5.2 文件格式</h4>
+
+<ul>
+  <li>文本文件： UTF-8(无BOM)编码</li>
+</ul>
+
+<h4 id="a-name53a-53-"><a name="5.3"></a> 5.3 <em>压缩和合并</em></h4>
+
+<p>根据项目架构，js, css, html, png需要合并和压缩</p>
+
+<h3 id="a-name6a-6-"><a name="6"></a> 6 命名</h3>
+
+<ul>
+  <li>文件名，文件夹名，项目名，html，css样式名中连接单词使用 <code>-</code> 不使用大写字母，不使用数字开头，如：</li>
+</ul>
+
+<p><code>dp-share.0.0.1.js</code>，<code>box-list-item-1</code>，<code>mengniu-m-20131230</code>，<code>.top-box</code></p>
+
+<ul>
+  <li>js中连接单词使用驼峰式的变量命名方法，不使用数字开头，数字之间采用 <code>_</code> ，如：</li>
+</ul>
+
+<p><code>dpShare</code>，<code>boxListItem1</code>，<code>boxListItem1_2</code></p>
+
+<h3 id="a-name7a-7-"><a name="7"></a> 7 注释</h3>
+
+<h4 id="a-name71a-71-"><a name="7.1"></a> 7.1 行注释</h4>
 
 <ul>
   <li>
@@ -367,10 +478,13 @@
   <li>
     <p><code>// js 单行注释</code>，可以使用多行注释，但是不要在单行中使用多行注释的方式去注释（可能和正则混淆）</p>
   </li>
-  <li>
-    <p><em>js 文档</em></p>
-  </li>
 </ul>
+
+<h4 id="a-name72a-72-"><a name="7.2"></a> 7.2 文档注释</h4>
+
+<p>推荐，不要求</p>
+
+<p>js 文档</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="cm">/**</span>
 <span class="cm"> * bla</span>
@@ -395,7 +509,7 @@
 
 <p>参见<a href="http://usejsdoc.org/index.html">JSDoc</a></p>
 
-<h3 id="git"><em>git分支</em></h3>
+<h3 id="a-name8a-8-git"><a name="8"></a> 8 git分支</h3>
 
 <ul>
   <li>主要分支，长期存在</li>
@@ -427,7 +541,7 @@
   </li>
 </ol>
 
-<h3 id="section-6"><em>版本</em></h3>
+<h3 id="a-name9a-9-"><a name="9"></a> 9 版本号</h3>
 
 <ul>
   <li>版本格式：主版本号.次版本号.修订号</li>
@@ -447,7 +561,7 @@
 
 <p>先行版本号及版本编译信息可以加到“主版本号.次版本号.修订号”的后面，作为延伸</p>
 
-<h3 id="section-7">接口</h3>
+<h3 id="a-name10a-10-"><a name="10"></a> 10 接口</h3>
 
 <ul>
   <li>
@@ -458,7 +572,7 @@
   </li>
 </ul>
 
-<h3 id="section-8">图片</h3>
+<h3 id="a-name11a-11--1"><a name="11"></a> 11 图片</h3>
 
 <ul>
   <li>
@@ -475,7 +589,9 @@
   </li>
 </ul>
 
-<h3 id="section-9"><em>性能</em></h3>
+<h3 id="a-name12a-12--1"><a name="12"></a> 12 <em>性能</em></h3>
+
+<p>推荐，不要求</p>
 
 <ul>
   <li>
@@ -489,7 +605,7 @@
   </li>
 </ul>
 
-<h2 id="section-10">参考</h2>
+<h2 id="section-2">参考</h2>
 
 <ul>
   <li>

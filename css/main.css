@@ -9,7 +9,7 @@ body {
 
 .container {
     position: relative;
-    width: 800px;
+    width: 1000px;
     margin: 0 auto;
     transition: width 0.5s;
     -webkit-transition: width 0.5s;
@@ -139,7 +139,7 @@ code {
 }
 
 /* media screen */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .container {
         width: 100%;
     }
