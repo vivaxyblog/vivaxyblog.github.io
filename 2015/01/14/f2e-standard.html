@@ -25,6 +25,10 @@
 
 <p>遵循本规范可以提高代码的可读性和可维护性，让所有代码都是有规可循的</p>
 
+<p>此规范适用于大众点评推广结婚前端</p>
+
+<p><em>斜体表示推荐做法，不做强制规定</em></p>
+
 <h3 id="section-1">目录结构</h3>
 
 <p>单个html</p>
@@ -59,19 +63,18 @@
   <li>文本文件： UTF-8(无BOM)编码</li>
 </ul>
 
-<h3 id="section-3">压缩和合并</h3>
+<h3 id="section-3"><em>压缩和合并</em></h3>
 
-<p>js,css,html,png需要合并和压缩</p>
+<p>根据项目架构，js, css, html, png需要合并和压缩</p>
 
 <h3 id="section-4">代码风格</h3>
 
-<blockquote>
-
-</blockquote>
-
 <ul>
   <li>
-    <p>css，html，xml，js，json等一律采用4个空格缩进</p>
+    <p>html, js, css等一律采用4个空格缩进</p>
+  </li>
+  <li>
+    <p>html, json中的引号采用双引号，js中的引号采用单引号</p>
   </li>
   <li>
     <p><code>{</code> 之间必须包含空格，如：</p>
@@ -82,7 +85,7 @@
 <span class="p">}</span></code></pre></div>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">fn</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">arg1</span><span class="p">,</span> <span class="nx">arg2</span><span class="p">)</span> <span class="p">{</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">};</span></code></pre></div>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
 <span class="p">}</span></code></pre></div>
@@ -98,7 +101,7 @@
 <span class="p">}</span></code></pre></div>
 
 <ul>
-  <li>结尾添加 <code>;</code> ，如：</li>
+  <li>js，css语句结尾添加 <code>;</code> ，如：</li>
 </ul>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">margin</span><span class="o">:</span> <span class="nt">0</span><span class="o">;</span></code></pre></div>
@@ -121,7 +124,7 @@
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
     <span class="k">return</span> <span class="s1">&#39;bar&#39;</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">};</span></code></pre></div>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
 <span class="p">}</span></code></pre></div>
@@ -130,20 +133,30 @@
   <li><code>代码块</code> ， <code>{}</code> 中的 <code>{</code> 要在行末，而不是行首，如：</li>
 </ul>
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// good</span>
+<span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
     <span class="k">return</span> <span class="p">{</span>
-        <span class="s1">&#39;bar&#39;</span><span class="p">;</span>
-    <span class="p">}</span>
+        <span class="s1">&#39;bar&#39;</span> <span class="o">:</span> <span class="mi">0</span>
+    <span class="p">};</span>
 <span class="p">}</span></code></pre></div>
 
 <p>js会自动插入分号，当如下情况时，<code>return</code>值是<code>undefined</code></p>
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// bad</span>
+<span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
     <span class="k">return</span>
     <span class="p">{</span>
-        <span class="s1">&#39;bar&#39;</span><span class="p">;</span>
-    <span class="p">}</span>
+        <span class="s1">&#39;bar&#39;</span> <span class="o">:</span> <span class="mi">0</span>
+    <span class="p">};</span>
 <span class="p">}</span></code></pre></div>
+
+<ul>
+  <li><code>[]</code> ， <code>()</code> 中的值，开头没有空格， <code>,</code> 前没有空格， <code>,</code> 后一个空格，最后没有空格，如：</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">arg1</span><span class="p">,</span> <span class="nx">arg2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s1">&#39;bar&#39;</span><span class="p">;</span>
+<span class="p">};</span></code></pre></div>
 
 <ul>
   <li>文件名，文件夹名，项目名，html，css样式名中连接单词使用 <code>-</code> 不使用大写字母，不使用数字开头，如：</li>
@@ -156,22 +169,6 @@
 </ul>
 
 <p><code>dpShare</code>，<code>boxListItem1</code>，<code>boxListItem1_2</code></p>
-
-<ul>
-  <li>
-    <p>html，json中的引号采用双引号，js中的引号采用单引号</p>
-  </li>
-  <li>
-    <p>js，css语句结束加 <code>;</code></p>
-  </li>
-  <li>
-    <p><code>[]</code> ， <code>()</code> 中的值，开头没有空格， <code>,</code> 前没有空格， <code>,</code> 后一个空格，最后没有空格，如：</p>
-  </li>
-</ul>
-
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">arg1</span><span class="p">,</span> <span class="nx">arg2</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="s1">&#39;bar&#39;</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
 
 <h3 id="html">html</h3>
 
@@ -195,10 +192,10 @@
     <p>文件头采用html5标准<code>&lt;!DOCTYPE html&gt;</code></p>
   </li>
   <li>
-    <p>特殊符号采用<a href="http://www.w3school.com.cn/tags/html_ref_entities.html">HTML符号实体</a></p>
+    <p>不用关闭的标签一律不加<code>/</code>，如：<code>&lt;br&gt;</code>，<code>&lt;hr&gt;</code>，<code>&lt;input&gt;</code></p>
   </li>
   <li>
-    <p>不用关闭的标签一律不加<code>/</code>，如：<code>&lt;br&gt;</code>，<code>&lt;hr&gt;</code>，<code>&lt;input&gt;</code></p>
+    <p>特殊符号采用<a href="http://www.w3school.com.cn/tags/html_ref_entities.html">HTML符号实体</a></p>
   </li>
 </ul>
 
@@ -215,7 +212,7 @@
     <p>变量在使用前必须通过 <code>var</code> 定义</p>
   </li>
   <li>
-    <p>构造函数内部的 <code>this</code> 别名采用 <code>self</code></p>
+    <p>构造函数内部的 <code>this</code> 别名采用 <code>_this</code></p>
   </li>
   <li>
     <p>小写开头表示变量，如：<code>topBox</code>，<code>topBoxList</code>，<code>footerCopyright</code></p>
@@ -224,35 +221,41 @@
     <p>大写开头表示构造器函数，如：<code>SuperMBox</code></p>
   </li>
   <li>
-    <p>方法内的私有变量加前缀<code>_</code></p>
+    <p>常量全部大写，如：<code>PIE</code></p>
   </li>
   <li>
-    <p>jQuery选择器选择的变量使用$开头</p>
+    <p>方法内的私有变量加前缀 <code>_</code></p>
   </li>
   <li>
-    <p>js改变样式时：尽量改变Class而不是Style，使用classList代替className</p>
+    <p><em><code>'use strict'</code> 严格模式</em></p>
+  </li>
+  <li>
+    <p>jQuery选择器选择的变量使用 <code>$</code> 开头</p>
+  </li>
+  <li>
+    <p>js改变样式时：尽量改变class而不是style，手机端使用classList代替className</p>
   </li>
   <li>
     <p>缓存DOM选择，每次选择都要计算。</p>
   </li>
   <li>
-    <p>缓存列表.length，每次选择都要计算。</p>
+    <p>缓存列表<code>.length</code>，每次选择都要计算。</p>
   </li>
   <li>
-    <p>使用requestAnimationFrame动画代替setTimeout</p>
+    <p><em>使用canvas动画时，5个元素以内使用css动画，5个以上使用canvas动画</em></p>
   </li>
   <li>
-    <p>使用Canvas动画 5个元素以内使用css动画，5个以上使用Canvas动画</p>
+    <p><em>动画选择时，优先使用css3动画</em></p>
   </li>
   <li>
-    <p>优先使用CSS3动画</p>
+    <p><em>使用requestAnimationFrame动画代替setTimeout</em></p>
   </li>
 </ul>
 
 <h3 id="css">css</h3>
 
 <ul>
-  <li>在可以使用缩写的情况下，尽量使用属性缩写，如：</li>
+  <li><em>在可以使用缩写的情况下，尽量使用属性缩写，减少代码量，如：</em></li>
 </ul>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* good */</span>
@@ -268,7 +271,7 @@
 <span class="p">}</span></code></pre></div>
 
 <ul>
-  <li>属性书写顺序：同一 rule set 下的属性在书写时，应按功能进行分组，并以 Formatting Model（布局方式、位置） &gt; Box Model（尺寸） &gt; Typographic（文本相关） &gt; Visual（视觉效果） 的顺序书写，以提高代码的可读性。</li>
+  <li><em>属性书写顺序：同一 rule set 下的属性在书写时，应按功能进行分组，并以 Formatting Model（布局方式、位置） &gt; Box Model（尺寸） &gt; Typographic（文本相关） &gt; Visual（视觉效果） 的顺序书写，以提高代码的可读性。</em></li>
 </ul>
 
 <blockquote>
@@ -283,13 +286,16 @@
   <p>另外，如果包含 content 属性，应放在最前面。</p>
 </blockquote>
 
-<ul>
-  <li>url() 函数中的路径不加引号，如：</li>
-</ul>
+<blockquote>
+  <ul>
+    <li>url() 函数中的路径不加引号，如：</li>
+  </ul>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
-    <span class="k">background</span><span class="o">:</span> <span class="sx">url(bg.png)</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+  <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="o">&gt;</span> <span class="nt">body</span> <span class="p">{</span>
+<span class="o">&gt;</span>     <span class="k">background</span><span class="o">:</span> <span class="sx">url(bg.png)</span><span class="p">;</span>
+<span class="o">&gt;</span> <span class="p">}</span>
+<span class="o">&gt;</span></code></pre></div>
+</blockquote>
 
 <ul>
   <li>长度为 0 时须省略单位</li>
@@ -307,6 +313,20 @@
 
 <ul>
   <li>颜色值可以缩写时，必须使用缩写形式，如：</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* good */</span>
+<span class="nc">.success</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="o">:</span> <span class="m">#aca</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* bad */</span>
+<span class="nc">.success</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="o">:</span> <span class="m">#aaccaa</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<ul>
+  <li>颜色值使用小写字母，如：</li>
 </ul>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* good */</span>
@@ -345,10 +365,10 @@
     <p><code>&lt;!-- html 注释 --&gt;</code></p>
   </li>
   <li>
-    <p><code>// js 单行注释</code></p>
+    <p><code>// js 单行注释</code>，可以使用多行注释，但是不要在单行中使用多行注释的方式去注释（可能和正则混淆）</p>
   </li>
   <li>
-    <p>js 文档</p>
+    <p><em>js 文档</em></p>
   </li>
 </ul>
 
@@ -373,9 +393,9 @@
 <span class="cm"> * @type {string} //变量类型</span>
 <span class="cm"> */</span></code></pre></div>
 
-<p>参见JSDoc</p>
+<p>参见<a href="http://usejsdoc.org/index.html">JSDoc</a></p>
 
-<h3 id="git">git分支</h3>
+<h3 id="git"><em>git分支</em></h3>
 
 <ul>
   <li>主要分支，长期存在</li>
@@ -407,13 +427,7 @@
   </li>
 </ol>
 
-<h3 id="section-6">外部链接中的协议可以省略</h3>
-
-<p><code>&lt;script type="text/javascript" src="//www.google.com/some.js"&gt;&lt;/script&gt;</code></p>
-
-<p><code>background: url(//baidu.com/img/bg.png) no-repeat 0 0;</code></p>
-
-<h3 id="section-7">版本</h3>
+<h3 id="section-6"><em>版本</em></h3>
 
 <ul>
   <li>版本格式：主版本号.次版本号.修订号</li>
@@ -433,7 +447,7 @@
 
 <p>先行版本号及版本编译信息可以加到“主版本号.次版本号.修订号”的后面，作为延伸</p>
 
-<h3 id="section-8">接口</h3>
+<h3 id="section-7">接口</h3>
 
 <ul>
   <li>
@@ -444,41 +458,38 @@
   </li>
 </ul>
 
-<h3 id="section-9">图片</h3>
+<h3 id="section-8">图片</h3>
 
 <ul>
   <li>
-    <p>避免重设图片大小，重设图片大小是指在html、css、js，多次重设图片大小会引发图片的多次重绘，影响性能</p>
-  </li>
-  <li>
-    <p>图片尽量避免使用DataURL，DataURL图片没有使用图片的压缩算法文件会变大，并且要解码后再渲染，加载慢耗时长</p>
-  </li>
-  <li>
-    <p>使用css,svg,iconfont代替图片</p>
-  </li>
-  <li>
     <p>移动端图片宽度不大于640</p>
+  </li>
+  <li>
+    <p>避免重设图片大小，重设图片大小是指在html、css、js，多次重设图片大小会引发图片的多次重绘，影响性能，默认在css中设置图片大小，当css中无法设置大小时，使用js</p>
+  </li>
+  <li>
+    <p><em>图片尽量避免使用DataURL，DataURL图片没有使用图片的压缩算法文件会变大，并且要解码后再渲染，加载慢耗时长</em></p>
+  </li>
+  <li>
+    <p><em>纯颜色，三角形，logo，使用css, svg, iconfont代替图片</em></p>
   </li>
 </ul>
 
-<h3 id="section-10">性能</h3>
+<h3 id="section-9"><em>性能</em></h3>
 
-<ol>
+<ul>
   <li>
-    <p>移动端三秒种渲染完成首屏，首屏加载3秒完成或使用Loading，基于联通3G网络平均338KB/s(2.71Mb/s），所以首屏资源不应超过1014KB</p>
+    <p>移动端三秒种渲染完成首屏，首屏加载3秒完成或使用Loading。基于联通3G网络平均338KB/s(2.71Mbps），所以首屏资源不应超过1014KB，多余的资源采用loading。</p>
   </li>
   <li>
-    <p>移动端减少HTTP请求，首次加载同时请求数不能超过4个。手机浏览器同时响应请求为4个请求（Android支持4个，iOS 5后可支持6个）。</p>
+    <p>移动端减少HTTP请求，首次加载同时请求数不能超过4个。手机浏览器同时响应请求为4个请求（Android支持4个，iOS 5后可支持6个）</p>
   </li>
   <li>
-    <p>使用缓存。可以减少向服务器的请求数，节省加载时间，所以所有静态资源都要在服务器端设置缓存，并且尽量使用长Cache（长Cache资源的更新可使用时间戳）</p>
+    <p>异步加载第三方资源：第三方资源不可控会影响页面的加载和显示，因此要异步加载第三方资源</p>
   </li>
-  <li>
-    <p>异步加载第三方资源：第三方资源不可控会影响页面的加载和显示，因此要异步加载第三方资源。</p>
-  </li>
-</ol>
+</ul>
 
-<h2 id="section-11">参考</h2>
+<h2 id="section-10">参考</h2>
 
 <ul>
   <li>
@@ -503,9 +514,6 @@
     <p><a href="http://semver.org/lang/zh-CN/">语义化版本2.0.0</a></p>
   </li>
   <li>
-    <p><a href="http://usejsdoc.org/index.html">JSDoc</a></p>
-  </li>
-  <li>
     <p><a href="http://isux.tencent.com/h5-performance.html">移动H5前端性能优化指南</a></p>
   </li>
   <li>
@@ -516,6 +524,18 @@
   </li>
   <li>
     <p><a href="https://github.com/CMCM-F2E/fe-standards">猎豹移动前端编码规范</a></p>
+  </li>
+  <li>
+    <p><a href="http://codeguide.bootcss.com/">编码规范 by @mdo</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/styleguide">Github Style Guide</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/ecomfe/spec">Baidu EFE team</a></p>
+  </li>
+  <li>
+    <p><a href="http://alloyteam.github.io/code-guide/">Tencent Alloyteam</a></p>
   </li>
 </ul>
 
