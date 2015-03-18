@@ -165,7 +165,7 @@ h2, h3, h4, h5, h6 {
     color: rgb(0, 0, 0);
 }
 
-a {
+a, a:visited {
     color: rgb(231, 76, 60);
     transition: color 0.5s;
     text-decoration: none;
