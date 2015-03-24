@@ -3,13 +3,13 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: rgb(230, 230, 230);
+    background: rgb(240, 240, 240);
     font-weight: 100;
 }
 
 .container {
     position: relative;
-    width: 1000px;
+    width: 800px;
     margin: 0 auto;
     transition: width 0.5s;
     -webkit-transition: width 0.5s;
@@ -139,13 +139,13 @@ code {
 }
 
 /* media screen */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
     .container {
         width: 100%;
     }
 
     .card {
-        padding: 10px 20px;
+        padding: 10px 15px;
         margin: 10px 0;
     }
 }
@@ -163,6 +163,7 @@ h2, h3, h4, h5, h6 {
     margin-top: 30px;
     font-weight: 100;
     color: rgb(0, 0, 0);
+    position: relative;
 }
 
 a, a:visited {
@@ -189,6 +190,11 @@ blockquote {
     overflow: auto;
     background-color: #f7f7f7;
     border-radius: 3px;
+}
+
+p {
+    line-height: 20px;
+    font-size: 16px;
 }
 
 /* fonts */
