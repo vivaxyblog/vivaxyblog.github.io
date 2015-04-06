@@ -102,15 +102,19 @@ a.card:hover h2, a.card:hover h1, a.card:hover .date {
     -webkit-transition: -webkit-transform 0.5s;
     transform: translateY(0);
     -webkit-transform: translateY(0);
+    text-align: center;
 }
 
 .hover-top .content .date {
     padding: 20px;
     text-align: center;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .hover-top .content:after {
     position: absolute;
+    display: block;
     padding: 20px 0;
     text-align: center;
     width: 100%;
@@ -210,4 +214,13 @@ p {
     url('icomoon/icomoon.svg?m0nlrt#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
+}
+
+.alipay {
+    width: 36px;
+    height: 36px;
+    background-image: url(/css/alipay.jpg);
+    background-size: 100%;
+    display: inline-block;
+    vertical-align: middle;
 }
