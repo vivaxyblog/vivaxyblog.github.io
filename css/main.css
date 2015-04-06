@@ -3,7 +3,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: rgb(240, 240, 240);
+    background: #f0f0f0;
     font-weight: 100;
 }
 
@@ -19,7 +19,7 @@ body {
     display: block;
     margin: 20px 0;
     padding: 20px 40px;
-    background: rgb(255, 255, 255);
+    background: #fff;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     outline: none;
     text-decoration: none;
@@ -30,18 +30,18 @@ body {
 }
 
 a.card:hover {
-    background: rgb(255, 255, 255);
-    color: rgb(192, 57, 43);
+    background: #fff;
+    color: #c0392b;
     text-decoration: none;
 }
 
 .card .date {
-    color: rgb(100, 100, 100);
+    color: #646464;
     transition: color 0.5s;
 }
 
 a.card:hover h2, a.card:hover h1, a.card:hover .date {
-    color: rgb(192, 57, 43);
+    color: #c0392b;
 }
 
 /* hover-left */
@@ -134,8 +134,8 @@ a.card:hover h2, a.card:hover h1, a.card:hover .date {
 
 /* selection */
 *::selection {
-    background: rgb(231, 76, 60);
-    color: rgb(255, 255, 255);
+    background: #e74c3c;
+    color: #fff;
 }
 
 /* media screen */
@@ -155,19 +155,19 @@ a.card:hover h2, a.card:hover h1, a.card:hover .date {
 h1 {
     text-align: center;
     font-weight: 100;
-    color: rgb(0, 0, 0);
+    color: #000;
 }
 
 /* page title */
 h2, h3, h4, h5, h6 {
     margin-top: 30px;
     font-weight: 100;
-    color: rgb(0, 0, 0);
+    color: #000;
     position: relative;
 }
 
 a, a:visited {
-    color: rgb(231, 76, 60);
+    color: #e74c3c;
     transition: color 0.5s;
     text-decoration: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
@@ -175,7 +175,7 @@ a, a:visited {
 }
 
 a:hover {
-    color: rgb(192, 57, 43);
+    color: #c0392b;
     text-decoration: underline;
 }
 
@@ -197,6 +197,16 @@ blockquote {
 p {
     line-height: 20px;
     font-size: 16px;
+}
+
+code {
+    font-size: 14px;
+    color: #e74c3c;
+    background-color: #f7f7f7;
+    border: 1px solid #d7d7d7;
+    border-radius: 3px;
+    padding: 1px 3px;
+    word-wrap: normal
 }
 
 /* fonts */
