@@ -138,10 +138,6 @@ a.card:hover h2, a.card:hover h1, a.card:hover .date {
     color: rgb(255, 255, 255);
 }
 
-code {
-    color: rgb(231, 76, 60);
-}
-
 /* media screen */
 @media screen and (max-width: 800px) {
     .container {
