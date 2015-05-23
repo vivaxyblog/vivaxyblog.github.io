@@ -4,7 +4,8 @@
   "description": "my blog",
   "main": "index.html",
   "scripts": {
-    "test": "console.log('ok')"
+    "build": "gulp",
+    "serve": "jekyll serve"
   },
   "repository": {
     "type": "git",
