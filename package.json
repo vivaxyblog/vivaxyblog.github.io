@@ -4,8 +4,8 @@
   "description": "my blog",
   "main": "index.html",
   "scripts": {
-    "build": "gulp",
-    "serve": "jekyll serve"
+    "serve": "jekyll serve",
+    "build": "jekyll build"
   },
   "repository": {
     "type": "git",
