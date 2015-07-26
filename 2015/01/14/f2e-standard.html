@@ -226,6 +226,15 @@
 
 <p>这样能够确保在每个浏览器中拥有一致的展现</p>
 
+<p><code>head</code>中包含样式表，不包含脚本，包含<code>meta</code>，包含<code>title</code></p>
+
+<p><code>head</code>中包含的meta，规定页面编码，禁用用户缩放</p>
+
+<p><code>
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"&gt;
+</code></p>
+
 <h4 id="a-name22a-22-jscss"><a name="2.2"></a> 2.2 js和css文件的引用</h4>
 
 <p>css文件引用 <code>&lt;link type="text/css" rel="stylesheet" href="..."&gt;</code> 放置于 <code>&lt;/head&gt;</code> 前，不使用 <code>&lt;style&gt;</code> ，便于使用缓存</p>
