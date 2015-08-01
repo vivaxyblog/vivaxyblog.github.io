@@ -76,7 +76,9 @@
 
     <p>3.4 <a href="#3.4">变量的命名</a></p>
 
-    <p>3.5 <a href="#3.5">其他</a></p>
+    <p>3.5 <a href="#3.5">作用域</a></p>
+
+    <p>3.6 <a href="#3.6">其他</a></p>
   </li>
   <li>
     <p><a href="#4">css</a></p>
@@ -269,7 +271,17 @@
 
 <h4 id="a-name33a-33-"><a name="3.3"></a> 3.3 变量的声明方式</h4>
 
-<p>变量在使用前必须通过 <code>var</code> 定义</p>
+<ul>
+  <li>
+    <p>变量在使用前必须通过 <code>var</code> 定义</p>
+  </li>
+  <li>
+    <p>使用字面量<code>{}</code>、<code>[]</code>替代<code>new Object()</code>、<code>new Array()</code></p>
+  </li>
+  <li>
+    <p>不要使用<code>string</code>、<code>bool</code>、<code>number</code>对象类型，即不要调用<code>new String</code>、<code>new Boolean</code>、<code>new Number</code></p>
+  </li>
+</ul>
 
 <h4 id="a-name34a-34-"><a name="3.4"></a> 3.4 变量的命名</h4>
 
@@ -294,7 +306,18 @@
   </li>
 </ul>
 
-<h4 id="a-name35a-35-"><a name="3.5"></a> 3.5 其他</h4>
+<h4 id="a-name35a-35-"><a name="3.5"></a> 3.5 作用域</h4>
+
+<ul>
+  <li>
+    <p>慎用<code>with</code>，<code>with</code>会引起作用域混乱，作用域查询减缓执行速度</p>
+  </li>
+  <li>
+    <p>慎用<code>eval</code></p>
+  </li>
+</ul>
+
+<h4 id="a-name36a-36-"><a name="3.6"></a> 3.6 其他</h4>
 
 <ul>
   <li>
@@ -688,6 +711,9 @@
   </li>
   <li>
     <p><a href="https://github.com/dianping-f2e/css-spec">Css 规范</a></p>
+  </li>
+  <li>
+    <p><a href="http://book.douban.com/subject/25768396/">Node编码规范</a></p>
   </li>
 </ul>
 
