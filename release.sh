@@ -1,7 +1,30 @@
 #!/bin/sh
 # vivaxy@15-08-22 13:37
+
+console(){
+    post="\033[0m"
+    case $1 in
+        error)
+            pre="\033[31m"
+            ;;
+        warn)
+            pre=""
+            ;;
+        info)
+            pre-"\033[36m"
+            ;;
+        debug)
+            pre="\033[30"
+            ;;
+        *)
+            pre="\033[37m"
+            ;;
+    esac
+    echo ${pre}$2${post}
+}
+
 branch=`git rev-parse --abbrev-ref HEAD`
-echo "current branch is \`${branch}\`"
+echo "\033[0mcurrent branch is \`${branch}\`\033[0m"
 
 case "$branch" in
     src)
@@ -25,11 +48,11 @@ case "$branch" in
             git add .
             git commit -m "update"
             git push
-            echo "done"
+            echo "\033[0mdone\033[0m"
         fi
         ;;
     *)
-        echo "nothing done"
+        echo "\033[0mnothing done\e[0m"
         ;;
 esac
 
