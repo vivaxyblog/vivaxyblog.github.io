@@ -25,9 +25,12 @@ case "$branch" in
             git add .
             git commit -m "update"
             git push
+            echo "done"
         fi
         ;;
     *)
         echo "nothing done"
         ;;
 esac
+
+git checkout src
