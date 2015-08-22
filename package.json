@@ -4,9 +4,7 @@
   "description": "my blog",
   "main": "index.html",
   "scripts": {
-    "serve": "jekyll serve",
-    "build": "jekyll build",
-    "release": "gulp"
+    "release": "make"
   },
   "repository": {
     "type": "git",
@@ -22,10 +20,5 @@
   "bugs": {
     "url": "https://github.com/vivaxyblog/vivaxyblog.github.io/issues"
   },
-  "homepage": "https://github.com/vivaxyblog/vivaxyblog.github.io",
-  "devDependencies": {
-    "del": "^0.1.3",
-    "gulp": "^3.8.10",
-    "gulp-shell": "^0.2.11"
-  }
+  "homepage": "https://github.com/vivaxyblog/vivaxyblog.github.io"
 }
