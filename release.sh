@@ -23,49 +23,49 @@ console(){
     echo "${pre}$2${post}"
 }
 
+## provide commit message
 if  [ ! -n "$1" ]
 then
     read -p "enter commit message :" msg
 else
     msg="$1"
 fi
+console debug "commit message is ${msg}"
 
-branch=`git rev-parse --abbrev-ref HEAD`
-console info "current branch is \`${branch}\`"
+console debug "git checkout src"
+git checkout src
+console debug "jekyll build"
+jekyll build
+console info "_site built"
+console debug "git add ."
+git add .
+console debug "git commit -m \"${msg}\""
+git commit -m "${msg}"
+console debug "git push origin src"
+git push origin src
+console info "branch \`src\` pushed"
+console debug "git checkout master"
+git checkout master
+console info "branch \`master\` checkouted"
+if [ -d "_site" ]
+then
+    console debug "rm -rf index.html css image js 2011 2014 2015 2016"
+    rm -rf index.html css image js 2011 2014 2015 2016
+    console debug "cp -r ./_site/* ./"
+    cp -r ./_site/* ./
+    console debug "rm -rf _site"
+    rm -rf _site
+    console debug "git add ."
+    git add .
+    console debug "git commit -m \"${msg}\""
+    git commit -m "${msg}"
+    console debug "git push origin master"
+    git push origin master
+    console info "branch \`master\` pushed"
+else
+    console erro "\`_site\` folder not found"
+fi
 
-case "$branch" in
-    src)
-        jekyll build
-        console info "_site built"
-        git add .
-        git commit -m "${msg}"
-        git push
-        console info "branch \`src\` pushed"
-        git checkout master
-        console info "branch \`master\` checkouted"
-        if [ -d "_site" ]
-        then
-            rm -rf index.html
-            rm -rf css
-            rm -rf image
-            rm -rf js
-            rm -rf 2011
-            rm -rf 2014
-            rm -rf 2015
-            rm -rf 2016
-            cp -r ./_site/* ./
-            rm -rf _site
-            git add .
-            git commit -m "${msg}"
-            git push
-            console info "branch \`master\` pushed"
-        else
-            console erro "\`_site\` folder not found"
-        fi
-        ;;
-    *)
-        ;;
-esac
-
+console debug "git checkout src"
 git checkout src
 console info "back to branch \`src\`"
