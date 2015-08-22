@@ -36,17 +36,17 @@ console debug "git checkout src"
 git checkout src
 console debug "jekyll build"
 jekyll build
-console info "_site built"
+console info "> _site built"
 console debug "git add ."
 git add .
 console debug "git commit -m \"${msg}\""
 git commit -m "${msg}"
 console debug "git push origin src"
 git push origin src
-console info "branch \`src\` pushed"
+console info "> branch \`src\` pushed"
 console debug "git checkout master"
 git checkout master
-console info "branch \`master\` checkouted"
+console info "> branch \`master\` checkouted"
 if [ -d "_site" ]
 then
     console debug "rm -rf index.html css image js 2011 2014 2015 2016"
@@ -61,11 +61,11 @@ then
     git commit -m "${msg}"
     console debug "git push origin master"
     git push origin master
-    console info "branch \`master\` pushed"
+    console info "> branch \`master\` pushed"
 else
     console erro "\`_site\` folder not found"
 fi
 
 console debug "git checkout src"
 git checkout src
-console info "back to branch \`src\`"
+console info "> back to branch \`src\`"
