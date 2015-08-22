@@ -23,16 +23,26 @@ console(){
     echo "${pre}$2${post}"
 }
 
+if  [ ! -n "$1" ]
+then
+    read -p "enter commit message :" msg
+else
+    msg="$1"
+fi
+
 branch=`git rev-parse --abbrev-ref HEAD`
 console info "current branch is \`${branch}\`"
 
 case "$branch" in
     src)
         jekyll build
+        console info "_site built"
         git add .
-        git commit -m $1
+        git commit -m "${msg}"
         git push
+        console info "branch \`src\` pushed"
         git checkout master
+        console info "branch \`master\` checkouted"
         if [ -d "_site" ]
         then
             rm -rf index.html
@@ -46,16 +56,16 @@ case "$branch" in
             cp -r ./_site/* ./
             rm -rf _site
             git add .
-            git commit -m $1
+            git commit -m "${msg}"
             git push
-            console info "done"
+            console info "branch \`master\` pushed"
         else
-            console erro "_site not found"
+            console erro "\`_site\` folder not found"
         fi
         ;;
     *)
-        console info "nothing done"
         ;;
 esac
 
 git checkout src
+console info "back to branch \`src\`"
