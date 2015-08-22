@@ -26,7 +26,7 @@ console(){
 ## provide commit message
 if  [ ! -n "$1" ]
 then
-    read -p "enter commit message :" msg
+    read -p "enter commit message : " msg
 else
     msg="$1"
 fi
