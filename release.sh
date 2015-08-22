@@ -3,34 +3,34 @@
 
 console(){
     post="\033[0m"
-    case $1 in
+    case "$1" in
         error)
-            pre="\033[31m"
+            pre="\033[91m"
             ;;
         warn)
-            pre=""
+            pre="\033[93m"
             ;;
         info)
-            pre-"\033[36m"
+            pre="\033[92m"
             ;;
         debug)
-            pre="\033[30"
+            pre="\033[94m"
             ;;
         *)
-            pre="\033[37m"
+            pre="\033[90m"
             ;;
     esac
-    echo ${pre}$2${post}
+    echo "${pre}$2${post}"
 }
 
 branch=`git rev-parse --abbrev-ref HEAD`
-echo "\033[0mcurrent branch is \`${branch}\`\033[0m"
+console info "current branch is \`${branch}\`"
 
 case "$branch" in
     src)
         jekyll build
         git add .
-        git commit -m "update"
+        git commit -m $1
         git push
         git checkout master
         if [ -d "_site" ]
@@ -46,13 +46,15 @@ case "$branch" in
             cp -r ./_site/* ./
             rm -rf _site
             git add .
-            git commit -m "update"
+            git commit -m $1
             git push
-            echo "\033[0mdone\033[0m"
+            console info "done"
+        else
+            console erro "_site not found"
         fi
         ;;
     *)
-        echo "\033[0mnothing done\e[0m"
+        console info "nothing done"
         ;;
 esac
 
