@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 # vivaxy@15-08-22 13:37
 
 log(){
@@ -20,14 +20,14 @@ log(){
             pre="\033[90m"
             ;;
     esac
-    echo "${pre}$2${post}"
+    echo -e "${pre}$2${post}"
 }
 
 ## provide commit message
 if  [ ! -n "$1" ]
 then
     log info "enter commit message: \c"
-    read msg
+    read -e msg
 else
     msg="$1"
 fi
