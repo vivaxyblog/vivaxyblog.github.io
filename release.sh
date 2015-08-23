@@ -1,7 +1,7 @@
 #!/bin/sh
 # vivaxy@15-08-22 13:37
 
-console(){
+log(){
     post="\033[0m"
     case "$1" in
         error)
@@ -26,47 +26,47 @@ console(){
 ## provide commit message
 if  [ ! -n "$1" ]
 then
-    console info "enter commit message: \c"
+    log info "enter commit message: \c"
     read msg
 else
     msg="$1"
 fi
-console debug "> commit message is ${msg}"
+log debug "> commit message is ${msg}"
 
-console debug "> git checkout src"
+log debug "> git checkout src"
 git checkout src
-console debug "> jekyll build"
+log debug "> jekyll build"
 jekyll build
-console info "_site built"
-console debug "> git add ."
+log info "_site built"
+log debug "> git add ."
 git add .
-console debug "> git commit -m \"${msg}\""
+log debug "> git commit -m \"${msg}\""
 git commit -m "${msg}"
-console debug "> git push origin src"
+log debug "> git push origin src"
 git push origin src
-console info "branch \`src\` pushed"
-console debug "> git checkout master"
+log info "branch \`src\` pushed"
+log debug "> git checkout master"
 git checkout master
-console info "branch \`master\` checkouted"
+log info "branch \`master\` checkouted"
 if [ -d "_site" ]
 then
-    console debug "> rm -rf index.html css image js 2011 2014 2015 2016"
+    log debug "> rm -rf index.html css image js 2011 2014 2015 2016"
     rm -rf index.html css image js 2011 2014 2015 2016
-    console debug "> cp -r ./_site/* ./"
+    log debug "> cp -r ./_site/* ./"
     cp -r ./_site/* ./
-    console debug "> rm -rf _site"
+    log debug "> rm -rf _site"
     rm -rf _site
-    console debug "> git add ."
+    log debug "> git add ."
     git add .
-    console debug "> git commit -m \"${msg}\""
+    log debug "> git commit -m \"${msg}\""
     git commit -m "${msg}"
-    console debug "> git push origin master"
+    log debug "> git push origin master"
     git push origin master
-    console info "branch \`master\` pushed"
+    log info "branch \`master\` pushed"
 else
-    console erro "\`_site\` folder not found"
+    log erro "\`_site\` folder not found"
 fi
 
-console debug "> git checkout src"
+log debug "> git checkout src"
 git checkout src
-console info "back to branch \`src\`"
+log info "back to branch \`src\`"
