@@ -5,19 +5,19 @@ log(){
     post="\033[0m"
     case "$1" in
         error)
-            pre="\033[91m"
+            pre="\033[31m"
             ;;
         warn)
-            pre="\033[93m"
+            pre="\033[33m"
             ;;
         info)
-            pre="\033[92m"
+            pre="\033[36m"
             ;;
         debug)
             pre="\033[94m"
             ;;
         *)
-            pre="\033[90m"
+            pre="\033[37m"
             ;;
     esac
     echo -e "${pre}$2${post}"
