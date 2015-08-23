@@ -24,11 +24,9 @@
 
 <p>see <a href="http://vivaxy.github.io/course/pitfall/event-delegation-on-ios-safari/">example</a></p>
 
-<p><code>
-$('body').on('click', '.J_button', function(e){
-    alert('clicked');
-});
-</code></p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="s1">&#39;.J_button&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;clicked&#39;</span><span class="p">);</span>
+<span class="p">});</span></code></pre></div>
 
 <p>First <code>click here</code> will not alert, while the second <code>click here</code> alerts.</p>
 
