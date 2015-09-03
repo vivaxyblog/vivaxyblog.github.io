@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="shortcut icon" href="/css/vivaxy.icon.png">
+    <link type="text/css" rel="stylesheet" href="/css/reset.css">
+    <link type="text/css" rel="stylesheet" href="/css/main.css">
+    <link type="text/css" rel="stylesheet" href="/css/syntax.css">
+    <title>Writing Modular Javascript with ECMAScript 6</title>
+</head>
+<body>
+<div class="container">
+    <a href="/" class="card hover-left">
+	<div class="content">
+		<h1>Writing Modular Javascript with ECMAScript 6</h1>
+		<div class="date">2015-09-03</div>
+	</div>
+	<div class="icon-arrow-left"></div>
+</a>
+<div class="card">
+	<div class="content">
+		<p>We need <a href="https://www.npmjs.com/package/babel">babel</a> and <a href="https://www.npmjs.com/package/browserify">browserify</a>.</p>
+
+<h2 id="initialize-the-project">Initialize the project.</h2>
+
+<p><code>npm init</code>…</p>
+
+<p>Install babel and browserify.</p>
+
+<p><code>npm i --save-dev babel browserify</code></p>
+
+<p>Create <code>src</code> folder, es6 codes goes in there.</p>
+
+<p>Create <code>makefile</code> to build the project.</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">./dest/index.js: ./dest ./build/event-emitter.js ./build/module.js ./build/index.js
+	./node_modules/.bin/browserify ./build/index.js &gt; ./dest/index.js
+	rm -rf ./build
+
+./build/event-emitter.js: ./build ./event-emitter/src/event-emitter.js
+	./node_modules/.bin/babel ./event-emitter/src/event-emitter.js -o ./build/event-emitter.js --module-id EventEmitter # specify the module name to EventEmitter, otherwise babel will generate the module name from file name
+
+./build/module.js: ./build ./src/module.js
+	./node_modules/.bin/babel ./src/module.js -o ./build/module.js
+
+./build/index.js: ./build ./src/index.js
+	./node_modules/.bin/babel ./src/index.js -o ./build/index.js
+
+./dest:
+	mkdir ./dest
+
+./build:
+	mkdir ./build</code></pre></div>
+
+<h2 id="write-the-code">Write the code</h2>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// ./src/index.js</span>
+<span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">module</span> <span class="nx">from</span> <span class="s1">&#39;./module.js&#39;</span><span class="p">;</span>
+
+<span class="nx">module</span><span class="p">();</span></code></pre></div>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// ./src/module.js</span>
+<span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">EventEmitter</span> <span class="nx">from</span> <span class="s1">&#39;./event-emitter.js&#39;</span><span class="p">;</span>
+
+<span class="kr">class</span> <span class="nx">Test</span> <span class="kr">extends</span> <span class="nx">EventEmitter</span> <span class="p">{</span> <span class="c1">// extend class</span>
+    <span class="nx">constructor</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kr">super</span><span class="p">();</span> <span class="c1">// call super constructor</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">_initialize</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="nx">_initialize</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// initialize</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">new</span> <span class="nx">Test</span><span class="p">();</span>
+<span class="p">});</span>
+<span class="c1">// exports.default = function () {</span>
+<span class="c1">//     new Test();</span>
+<span class="c1">// }</span></code></pre></div>
+
+<h2 id="build-the-project">Build the project</h2>
+
+<p><code>make</code> will generate <code>./dest/index.js</code> with runnable javascript.</p>
+
+<h2 id="using-git-submodule">Using git submodule</h2>
+
+<p><code>git submodule add [-b gh-pages] https://github.com/vivaxy/event-emitter.git</code></p>
+
+<p>Repository here must start with <code>https://</code>, or we cannot publish this project to github pages.</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">Page build failure
+
+The page build failed with the following error:
+
+The submodule registered for `./event-emitter` could not be cloned. Make sure it&#39;s using https:// and that it&#39;s a public repo. For more information, see https://help.github.com/articles/page-build-failed-invalid-submodule.
+
+If you have any questions you can contact us by replying to this email.</code></pre></div>
+
+<h2 id="other-recommendation">Other Recommendation</h2>
+
+<p>Use git to keep your code traced.</p>
+
+<p>Write <code>README.md</code> to explain your project.</p>
+
+<p>Create <code>.gitignore</code> to keep <code>node_module</code>, <code>.DS_Store</code> and your git submodules out of git repository.</p>
+
+	</div>
+</div>
+<div class="card">
+	<!-- 多说 start -->
+	<div class="ds-thread" data-title="Writing Modular Javascript with ECMAScript 6" data-url=""></div>
+	<script type="text/javascript" charset="utf-8" src="/js/duoshuo/duoshuo.js"></script>
+	<!-- 多说  end  -->
+</div>
+
+    <a href="javascript:document.body.scrollIntoView(true);" class="card hover-top">
+        <div class="content">
+            <div class="date">© Copyright 2015 by vivaxy</div>
+            <!--<div class="alipay"></div>-->
+        </div>
+    </a>
+</div>
+</body>
+<script type="text/javascript" charset="utf-8" src="/js/analysis/ba.js"></script>
+</html>
