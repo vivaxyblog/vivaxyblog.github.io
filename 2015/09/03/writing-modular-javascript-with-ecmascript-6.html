@@ -36,7 +36,6 @@
 
 <div class="highlight"><pre><code class="language-text" data-lang="text">./dest/index.js: ./dest ./build/event-emitter.js ./build/module.js ./build/index.js
 	./node_modules/.bin/browserify ./build/index.js &gt; ./dest/index.js
-	rm -rf ./build
 
 ./build/event-emitter.js: ./build ./event-emitter/src/event-emitter.js
 	./node_modules/.bin/babel ./event-emitter/src/event-emitter.js -o ./build/event-emitter.js --module-id EventEmitter # specify the module name to EventEmitter, otherwise babel will generate the module name from file name
