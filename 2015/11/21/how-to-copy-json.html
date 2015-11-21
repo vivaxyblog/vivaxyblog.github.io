@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="shortcut icon" href="/css/vivaxy.icon.png">
+    <link type="text/css" rel="stylesheet" href="/css/reset.css">
+    <link type="text/css" rel="stylesheet" href="/css/main.css">
+    <link type="text/css" rel="stylesheet" href="/css/syntax.css">
+    <title>How to Copy JSON Object</title>
+</head>
+<body>
+<div class="container">
+    <a href="/" class="card hover-left">
+	<div class="content">
+		<h1>How to Copy JSON Object</h1>
+		<div class="date">2015-11-21</div>
+	</div>
+	<div class="icon-arrow-left"></div>
+</a>
+<div class="card">
+	<div class="content">
+		<h2 id="why-we-need-to-copy-json-object">Why we need to copy JSON object?</h2>
+
+<p>Sometimes server respond with data like this:</p>
+
+<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span>
+    <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="nt">&quot;msg&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;list&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;string 1&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="mi">1</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;string 2&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="mi">2</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>And we modify the list like this:</p>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">list</span> <span class="o">=</span> <span class="nx">ret</span><span class="p">.</span><span class="nx">msg</span><span class="p">.</span><span class="nx">list</span><span class="p">;</span>
+<span class="nx">list</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+    <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;string 3&#39;</span><span class="p">,</span>
+    <span class="nx">value</span><span class="o">:</span> <span class="mi">3</span>
+<span class="p">});</span>
+<span class="nx">ret</span><span class="p">.</span><span class="nx">msg</span><span class="p">.</span><span class="nx">list</span> <span class="o">===</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;string 1&#39;</span><span class="p">,</span>
+        <span class="nx">value</span><span class="o">:</span> <span class="mi">1</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;string 2&#39;</span><span class="p">,</span>
+        <span class="nx">value</span><span class="o">:</span> <span class="mi">2</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;string 3&#39;</span><span class="p">,</span>
+        <span class="nx">value</span><span class="o">:</span> <span class="mi">3</span>
+    <span class="p">}</span>
+<span class="p">]</span></code></pre></div>
+
+<p>Now, we will find the original response modified. What if I want it not to be changed.</p>
+
+<h2 id="why-its-changed">Why it’s changed?</h2>
+
+<p>Because javascript passing variables by pointer, which means <code>list</code> above is always pointing to the array that server responded.</p>
+
+<p>So when we modify <code>list</code>, will simultaneously modify the server response.</p>
+
+<p>This will happen when we cope with arrays and js objects.</p>
+
+<h2 id="so-we-copy-it">So we copy it.</h2>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">list</span> <span class="o">=</span> <span class="nx">ret</span><span class="p">.</span><span class="nx">msg</span><span class="p">.</span><span class="nx">list</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">item</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">item</span><span class="p">.</span><span class="nx">text</span><span class="p">,</span>
+    <span class="nx">item</span><span class="p">.</span><span class="nx">value</span>
+<span class="p">});</span>
+<span class="nx">list</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+    <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;string 3&#39;</span><span class="p">,</span>
+    <span class="nx">value</span><span class="o">:</span> <span class="mi">3</span>
+<span class="p">});</span>
+<span class="nx">ret</span><span class="p">.</span><span class="nx">msg</span><span class="p">.</span><span class="nx">list</span> <span class="o">===</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;string 1&#39;</span><span class="p">,</span>
+        <span class="nx">value</span><span class="o">:</span> <span class="mi">1</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;string 2&#39;</span><span class="p">,</span>
+        <span class="nx">value</span><span class="o">:</span> <span class="mi">2</span>
+    <span class="p">}</span>
+<span class="p">]</span></code></pre></div>
+
+<h2 id="what-if-the-respond-grows-more-deeper">What if the respond grows more deeper?</h2>
+
+<p>We can use <code>jQuery</code>, <code>underscore</code>, <code>lodash</code>.</p>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">list</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">({},</span> <span class="nx">ret</span><span class="p">.</span><span class="nx">msg</span><span class="p">).</span><span class="nx">list</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">list</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">extend</span><span class="p">({},</span> <span class="nx">ret</span><span class="p">.</span><span class="nx">msg</span><span class="p">).</span><span class="nx">list</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">list</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">clone</span><span class="p">(</span><span class="nx">ret</span><span class="p">.</span><span class="nx">msg</span><span class="p">.</span><span class="nx">list</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">list</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">cloneDeep</span><span class="p">(</span><span class="nx">ret</span><span class="p">.</span><span class="nx">msg</span><span class="p">.</span><span class="nx">list</span><span class="p">);</span></code></pre></div>
+
+<h2 id="a-much-more-simply-way">A much more simply way.</h2>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">list</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">ret</span><span class="p">.</span><span class="nx">msg</span><span class="p">.</span><span class="nx">list</span><span class="p">));</span></code></pre></div>
+
+<p>But this only works for JSON objects, removes <code>Function</code>, <code>undefined</code> values, and keeps what JSON objects takes.</p>
+
+<h2 id="difference-between-json-object-and-js-object">Difference between JSON object and js object.</h2>
+
+<ul>
+  <li>
+    <p>The <em>keys</em> must be strings (i.e. enclosed in double quotes “) in JSON.</p>
+  </li>
+  <li>
+    <p>The values can be either:</p>
+    <ul>
+      <li>a string</li>
+      <li>a number</li>
+      <li>an (JSON) object</li>
+      <li>an array</li>
+      <li>true</li>
+      <li>false</li>
+      <li>null</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="section">参考文档</h2>
+
+<ul>
+  <li>
+    <p><a href="https://lodash.com/docs">lodash</a></p>
+  </li>
+  <li>
+    <p><a href="http://underscorejs.org/">underscore</a></p>
+  </li>
+  <li>
+    <p><a href="http://api.jquery.com/">jQuery</a></p>
+  </li>
+  <li>
+    <p><a href="http://stackoverflow.com/questions/3975859/what-are-the-differences-between-json-and-javascript-object">What are the differences between JSON and JavaScript object?</a></p>
+  </li>
+  <li>
+    <p><a href="http://stackoverflow.com/questions/2904131/what-is-the-difference-between-json-and-object-literal-notation">What is the difference between JSON and Object Literal Notation?</a></p>
+  </li>
+</ul>
+
+	</div>
+</div>
+<div class="card">
+	<!-- 多说 start -->
+	<div class="ds-thread" data-title="How to Copy JSON Object" data-url=""></div>
+	<script type="text/javascript" charset="utf-8" src="/js/duoshuo/duoshuo.js"></script>
+	<!-- 多说  end  -->
+</div>
+
+    <a href="javascript:document.body.scrollIntoView(true);" class="card hover-top">
+        <div class="content">
+            <div class="date">© Copyright 2015 by vivaxy</div>
+            <!--<div class="alipay"></div>-->
+        </div>
+    </a>
+</div>
+</body>
+<script type="text/javascript" charset="utf-8" src="/js/analysis/ba.js"></script>
+</html>

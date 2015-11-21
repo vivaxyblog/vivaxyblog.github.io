@@ -323,16 +323,16 @@
 
 <ul>
   <li>
-    <p>js改变样式时：尽量改变class而不是style，手机端使用classList代替className</p>
+    <p>js改变样式时：尽量改变 class 而不是 style ，手机端使用 classList 代替 className</p>
   </li>
   <li>
-    <p>缓存DOM选择，每次选择都要计算。</p>
+    <p>缓存DOM选择，每次选择都要计算</p>
   </li>
   <li>
-    <p>缓存列表 <code>.length</code>，每次选择都要计算。</p>
+    <p>缓存列表 <code>.length</code>，每次选择都要计算</p>
   </li>
   <li>
-    <p>两次及以上用到的字符串常量，赋值给一个变量，以便在压缩时减少代码体积。</p>
+    <p>两次及以上用到的字符串常量，赋值给一个变量，以便在压缩时减少代码体积</p>
   </li>
 </ul>
 
@@ -369,6 +369,9 @@
 <span class="p">});</span></code></pre></div>
 
 <ul>
+  <li>
+    <p>字符串转换成数字的时候用 <code>parseInt('08', 10)</code> ，ie8 和三星 webview 下的 bug 会让0开头的字符串变成0</p>
+  </li>
   <li>
     <p><em>文件开始处添加 <code>'use strict'</code>，启用严格模式</em></p>
   </li>
@@ -767,6 +770,9 @@
   </li>
   <li>
     <p><a href="http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml">Google JavaScript Style Guide</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.zybuluo.com/TyrionYu/note/198953">点评前端编码规范</a></p>
   </li>
 </ul>
 
