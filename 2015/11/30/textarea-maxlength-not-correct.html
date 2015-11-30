@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="shortcut icon" href="/css/vivaxy.icon.png">
+    <link type="text/css" rel="stylesheet" href="/css/reset.css">
+    <link type="text/css" rel="stylesheet" href="/css/main.css">
+    <link type="text/css" rel="stylesheet" href="/css/syntax.css">
+    <title>textarea 的 maxlength 长度计算不正确</title>
+</head>
+<body>
+<div class="container">
+    <a href="/" class="card hover-left">
+	<div class="content">
+		<h1>textarea 的 maxlength 长度计算不正确</h1>
+		<div class="date">2015-11-30</div>
+	</div>
+	<div class="icon-arrow-left"></div>
+</a>
+<div class="card">
+	<div class="content">
+		<p>chrome 下的 textarea 的长度限制后，如果其中包括换行的话，能输入的字符会少于 maxlength 中限定的长度。</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;textarea</span>
+    <span class="na">placeholder=</span><span class="s">&quot;请输入驳回原因&quot;</span>
+    <span class="na">maxlength=</span><span class="s">&quot;10&quot;</span>
+    <span class="nt">&gt;</span>
+<span class="nt">&lt;/textarea&gt;</span></code></pre></div>
+
+<h2 id="section">测试结果</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>浏览器</th>
+      <th>回车占几个字符</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>chrome 46.0.2490.86 (64-bit)</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>chrome 46.0.2490.86 m</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>ie 11</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>edge</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>firefox 42.0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="section-1">参考资料</h2>
+
+<ul>
+  <li><a href="https://code.google.com/p/chromium/issues/detail?id=252613">Issue 252613 - chromium - textarea maxlength attribute does not count the correct string length</a></li>
+</ul>
+
+	</div>
+</div>
+<div class="card">
+	<!-- 多说 start -->
+	<div class="ds-thread" data-title="textarea 的 maxlength 长度计算不正确" data-url=""></div>
+	<script type="text/javascript" charset="utf-8" src="/js/duoshuo/duoshuo.js"></script>
+	<!-- 多说  end  -->
+</div>
+
+    <a href="javascript:document.body.scrollIntoView(true);" class="card hover-top">
+        <div class="content">
+            <div class="date">© Copyright 2015 by vivaxy</div>
+            <!--<div class="alipay"></div>-->
+        </div>
+    </a>
+</div>
+</body>
+<script type="text/javascript" charset="utf-8" src="/js/analysis/ba.js"></script>
+</html>
