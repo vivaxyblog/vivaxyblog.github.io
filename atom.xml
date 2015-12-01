@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title>vivaxy</title>
-    <link href="http://vivaxyblog.github.io//atom.xml" rel="self" />
-    <link href="http://vivaxyblog.github.io//"/>
-    <updated>2015-12-01T14:13:22+08:00</updated>
-    <id>http://vivaxyblog.github.io/</id>
+    <title>vivaxy's blog</title>
+    <link href="http://vivaxyblog.github.io/atom.xml" rel="self" />
+    <link href="http://vivaxyblog.github.io/"/>
+    <updated>2015-12-01T14:15:28+08:00</updated>
+    <id>http://vivaxyblog.github.io</id>
     <author>
         <name>vivaxy</name>
         <email>xyxuye2007@126.com</email>
@@ -12,9 +12,9 @@
     
     <entry>
         <title>textarea 的 maxlength 长度计算不正确</title>
-        <link href="http://vivaxyblog.github.io//2015/11/30/textarea-maxlength-not-correct.html" />
+        <link href="http://vivaxyblog.github.io/2015/11/30/textarea-maxlength-not-correct.html" />
         <updated>2015-11-30T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2015/11/30/textarea-maxlength-not-correct</id>
+        <id>http://vivaxyblog.github.io/2015/11/30/textarea-maxlength-not-correct</id>
         <content type="html">&lt;p&gt;chrome 下的 textarea 的长度限制后，如果其中包括换行的话，能输入的字符会少于 maxlength 中限定的长度。&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;textarea&lt;/span&gt;
@@ -66,9 +66,9 @@
     
     <entry>
         <title>同步 kindle 的文章剪贴</title>
-        <link href="http://vivaxyblog.github.io//2015/11/30/sync-kindle-clippings.html" />
+        <link href="http://vivaxyblog.github.io/2015/11/30/sync-kindle-clippings.html" />
         <updated>2015-11-30T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2015/11/30/sync-kindle-clippings</id>
+        <id>http://vivaxyblog.github.io/2015/11/30/sync-kindle-clippings</id>
         <content type="html">&lt;h2 id=&quot;kindle-&quot;&gt;国内的 kindle 少了一个好用的官方服务&lt;/h2&gt;
 
 &lt;p&gt;我需要在电脑上方便地找到 kindle 中的标注的时候，发现 kindle 中居然没有自动同步“我的剪贴”文档。&lt;/p&gt;
@@ -123,9 +123,9 @@
     
     <entry>
         <title>Node Gyp Rebuild Too Slow</title>
-        <link href="http://vivaxyblog.github.io//2015/11/25/node-gyp-rebuild-too-slow.html" />
+        <link href="http://vivaxyblog.github.io/2015/11/25/node-gyp-rebuild-too-slow.html" />
         <updated>2015-11-25T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2015/11/25/node-gyp-rebuild-too-slow</id>
+        <id>http://vivaxyblog.github.io/2015/11/25/node-gyp-rebuild-too-slow</id>
         <content type="html">&lt;p&gt;In China, node-gyp always building too slow or failing because of connection.&lt;/p&gt;
 
 &lt;p&gt;We can fix it by executing a shell script.&lt;/p&gt;
@@ -168,9 +168,9 @@ rm -rf node-v&lt;span class=&quot;nv&quot;&gt;$NODE_VERSION&lt;/span&gt;.tar.gz&
     
     <entry>
         <title>How to Copy JSON Object</title>
-        <link href="http://vivaxyblog.github.io//2015/11/21/how-to-copy-json.html" />
+        <link href="http://vivaxyblog.github.io/2015/11/21/how-to-copy-json.html" />
         <updated>2015-11-21T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2015/11/21/how-to-copy-json</id>
+        <id>http://vivaxyblog.github.io/2015/11/21/how-to-copy-json</id>
         <content type="html">&lt;h2 id=&quot;why-we-need-to-copy-json-object&quot;&gt;Why we need to copy JSON object?&lt;/h2&gt;
 
 &lt;p&gt;Sometimes server respond with data like this:&lt;/p&gt;
@@ -303,9 +303,9 @@ rm -rf node-v&lt;span class=&quot;nv&quot;&gt;$NODE_VERSION&lt;/span&gt;.tar.gz&
     
     <entry>
         <title>如何在亚马逊 EC2 上搭建 Shadowsocks 服务器</title>
-        <link href="http://vivaxyblog.github.io//2015/10/27/build-shadowsocks-server-on-amazon-ec2.html" />
+        <link href="http://vivaxyblog.github.io/2015/10/27/build-shadowsocks-server-on-amazon-ec2.html" />
         <updated>2015-10-27T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2015/10/27/build-shadowsocks-server-on-amazon-ec2</id>
+        <id>http://vivaxyblog.github.io/2015/10/27/build-shadowsocks-server-on-amazon-ec2</id>
         <content type="html">&lt;p&gt;以下过程需要代理支持。&lt;/p&gt;
 
 &lt;p&gt;新注册的 AWS 用户拥有一年的免费计划。&lt;/p&gt;
@@ -419,9 +419,9 @@ rm -rf node-v&lt;span class=&quot;nv&quot;&gt;$NODE_VERSION&lt;/span&gt;.tar.gz&
     
     <entry>
         <title>IOS 7 Switchery</title>
-        <link href="http://vivaxyblog.github.io//2015/10/20/ios-7-switchery.html" />
+        <link href="http://vivaxyblog.github.io/2015/10/20/ios-7-switchery.html" />
         <updated>2015-10-20T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2015/10/20/ios-7-switchery</id>
+        <id>http://vivaxyblog.github.io/2015/10/20/ios-7-switchery</id>
         <content type="html">&lt;h2 id=&quot;result-preview-and-live-example&quot;&gt;Result Preview and Live Example&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&quot;/image/2015-10-20-ios-7-switchery/preview.png&quot; alt=&quot;preview&quot; /&gt;&lt;/p&gt;
@@ -470,9 +470,9 @@ rm -rf node-v&lt;span class=&quot;nv&quot;&gt;$NODE_VERSION&lt;/span&gt;.tar.gz&
     
     <entry>
         <title>Writing Modular Javascript with ECMAScript 6</title>
-        <link href="http://vivaxyblog.github.io//2015/09/03/writing-modular-javascript-with-ecmascript-6.html" />
+        <link href="http://vivaxyblog.github.io/2015/09/03/writing-modular-javascript-with-ecmascript-6.html" />
         <updated>2015-09-03T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2015/09/03/writing-modular-javascript-with-ecmascript-6</id>
+        <id>http://vivaxyblog.github.io/2015/09/03/writing-modular-javascript-with-ecmascript-6</id>
         <content type="html">&lt;p&gt;We need &lt;a href=&quot;https://www.npmjs.com/package/babel&quot;&gt;babel&lt;/a&gt; and &lt;a href=&quot;https://www.npmjs.com/package/browserify&quot;&gt;browserify&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;initialize-the-project&quot;&gt;Initialize the project&lt;/h2&gt;
@@ -595,9 +595,9 @@ If you have any questions you can contact us by replying to this email.&lt;/code
     
     <entry>
         <title>Git Commit Script</title>
-        <link href="http://vivaxyblog.github.io//2015/08/23/git-commit-script.html" />
+        <link href="http://vivaxyblog.github.io/2015/08/23/git-commit-script.html" />
         <updated>2015-08-23T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2015/08/23/git-commit-script</id>
+        <id>http://vivaxyblog.github.io/2015/08/23/git-commit-script</id>
         <content type="html">&lt;p&gt;When using &lt;a href=&quot;https://git-scm.com/&quot;&gt;git&lt;/a&gt;, I always typed following command in order:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;git add .
@@ -623,9 +623,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>Preload Images</title>
-        <link href="http://vivaxyblog.github.io//2015/08/22/preload-images.html" />
+        <link href="http://vivaxyblog.github.io/2015/08/22/preload-images.html" />
         <updated>2015-08-22T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2015/08/22/preload-images</id>
+        <id>http://vivaxyblog.github.io/2015/08/22/preload-images</id>
         <content type="html">&lt;p&gt;Sites with big images always encounter slow loading.&lt;/p&gt;
 
 &lt;p&gt;Now i introduce to you a brand new utility: &lt;code&gt;preload-images&lt;/code&gt;.&lt;/p&gt;
@@ -705,9 +705,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>Pitfall Delegate Event on ios safari not working</title>
-        <link href="http://vivaxyblog.github.io//2015/08/14/pitfall-delegate-event-on-ios-safari.html" />
+        <link href="http://vivaxyblog.github.io/2015/08/14/pitfall-delegate-event-on-ios-safari.html" />
         <updated>2015-08-14T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2015/08/14/pitfall-delegate-event-on-ios-safari</id>
+        <id>http://vivaxyblog.github.io/2015/08/14/pitfall-delegate-event-on-ios-safari</id>
         <content type="html">&lt;h2 id=&quot;event-delegation-not-available-on-body&quot;&gt;Event delegation not available on body&lt;/h2&gt;
 
 &lt;p&gt;see &lt;a href=&quot;http://vivaxy.github.io/course/pitfall/event-delegation-on-ios-safari/&quot;&gt;example&lt;/a&gt;&lt;/p&gt;
@@ -728,9 +728,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>Alfred Workflow Open in WebStorm</title>
-        <link href="http://vivaxyblog.github.io//2015/06/02/alfred-workflow-open-in-webstorm.html" />
+        <link href="http://vivaxyblog.github.io/2015/06/02/alfred-workflow-open-in-webstorm.html" />
         <updated>2015-06-02T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2015/06/02/alfred-workflow-open-in-webstorm</id>
+        <id>http://vivaxyblog.github.io/2015/06/02/alfred-workflow-open-in-webstorm</id>
         <content type="html">&lt;h2 id=&quot;screenshots&quot;&gt;ScreenShots&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&quot;/image/2015-06-02-alfred-workflow-open-in-webstorm/find-folder.png&quot; alt=&quot;find folder&quot; /&gt;
@@ -757,9 +757,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>Pitfall in Label Input Click Events</title>
-        <link href="http://vivaxyblog.github.io//2015/05/31/pitfall-in-label-input-click-events.html" />
+        <link href="http://vivaxyblog.github.io/2015/05/31/pitfall-in-label-input-click-events.html" />
         <updated>2015-05-31T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2015/05/31/pitfall-in-label-input-click-events</id>
+        <id>http://vivaxyblog.github.io/2015/05/31/pitfall-in-label-input-click-events</id>
         <content type="html">&lt;p&gt;Labels and inputs are associated with &lt;code&gt;for&lt;/code&gt;, &lt;code&gt;id&lt;/code&gt; attribute.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;label&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;for=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;input-1&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;label-1&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;label 1 for input 1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/label&amp;gt;&lt;/span&gt;
@@ -789,9 +789,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>本地静态资源服务器</title>
-        <link href="http://vivaxyblog.github.io//2015/05/29/local-static-server.html" />
+        <link href="http://vivaxyblog.github.io/2015/05/29/local-static-server.html" />
         <updated>2015-05-29T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2015/05/29/local-static-server</id>
+        <id>http://vivaxyblog.github.io/2015/05/29/local-static-server</id>
         <content type="html">&lt;p&gt;适用于前端开发的静态资源服务器。&lt;/p&gt;
 
 &lt;ul&gt;
@@ -819,9 +819,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>谷歌浏览器二维码插件</title>
-        <link href="http://vivaxyblog.github.io//2015/05/25/qrcode-for-chrome.html" />
+        <link href="http://vivaxyblog.github.io/2015/05/25/qrcode-for-chrome.html" />
         <updated>2015-05-25T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2015/05/25/qrcode-for-chrome</id>
+        <id>http://vivaxyblog.github.io/2015/05/25/qrcode-for-chrome</id>
         <content type="html">&lt;p&gt;本浏览器插件为了方便直接扫描链接进入各种APP，如大众点评，点评管家等。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://vivaxy.github.io/qrcode-chrome/screenshot/0.png&quot; alt=&quot;preview&quot; /&gt;&lt;/p&gt;
@@ -836,9 +836,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>如何在js中优雅地写HTML模板</title>
-        <link href="http://vivaxyblog.github.io//2015/05/21/how-to-write-html-template-elegently-in-javascript-file.html" />
+        <link href="http://vivaxyblog.github.io/2015/05/21/how-to-write-html-template-elegently-in-javascript-file.html" />
         <updated>2015-05-21T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2015/05/21/how-to-write-html-template-elegently-in-javascript-file</id>
+        <id>http://vivaxyblog.github.io/2015/05/21/how-to-write-html-template-elegently-in-javascript-file</id>
         <content type="html">&lt;p&gt;注释形式写在js中，然后用Function.prototype.toString方法拿到。&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;compile&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;functionObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -940,9 +940,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>用animation的step属性实现帧动画</title>
-        <link href="http://vivaxyblog.github.io//2015/05/20/animation-step.html" />
+        <link href="http://vivaxyblog.github.io/2015/05/20/animation-step.html" />
         <updated>2015-05-20T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2015/05/20/animation-step</id>
+        <id>http://vivaxyblog.github.io/2015/05/20/animation-step</id>
         <content type="html">&lt;p&gt;准备一张长图，包含动画内的所有帧。如下图：&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://vivaxy.github.io/course/native-api/animation-steps/sprite.png&quot; alt=&quot;sprite&quot; /&gt;&lt;/p&gt;
@@ -980,9 +980,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>Commonly used clear fix</title>
-        <link href="http://vivaxyblog.github.io//2015/05/19/commonly-used-clear-fix.html" />
+        <link href="http://vivaxyblog.github.io/2015/05/19/commonly-used-clear-fix.html" />
         <updated>2015-05-19T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2015/05/19/commonly-used-clear-fix</id>
+        <id>http://vivaxyblog.github.io/2015/05/19/commonly-used-clear-fix</id>
         <content type="html">
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.clear-fix&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;c&quot;&gt;/* for ie7~8 */&lt;/span&gt;
@@ -1003,9 +1003,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>javascript模块化探索</title>
-        <link href="http://vivaxyblog.github.io//2015/04/06/object-oriented-module-view-in-javascript.html" />
+        <link href="http://vivaxyblog.github.io/2015/04/06/object-oriented-module-view-in-javascript.html" />
         <updated>2015-04-06T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2015/04/06/object-oriented-module-view-in-javascript</id>
+        <id>http://vivaxyblog.github.io/2015/04/06/object-oriented-module-view-in-javascript</id>
         <content type="html">&lt;p&gt;前端模块化的实现意味着要将一个模块中的数据，逻辑和渲染合并在一个单元中，往往这个单元是一个js文件。本文采用的方法也是如此。&lt;/p&gt;
 
 &lt;h2 id=&quot;reactjshttpsgithubcomfacebookreact&quot;&gt;&lt;a href=&quot;https://github.com/facebook/react&quot;&gt;reactjs&lt;/a&gt;的实现&lt;/h2&gt;
@@ -1163,9 +1163,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>使用excanvas实现canvas在IE7~8的兼容</title>
-        <link href="http://vivaxyblog.github.io//2015/02/15/using-canvas-with-excanvas.html" />
+        <link href="http://vivaxyblog.github.io/2015/02/15/using-canvas-with-excanvas.html" />
         <updated>2015-02-15T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2015/02/15/using-canvas-with-excanvas</id>
+        <id>http://vivaxyblog.github.io/2015/02/15/using-canvas-with-excanvas</id>
         <content type="html">&lt;p&gt;IE8及以下的浏览器上不兼容canvas，可以使用&lt;a href=&quot;https://code.google.com/p/explorercanvas/&quot;&gt;ExplorerCanvas&lt;/a&gt;做兼容性的替代。&lt;/p&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;兼容性检测&lt;/h2&gt;
@@ -1220,9 +1220,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>前端规范</title>
-        <link href="http://vivaxyblog.github.io//2015/01/14/f2e-standard.html" />
+        <link href="http://vivaxyblog.github.io/2015/01/14/f2e-standard.html" />
         <updated>2015-01-14T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2015/01/14/f2e-standard</id>
+        <id>http://vivaxyblog.github.io/2015/01/14/f2e-standard</id>
         <content type="html">&lt;h3 id=&quot;section&quot;&gt;说明&lt;/h3&gt;
 
 &lt;p&gt;前端规范是前端开发团队遵循和约定的代码书写规范&lt;/p&gt;
@@ -1983,9 +1983,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>git 指南</title>
-        <link href="http://vivaxyblog.github.io//2014/12/21/git-guide.html" />
+        <link href="http://vivaxyblog.github.io/2014/12/21/git-guide.html" />
         <updated>2014-12-21T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2014/12/21/git-guide</id>
+        <id>http://vivaxyblog.github.io/2014/12/21/git-guide</id>
         <content type="html">&lt;h2 id=&quot;git&quot;&gt;git介绍&lt;/h2&gt;
 
 &lt;h3 id=&quot;git-1&quot;&gt;什么是git？&lt;/h3&gt;
@@ -2205,9 +2205,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>把CapsLock改成Hyper键</title>
-        <link href="http://vivaxyblog.github.io//2014/12/12/map-capslock-to-hyperkey.html" />
+        <link href="http://vivaxyblog.github.io/2014/12/12/map-capslock-to-hyperkey.html" />
         <updated>2014-12-12T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2014/12/12/map-capslock-to-hyperkey</id>
+        <id>http://vivaxyblog.github.io/2014/12/12/map-capslock-to-hyperkey</id>
         <content type="html">&lt;h2 id=&quot;capslock&quot;&gt;CapsLock按键的位置&lt;/h2&gt;
 
 &lt;p&gt;Mac上的CapsLock占据了一个非常顺手的位置，可是却提供了一个没有用处的功能。&lt;/p&gt;
@@ -2282,9 +2282,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>Setup Gulp Livereload</title>
-        <link href="http://vivaxyblog.github.io//2014/11/30/setup-gulp-livereload.html" />
+        <link href="http://vivaxyblog.github.io/2014/11/30/setup-gulp-livereload.html" />
         <updated>2014-11-30T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2014/11/30/setup-gulp-livereload</id>
+        <id>http://vivaxyblog.github.io/2014/11/30/setup-gulp-livereload</id>
         <content type="html">&lt;h2 id=&quot;gulp&quot;&gt;Gulp&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://gulpjs.com/&quot;&gt;Gulp&lt;/a&gt; is a new build tool for web developers.&lt;/p&gt;
@@ -2368,9 +2368,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>Alfred Workflows for MacOS</title>
-        <link href="http://vivaxyblog.github.io//2014/11/30/alfred-workflows-for-macos.html" />
+        <link href="http://vivaxyblog.github.io/2014/11/30/alfred-workflows-for-macos.html" />
         <updated>2014-11-30T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2014/11/30/alfred-workflows-for-macos</id>
+        <id>http://vivaxyblog.github.io/2014/11/30/alfred-workflows-for-macos</id>
         <content type="html">&lt;h2 id=&quot;alfred&quot;&gt;Alfred&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.alfredapp.com/&quot;&gt;Alfred&lt;/a&gt; is an award-winning productivity application for Mac OS X.&lt;/p&gt;
@@ -2609,9 +2609,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>Genymotion Android Emulator</title>
-        <link href="http://vivaxyblog.github.io//2014/07/14/Genymotion-Android-Emulator.html" />
+        <link href="http://vivaxyblog.github.io/2014/07/14/Genymotion-Android-Emulator.html" />
         <updated>2014-07-14T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2014/07/14/Genymotion-Android-Emulator</id>
+        <id>http://vivaxyblog.github.io/2014/07/14/Genymotion-Android-Emulator</id>
         <content type="html">&lt;h2 id=&quot;why-is-genymotion&quot;&gt;Why is Genymotion?&lt;/h2&gt;
 
 &lt;p&gt;FAST!&lt;/p&gt;
@@ -2652,9 +2652,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>Post Feedback on Github Issue from Android Applications</title>
-        <link href="http://vivaxyblog.github.io//2014/06/27/Post-Feedback-on-Github-Issue-from-Android-Applications.html" />
+        <link href="http://vivaxyblog.github.io/2014/06/27/Post-Feedback-on-Github-Issue-from-Android-Applications.html" />
         <updated>2014-06-27T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2014/06/27/Post-Feedback-on-Github-Issue-from-Android-Applications</id>
+        <id>http://vivaxyblog.github.io/2014/06/27/Post-Feedback-on-Github-Issue-from-Android-Applications</id>
         <content type="html">&lt;h2 id=&quot;create-a-github-account&quot;&gt;Create a github account.&lt;/h2&gt;
 
 &lt;p&gt;Visit &lt;a href=&quot;github.com&quot;&gt;github.com&lt;/a&gt;.&lt;/p&gt;
@@ -2770,9 +2770,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>EXCEL 批量添加文件超链接</title>
-        <link href="http://vivaxyblog.github.io//2014/06/11/excel-PiLiangTianJiaWenJianChaoLianJie.html" />
+        <link href="http://vivaxyblog.github.io/2014/06/11/excel-PiLiangTianJiaWenJianChaoLianJie.html" />
         <updated>2014-06-11T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2014/06/11/excel-PiLiangTianJiaWenJianChaoLianJie</id>
+        <id>http://vivaxyblog.github.io/2014/06/11/excel-PiLiangTianJiaWenJianChaoLianJie</id>
         <content type="html">&lt;h2 id=&quot;folder50wordexcel&quot;&gt;文件夹folder下，有50个word文档，要添加到excel中的一列里面，作为超链接。&lt;/h2&gt;
 
 &lt;p&gt;在folder目录下shift+鼠标右键，在此处打开命令窗口(W)，输入：&lt;/p&gt;
@@ -2785,9 +2785,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>搭建博客</title>
-        <link href="http://vivaxyblog.github.io//2014/05/11/DaJanBoKe.html" />
+        <link href="http://vivaxyblog.github.io/2014/05/11/DaJanBoKe.html" />
         <updated>2014-05-11T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2014/05/11/DaJanBoKe</id>
+        <id>http://vivaxyblog.github.io/2014/05/11/DaJanBoKe</id>
         <content type="html">&lt;h2 id=&quot;section&quot;&gt;工具&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -2881,9 +2881,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>MI2S 刷 CM</title>
-        <link href="http://vivaxyblog.github.io//2014/05/10/MI2S-Shua-CM.html" />
+        <link href="http://vivaxyblog.github.io/2014/05/10/MI2S-Shua-CM.html" />
         <updated>2014-05-10T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2014/05/10/MI2S-Shua-CM</id>
+        <id>http://vivaxyblog.github.io/2014/05/10/MI2S-Shua-CM</id>
         <content type="html">&lt;p&gt;更新了&lt;a href=&quot;http://www.miui.com/thread-1751929-1-1.html&quot;&gt;MIUI 4.5.9&lt;/a&gt;开发版后，系统自带程序越来越多，自己做的主题也无法使用了……&lt;/p&gt;
 
 &lt;h2 id=&quot;s2-cyanogenmod3-11&quot;&gt;&lt;a href=&quot;http://www.mi.com/mi2s/&quot;&gt;小米2S手机&lt;/a&gt;标准版，刷入 &lt;a href=&quot;http://www.cyanogenmod.org/&quot;&gt;CyanogenMod&lt;/a&gt; 11&lt;/h2&gt;
@@ -2976,9 +2976,9 @@ MI2S&lt;/a&gt;，找到并下载&lt;a href=&quot;http://d-h.st/users/M1cha/?fld_
     
     <entry>
         <title>百度手机输入法自定义主题</title>
-        <link href="http://vivaxyblog.github.io//2014/05/03/baidu-input-custom-theme.html" />
+        <link href="http://vivaxyblog.github.io/2014/05/03/baidu-input-custom-theme.html" />
         <updated>2014-05-03T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2014/05/03/baidu-input-custom-theme</id>
+        <id>http://vivaxyblog.github.io/2014/05/03/baidu-input-custom-theme</id>
         <content type="html">&lt;p&gt;根据ejiepe的cmgt926黑白修改。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/image/2014-05-03-baidu-input-custom-theme/en.jpg&quot; alt=&quot;en&quot; /&gt;&lt;/p&gt;
@@ -3036,9 +3036,9 @@ HOLDSYM #长按出现候选列表&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>s60 手机 java 小游戏 Man(Manorg)</title>
-        <link href="http://vivaxyblog.github.io//2011/02/27/s60-ShouJi-java-XiaoYouXi-Man(Manorg).html" />
+        <link href="http://vivaxyblog.github.io/2011/02/27/s60-ShouJi-java-XiaoYouXi-Man(Manorg).html" />
         <updated>2011-02-27T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2011/02/27/s60-ShouJi-java-XiaoYouXi-Man(Manorg)</id>
+        <id>http://vivaxyblog.github.io/2011/02/27/s60-ShouJi-java-XiaoYouXi-Man(Manorg)</id>
         <content type="html">&lt;h2 id=&quot;section&quot;&gt;操作&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -3058,9 +3058,9 @@ HOLDSYM #长按出现候选列表&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>casio fx-82MS 暂时升级方法</title>
-        <link href="http://vivaxyblog.github.io//2011/02/11/casio-fx-82MS-ZanShiShengJiFangFa.html" />
+        <link href="http://vivaxyblog.github.io/2011/02/11/casio-fx-82MS-ZanShiShengJiFangFa.html" />
         <updated>2011-02-11T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2011/02/11/casio-fx-82MS-ZanShiShengJiFangFa</id>
+        <id>http://vivaxyblog.github.io/2011/02/11/casio-fx-82MS-ZanShiShengJiFangFa</id>
         <content type="html">&lt;h2 id=&quot;section&quot;&gt;按键顺序&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -3118,9 +3118,9 @@ HOLDSYM #长按出现候选列表&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>Super Miners HighScores 的修改</title>
-        <link href="http://vivaxyblog.github.io//2011/02/11/Super-Miners-HighScores-DeXiuGai.html" />
+        <link href="http://vivaxyblog.github.io/2011/02/11/Super-Miners-HighScores-DeXiuGai.html" />
         <updated>2011-02-11T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io//2011/02/11/Super-Miners-HighScores-DeXiuGai</id>
+        <id>http://vivaxyblog.github.io/2011/02/11/Super-Miners-HighScores-DeXiuGai</id>
         <content type="html">&lt;h2 id=&quot;section&quot;&gt;记录文件：&lt;/h2&gt;
 
 &lt;p&gt;&lt;code&gt;*/Private/A0000BF4/hiscores*.dat&lt;/code&gt;&lt;/p&gt;
