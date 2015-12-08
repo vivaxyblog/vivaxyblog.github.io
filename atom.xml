@@ -3,12 +3,116 @@
     <title>vivaxy's blog</title>
     <link href="http://vivaxyblog.github.io/atom.xml" rel="self" />
     <link href="http://vivaxyblog.github.io/"/>
-    <updated>2015-12-01T14:15:28+08:00</updated>
+    <updated>2015-12-08T10:35:37+08:00</updated>
     <id>http://vivaxyblog.github.io</id>
     <author>
         <name>vivaxy</name>
         <email>xyxuye2007@126.com</email>
     </author>
+    
+    <entry>
+        <title>用 ECMAScript 6 编写模块化的 js</title>
+        <link href="http://vivaxyblog.github.io/2015/12/08/writing-modular-javascript-with-ecmascript-6.html" />
+        <updated>2015-12-08T00:00:00+08:00</updated>
+        <id>http://vivaxyblog.github.io/2015/12/08/writing-modular-javascript-with-ecmascript-6</id>
+        <content type="html">&lt;h2 id=&quot;section&quot;&gt;阶段一&lt;/h2&gt;
+
+&lt;p&gt;用 babel 5.0 的 &lt;a href=&quot;https://babeljs.io/docs/setup/#babel_cli&quot;&gt;cli&lt;/a&gt; 将单个 es6 文件编译成 umd 形式的 es5&lt;/p&gt;
+
+&lt;p&gt;将文件拼接在一起 &lt;code&gt;&amp;gt; cat ./build/a.js ./build/b.js &amp;gt; ./dest/index.js&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;writing-modular-javascript-with-ecmascript-6html&quot;&gt;&lt;a href=&quot;/2015/09/03/writing-modular-javascript-with-ecmascript-6.html&quot;&gt;阶段二&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;使用到了 &lt;a href=&quot;https://www.npmjs.com/package/babel&quot;&gt;babel&lt;/a&gt; 和 &lt;a href=&quot;https://www.npmjs.com/package/browserify&quot;&gt;browserify&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;用 babel 5.0 的 &lt;a href=&quot;https://babeljs.io/docs/setup/#babel_cli&quot;&gt;cli&lt;/a&gt; 将单个 es6 文件编译成 cmd 形式的 es5&lt;/p&gt;
+
+&lt;p&gt;用 browserify 输出为同一个文件&lt;/p&gt;
+
+&lt;h2 id=&quot;writing-modular-javascript-with-ecmascript-6html-1&quot;&gt;&lt;a href=&quot;/2015/09/03/writing-modular-javascript-with-ecmascript-6.html&quot;&gt;阶段三&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;使用 browserify 插件 babelify&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;gt; browserify ./src/index.js -t babelify -o ./dest/index.js&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;阶段四&lt;/h2&gt;
+
+&lt;p&gt;babel 升级到了 6.0 ，对所有功能进行了细化拆分，如果用到 es6 的规范，则需要安装 &lt;code&gt;babel-preset-es2015&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;此处需要对上个阶段的项目进行升级&lt;/p&gt;
+
+&lt;p&gt;首先安装依赖&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;npm i --save-dev babelify babel-preset-es2015&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;修改 &lt;code&gt;package.json&lt;/code&gt; 添加 browserify 的配置&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&amp;quot;browserify&amp;quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;quot;transform&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+            &lt;span class=&quot;s2&quot;&gt;&amp;quot;babelify&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;quot;presets&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+                    &lt;span class=&quot;s2&quot;&gt;&amp;quot;es2015&amp;quot;&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;编译的指令变成了 &lt;code&gt;browserify ./src/index.js -o ./dest/index.js&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;这里可以把原本的 makefile 去除了，改由 &lt;code&gt;npm run make&lt;/code&gt; 命令来执行编译，在 &lt;code&gt;package.json&lt;/code&gt; 中添加&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&amp;quot;scripts&amp;quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;quot;build&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;browserify ./src/index.js -o ./dest/index.js&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;阶段五&lt;/h2&gt;
+
+&lt;p&gt;使用 &lt;a href=&quot;https://webpack.github.io/&quot;&gt;webpack&lt;/a&gt; 和 babel&lt;/p&gt;
+
+&lt;p&gt;上个阶段中每次编译的时间都是漫长的，不便于调试，使用 &lt;a href=&quot;https://webpack.github.io/docs/webpack-dev-server.html&quot;&gt;webpack-dev-server&lt;/a&gt; 可以解决调试慢的问题&lt;/p&gt;
+
+&lt;p&gt;安装依赖 &lt;code&gt;npm i --save-dev webpack webpack-dev-server babel-loader babel-core babel-preset-es2015&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;项目下新建 webpack 配置文件 &lt;code&gt;webpack.config.js&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;err&quot;&gt;/**&lt;/span&gt;
+ &lt;span class=&quot;err&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;@since&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2015-12-07&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;43&lt;/span&gt;
+ &lt;span class=&quot;err&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;@author&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;vivaxy&lt;/span&gt;
+ &lt;span class=&quot;err&quot;&gt;*/&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;&amp;#39;use&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;strict&amp;#39;;&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;module.exports&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;entry:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;err&quot;&gt;index:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;#39;./src/index.js&amp;#39;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;项目主入口文件&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;output:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;err&quot;&gt;filename:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;#39;./[name].js&amp;#39;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;输出的文件&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;module:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;err&quot;&gt;loaders:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;[&lt;/span&gt;
+            &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;err&quot;&gt;test:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;/src\/.+\.js?$/,&lt;/span&gt;
+                &lt;span class=&quot;err&quot;&gt;loader:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;#39;babel?presets[]=es2015&amp;#39;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;定义了&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;loader&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;err&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;loader 中的配置可以参考&lt;a href=&quot;https://webpack.github.io/docs/configuration.html#module-loaders&quot;&gt;这里&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;配置完成后，在命令行中执行 &lt;code&gt;&amp;gt; webpack&lt;/code&gt; 就能得到输出的文件，执行 &lt;code&gt;&amp;gt; webpack-dev-server&lt;/code&gt; 就能在 8080 端口启动本地服务，调试 es6 代码&lt;/p&gt;
+
+&lt;p&gt;如果想在文件变动后自动刷新页面，可以在 html 中加入 &lt;code&gt;&amp;lt;script src=&quot;http://localhost:8080/webpack-dev-server.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/vivaxy/course/tree/gh-pages/hammer&quot;&gt;参考项目&lt;/a&gt;&lt;/p&gt;
+</content>
+    </entry>
     
     <entry>
         <title>textarea 的 maxlength 长度计算不正确</title>
