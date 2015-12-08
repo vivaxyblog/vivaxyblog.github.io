@@ -53,30 +53,30 @@
 
 <p>修改 <code>package.json</code> 添加 browserify 的配置</p>
 
-<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">...</span>
-<span class="s2">&quot;browserify&quot;</span><span class="err">:</span> <span class="p">{</span>
-    <span class="nt">&quot;transform&quot;</span><span class="p">:</span> <span class="p">[</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// ...</span>
+<span class="s2">&quot;browserify&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;transform&quot;</span><span class="o">:</span> <span class="p">[</span>
         <span class="p">[</span>
             <span class="s2">&quot;babelify&quot;</span><span class="p">,</span>
             <span class="p">{</span>
-                <span class="nt">&quot;presets&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;presets&quot;</span><span class="o">:</span> <span class="p">[</span>
                     <span class="s2">&quot;es2015&quot;</span>
                 <span class="p">]</span>
             <span class="p">}</span>
         <span class="p">]</span>
     <span class="p">]</span>
-<span class="p">}</span><span class="err">,</span>
-<span class="err">...</span></code></pre></div>
+<span class="p">}</span> <span class="c1">// ,</span>
+<span class="c1">// ...</span></code></pre></div>
 
 <p>编译的指令变成了 <code>browserify ./src/index.js -o ./dest/index.js</code></p>
 
 <p>这里可以把原本的 makefile 去除了，改由 <code>npm run make</code> 命令来执行编译，在 <code>package.json</code> 中添加</p>
 
-<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">...</span>
-<span class="s2">&quot;scripts&quot;</span><span class="err">:</span> <span class="p">{</span>
-    <span class="nt">&quot;build&quot;</span><span class="p">:</span> <span class="s2">&quot;browserify ./src/index.js -o ./dest/index.js&quot;</span>
-<span class="p">}</span><span class="err">,</span>
-<span class="err">...</span></code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// ...</span>
+<span class="s2">&quot;scripts&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;build&quot;</span><span class="o">:</span> <span class="s2">&quot;browserify ./src/index.js -o ./dest/index.js&quot;</span>
+<span class="p">}</span> <span class="c1">// ,</span>
+<span class="c1">// ...</span></code></pre></div>
 
 <h2 id="section-2">阶段五</h2>
 
@@ -88,27 +88,27 @@
 
 <p>项目下新建 webpack 配置文件 <code>webpack.config.js</code></p>
 
-<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">/**</span>
- <span class="err">*</span> <span class="err">@since</span> <span class="mi">2015-12-07</span> <span class="mi">16</span><span class="err">:</span><span class="mi">43</span>
- <span class="err">*</span> <span class="err">@author</span> <span class="err">vivaxy</span>
- <span class="err">*/</span>
-<span class="err">&#39;use</span> <span class="err">strict&#39;;</span>
-<span class="err">module.exports</span> <span class="err">=</span> <span class="p">{</span>
-    <span class="err">entry:</span> <span class="err">{</span>
-        <span class="err">index:</span> <span class="err">&#39;./src/index.js&#39;</span> <span class="err">//</span> <span class="err">项目主入口文件</span>
-    <span class="p">}</span><span class="err">,</span>
-    <span class="err">output:</span> <span class="p">{</span>
-        <span class="err">filename:</span> <span class="err">&#39;./[name].js&#39;</span> <span class="err">//</span> <span class="err">输出的文件</span>
-    <span class="p">}</span><span class="err">,</span>
-    <span class="err">module:</span> <span class="p">{</span>
-        <span class="err">loaders:</span> <span class="err">[</span>
-            <span class="err">{</span>
-                <span class="err">test:</span> <span class="err">/src\/.+\.js?$/,</span>
-                <span class="err">loader:</span> <span class="err">&#39;babel?presets[]=es2015&#39;</span> <span class="err">//</span> <span class="err">定义了</span> <span class="err">loader</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="cm">/**</span>
+<span class="cm"> * @since 2015-12-07 16:43</span>
+<span class="cm"> * @author vivaxy</span>
+<span class="cm"> */</span>
+<span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">entry</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">index</span><span class="o">:</span> <span class="s1">&#39;./src/index.js&#39;</span> <span class="c1">// 项目主入口文件</span>
+    <span class="p">},</span>
+    <span class="nx">output</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">filename</span><span class="o">:</span> <span class="s1">&#39;./[name].js&#39;</span> <span class="c1">// 输出的文件</span>
+    <span class="p">},</span>
+    <span class="nx">module</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">loaders</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nx">test</span><span class="o">:</span> <span class="sr">/src\/.+\.js?$/</span><span class="p">,</span>
+                <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;babel?presets[]=es2015&#39;</span> <span class="c1">// 定义了 loader</span>
             <span class="p">}</span>
-        <span class="err">]</span>
-    <span class="err">}</span>
-<span class="err">};</span></code></pre></div>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></div>
 
 <p>loader 中的配置可以参考<a href="https://webpack.github.io/docs/configuration.html#module-loaders">这里</a></p>
 
