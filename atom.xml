@@ -3,7 +3,7 @@
     <title>vivaxy's blog</title>
     <link href="http://vivaxyblog.github.io/atom.xml" rel="self" />
     <link href="http://vivaxyblog.github.io/"/>
-    <updated>2015-12-08T14:34:52+08:00</updated>
+    <updated>2015-12-08T14:52:31+08:00</updated>
     <id>http://vivaxyblog.github.io</id>
     <author>
         <name>vivaxy</name>
@@ -2713,9 +2713,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>Genymotion Android Emulator</title>
-        <link href="http://vivaxyblog.github.io/2014/07/14/Genymotion-Android-Emulator.html" />
+        <link href="http://vivaxyblog.github.io/2014/07/14/genymotion-android-emulator.html" />
         <updated>2014-07-14T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io/2014/07/14/Genymotion-Android-Emulator</id>
+        <id>http://vivaxyblog.github.io/2014/07/14/genymotion-android-emulator</id>
         <content type="html">&lt;h2 id=&quot;why-is-genymotion&quot;&gt;Why is Genymotion?&lt;/h2&gt;
 
 &lt;p&gt;FAST!&lt;/p&gt;
@@ -2756,9 +2756,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>Post Feedback on Github Issue from Android Applications</title>
-        <link href="http://vivaxyblog.github.io/2014/06/27/Post-Feedback-on-Github-Issue-from-Android-Applications.html" />
+        <link href="http://vivaxyblog.github.io/2014/06/27/post-feedback-on-github-issue-from-android-applications.html" />
         <updated>2014-06-27T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io/2014/06/27/Post-Feedback-on-Github-Issue-from-Android-Applications</id>
+        <id>http://vivaxyblog.github.io/2014/06/27/post-feedback-on-github-issue-from-android-applications</id>
         <content type="html">&lt;h2 id=&quot;create-a-github-account&quot;&gt;Create a github account.&lt;/h2&gt;
 
 &lt;p&gt;Visit &lt;a href=&quot;github.com&quot;&gt;github.com&lt;/a&gt;.&lt;/p&gt;
@@ -2874,9 +2874,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>EXCEL 批量添加文件超链接</title>
-        <link href="http://vivaxyblog.github.io/2014/06/11/excel-PiLiangTianJiaWenJianChaoLianJie.html" />
+        <link href="http://vivaxyblog.github.io/2014/06/11/excel-batch-add-hyperlink.html" />
         <updated>2014-06-11T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io/2014/06/11/excel-PiLiangTianJiaWenJianChaoLianJie</id>
+        <id>http://vivaxyblog.github.io/2014/06/11/excel-batch-add-hyperlink</id>
         <content type="html">&lt;h2 id=&quot;folder50wordexcel&quot;&gt;文件夹folder下，有50个word文档，要添加到excel中的一列里面，作为超链接。&lt;/h2&gt;
 
 &lt;p&gt;在folder目录下shift+鼠标右键，在此处打开命令窗口(W)，输入：&lt;/p&gt;
@@ -2889,9 +2889,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>搭建博客</title>
-        <link href="http://vivaxyblog.github.io/2014/05/11/DaJanBoKe.html" />
+        <link href="http://vivaxyblog.github.io/2014/05/11/build-blog.html" />
         <updated>2014-05-11T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io/2014/05/11/DaJanBoKe</id>
+        <id>http://vivaxyblog.github.io/2014/05/11/build-blog</id>
         <content type="html">&lt;h2 id=&quot;section&quot;&gt;工具&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -2985,9 +2985,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>MI2S 刷 CM</title>
-        <link href="http://vivaxyblog.github.io/2014/05/10/MI2S-Shua-CM.html" />
+        <link href="http://vivaxyblog.github.io/2014/05/10/mi2s-flash-cm.html" />
         <updated>2014-05-10T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io/2014/05/10/MI2S-Shua-CM</id>
+        <id>http://vivaxyblog.github.io/2014/05/10/mi2s-flash-cm</id>
         <content type="html">&lt;p&gt;更新了&lt;a href=&quot;http://www.miui.com/thread-1751929-1-1.html&quot;&gt;MIUI 4.5.9&lt;/a&gt;开发版后，系统自带程序越来越多，自己做的主题也无法使用了……&lt;/p&gt;
 
 &lt;h2 id=&quot;s2-cyanogenmod3-11&quot;&gt;&lt;a href=&quot;http://www.mi.com/mi2s/&quot;&gt;小米2S手机&lt;/a&gt;标准版，刷入 &lt;a href=&quot;http://www.cyanogenmod.org/&quot;&gt;CyanogenMod&lt;/a&gt; 11&lt;/h2&gt;
@@ -3140,9 +3140,9 @@ HOLDSYM #长按出现候选列表&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>s60 手机 java 小游戏 Man(Manorg)</title>
-        <link href="http://vivaxyblog.github.io/2011/02/27/s60-ShouJi-java-XiaoYouXi-Man(Manorg).html" />
+        <link href="http://vivaxyblog.github.io/2011/02/27/s60-mobile-java-game-man-manorg.html" />
         <updated>2011-02-27T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io/2011/02/27/s60-ShouJi-java-XiaoYouXi-Man(Manorg)</id>
+        <id>http://vivaxyblog.github.io/2011/02/27/s60-mobile-java-game-man-manorg</id>
         <content type="html">&lt;h2 id=&quot;section&quot;&gt;操作&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -3161,70 +3161,10 @@ HOLDSYM #长按出现候选列表&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     </entry>
     
     <entry>
-        <title>casio fx-82MS 暂时升级方法</title>
-        <link href="http://vivaxyblog.github.io/2011/02/11/casio-fx-82MS-ZanShiShengJiFangFa.html" />
-        <updated>2011-02-11T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io/2011/02/11/casio-fx-82MS-ZanShiShengJiFangFa</id>
-        <content type="html">&lt;h2 id=&quot;section&quot;&gt;按键顺序&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;shift + 7 + on&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;4次shift&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;如果左边显示25，则输入组合13，如果左边显示20，则输入组合53&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;mode&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;3&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;1（进入lin模式）&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;1&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;42次m+（存入40个1的数据，然后切到选择是否关闭edit的对话界面）&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;2（选择esc）&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;↑（切到第40个数据freq的编辑界面）&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;输入组合（按上面的方法选择1313131…还是5353535…）直到满&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;两次=（切到选择是否关闭edit的对话界面）&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;0（貌似没反应，但是一定要按）&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;1（界面上有个1，光标在1很后面的位置，大功告成！）&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;按mode进入模式选择界面即可&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://file.casio.com.cn/resource/files/support/cal/support/Manual/fx-991ES.pdf&quot;&gt;casio fx-82MS 说明书&lt;/a&gt;&lt;/p&gt;
-
-</content>
-    </entry>
-    
-    <entry>
         <title>Super Miners HighScores 的修改</title>
-        <link href="http://vivaxyblog.github.io/2011/02/11/Super-Miners-HighScores-DeXiuGai.html" />
+        <link href="http://vivaxyblog.github.io/2011/02/11/modify-super-miners-high-scores.html" />
         <updated>2011-02-11T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io/2011/02/11/Super-Miners-HighScores-DeXiuGai</id>
+        <id>http://vivaxyblog.github.io/2011/02/11/modify-super-miners-high-scores</id>
         <content type="html">&lt;h2 id=&quot;section&quot;&gt;记录文件：&lt;/h2&gt;
 
 &lt;p&gt;&lt;code&gt;*/Private/A0000BF4/hiscores*.dat&lt;/code&gt;&lt;/p&gt;
@@ -3293,6 +3233,66 @@ z d0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 000000a0h: D2 D3 AA AA AA AA AA AA AA AA AA AA AA AA AA AA
 000000b0h: AE AA AA AA D2 D3 AA AA AA AA AA AA AA AA AA AA
 000000c0h: AA AA AA AA AF AA AA AA&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</content>
+    </entry>
+    
+    <entry>
+        <title>casio fx-82MS 暂时升级方法</title>
+        <link href="http://vivaxyblog.github.io/2011/02/11/casio-fx-82ms-temporary-upgrade.html" />
+        <updated>2011-02-11T00:00:00+08:00</updated>
+        <id>http://vivaxyblog.github.io/2011/02/11/casio-fx-82ms-temporary-upgrade</id>
+        <content type="html">&lt;h2 id=&quot;section&quot;&gt;按键顺序&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;shift + 7 + on&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;4次shift&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;如果左边显示25，则输入组合13，如果左边显示20，则输入组合53&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;mode&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;3&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;1（进入lin模式）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;1&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;42次m+（存入40个1的数据，然后切到选择是否关闭edit的对话界面）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;2（选择esc）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;↑（切到第40个数据freq的编辑界面）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;输入组合（按上面的方法选择1313131…还是5353535…）直到满&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;两次=（切到选择是否关闭edit的对话界面）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;0（貌似没反应，但是一定要按）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;1（界面上有个1，光标在1很后面的位置，大功告成！）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;按mode进入模式选择界面即可&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://file.casio.com.cn/resource/files/support/cal/support/Manual/fx-991ES.pdf&quot;&gt;casio fx-82MS 说明书&lt;/a&gt;&lt;/p&gt;
 
 </content>
     </entry>
