@@ -3,7 +3,7 @@
     <title>vivaxy's blog</title>
     <link href="http://vivaxyblog.github.io/atom.xml" rel="self" />
     <link href="http://vivaxyblog.github.io/"/>
-    <updated>2015-12-08T14:52:31+08:00</updated>
+    <updated>2015-12-08T20:25:41+08:00</updated>
     <id>http://vivaxyblog.github.io</id>
     <author>
         <name>vivaxy</name>
@@ -2352,7 +2352,7 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;下载安装以上两个软件。&lt;/p&gt;
 
-&lt;p&gt;打开&lt;code&gt;seil&lt;/code&gt;，勾选&lt;code&gt;change ths caps lock key&lt;/code&gt;，&lt;code&gt;keyocde&lt;/code&gt;填写80，即&lt;code&gt;F19&lt;/code&gt;，根据下方提示到系统选项中禁用CapsLock键的默认功能。&lt;/p&gt;
+&lt;p&gt;打开&lt;code&gt;seil&lt;/code&gt;，勾选&lt;code&gt;change ths caps lock key&lt;/code&gt;，&lt;code&gt;keycode&lt;/code&gt;填写80，即&lt;code&gt;F19&lt;/code&gt;，根据下方提示到系统选项中禁用CapsLock键的默认功能。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/image/2014-12-12-map-capslock-to-hyperkey/seil.png&quot; alt=&quot;seil&quot; /&gt;&lt;/p&gt;
 
@@ -2713,9 +2713,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>Genymotion Android Emulator</title>
-        <link href="http://vivaxyblog.github.io/2014/07/14/genymotion-android-emulator.html" />
+        <link href="http://vivaxyblog.github.io/2014/07/14/Genymotion-Android-Emulator.html" />
         <updated>2014-07-14T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io/2014/07/14/genymotion-android-emulator</id>
+        <id>http://vivaxyblog.github.io/2014/07/14/Genymotion-Android-Emulator</id>
         <content type="html">&lt;h2 id=&quot;why-is-genymotion&quot;&gt;Why is Genymotion?&lt;/h2&gt;
 
 &lt;p&gt;FAST!&lt;/p&gt;
@@ -2756,9 +2756,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
     <entry>
         <title>Post Feedback on Github Issue from Android Applications</title>
-        <link href="http://vivaxyblog.github.io/2014/06/27/post-feedback-on-github-issue-from-android-applications.html" />
+        <link href="http://vivaxyblog.github.io/2014/06/27/Post-Feedback-on-Github-Issue-from-Android-Applications.html" />
         <updated>2014-06-27T00:00:00+08:00</updated>
-        <id>http://vivaxyblog.github.io/2014/06/27/post-feedback-on-github-issue-from-android-applications</id>
+        <id>http://vivaxyblog.github.io/2014/06/27/Post-Feedback-on-Github-Issue-from-Android-Applications</id>
         <content type="html">&lt;h2 id=&quot;create-a-github-account&quot;&gt;Create a github account.&lt;/h2&gt;
 
 &lt;p&gt;Visit &lt;a href=&quot;github.com&quot;&gt;github.com&lt;/a&gt;.&lt;/p&gt;
