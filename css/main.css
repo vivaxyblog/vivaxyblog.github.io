@@ -6,14 +6,14 @@
 
 /* selection */
 *::selection {
-    background: rgb(231, 76, 60);
-    color: rgb(255, 255, 255);
+    background: #e74c3c;
+    color: #fff;
 }
 
 body {
     width: 100%;
     height: 100%;
-    background: rgb(250, 250, 250);
+    background: #f7f7f7;
     font-family: "\5b8b\4f53", "georgia", "times new roman", "times", "serif";
     -webkit-font-smoothing: antialiased;
 }
@@ -51,18 +51,18 @@ textarea, input, a {
 h1 {
     margin: 15px 0;
     text-align: center;
-    color: rgb(51, 51, 51);
+    color: #333;
 }
 
 /* page title */
 h2, h3, h4, h5, h6 {
     margin: 15px 0;
-    color: rgb(51, 51, 51);
+    color: #333;
     position: relative;
 }
 
 a, a:visited {
-    color: rgb(231, 76, 60);
+    color: #e74c3c;
     transition: color 0.5s;
     text-decoration: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
@@ -70,7 +70,7 @@ a, a:visited {
 }
 
 a:hover {
-    color: rgb(192, 57, 43);
+    color: #c0392b;
     text-decoration: underline;
 }
 
@@ -88,7 +88,7 @@ img {
 blockquote {
     padding: 16px;
     overflow: auto;
-    background-color: rgb(247, 247, 247);
+    background-color: #f7f7f7;
     border-radius: 3px;
 }
 
@@ -99,9 +99,9 @@ p {
 
 code {
     font-size: 14px;
-    color: rgb(231, 76, 60);
-    background-color: rgb(247, 247, 247);
-    border: 1px solid rgb(239, 239, 239);
+    color: #d14;
+    background-color: #f7f7f7;
+    border: 1px solid #efefef;
     border-radius: 3px;
     padding: 1px 3px;
     word-wrap: normal;
@@ -116,29 +116,29 @@ code {
 }
 
 table thead tr, table tbody tr {
-    background-color: rgb(255, 255, 255);
-    border-top: 1px solid rgb(239, 239, 239);
+    background-color: #fff;
+    border-top: 1px solid #efefef;
 }
 
 table thead tr th, table tbody tr td {
     padding: 6px 13px;
-    border: 1px solid rgb(239, 239, 239);
+    border: 1px solid #efefef;
     font-size: 14px;
 }
 
 table tbody tr:nth-child(2n) {
-    background-color: rgb(247, 247, 247);
+    background-color: #f7f7f7;
 }
 
 .card {
     display: block;
     margin: 20px 0;
     padding: 20px 40px;
-    background: rgb(255, 255, 255);
+    background: #fff;
     box-shadow: 0 0 1px rgba(239, 239, 239, 0.8);
     outline: none;
     text-decoration: none;
-    color: rgb(51, 51, 51);
+    color: #333;
     transition: background 0.5s, color 0.5s;
     word-wrap: break-word;
     overflow: hidden;
@@ -151,19 +151,19 @@ table tbody tr:nth-child(2n) {
 }
 
 a.card:hover {
-    background: rgb(255, 255, 255);
-    color: rgb(192, 57, 43);
+    background: #fff;
+    color: #c0392b;
     text-decoration: none;
 }
 
 .card .date {
-    color: rgb(102, 102, 102);
+    color: #666;
     transition: color 0.5s;
     font-size: 14px;
 }
 
 a.card:hover h2, a.card:hover h1, a.card:hover .date {
-    color: rgb(192, 57, 43);
+    color: #c0392b;
 }
 
 /* hover-left */
