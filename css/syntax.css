@@ -5,15 +5,15 @@
 
 .highlight code {
     display: block;
-    padding: 9.5px;
+    padding: 9px;
     margin: 0 0 10px;
     font-size: 13px;
     line-height: 1.428571429;
-    color: #333;
+    color: rgb(51, 51, 51);
     word-break: break-all;
     word-wrap: break-word;
-    background-color: #f7f7f7;
-    border: 1px solid #ccc;
+    background-color: rgb(247, 247, 247);
+    border: 1px solid rgb(239, 239, 239);
     border-radius: 3px
 }
 
