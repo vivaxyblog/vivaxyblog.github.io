@@ -144,10 +144,29 @@ table tbody tr:nth-child(2n) {
     overflow: hidden;
 }
 
-.pagination {
-    text-align: center;
+.footer {
+    display: -webkit-box;
     font-size: 18px;
     line-height: 60px;
+}
+
+.footer .pagination {
+    -webkit-box-flex: 1;
+    text-align: right;
+}
+
+.footer .accessories {
+    -webkit-box-flex: 1;
+    text-align: left;
+}
+
+.footer .icon {
+    font-family: "icomoon";
+    text-decoration: none;
+}
+
+.footer .pagination .page-number {
+    font-family: "Helvetica Neue", "Helvetica", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "SimSun", "sans-serif";
 }
 
 a.card:hover {
