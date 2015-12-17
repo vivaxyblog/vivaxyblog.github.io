@@ -7,21 +7,21 @@
     <link type="text/css" rel="stylesheet" href="/css/reset.css">
     <link type="text/css" rel="stylesheet" href="/css/main.css">
     <link type="text/css" rel="stylesheet" href="/css/syntax.css">
-    <link rel="alternate" type="application/atom+xml" title="vivaxy blog" href="/atom.xml" />
+    <link rel="alternate" type="application/atom+xml" title="vivaxy blog" href="/atom.xml"/>
     <title>如何在js中优雅地写HTML模板</title>
 </head>
 <body>
 <div class="container">
     <a href="/" class="card hover-left">
-	<div class="content">
-		<h1>如何在js中优雅地写HTML模板</h1>
-		<div class="date">2015-05-21</div>
-	</div>
-	<div class="icon-arrow-left"></div>
+    <div class="content">
+        <h1>如何在js中优雅地写HTML模板</h1>
+        <div class="date">2015-05-21</div>
+    </div>
+    <div class="icon-arrow-left"></div>
 </a>
 <div class="card">
-	<div class="content">
-		<p>注释形式写在js中，然后用Function.prototype.toString方法拿到。</p>
+    <div class="content">
+        <p>注释形式写在js中，然后用Function.prototype.toString方法拿到。</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">compile</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">functionObject</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="nx">functionObject</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">match</span><span class="p">(</span><span class="sr">/\/\*([\s\S]*?)\*\//</span><span class="p">)[</span><span class="mi">1</span><span class="p">];</span>
@@ -118,18 +118,18 @@
 
 <p>另：已经有人造了轮子：<a href="https://github.com/sindresorhus/multiline">multiline</a></p>
 
-	</div>
+    </div>
 </div>
 <div class="card">
-	<!-- 多说 start -->
-	<div class="ds-thread" data-title="如何在js中优雅地写HTML模板" data-url=""></div>
-	<script type="text/javascript" charset="utf-8" src="/js/duoshuo/duoshuo.js"></script>
-	<!-- 多说  end  -->
+    <!-- 多说 start -->
+    <div class="ds-thread" data-title="如何在js中优雅地写HTML模板" data-url=""></div>
+    <script type="text/javascript" charset="utf-8" src="/js/duoshuo/duoshuo.js"></script>
+    <!-- 多说  end  -->
 </div>
 
-    <a href="javascript:document.body.scrollIntoView(true);" class="card hover-top">
+    <a href="javascript:document.body.scrollIntoView(true)" class="card hover-top">
         <div class="content">
-            <div class="date">© Copyright 2016 by vivaxy</div>
+            <div class="date">© Copyright 2011 ~ 2016 by vivaxy</div>
         </div>
     </a>
 </div>
