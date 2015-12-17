@@ -3,7 +3,7 @@
     <title>vivaxy's blog</title>
     <link href="http://vivaxyblog.github.io/atom.xml" rel="self" />
     <link href="http://vivaxyblog.github.io/"/>
-    <updated>2015-12-16T18:36:51+08:00</updated>
+    <updated>2015-12-17T10:25:40+08:00</updated>
     <id>http://vivaxyblog.github.io</id>
     <author>
         <name>vivaxy</name>
@@ -1422,7 +1422,7 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     &lt;p&gt;7.2 &lt;a href=&quot;#7.2&quot;&gt;&lt;em&gt;文档注释&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;#8&quot;&gt;git分支&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;#8&quot;&gt;git 版本管理&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;#9&quot;&gt;版本号&lt;/a&gt;&lt;/p&gt;
@@ -1910,32 +1910,28 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id=&quot;a-name8a-8-git&quot;&gt;&lt;a name=&quot;8&quot;&gt;&lt;/a&gt; 8 git分支&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;主要分支，长期存在&lt;/li&gt;
+  &lt;li&gt;分支命名&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;主分支：&lt;code&gt;master&lt;/code&gt;，用于发布到ppe和线上&lt;/p&gt;
+    &lt;p&gt;主分支：&lt;code&gt;master&lt;/code&gt;，用于发布到 ppe 和线上&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;开发分支：&lt;code&gt;develop&lt;/code&gt;，可交付的代码，用于持续集成的构建，nightly-build&lt;/p&gt;
+    &lt;p&gt;开发分支：&lt;code&gt;yyyyMMdd-feture&lt;/code&gt;，可交付的代码，用于持续集成 ci 的构建&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;当开发分支足够稳定时，就将改动合并到 &lt;code&gt;master&lt;/code&gt; 上，并且打上标签，标签名称为发布的版本号&lt;/p&gt;
-
-&lt;p&gt;可以用于长期绑定在beta上&lt;/p&gt;
-
 &lt;ul&gt;
-  &lt;li&gt;辅助分支，生命周期短暂&lt;/li&gt;
+  &lt;li&gt;分支合并&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;特性分支：从开发分支上分出，并最终合并入开发分支。特性分支用于开发一个新特性。以 &lt;code&gt;feature-xxx&lt;/code&gt; 的方式命名&lt;/p&gt;
+    &lt;p&gt;采用 &lt;code&gt;git rebase&lt;/code&gt; 合并同一分支上不同人的改动记录，避免产生多余的 commit 记录&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;紧急修复分支：从主分支上分出，并最终合并入开发分支和主分支。分支以 &lt;code&gt;hotfix-xxx&lt;/code&gt; 的方式命名&lt;/p&gt;
+    &lt;p&gt;提交 merge request 来将开发分支合并到主分支上。目的是为了增加代码审核流程，以减少上线后的问题&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 

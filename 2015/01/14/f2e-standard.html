@@ -116,7 +116,7 @@
     <p>7.2 <a href="#7.2"><em>文档注释</em></a></p>
   </li>
   <li>
-    <p><a href="#8">git分支</a></p>
+    <p><a href="#8">git 版本管理</a></p>
   </li>
   <li>
     <p><a href="#9">版本号</a></p>
@@ -604,32 +604,28 @@
 <h3 id="a-name8a-8-git"><a name="8"></a> 8 git分支</h3>
 
 <ul>
-  <li>主要分支，长期存在</li>
+  <li>分支命名</li>
 </ul>
 
 <ol>
   <li>
-    <p>主分支：<code>master</code>，用于发布到ppe和线上</p>
+    <p>主分支：<code>master</code>，用于发布到 ppe 和线上</p>
   </li>
   <li>
-    <p>开发分支：<code>develop</code>，可交付的代码，用于持续集成的构建，nightly-build</p>
+    <p>开发分支：<code>yyyyMMdd-feture</code>，可交付的代码，用于持续集成 ci 的构建</p>
   </li>
 </ol>
 
-<p>当开发分支足够稳定时，就将改动合并到 <code>master</code> 上，并且打上标签，标签名称为发布的版本号</p>
-
-<p>可以用于长期绑定在beta上</p>
-
 <ul>
-  <li>辅助分支，生命周期短暂</li>
+  <li>分支合并</li>
 </ul>
 
 <ol>
   <li>
-    <p>特性分支：从开发分支上分出，并最终合并入开发分支。特性分支用于开发一个新特性。以 <code>feature-xxx</code> 的方式命名</p>
+    <p>采用 <code>git rebase</code> 合并同一分支上不同人的改动记录，避免产生多余的 commit 记录</p>
   </li>
   <li>
-    <p>紧急修复分支：从主分支上分出，并最终合并入开发分支和主分支。分支以 <code>hotfix-xxx</code> 的方式命名</p>
+    <p>提交 merge request 来将开发分支合并到主分支上。目的是为了增加代码审核流程，以减少上线后的问题</p>
   </li>
 </ol>
 
