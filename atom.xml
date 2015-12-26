@@ -3,7 +3,7 @@
     <title>vivaxy's blog</title>
     <link href="http://vivaxyblog.github.io/atom.xml" rel="self" />
     <link href="http://vivaxyblog.github.io/"/>
-    <updated>2015-12-17T10:29:42+08:00</updated>
+    <updated>2015-12-26T21:11:10+08:00</updated>
     <id>http://vivaxyblog.github.io</id>
     <author>
         <name>vivaxy</name>
@@ -2076,6 +2076,9 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;https://www.zybuluo.com/TyrionYu/note/198953&quot;&gt;点评前端编码规范&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/interagent/http-api-design&quot;&gt;http-api-design&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 </content>
