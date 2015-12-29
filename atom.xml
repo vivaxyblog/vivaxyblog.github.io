@@ -3,7 +3,7 @@
     <title>vivaxy's blog</title>
     <link href="http://vivaxyblog.github.io/atom.xml" rel="self" />
     <link href="http://vivaxyblog.github.io/"/>
-    <updated>2015-12-29T16:38:43+08:00</updated>
+    <updated>2015-12-29T17:04:21+08:00</updated>
     <id>http://vivaxyblog.github.io</id>
     <author>
         <name>vivaxy</name>
@@ -69,6 +69,58 @@
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://eslint.org/&quot;&gt;ESLint - Pluggable JavaScript linter&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/husky&quot;&gt;husky&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </entry>
+    
+    <entry>
+        <title>用 editor config 配置统一编辑器配置</title>
+        <link href="http://vivaxyblog.github.io/2015/12/29/use-editor-config-file-to-unify-code-style.html" />
+        <updated>2015-12-29T00:00:00+08:00</updated>
+        <id>http://vivaxyblog.github.io/2015/12/29/use-editor-config-file-to-unify-code-style</id>
+        <content type="html">&lt;h2 id=&quot;editor-config&quot;&gt;配置 editor config&lt;/h2&gt;
+
+&lt;p&gt;在项目下创建文件 &lt;a href=&quot;https://github.com/vivaxy/front-end-scaffold/blob/master/.editorconfig&quot;&gt;&lt;code&gt;.editorconfig&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;root = true                         # 根目录的配置文件，编辑器会由当前目录向上查找，如果找到 `roor = true` 的文件，则不再查找
+
+[*]                                 # 匹配所有的文件
+indent_style = space                # 空格缩进
+indent_size = 4                     # 缩进空格为4个
+end_of_line = lf                    # 文件换行符是 linux 的 `\n`
+charset = utf-8                     # 文件编码是 utf-8
+trim_trailing_whitespace = true     # 不保留行末的空格
+insert_final_newline = true         # 文件末尾添加一个空行
+curly_bracket_next_line = false     # 大括号不另起一行
+spaces_around_operators = true      # 运算符两遍都有空格
+indent_brace_style = 1tbs           # 条件语句格式是 1tbs
+
+[*.js]                              # 对所有的 js 文件生效
+quote_type = single                 # 字符串使用单引号
+
+[*.{html,less,css,json}]            # 对所有 html, less, css, json 文件生效
+quote_type = double                 # 字符串使用双引号
+
+[package.json]                      # 对 package.json 生效
+indent_size = 2                     # 使用2个空格缩进&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;editor-config-&quot;&gt;编辑器中启用 editor config 插件&lt;/h2&gt;
+
+&lt;p&gt;webstorm 中自带了 editor config 插件&lt;/p&gt;
+
+&lt;p&gt;sublime 用户可以去&lt;a href=&quot;http://editorconfig.org/#download&quot;&gt;这里&lt;/a&gt;下载安装&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;参考项目&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/vivaxy/here&quot;&gt;vivaxy/here&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/vivaxy/front-end-scaffold&quot;&gt;vivaxy/front-end-scaffold&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;参考文档&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://editorconfig.org/&quot;&gt;EditorConfig&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
     </entry>
