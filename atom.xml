@@ -3,12 +3,68 @@
     <title>vivaxy's blog</title>
     <link href="http://vivaxyblog.github.io/atom.xml" rel="self" />
     <link href="http://vivaxyblog.github.io/"/>
-    <updated>2015-12-26T21:11:10+08:00</updated>
+    <updated>2015-12-29T16:32:02+08:00</updated>
     <id>http://vivaxyblog.github.io</id>
     <author>
         <name>vivaxy</name>
         <email>xyxuye2007@126.com</email>
     </author>
+    
+    <entry>
+        <title>用 eslint 管理 js 的代码风格</title>
+        <link href="http://vivaxyblog.github.io/2015/12/29/use-eslint-to-improve-code-style.html" />
+        <updated>2015-12-29T00:00:00+08:00</updated>
+        <id>http://vivaxyblog.github.io/2015/12/29/use-eslint-to-improve-code-style</id>
+        <content type="html">&lt;h2 id=&quot;eslint&quot;&gt;使用全局 eslint&lt;/h2&gt;
+
+&lt;p&gt;安装全局 eslint &lt;code&gt;&amp;gt; npm i -g eslint&lt;/code&gt; 。&lt;/p&gt;
+
+&lt;p&gt;在项目根目录下放置文件 &lt;a href=&quot;https://github.com/vivaxy/front-end-scaffold/blob/master/.eslintrc.json&quot;&gt;&lt;code&gt;eslintrc.json&lt;/code&gt;&lt;/a&gt; 。&lt;/p&gt;
+
+&lt;p&gt;导航到项目根目录，在控制台中输入 &lt;code&gt;eslint &amp;lt;js 文件路径&amp;gt;&lt;/code&gt; ，可以看到输出的问题，如果为空，那么就没有问题。&lt;/p&gt;
+
+&lt;p&gt;要检查项目下所有 js 文件，可以输入 &lt;code&gt;eslint .&lt;/code&gt; 。&lt;/p&gt;
+
+&lt;h2 id=&quot;eslint-1&quot;&gt;配置项目下的 eslint&lt;/h2&gt;
+
+&lt;p&gt;在项目下执行 &lt;code&gt;&amp;gt; npm i --save-dev eslint&lt;/code&gt; ， &lt;code&gt;package.json&lt;/code&gt; 中配置 &lt;code&gt;scripts.lint: &quot;eslint .&quot;&lt;/code&gt; 。&lt;/p&gt;
+
+&lt;p&gt;在控制台中执行 &lt;code&gt;npm run lint&lt;/code&gt; ，依然可以执行 eslint 。&lt;/p&gt;
+
+&lt;h2 id=&quot;eslint-&quot;&gt;配置 eslint 不检查的文件&lt;/h2&gt;
+
+&lt;p&gt;在项目下创建 &lt;code&gt;.eslintignore&lt;/code&gt; ，将不需要检查的文件路径添加进去。&lt;/p&gt;
+
+&lt;p&gt;不需要检查的文件包括： 依赖包，编译后的文件等。&lt;/p&gt;
+
+&lt;h2 id=&quot;git-commit--eslint&quot;&gt;配置 &lt;code&gt;git commit&lt;/code&gt; 前执行 eslint&lt;/h2&gt;
+
+&lt;p&gt;在项目下安装 husky ， &lt;code&gt;&amp;gt; npm i --save-dev husky&lt;/code&gt; 。&lt;/p&gt;
+
+&lt;p&gt;配置 &lt;code&gt;package.json&lt;/code&gt; ，添加 &lt;code&gt;scripts.precommit: &quot;eslint .&quot;&lt;/code&gt; 。&lt;/p&gt;
+
+&lt;h2 id=&quot;eslint-2&quot;&gt;对代码禁用 eslint&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;对于文件，配置在 &lt;code&gt;.eslintignore&lt;/code&gt; 文件中&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;对于代码块，使用 &lt;code&gt;/* eslint-disable */&lt;/code&gt; 和 &lt;code&gt;/* eslint-enable */&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;对于代码行，使用 &lt;code&gt;/* eslint-disable-line rule1, rule2 */&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;参考文档&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://eslint.org/&quot;&gt;ESLint - Pluggable JavaScript linter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/husky&quot;&gt;husky&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </entry>
     
     <entry>
         <title>用 ECMAScript 6 编写模块化的 js</title>
