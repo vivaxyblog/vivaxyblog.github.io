@@ -3,7 +3,7 @@
     <title>vivaxy's blog</title>
     <link href="http://vivaxyblog.github.io/atom.xml" rel="self" />
     <link href="http://vivaxyblog.github.io/"/>
-    <updated>2015-12-29T16:32:02+08:00</updated>
+    <updated>2015-12-29T16:38:43+08:00</updated>
     <id>http://vivaxyblog.github.io</id>
     <author>
         <name>vivaxy</name>
@@ -57,7 +57,14 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;section&quot;&gt;参考文档&lt;/h2&gt;
+&lt;h2 id=&quot;section&quot;&gt;参考项目&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/vivaxy/here&quot;&gt;vivaxy/here&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/vivaxy/front-end-scaffold&quot;&gt;vivaxy/front-end-scaffold&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;参考文档&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://eslint.org/&quot;&gt;ESLint - Pluggable JavaScript linter&lt;/a&gt;&lt;/li&gt;
