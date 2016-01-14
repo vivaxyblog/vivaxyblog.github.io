@@ -3,7 +3,7 @@
     <title>vivaxy's blog</title>
     <link href="http://vivaxyblog.github.io/atom.xml" rel="self" />
     <link href="http://vivaxyblog.github.io/"/>
-    <updated>2015-12-29T17:04:21+08:00</updated>
+    <updated>2016-01-14T09:55:55+08:00</updated>
     <id>http://vivaxyblog.github.io</id>
     <author>
         <name>vivaxy</name>
@@ -539,7 +539,7 @@ rm -rf node-v&lt;span class=&quot;nv&quot;&gt;$NODE_VERSION&lt;/span&gt;.tar.gz&
 
 &lt;p&gt;绑定手机号的时候亚马逊会打电话到你的手机上，你在手机上输入网页上显示的4位验证码即可。&lt;/p&gt;
 
-&lt;p&gt;话说不知道为什么这时候信用卡被扣了1美元。&lt;/p&gt;
+&lt;p&gt;此时会发生验卡操作，信用卡可能会被扣1美元，然后交易未成功。实际不会有支出。&lt;/p&gt;
 
 &lt;h2 id=&quot;ec2-&quot;&gt;创建 EC2 服务器&lt;/h2&gt;
 
