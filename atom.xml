@@ -3,7 +3,7 @@
     <title>vivaxy's blog</title>
     <link href="http://vivaxyblog.github.io/atom.xml" rel="self" />
     <link href="http://vivaxyblog.github.io/"/>
-    <updated>2016-01-14T09:55:55+08:00</updated>
+    <updated>2016-01-26T15:19:05+08:00</updated>
     <id>http://vivaxyblog.github.io</id>
     <author>
         <name>vivaxy</name>
@@ -971,6 +971,102 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     &lt;p&gt;Select multiple files in Finder, type &lt;code&gt;ws&lt;/code&gt;, open it in WebStorm.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&quot;steps&quot;&gt;Steps&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Create Blank Workflow&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Workflow Name: &lt;code&gt;open in webstrom&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Description: &lt;code&gt;open in webstorm&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Category: &lt;code&gt;productivity&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Drop a webstorm icon into it.&lt;/p&gt;
+
+&lt;p&gt;You can download icon from &lt;a href=&quot;https://www.jetbrains.com/products.html&quot;&gt;official website&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Add Keyword inputs&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Keyword: &lt;code&gt;ws&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Select &lt;code&gt;no arguments&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Title: &lt;code&gt;Open in WebStorm&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Subtext: &lt;code&gt;Open in WebStorm&lt;/code&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Add Run NSAppleScript action&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;AppleScript:&lt;/p&gt;
+
+&lt;p&gt;```
+on alfred_script(q)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;tell application &quot;Finder&quot;
+	set theSelection to (get selection)
+	if length of theSelection is equal to 1 then
+		set pathList to {}
+		repeat with anItem in theSelection
+			set pathList to quoted form of POSIX path of (anItem as text)
+		end repeat
+	else
+		set pathList to (quoted form of POSIX path of (folder of the front window as alias))
+	end if
+end tell
+
+tell application &quot;System Events&quot;
+	do shell script &quot;/usr/local/bin/wstorm &quot; &amp;amp; pathList
+end tell
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;end alfred_script
+```&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Drag line between them&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Add File Filter input&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Keyword: &lt;code&gt;ws&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Check with space&lt;/p&gt;
+
+&lt;p&gt;Placeholder Title: &lt;code&gt;Open in WebStorm&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Placeholder Subtext: &lt;code&gt;Open file matching &#39;{query}&#39; in WebStorm.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Drag any folder into File Types&lt;/p&gt;
+
+&lt;p&gt;You can specify path in Search Scope&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Add Run Script action&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Language: &lt;code&gt;/bin/bash&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Escaping: &lt;code&gt;Double Quotes&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Scripts:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+/usr/local/bin/wstorm &quot;{query}&quot;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Drag a line between them&lt;/li&gt;
+&lt;/ol&gt;
 </content>
     </entry>
     

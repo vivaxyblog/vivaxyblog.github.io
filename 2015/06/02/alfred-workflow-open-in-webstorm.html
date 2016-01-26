@@ -43,6 +43,102 @@
   </li>
 </ul>
 
+<h2 id="steps">Steps</h2>
+
+<ol>
+  <li>Create Blank Workflow</li>
+</ol>
+
+<p>Workflow Name: <code>open in webstrom</code></p>
+
+<p>Description: <code>open in webstorm</code></p>
+
+<p>Category: <code>productivity</code></p>
+
+<p>Drop a webstorm icon into it.</p>
+
+<p>You can download icon from <a href="https://www.jetbrains.com/products.html">official website</a></p>
+
+<ol>
+  <li>Add Keyword inputs</li>
+</ol>
+
+<p>Keyword: <code>ws</code></p>
+
+<p>Select <code>no arguments</code></p>
+
+<p>Title: <code>Open in WebStorm</code></p>
+
+<p>Subtext: <code>Open in WebStorm</code></p>
+
+<ol>
+  <li>Add Run NSAppleScript action</li>
+</ol>
+
+<p>AppleScript:</p>
+
+<p>```
+on alfred_script(q)</p>
+
+<pre><code>tell application "Finder"
+	set theSelection to (get selection)
+	if length of theSelection is equal to 1 then
+		set pathList to {}
+		repeat with anItem in theSelection
+			set pathList to quoted form of POSIX path of (anItem as text)
+		end repeat
+	else
+		set pathList to (quoted form of POSIX path of (folder of the front window as alias))
+	end if
+end tell
+
+tell application "System Events"
+	do shell script "/usr/local/bin/wstorm " &amp; pathList
+end tell
+</code></pre>
+
+<p>end alfred_script
+```</p>
+
+<ol>
+  <li>
+    <p>Drag line between them</p>
+  </li>
+  <li>
+    <p>Add File Filter input</p>
+  </li>
+</ol>
+
+<p>Keyword: <code>ws</code></p>
+
+<p>Check with space</p>
+
+<p>Placeholder Title: <code>Open in WebStorm</code></p>
+
+<p>Placeholder Subtext: <code>Open file matching '{query}' in WebStorm.</code></p>
+
+<p>Drag any folder into File Types</p>
+
+<p>You can specify path in Search Scope</p>
+
+<ol>
+  <li>Add Run Script action</li>
+</ol>
+
+<p>Language: <code>/bin/bash</code></p>
+
+<p>Escaping: <code>Double Quotes</code></p>
+
+<p>Scripts:</p>
+
+<p><code>
+/usr/local/bin/wstorm "{query}"
+</code></p>
+
+<ol>
+  <li>Drag a line between them</li>
+</ol>
+
     </div>
 </div>
 <div class="card">
