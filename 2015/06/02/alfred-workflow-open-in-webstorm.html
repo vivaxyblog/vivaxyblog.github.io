@@ -45,9 +45,7 @@
 
 <h2 id="steps">Steps</h2>
 
-<ol>
-  <li>Create Blank Workflow</li>
-</ol>
+<h3 id="create-blank-workflow">Create Blank Workflow</h3>
 
 <p>Workflow Name: <code>open in webstrom</code></p>
 
@@ -59,9 +57,7 @@
 
 <p>You can download icon from <a href="https://www.jetbrains.com/products.html">official website</a></p>
 
-<ol>
-  <li>Add Keyword inputs</li>
-</ol>
+<h3 id="add-keyword-inputs">Add Keyword inputs</h3>
 
 <p>Keyword: <code>ws</code></p>
 
@@ -71,43 +67,33 @@
 
 <p>Subtext: <code>Open in WebStorm</code></p>
 
-<ol>
-  <li>Add Run NSAppleScript action</li>
-</ol>
+<h3 id="add-run-nsapplescript-action">Add Run NSAppleScript action</h3>
 
 <p>AppleScript:</p>
 
-<p>```
-on alfred_script(q)</p>
+<div class="highlight"><pre><code class="language-as" data-lang="as"><span class="nx">on</span> <span class="nx">alfred_script</span><span class="p">(</span><span class="nx">q</span><span class="p">)</span>
 
-<pre><code>tell application "Finder"
-	set theSelection to (get selection)
-	if length of theSelection is equal to 1 then
-		set pathList to {}
-		repeat with anItem in theSelection
-			set pathList to quoted form of POSIX path of (anItem as text)
-		end repeat
-	else
-		set pathList to (quoted form of POSIX path of (folder of the front window as alias))
-	end if
-end tell
+	<span class="nx">tell</span> <span class="nx">application</span> <span class="s2">&quot;Finder&quot;</span>
+		<span class="kd">set</span> <span class="nx">theSelection</span> <span class="nx">to</span> <span class="p">(</span><span class="kd">get</span> <span class="nx">selection</span><span class="p">)</span>
+		<span class="k">if</span> <span class="nx">length</span> <span class="nx">of</span> <span class="nx">theSelection</span> <span class="nx">is</span> <span class="nx">equal</span> <span class="nx">to</span> <span class="mi">1</span> <span class="nx">then</span>
+			<span class="kd">set</span> <span class="nx">pathList</span> <span class="nx">to</span> <span class="p">{}</span>
+			<span class="nx">repeat</span> <span class="k">with</span> <span class="nx">anItem</span> <span class="k">in</span> <span class="nx">theSelection</span>
+				<span class="kd">set</span> <span class="nx">pathList</span> <span class="nx">to</span> <span class="nx">quoted</span> <span class="nx">form</span> <span class="nx">of</span> <span class="nx">POSIX</span> <span class="nx">path</span> <span class="nx">of</span> <span class="p">(</span><span class="nx">anItem</span> <span class="nx">as</span> <span class="nx">text</span><span class="p">)</span>
+			<span class="nx">end</span> <span class="nx">repeat</span>
+		<span class="k">else</span>
+			<span class="kd">set</span> <span class="nx">pathList</span> <span class="nx">to</span> <span class="p">(</span><span class="nx">quoted</span> <span class="nx">form</span> <span class="nx">of</span> <span class="nx">POSIX</span> <span class="nx">path</span> <span class="nx">of</span> <span class="p">(</span><span class="nx">folder</span> <span class="nx">of</span> <span class="nx">the</span> <span class="nx">front</span> <span class="nx">window</span> <span class="nx">as</span> <span class="nx">alias</span><span class="p">))</span>
+		<span class="nx">end</span> <span class="k">if</span>
+	<span class="nx">end</span> <span class="nx">tell</span>
 
-tell application "System Events"
-	do shell script "/usr/local/bin/wstorm " &amp; pathList
-end tell
-</code></pre>
+	<span class="nx">tell</span> <span class="nx">application</span> <span class="s2">&quot;System Events&quot;</span>
+		<span class="k">do</span> <span class="nx">shell</span> <span class="nx">script</span> <span class="s2">&quot;/usr/local/bin/wstorm &quot;</span> <span class="o">&amp;</span> <span class="nx">pathList</span>
+	<span class="nx">end</span> <span class="nx">tell</span>
 
-<p>end alfred_script
-```</p>
+<span class="nx">end</span> <span class="nx">alfred_script</span></code></pre></div>
 
-<ol>
-  <li>
-    <p>Drag line between them</p>
-  </li>
-  <li>
-    <p>Add File Filter input</p>
-  </li>
-</ol>
+<h3 id="drag-line-between-them">Drag line between them</h3>
+
+<h3 id="add-file-filter-input">Add File Filter input</h3>
 
 <p>Keyword: <code>ws</code></p>
 
@@ -121,9 +107,7 @@ end tell
 
 <p>You can specify path in Search Scope</p>
 
-<ol>
-  <li>Add Run Script action</li>
-</ol>
+<h3 id="add-run-script-action">Add Run Script action</h3>
 
 <p>Language: <code>/bin/bash</code></p>
 
@@ -131,13 +115,9 @@ end tell
 
 <p>Scripts:</p>
 
-<p><code>
-/usr/local/bin/wstorm "{query}"
-</code></p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">/usr/local/bin/wstorm <span class="s2">&quot;{query}&quot;</span></code></pre></div>
 
-<ol>
-  <li>Drag a line between them</li>
-</ol>
+<h3 id="drag-a-line-between-them">Drag a line between them</h3>
 
     </div>
 </div>

@@ -3,7 +3,7 @@
     <title>vivaxy's blog</title>
     <link href="http://vivaxyblog.github.io/atom.xml" rel="self" />
     <link href="http://vivaxyblog.github.io/"/>
-    <updated>2016-01-26T15:19:05+08:00</updated>
+    <updated>2016-01-27T10:11:03+08:00</updated>
     <id>http://vivaxyblog.github.io</id>
     <author>
         <name>vivaxy</name>
@@ -974,9 +974,7 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;steps&quot;&gt;Steps&lt;/h2&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Create Blank Workflow&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3 id=&quot;create-blank-workflow&quot;&gt;Create Blank Workflow&lt;/h3&gt;
 
 &lt;p&gt;Workflow Name: &lt;code&gt;open in webstrom&lt;/code&gt;&lt;/p&gt;
 
@@ -988,9 +986,7 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;You can download icon from &lt;a href=&quot;https://www.jetbrains.com/products.html&quot;&gt;official website&lt;/a&gt;&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Add Keyword inputs&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3 id=&quot;add-keyword-inputs&quot;&gt;Add Keyword inputs&lt;/h3&gt;
 
 &lt;p&gt;Keyword: &lt;code&gt;ws&lt;/code&gt;&lt;/p&gt;
 
@@ -1000,43 +996,33 @@ enter commit message: foobar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Subtext: &lt;code&gt;Open in WebStorm&lt;/code&gt;&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Add Run NSAppleScript action&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3 id=&quot;add-run-nsapplescript-action&quot;&gt;Add Run NSAppleScript action&lt;/h3&gt;
 
 &lt;p&gt;AppleScript:&lt;/p&gt;
 
-&lt;p&gt;```
-on alfred_script(q)&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-as&quot; data-lang=&quot;as&quot;&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;alfred_script&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;pre&gt;&lt;code&gt;tell application &quot;Finder&quot;
-	set theSelection to (get selection)
-	if length of theSelection is equal to 1 then
-		set pathList to {}
-		repeat with anItem in theSelection
-			set pathList to quoted form of POSIX path of (anItem as text)
-		end repeat
-	else
-		set pathList to (quoted form of POSIX path of (folder of the front window as alias))
-	end if
-end tell
+	&lt;span class=&quot;nx&quot;&gt;tell&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;application&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Finder&amp;quot;&lt;/span&gt;
+		&lt;span class=&quot;kd&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;theSelection&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;theSelection&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;equal&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;
+			&lt;span class=&quot;kd&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pathList&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+			&lt;span class=&quot;nx&quot;&gt;repeat&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;anItem&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;theSelection&lt;/span&gt;
+				&lt;span class=&quot;kd&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pathList&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;quoted&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;form&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;POSIX&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;anItem&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+			&lt;span class=&quot;nx&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;repeat&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+			&lt;span class=&quot;kd&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pathList&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;quoted&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;form&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;POSIX&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;folder&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;front&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;window&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;alias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+		&lt;span class=&quot;nx&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tell&lt;/span&gt;
 
-tell application &quot;System Events&quot;
-	do shell script &quot;/usr/local/bin/wstorm &quot; &amp;amp; pathList
-end tell
-&lt;/code&gt;&lt;/pre&gt;
+	&lt;span class=&quot;nx&quot;&gt;tell&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;application&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;System Events&amp;quot;&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;shell&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;/usr/local/bin/wstorm &amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pathList&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tell&lt;/span&gt;
 
-&lt;p&gt;end alfred_script
-```&lt;/p&gt;
+&lt;span class=&quot;nx&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;alfred_script&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Drag line between them&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Add File Filter input&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3 id=&quot;drag-line-between-them&quot;&gt;Drag line between them&lt;/h3&gt;
+
+&lt;h3 id=&quot;add-file-filter-input&quot;&gt;Add File Filter input&lt;/h3&gt;
 
 &lt;p&gt;Keyword: &lt;code&gt;ws&lt;/code&gt;&lt;/p&gt;
 
@@ -1050,9 +1036,7 @@ end tell
 
 &lt;p&gt;You can specify path in Search Scope&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Add Run Script action&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3 id=&quot;add-run-script-action&quot;&gt;Add Run Script action&lt;/h3&gt;
 
 &lt;p&gt;Language: &lt;code&gt;/bin/bash&lt;/code&gt;&lt;/p&gt;
 
@@ -1060,13 +1044,9 @@ end tell
 
 &lt;p&gt;Scripts:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-/usr/local/bin/wstorm &quot;{query}&quot;
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;/usr/local/bin/wstorm &lt;span class=&quot;s2&quot;&gt;&amp;quot;{query}&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Drag a line between them&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3 id=&quot;drag-a-line-between-them&quot;&gt;Drag a line between them&lt;/h3&gt;
 </content>
     </entry>
     
