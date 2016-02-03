@@ -23,20 +23,19 @@
     <div class="content">
         <p>前端模块化的实现意味着要将一个模块中的数据，逻辑和渲染合并在一个单元中，往往这个单元是一个js文件。本文采用的方法也是如此。</p>
 
-<h2 id="reactjshttpsgithubcomfacebookreact"><a href="https://github.com/facebook/react">reactjs</a>的实现</h2>
+<h2><a href="https://github.com/facebook/react">reactjs</a>的实现</h2>
 
 <p>reactjs采用单向的数据流：通过mudule层上的数据更新，触发view层的更新。使用<code>state</code>保存数据状态。reactjs会算出那些view需要重新渲染，然后再做DOM上的重绘。</p>
 
-<h2 id="crystalhttpsgithubcomyoungjaycrystal-template"><a href="https://github.com/youngjay/crystal-template">crystal</a>的实现</h2>
+<h2><a href="https://github.com/youngjay/crystal-template">crystal</a>的实现</h2>
 
 <p>采用knockoutjs作为MVVM，使用browserify作为模块管理器。页面状态由hash记录。html方式书写view，<code>&lt;script&gt;&lt;/script&gt;</code>中书写module，然后编译成js文件，模块化加载到应用中。</p>
 
-<h2 id="js">原生js的实现</h2>
+<h2>原生js的实现</h2>
 
 <p>基于事件机制的<code>on</code>和<code>fire</code>方法传递数据，js的渲染方式实现view，原型链方式继承。</p>
 
-<h3 id="base">基础类：<code>Base</code></h3>
-
+<h3>基础类：<code>Base</code></h3>
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="cm">/*</span>
 <span class="cm"> * @author: vivaxy</span>
 <span class="cm"> * @date:   2015-04-06 15:52:47</span>
@@ -109,14 +108,13 @@
     <span class="p">});</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">render</span><span class="p">();</span>
     <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
-<span class="p">};</span></code></pre></div>
-
+<span class="p">};</span>
+</code></pre></div>
 <p>包含<code>on</code>, <code>off</code>, <code>fire</code>的事件方法，和<code>render</code>, <code>template</code>, <code>update</code>的渲染方法。</p>
 
 <p>其中事件方法需要用到module中的<code>events</code>对象，而渲染方法需要用到module中的<code>container</code>, <code>data</code>对象。</p>
 
-<h3 id="module">组件类<code>Module</code></h3>
-
+<h3>组件类<code>Module</code></h3>
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">Module</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">options</span><span class="p">){</span>
         <span class="k">this</span><span class="p">.</span><span class="nx">events</span> <span class="o">=</span> <span class="p">{};</span>
 
@@ -132,8 +130,8 @@
 <span class="c1">// @Override</span>
 <span class="nx">p</span><span class="p">.</span><span class="nx">template</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
     <span class="c1">// ...</span>
-<span class="p">};</span></code></pre></div>
-
+<span class="p">};</span>
+</code></pre></div>
 <p>继承了基础类的中的事件方法和渲染方法，同时可以在原型上重写两类方法中的具体方法。</p>
 
 <p>组件需要定义<code>this.events = {}</code>, <code>this.data</code>, <code>this.container</code>以使用基础类中的方法。</p>
@@ -142,19 +140,19 @@
 
 <p>组件中可以包含其他自定义方法，只需要在原型<code>p</code>上添加对象即可。</p>
 
-<h3 id="section">继承</h3>
+<h3>继承</h3>
 
 <p><code>var module = new Module({});</code></p>
 
 <p><code>module.render</code>将寻找<code>module</code>构造函数上的<code>render</code>方法；如果没有找到，会寻找<code>module</code>原型链上的<code>render</code>方法，由于<code>module</code>原型链是基础类的实体<code>base</code>，所以相当于在<code>base</code>中找字面量<code>render</code>；如果没有找到，会寻找<code>base</code>原型链上的<code>render</code>方法。这样继承能最大化js原型链的使用，复用相同的函数，以减少内存开销；同时，还保证了方法重写的可能性，提高了方便性，可以在继承的对象中的任意一个构造函数上重写。</p>
 
-<h3 id="section-1">渲染</h3>
+<h3>渲染</h3>
 
 <p>可以根据不同试用场景修改<code>render</code>方法的具体实现方式，如：<code>innerHTML</code>, <code>appendChild</code>, jquery的<code>html</code>等。</p>
 
 <p>可以根据更改内容的影响范围修改<code>update</code>方法，实现局部渲染，以减少浏览器重绘，提高性能。</p>
 
-<h3 id="section-2">事件</h3>
+<h3>事件</h3>
 
 <p>父级对象中使用<code>new</code>方式构造子对象，并且可以在子对象上使用<code>on</code>方法添加事件监听。</p>
 
@@ -164,7 +162,7 @@
 
 <p><code>off</code>可以去掉采用函数名绑定的事件。</p>
 
-<h3 id="section-3">数据流</h3>
+<h3>数据流</h3>
 
 <p>父级对象将拿到的数据用<code>options</code>的方式在<code>new</code>子对象的时候传入。</p>
 
@@ -172,7 +170,7 @@
 
 <p>如果修改的是用一个对象，则在任何时候拿到的数据都是完整的，并且实时的。子对象内的修改数据操作会反馈到父级对象中！</p>
 
-<h2 id="httpvivaxygithubiofragmentmodule-view"><a href="http://vivaxy.github.io/fragment/module-view/#">例子</a></h2>
+<h2><a href="http://vivaxy.github.io/fragment/module-view/#">例子</a></h2>
 
     </div>
 </div>

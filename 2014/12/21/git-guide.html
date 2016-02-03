@@ -21,219 +21,129 @@
 </a>
 <div class="card">
     <div class="content">
-        <h2 id="git">git介绍</h2>
+        <h2>git介绍</h2>
 
-<h3 id="git-1">什么是git？</h3>
+<h3>什么是git？</h3>
 
 <p><a href="http://www.git-scm.com/">git</a> 是一种目前最流行，最好用的版本管理系统（Version Control System (VCS)）。</p>
 
-<h3 id="git-2">git的特点</h3>
+<h3>git的特点</h3>
 
 <ol>
-  <li>
-    <p>分布式：每个开发人员在检出（checkout）代码之后，在本地都会有一份完整的版本库。其中包含所有历史版本的代码和版本之间的关系。使用git的开发可以不依赖于网络保存版本信息，在有网络后再提交更改。</p>
-  </li>
-  <li>
-    <p>支持非线性开发：新的特性可以不依赖于其他特性的版本，在改动提交合并后，两个特性可以合并到一个分支中。</p>
-  </li>
-  <li>
-    <p>兼容现有的通信协议：可以通过http，ftp，socket，ssh发布版本。同时，git还有其他VCS的模拟器，如git-svn。</p>
-  </li>
-  <li>
-    <p>开源。</p>
-  </li>
+<li><p>分布式：每个开发人员在检出（checkout）代码之后，在本地都会有一份完整的版本库。其中包含所有历史版本的代码和版本之间的关系。使用git的开发可以不依赖于网络保存版本信息，在有网络后再提交更改。</p></li>
+<li><p>支持非线性开发：新的特性可以不依赖于其他特性的版本，在改动提交合并后，两个特性可以合并到一个分支中。</p></li>
+<li><p>兼容现有的通信协议：可以通过http，ftp，socket，ssh发布版本。同时，git还有其他VCS的模拟器，如git-svn。</p></li>
+<li><p>开源。</p></li>
 </ol>
 
-<h3 id="section">文件结构</h3>
+<h3>文件结构</h3>
 
 <p>git有两种文件结构：</p>
 
 <ol>
-  <li>
-    <p>可变的，保存着工作目录的所有改动。</p>
-  </li>
-  <li>
-    <p>不可变的，只能添加的文件对象系统。</p>
+<li><p>可变的，保存着工作目录的所有改动。</p></li>
+<li><p>不可变的，只能添加的文件对象系统。</p>
 
-    <p>a. 二进制文件对象（binary large object (blob)）：只包含文件，没有文件名，没有时间戳，等其他元数据。</p>
+<p>a. 二进制文件对象（binary large object (blob)）：只包含文件，没有文件名，没有时间戳，等其他元数据。</p>
 
-    <p>b. 树对象：包含文件列表，保存着一个版本树的快照。</p>
+<p>b. 树对象：包含文件列表，保存着一个版本树的快照。</p>
 
-    <p>c. 提交对象：联结树对象，组成提交历史信息。包含树对象的名称，时间信息和提交信息。</p>
+<p>c. 提交对象：联结树对象，组成提交历史信息。包含树对象的名称，时间信息和提交信息。</p>
 
-    <p>d. 标签对象：一般用来标记特定的版本。</p>
-  </li>
+<p>d. 标签对象：一般用来标记特定的版本。</p></li>
 </ol>
 
-<h3 id="section-1">库结构</h3>
+<h3>库结构</h3>
 
 <ol>
-  <li>
-    <p>heads：本地对象。</p>
-  </li>
-  <li>
-    <p>remotes：远程对象。</p>
-  </li>
-  <li>
-    <p>stash：没有提交的对象。</p>
-  </li>
-  <li>
-    <p>meta：元数据。</p>
-  </li>
-  <li>
-    <p>tags：标签。</p>
-  </li>
+<li><p>heads：本地对象。</p></li>
+<li><p>remotes：远程对象。</p></li>
+<li><p>stash：没有提交的对象。</p></li>
+<li><p>meta：元数据。</p></li>
+<li><p>tags：标签。</p></li>
 </ol>
 
-<h3 id="git-3">git服务提供商</h3>
+<h3>git服务提供商</h3>
 
 <ol>
-  <li>
-    <p>Bitbucket</p>
-  </li>
-  <li>
-    <p>GitHub</p>
-  </li>
-  <li>
-    <p>Gitorious</p>
-  </li>
-  <li>
-    <p>Google Code</p>
-  </li>
-  <li>
-    <p>SourceForge</p>
-  </li>
-  <li>
-    <p>CSDN CODE</p>
-  </li>
-  <li>
-    <p>GitCafe</p>
-  </li>
-  <li>
-    <p>Gitlab</p>
-  </li>
+<li><p>Bitbucket</p></li>
+<li><p>GitHub</p></li>
+<li><p>Gitorious</p></li>
+<li><p>Google Code</p></li>
+<li><p>SourceForge</p></li>
+<li><p>CSDN CODE</p></li>
+<li><p>GitCafe</p></li>
+<li><p>Gitlab</p></li>
 </ol>
 
-<h2 id="git-4">git使用</h2>
+<h2>git使用</h2>
 
-<h3 id="git-5">初始化本地git版本库</h3>
+<h3>初始化本地git版本库</h3>
 
 <ol>
-  <li>
-    <p>从现有的线上服务中检出版本：<code>git clone some_url</code></p>
-  </li>
-  <li>
-    <p>本地新建版本库：<code>git init</code>。然后设置远程目录：<code>git remote add origin some_url</code></p>
-  </li>
+<li><p>从现有的线上服务中检出版本：<code>git clone some_url</code></p></li>
+<li><p>本地新建版本库：<code>git init</code>。然后设置远程目录：<code>git remote add origin some_url</code></p></li>
 </ol>
 
-<h3 id="git-6">初始化git用户信息</h3>
+<h3>初始化git用户信息</h3>
 
 <ol>
-  <li>
-    <p>全局：</p>
+<li><p>全局：</p>
 
-    <p><code>git config --global user.name "your_name"</code></p>
+<p><code>git config --global user.name &quot;your_name&quot;</code></p>
 
-    <p><code>git config --global user.email "your_email"</code></p>
-  </li>
-  <li>
-    <p>项目内：</p>
+<p><code>git config --global user.email &quot;your_email&quot;</code></p></li>
+<li><p>项目内：</p>
 
-    <p>去掉<code>--global</code></p>
-  </li>
+<p>去掉<code>--global</code></p></li>
 </ol>
 
-<h3 id="section-2">工作流</h3>
+<h3>工作流</h3>
 
 <ol>
-  <li>
-    <p>将远程的改动下载到本地：<code>git pull</code>。</p>
-  </li>
-  <li>
-    <p>新建分支进行改动：<code>git checkout -b branch_name</code>。</p>
-  </li>
-  <li>
-    <p>改动本地文件：保存本地文件。</p>
-  </li>
-  <li>
-    <p>缓存区：保存本地未提交的改动。通过<code>git add some_file</code>来添加。</p>
-  </li>
-  <li>
-    <p>HEAD：提交的版本。通过<code>git commit -m 'some_message'</code>来提交。</p>
-  </li>
-  <li>
-    <p>origin：远程库的版本。通过<code>git push origin branch_name</code>来推送。</p>
-  </li>
-  <li>
-    <p>切换到master上，并合并分支：<code>git checkout master</code>，<code>git merge branch_name</code>。</p>
-  </li>
-  <li>
-    <p>再推送到远程库上。</p>
-  </li>
+<li><p>将远程的改动下载到本地：<code>git pull</code>。</p></li>
+<li><p>新建分支进行改动：<code>git checkout -b branch_name</code>。</p></li>
+<li><p>改动本地文件：保存本地文件。</p></li>
+<li><p>缓存区：保存本地未提交的改动。通过<code>git add some_file</code>来添加。</p></li>
+<li><p>HEAD：提交的版本。通过<code>git commit -m &#39;some_message&#39;</code>来提交。</p></li>
+<li><p>origin：远程库的版本。通过<code>git push origin branch_name</code>来推送。</p></li>
+<li><p>切换到master上，并合并分支：<code>git checkout master</code>，<code>git merge branch_name</code>。</p></li>
+<li><p>再推送到远程库上。</p></li>
 </ol>
 
-<h3 id="section-3">分支管理</h3>
+<h3>分支管理</h3>
 
 <ol>
-  <li>
-    <p>创建分支并切换到这个分支：<code>git checkout -b branch_name</code>。</p>
-  </li>
-  <li>
-    <p>切换分支：<code>git checkout branch_name</code>。</p>
-  </li>
-  <li>
-    <p>删除分支：<code>git branch -d branch_name</code>。</p>
-  </li>
-  <li>
-    <p>合并某分支到当前分支：<code>git merge branch_name</code>。</p>
-  </li>
-  <li>
-    <p>查看分支之间的改动：<code>git diff one_branch another_branch</code>。</p>
-  </li>
+<li><p>创建分支并切换到这个分支：<code>git checkout -b branch_name</code>。</p></li>
+<li><p>切换分支：<code>git checkout branch_name</code>。</p></li>
+<li><p>删除分支：<code>git branch -d branch_name</code>。</p></li>
+<li><p>合并某分支到当前分支：<code>git merge branch_name</code>。</p></li>
+<li><p>查看分支之间的改动：<code>git diff one_branch another_branch</code>。</p></li>
 </ol>
 
-<h3 id="section-4">标签管理</h3>
+<h3>标签管理</h3>
 
 <ol>
-  <li>为某个版本添加标签：<code>git tag 1.0.0 version_number</code>。version_number可以用<code>git log</code>来查看。</li>
+<li>为某个版本添加标签：<code>git tag 1.0.0 version_number</code>。version_number可以用<code>git log</code>来查看。</li>
 </ol>
 
-<h3 id="section-5">替换本地改动</h3>
+<h3>替换本地改动</h3>
 
 <ol>
-  <li>
-    <p><code>git checkout -- file_name</code>。</p>
-  </li>
-  <li>
-    <p>丢弃本地改动与提交，重置为服务器的状态：<code>git fetch origin</code>。</p>
-  </li>
+<li><p><code>git checkout -- file_name</code>。</p></li>
+<li><p>丢弃本地改动与提交，重置为服务器的状态：<code>git fetch origin</code>。</p></li>
 </ol>
 
-<h2 id="section-6">参考</h2>
+<h2>参考</h2>
 
 <ol>
-  <li>
-    <p><a href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html">图解git</a></p>
-  </li>
-  <li>
-    <p><a href="https://en.wikipedia.org/wiki/Git\_(software)">https://en.wikipedia.org/wiki/Git_(software)</a></p>
-  </li>
-  <li>
-    <p><a href="http://www.open-open.com/lib/view/open1332904495999.html">http://www.open-open.com/lib/view/open1332904495999.html</a></p>
-  </li>
-  <li>
-    <p><a href="http://www.bootcss.com/p/git-guide/">http://www.bootcss.com/p/git-guide/</a></p>
-  </li>
-  <li>
-    <p><a href="http://www.ruanyifeng.com/blog/2012/07/git.html">http://www.ruanyifeng.com/blog/2012/07/git.html</a></p>
-  </li>
-  <li>
-    <p><a href="http://www.ruanyifeng.com/blog/2014/06/git_remote.html">http://www.ruanyifeng.com/blog/2014/06/git_remote.html</a></p>
-  </li>
-  <li>
-    <p><a href="http://justcoding.iteye.com/blog/1830388">http://justcoding.iteye.com/blog/1830388</a></p>
-  </li>
+<li><p><a href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html">图解git</a></p></li>
+<li><p><a href="https://en.wikipedia.org/wiki/Git_(software)">https://en.wikipedia.org/wiki/Git_(software)</a></p></li>
+<li><p><a href="http://www.open-open.com/lib/view/open1332904495999.html">http://www.open-open.com/lib/view/open1332904495999.html</a></p></li>
+<li><p><a href="http://www.bootcss.com/p/git-guide/">http://www.bootcss.com/p/git-guide/</a></p></li>
+<li><p><a href="http://www.ruanyifeng.com/blog/2012/07/git.html">http://www.ruanyifeng.com/blog/2012/07/git.html</a></p></li>
+<li><p><a href="http://www.ruanyifeng.com/blog/2014/06/git_remote.html">http://www.ruanyifeng.com/blog/2014/06/git_remote.html</a></p></li>
+<li><p><a href="http://justcoding.iteye.com/blog/1830388">http://justcoding.iteye.com/blog/1830388</a></p></li>
 </ol>
 
     </div>

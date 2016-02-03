@@ -21,31 +21,23 @@
 </a>
 <div class="card">
     <div class="content">
-        <h2 id="screenshots">ScreenShots</h2>
+        <h2>ScreenShots</h2>
 
-<p><img src="/image/2015-06-02-alfred-workflow-open-in-webstorm/find-folder.png" alt="find folder" />
-<img src="/image/2015-06-02-alfred-workflow-open-in-webstorm/open-selected-file.png" alt="find folder" /></p>
+<p><img src="/image/2015-06-02-alfred-workflow-open-in-webstorm/find-folder.png" alt="find folder">
+<img src="/image/2015-06-02-alfred-workflow-open-in-webstorm/open-selected-file.png" alt="find folder"></p>
 
-<h2 id="supported">Supported</h2>
+<h2>Supported</h2>
 
 <ul>
-  <li>
-    <p>Type <code>ws</code>, start searching files or folders, press <code>enter</code>, open it in WebStorm.</p>
-  </li>
-  <li>
-    <p>Select a file or folder in Finder, type <code>ws</code>, open it in WebStorm.</p>
-  </li>
-  <li>
-    <p>Open a folder in Finder, type <code>ws</code>, open it in WebStorm.</p>
-  </li>
-  <li>
-    <p>Select multiple files in Finder, type <code>ws</code>, open it in WebStorm.</p>
-  </li>
+<li><p>Type <code>ws</code>, start searching files or folders, press <code>enter</code>, open it in WebStorm.</p></li>
+<li><p>Select a file or folder in Finder, type <code>ws</code>, open it in WebStorm.</p></li>
+<li><p>Open a folder in Finder, type <code>ws</code>, open it in WebStorm.</p></li>
+<li><p>Select multiple files in Finder, type <code>ws</code>, open it in WebStorm.</p></li>
 </ul>
 
-<h2 id="steps">Steps</h2>
+<h2>Steps</h2>
 
-<h3 id="create-blank-workflow">Create Blank Workflow</h3>
+<h3>Create Blank Workflow</h3>
 
 <p>Workflow Name: <code>open in webstrom</code></p>
 
@@ -57,7 +49,7 @@
 
 <p>You can download icon from <a href="https://www.jetbrains.com/products.html">official website</a></p>
 
-<h3 id="add-keyword-inputs">Add Keyword inputs</h3>
+<h3>Add Keyword inputs</h3>
 
 <p>Keyword: <code>ws</code></p>
 
@@ -67,33 +59,32 @@
 
 <p>Subtext: <code>Open in WebStorm</code></p>
 
-<h3 id="add-run-nsapplescript-action">Add Run NSAppleScript action</h3>
+<h3>Add Run NSAppleScript action</h3>
 
 <p>AppleScript:</p>
-
 <div class="highlight"><pre><code class="language-as" data-lang="as"><span class="nx">on</span> <span class="nx">alfred_script</span><span class="p">(</span><span class="nx">q</span><span class="p">)</span>
 
-	<span class="nx">tell</span> <span class="nx">application</span> <span class="s2">&quot;Finder&quot;</span>
-		<span class="kd">set</span> <span class="nx">theSelection</span> <span class="nx">to</span> <span class="p">(</span><span class="kd">get</span> <span class="nx">selection</span><span class="p">)</span>
-		<span class="k">if</span> <span class="nx">length</span> <span class="nx">of</span> <span class="nx">theSelection</span> <span class="nx">is</span> <span class="nx">equal</span> <span class="nx">to</span> <span class="mi">1</span> <span class="nx">then</span>
-			<span class="kd">set</span> <span class="nx">pathList</span> <span class="nx">to</span> <span class="p">{}</span>
-			<span class="nx">repeat</span> <span class="k">with</span> <span class="nx">anItem</span> <span class="k">in</span> <span class="nx">theSelection</span>
-				<span class="kd">set</span> <span class="nx">pathList</span> <span class="nx">to</span> <span class="nx">quoted</span> <span class="nx">form</span> <span class="nx">of</span> <span class="nx">POSIX</span> <span class="nx">path</span> <span class="nx">of</span> <span class="p">(</span><span class="nx">anItem</span> <span class="nx">as</span> <span class="nx">text</span><span class="p">)</span>
-			<span class="nx">end</span> <span class="nx">repeat</span>
-		<span class="k">else</span>
-			<span class="kd">set</span> <span class="nx">pathList</span> <span class="nx">to</span> <span class="p">(</span><span class="nx">quoted</span> <span class="nx">form</span> <span class="nx">of</span> <span class="nx">POSIX</span> <span class="nx">path</span> <span class="nx">of</span> <span class="p">(</span><span class="nx">folder</span> <span class="nx">of</span> <span class="nx">the</span> <span class="nx">front</span> <span class="nx">window</span> <span class="nx">as</span> <span class="nx">alias</span><span class="p">))</span>
-		<span class="nx">end</span> <span class="k">if</span>
-	<span class="nx">end</span> <span class="nx">tell</span>
+    <span class="nx">tell</span> <span class="nx">application</span> <span class="s2">&quot;Finder&quot;</span>
+        <span class="kd">set</span> <span class="nx">theSelection</span> <span class="nx">to</span> <span class="p">(</span><span class="kd">get</span> <span class="nx">selection</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nx">length</span> <span class="nx">of</span> <span class="nx">theSelection</span> <span class="nx">is</span> <span class="nx">equal</span> <span class="nx">to</span> <span class="mi">1</span> <span class="nx">then</span>
+            <span class="kd">set</span> <span class="nx">pathList</span> <span class="nx">to</span> <span class="p">{}</span>
+            <span class="nx">repeat</span> <span class="k">with</span> <span class="nx">anItem</span> <span class="k">in</span> <span class="nx">theSelection</span>
+                <span class="kd">set</span> <span class="nx">pathList</span> <span class="nx">to</span> <span class="nx">quoted</span> <span class="nx">form</span> <span class="nx">of</span> <span class="nx">POSIX</span> <span class="nx">path</span> <span class="nx">of</span> <span class="p">(</span><span class="nx">anItem</span> <span class="nx">as</span> <span class="nx">text</span><span class="p">)</span>
+            <span class="nx">end</span> <span class="nx">repeat</span>
+        <span class="k">else</span>
+            <span class="kd">set</span> <span class="nx">pathList</span> <span class="nx">to</span> <span class="p">(</span><span class="nx">quoted</span> <span class="nx">form</span> <span class="nx">of</span> <span class="nx">POSIX</span> <span class="nx">path</span> <span class="nx">of</span> <span class="p">(</span><span class="nx">folder</span> <span class="nx">of</span> <span class="nx">the</span> <span class="nx">front</span> <span class="nx">window</span> <span class="nx">as</span> <span class="nx">alias</span><span class="p">))</span>
+        <span class="nx">end</span> <span class="k">if</span>
+    <span class="nx">end</span> <span class="nx">tell</span>
 
-	<span class="nx">tell</span> <span class="nx">application</span> <span class="s2">&quot;System Events&quot;</span>
-		<span class="k">do</span> <span class="nx">shell</span> <span class="nx">script</span> <span class="s2">&quot;/usr/local/bin/wstorm &quot;</span> <span class="o">&amp;</span> <span class="nx">pathList</span>
-	<span class="nx">end</span> <span class="nx">tell</span>
+    <span class="nx">tell</span> <span class="nx">application</span> <span class="s2">&quot;System Events&quot;</span>
+        <span class="k">do</span> <span class="nx">shell</span> <span class="nx">script</span> <span class="s2">&quot;/usr/local/bin/wstorm &quot;</span> <span class="o">&amp;</span> <span class="nx">pathList</span>
+    <span class="nx">end</span> <span class="nx">tell</span>
 
-<span class="nx">end</span> <span class="nx">alfred_script</span></code></pre></div>
+<span class="nx">end</span> <span class="nx">alfred_script</span>
+</code></pre></div>
+<h3>Drag line between them</h3>
 
-<h3 id="drag-line-between-them">Drag line between them</h3>
-
-<h3 id="add-file-filter-input">Add File Filter input</h3>
+<h3>Add File Filter input</h3>
 
 <p>Keyword: <code>ws</code></p>
 
@@ -101,23 +92,22 @@
 
 <p>Placeholder Title: <code>Open in WebStorm</code></p>
 
-<p>Placeholder Subtext: <code>Open file matching '{query}' in WebStorm.</code></p>
+<p>Placeholder Subtext: <code>Open file matching &#39;{query}&#39; in WebStorm.</code></p>
 
 <p>Drag any folder into File Types</p>
 
 <p>You can specify path in Search Scope</p>
 
-<h3 id="add-run-script-action">Add Run Script action</h3>
+<h3>Add Run Script action</h3>
 
 <p>Language: <code>/bin/bash</code></p>
 
 <p>Escaping: <code>Double Quotes</code></p>
 
 <p>Scripts:</p>
-
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">/usr/local/bin/wstorm <span class="s2">&quot;{query}&quot;</span></code></pre></div>
-
-<h3 id="drag-a-line-between-them">Drag a line between them</h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">/usr/local/bin/wstorm <span class="s2">&quot;{query}&quot;</span>
+</code></pre></div>
+<h3>Drag a line between them</h3>
 
     </div>
 </div>

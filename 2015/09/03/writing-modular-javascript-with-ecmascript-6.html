@@ -23,9 +23,9 @@
     <div class="content">
         <p>We need <a href="https://www.npmjs.com/package/babel">babel</a> and <a href="https://www.npmjs.com/package/browserify">browserify</a>.</p>
 
-<h2 id="initialize-the-project">Initialize the project</h2>
+<h2>Initialize the project</h2>
 
-<p><code>npm init</code>…</p>
+<p><code>npm init</code>...</p>
 
 <p>Install babel and browserify.</p>
 
@@ -33,61 +33,56 @@
 
 <p>Create <code>src</code> folder, es6 codes goes in there.</p>
 
-<h3 id="create-makefile-to-build-the-project">Create <code>makefile</code> to build the project.</h3>
-
+<h3>Create <code>makefile</code> to build the project.</h3>
 <div class="highlight"><pre><code class="language-text" data-lang="text">./dest/index.js: ./dest ./build/event-emitter.js ./build/module.js ./build/index.js
-	./node_modules/.bin/browserify ./build/index.js &gt; ./dest/index.js
+    ./node_modules/.bin/browserify ./build/index.js &gt; ./dest/index.js
 
 ./build/event-emitter.js: ./build ./event-emitter/src/event-emitter.js
-	./node_modules/.bin/babel ./event-emitter/src/event-emitter.js -o ./build/event-emitter.js --module-id EventEmitter # specify the module name to EventEmitter, otherwise babel will generate the module name from file name
+    ./node_modules/.bin/babel ./event-emitter/src/event-emitter.js -o ./build/event-emitter.js --module-id EventEmitter # specify the module name to EventEmitter, otherwise babel will generate the module name from file name
 
 ./build/module.js: ./build ./src/module.js
-	./node_modules/.bin/babel ./src/module.js -o ./build/module.js
+    ./node_modules/.bin/babel ./src/module.js -o ./build/module.js
 
 ./build/index.js: ./build ./src/index.js
-	./node_modules/.bin/babel ./src/index.js -o ./build/index.js
+    ./node_modules/.bin/babel ./src/index.js -o ./build/index.js
 
 ./dest:
-	mkdir ./dest
+    mkdir ./dest
 
 ./build:
-	mkdir ./build</code></pre></div>
-
-<h3 id="update-makefile-using-babel--d-option-to-build-directories">Update <code>makefile</code> using <code>babel -d</code> option to build directories</h3>
-
+    mkdir ./build
+</code></pre></div>
+<h3>Update <code>makefile</code> using <code>babel -d</code> option to build directories</h3>
 <div class="highlight"><pre><code class="language-text" data-lang="text">./dest/index.js: ./dest build-js ./build/event-emitter.js
-	./node_modules/.bin/browserify ./build/index.js &gt; ./dest/index.js
+    ./node_modules/.bin/browserify ./build/index.js &gt; ./dest/index.js
 
 build-js: ./build
-	./node_modules/.bin/babel ./src -d ./build
+    ./node_modules/.bin/babel ./src -d ./build
 
 ./build/event-emitter.js: ./build ./event-emitter/src/event-emitter.js
-	./node_modules/.bin/babel ./event-emitter/src/event-emitter.js -o ./build/event-emitter.js --module-id EventEmitter # specify the module name to EventEmitter, otherwise babel will generate the module name from file name
+    ./node_modules/.bin/babel ./event-emitter/src/event-emitter.js -o ./build/event-emitter.js --module-id EventEmitter # specify the module name to EventEmitter, otherwise babel will generate the module name from file name
 
 ./dest:
-	mkdir ./dest
+    mkdir ./dest
 
 ./build:
-	mkdir ./build
+    mkdir ./build
 
-.PHONY: build-js</code></pre></div>
-
-<h3 id="update-makefile-using-babelify">Update <code>makefile</code> using <code>babelify</code></h3>
+.PHONY: build-js
+</code></pre></div>
+<h3>Update <code>makefile</code> using <code>babelify</code></h3>
 
 <p><code>npm i --save-dev browserify babelify</code></p>
-
 <div class="highlight"><pre><code class="language-text" data-lang="text">./dest/index.js: ./event-emitter/src/event-emitter.js ./src/index.jsx
-	./node_modules/.bin/browserify ./src/index.jsx -t babelify --outfile ./dest/index.js</code></pre></div>
-
-<h2 id="write-the-code">Write the code</h2>
-
+    ./node_modules/.bin/browserify ./src/index.jsx -t babelify --outfile ./dest/index.js
+</code></pre></div>
+<h2>Write the code</h2>
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// ./src/index.js</span>
 <span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="nx">module</span> <span class="nx">from</span> <span class="s1">&#39;./module.js&#39;</span><span class="p">;</span>
 
-<span class="nx">module</span><span class="p">();</span></code></pre></div>
-
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// ./src/module.js</span>
+<span class="nx">module</span><span class="p">();</span>
+</code></pre></div><div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// ./src/module.js</span>
 <span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="nx">EventEmitter</span> <span class="nx">from</span> <span class="s1">&#39;./event-emitter.js&#39;</span><span class="p">;</span>
 
@@ -107,27 +102,26 @@ build-js: ./build
 <span class="p">});</span>
 <span class="c1">// exports.default = function () {</span>
 <span class="c1">//     new Test();</span>
-<span class="c1">// }</span></code></pre></div>
-
-<h2 id="build-the-project">Build the project</h2>
+<span class="c1">// }</span>
+</code></pre></div>
+<h2>Build the project</h2>
 
 <p><code>make</code> will generate <code>./dest/index.js</code> with runnable javascript.</p>
 
-<h2 id="using-git-submodule">Using git submodule</h2>
+<h2>Using git submodule</h2>
 
 <p><code>git submodule add [-b gh-pages] https://github.com/vivaxy/event-emitter.git</code></p>
 
 <p>Repository here must start with <code>https://</code>, or we cannot publish this project to github pages.</p>
-
 <div class="highlight"><pre><code class="language-text" data-lang="text">Page build failure
 
 The page build failed with the following error:
 
 The submodule registered for `./event-emitter` could not be cloned. Make sure it&#39;s using https:// and that it&#39;s a public repo. For more information, see https://help.github.com/articles/page-build-failed-invalid-submodule.
 
-If you have any questions you can contact us by replying to this email.</code></pre></div>
-
-<h2 id="other-recommendation">Other Recommendation</h2>
+If you have any questions you can contact us by replying to this email.
+</code></pre></div>
+<h2>Other Recommendation</h2>
 
 <p>Use git to keep your code traced.</p>
 
@@ -135,7 +129,7 @@ If you have any questions you can contact us by replying to this email.</code></
 
 <p>Create <code>.gitignore</code> to keep <code>node_module</code>, <code>.DS_Store</code> and your git submodules out of git repository.</p>
 
-<h2 id="example-projects">Example projects</h2>
+<h2>Example projects</h2>
 
 <p><a href="https://github.com/vivaxy/design/tree/gh-pages/ink">ink</a></p>
 

@@ -21,11 +21,11 @@
 </a>
 <div class="card">
     <div class="content">
-        <h2 id="folder50wordexcel">文件夹folder下，有50个word文档，要添加到excel中的一列里面，作为超链接。</h2>
+        <h2>文件夹folder下，有50个word文档，要添加到excel中的一列里面，作为超链接。</h2>
 
 <p>在folder目录下shift+鼠标右键，在此处打开命令窗口(W)，输入：</p>
 
-<p><code>for /f %i in ('dir /b *.doc *.docx') do echo =HYPERLINK("%i") &gt;&gt; link.txt</code></p>
+<p><code>for /f %i in (&#39;dir /b *.doc *.docx&#39;) do echo =HYPERLINK(&quot;%i&quot;) &gt;&gt; link.txt</code></p>
 
 <p>，把link.txt中的文字粘贴到excel中。</p>
 

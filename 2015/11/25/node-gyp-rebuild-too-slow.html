@@ -24,7 +24,6 @@
         <p>In China, node-gyp always building too slow or failing because of connection.</p>
 
 <p>We can fix it by executing a shell script.</p>
-
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#!/usr/bin/env bash</span>
 
 <span class="c"># 获得 nodejs 版本号</span>
@@ -45,18 +44,18 @@ mv ~/.node-gyp/node-v<span class="nv">$NODE_VERSION</span> ~/.node-gyp/<span cla
 <span class="nb">printf</span> <span class="s2">&quot;9\n&quot;</span>&gt;~/.node-gyp/<span class="nv">$NODE_VERSION</span>/installVersion
 
 <span class="c"># 删除下载下来的源码包</span>
-rm -rf node-v<span class="nv">$NODE_VERSION</span>.tar.gz</code></pre></div>
-
+rm -rf node-v<span class="nv">$NODE_VERSION</span>.tar.gz
+</code></pre></div>
 <p>Before we install a npm package, which requires node-gyp, just run it.</p>
 
 <p>Or use <a href="https://www.npmjs.com/package/node-gyp-install">node-gyp-install</a></p>
 
 <p>See other ways in reference.</p>
 
-<h2 id="reference">Reference</h2>
+<h2>Reference</h2>
 
 <ul>
-  <li><a href="https://breeswish.org/blog/2014/11/14/node-gyp-rebuild-freeze/">node-gyp rebuild 卡住的解决方案</a></li>
+<li><a href="https://breeswish.org/blog/2014/11/14/node-gyp-rebuild-freeze/">node-gyp rebuild 卡住的解决方案</a></li>
 </ul>
 
     </div>

@@ -25,7 +25,7 @@
 
 <p>新注册的 AWS 用户拥有一年的免费计划。</p>
 
-<h2 id="aws">注册亚马逊 AWS</h2>
+<h2>注册亚马逊 AWS</h2>
 
 <p><a href="https://aws.amazon.com/">AWS 地址</a></p>
 
@@ -37,7 +37,7 @@
 
 <p>此时会发生验卡操作，信用卡可能会被扣1美元，然后交易未成功。实际不会有支出。</p>
 
-<h2 id="ec2-">创建 EC2 服务器</h2>
+<h2>创建 EC2 服务器</h2>
 
 <p>创建一个实例，选择镜像（AMI），比如 <code>SUSE Linux Enterprise Server 12 (HVM), SSD Volume Type</code>。</p>
 
@@ -45,7 +45,7 @@
 
 <p>启动实例后，会生成一个 <code>pem</code> 文件，保存到硬盘下 <code>~/amazon.pem</code> 。</p>
 
-<h2 id="section">连接服务器</h2>
+<h2>连接服务器</h2>
 
 <p>等服务器启动后，可以找到 <code>Public DNS</code> 和 <code>Public IP</code> ，两者都可以用来连接服务器。</p>
 
@@ -55,7 +55,7 @@
 
 <p>第一次登录时选择信任，之后不需要每次都 <code>yes</code> 。</p>
 
-<h2 id="shadowsocks">安装 shadowsocks</h2>
+<h2>安装 shadowsocks</h2>
 
 <p>shadowsocks-python 支持 python 2.6 或 2.7 ，可以用 pip 安装。</p>
 
@@ -69,7 +69,7 @@
 
 <p><code>&gt; pip install shadowsocks</code></p>
 
-<h2 id="section-1">启动和配置</h2>
+<h2>启动和配置</h2>
 
 <p>直接运行 <code>&gt; ssserver -p 443 -k password -m aes-256-cfb</code></p>
 
@@ -81,10 +81,9 @@
 
 <p>或者使用配置文件运行 <code>&gt; ssserver -c /etc/shadowsocks.json</code></p>
 
-<h2 id="section-2">配置文件</h2>
+<h2>配置文件</h2>
 
 <p><code>sudo vim /etc/shadowsocks.json</code></p>
-
 <div class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span>
     <span class="nt">&quot;server&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0.0.0&quot;</span><span class="p">,</span>
     <span class="nt">&quot;server_port&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
@@ -95,9 +94,9 @@
     <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;aes-256-cfb&quot;</span><span class="p">,</span>
     <span class="nt">&quot;fast_open&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
     <span class="nt">&quot;workers&quot;</span><span class="p">:</span> <span class="mi">1</span>
-<span class="p">}</span></code></pre></div>
-
-<h2 id="ec2">提高EC2的安全性</h2>
+<span class="p">}</span>
+</code></pre></div>
+<h2>提高EC2的安全性</h2>
 
 <p>选择 <code>NETWORK &amp; SECURITY</code> 下的 <code>Security Groups</code> 。</p>
 
@@ -113,21 +112,13 @@
 
 <p>保存后，只有本机 ip 才能使用 <code>ssh</code> 连接机器，任何机器都能使用这台 shadowsocks 服务器。</p>
 
-<h2 id="section-3">参考文档</h2>
+<h2>参考文档</h2>
 
 <ul>
-  <li>
-    <p><a href="http://shadowsocks.org/en/download/servers.html">shadowsocks download</a></p>
-  </li>
-  <li>
-    <p><a href="https://github.com/shadowsocks/shadowsocks/tree/7c08101ce8a673fafb22477e8ad720aa57114a1f">shadowsocks github</a></p>
-  </li>
-  <li>
-    <p><a href="https://pip.pypa.io/en/stable/installing/#install-pip">pip document</a></p>
-  </li>
-  <li>
-    <p><a href="http://aisheji.org/web/centos-build-shadowsocks.html">Shadowsocks搭建、优化及客户端设置教程</a></p>
-  </li>
+<li><p><a href="http://shadowsocks.org/en/download/servers.html">shadowsocks download</a></p></li>
+<li><p><a href="https://github.com/shadowsocks/shadowsocks/tree/7c08101ce8a673fafb22477e8ad720aa57114a1f">shadowsocks github</a></p></li>
+<li><p><a href="https://pip.pypa.io/en/stable/installing/#install-pip">pip document</a></p></li>
+<li><p><a href="http://aisheji.org/web/centos-build-shadowsocks.html">Shadowsocks搭建、优化及客户端设置教程</a></p></li>
 </ul>
 
     </div>

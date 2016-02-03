@@ -21,21 +21,20 @@
 </a>
 <div class="card">
     <div class="content">
-        <h2 id="event-delegation-not-available-on-body">Event delegation not available on body</h2>
+        <h2>Event delegation not available on body</h2>
 
 <p>see <a href="http://vivaxy.github.io/course/pitfall/event-delegation-on-ios-safari/">example</a></p>
-
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="s1">&#39;.J_button&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
     <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;clicked&#39;</span><span class="p">);</span>
-<span class="p">});</span></code></pre></div>
-
+<span class="p">});</span>
+</code></pre></div>
 <p>First <code>click here</code> will not alert, while the second <code>click here</code> alerts.</p>
 
 <p><code>fix</code> class was added to the second one, appending <code>cursor: pointer</code> style.</p>
 
 <p>This fixed event delegation problem and added a visible click style to the clickable element.</p>
 
-<h2 id="referencehttpwwwquirksmodeorgblogarchives201010clickeventdel1html"><a href="http://www.quirksmode.org/blog/archives/2010/10/click_event_del_1.html">reference</a></h2>
+<h2><a href="http://www.quirksmode.org/blog/archives/2010/10/click_event_del_1.html">reference</a></h2>
 
     </div>
 </div>

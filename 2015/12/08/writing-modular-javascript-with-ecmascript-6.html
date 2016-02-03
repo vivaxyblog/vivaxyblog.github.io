@@ -21,13 +21,13 @@
 </a>
 <div class="card">
     <div class="content">
-        <h2 id="section">阶段一</h2>
+        <h2>阶段一</h2>
 
 <p>用 babel 5.0 的 <a href="https://babeljs.io/docs/setup/#babel_cli">cli</a> 将单个 es6 文件编译成 umd 形式的 es5</p>
 
 <p>将文件拼接在一起 <code>&gt; cat ./build/a.js ./build/b.js &gt; ./dest/index.js</code></p>
 
-<h2 id="writing-modular-javascript-with-ecmascript-6html"><a href="/2015/09/03/writing-modular-javascript-with-ecmascript-6.html">阶段二</a></h2>
+<h2><a href="/2015/09/03/writing-modular-javascript-with-ecmascript-6.html">阶段二</a></h2>
 
 <p>使用到了 <a href="https://www.npmjs.com/package/babel">babel</a> 和 <a href="https://www.npmjs.com/package/browserify">browserify</a></p>
 
@@ -35,13 +35,13 @@
 
 <p>用 browserify 输出为同一个文件</p>
 
-<h2 id="writing-modular-javascript-with-ecmascript-6html-1"><a href="/2015/09/03/writing-modular-javascript-with-ecmascript-6.html">阶段三</a></h2>
+<h2><a href="/2015/09/03/writing-modular-javascript-with-ecmascript-6.html">阶段三</a></h2>
 
 <p>使用 browserify 插件 babelify</p>
 
 <p><code>&gt; browserify ./src/index.js -t babelify -o ./dest/index.js</code></p>
 
-<h2 id="section-1">阶段四</h2>
+<h2>阶段四</h2>
 
 <p>babel 升级到了 6.0 ，对所有功能进行了细化拆分，如果用到 es6 的规范，则需要安装 <code>babel-preset-es2015</code></p>
 
@@ -52,7 +52,6 @@
 <p><code>npm i --save-dev babelify babel-preset-es2015</code></p>
 
 <p>修改 <code>package.json</code> 添加 browserify 的配置</p>
-
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// ...</span>
 <span class="s2">&quot;browserify&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;transform&quot;</span><span class="o">:</span> <span class="p">[</span>
@@ -66,19 +65,18 @@
         <span class="p">]</span>
     <span class="p">]</span>
 <span class="p">}</span> <span class="c1">// ,</span>
-<span class="c1">// ...</span></code></pre></div>
-
+<span class="c1">// ...</span>
+</code></pre></div>
 <p>编译的指令变成了 <code>browserify ./src/index.js -o ./dest/index.js</code></p>
 
 <p>这里可以把原本的 makefile 去除了，改由 <code>npm run make</code> 命令来执行编译，在 <code>package.json</code> 中添加</p>
-
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// ...</span>
 <span class="s2">&quot;scripts&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;build&quot;</span><span class="o">:</span> <span class="s2">&quot;browserify ./src/index.js -o ./dest/index.js&quot;</span>
 <span class="p">}</span> <span class="c1">// ,</span>
-<span class="c1">// ...</span></code></pre></div>
-
-<h2 id="section-2">阶段五</h2>
+<span class="c1">// ...</span>
+</code></pre></div>
+<h2>阶段五</h2>
 
 <p>使用 <a href="https://webpack.github.io/">webpack</a> 和 babel</p>
 
@@ -87,7 +85,6 @@
 <p>安装依赖 <code>npm i --save-dev webpack webpack-dev-server babel-loader babel-core babel-preset-es2015</code></p>
 
 <p>项目下新建 webpack 配置文件 <code>webpack.config.js</code></p>
-
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="cm">/**</span>
 <span class="cm"> * @since 2015-12-07 16:43</span>
 <span class="cm"> * @author vivaxy</span>
@@ -108,13 +105,13 @@
             <span class="p">}</span>
         <span class="p">]</span>
     <span class="p">}</span>
-<span class="p">};</span></code></pre></div>
-
+<span class="p">};</span>
+</code></pre></div>
 <p>loader 中的配置可以参考<a href="https://webpack.github.io/docs/configuration.html#module-loaders">这里</a></p>
 
 <p>配置完成后，在命令行中执行 <code>&gt; webpack</code> 就能得到输出的文件，执行 <code>&gt; webpack-dev-server</code> 就能在 8080 端口启动本地服务，调试 es6 代码</p>
 
-<p>如果想在文件变动后自动刷新页面，可以在 html 中加入 <code>&lt;script src="http://localhost:8080/webpack-dev-server.js"&gt;&lt;/script&gt;</code></p>
+<p>如果想在文件变动后自动刷新页面，可以在 html 中加入 <code>&lt;script src=&quot;http://localhost:8080/webpack-dev-server.js&quot;&gt;&lt;/script&gt;</code></p>
 
 <p><a href="https://github.com/vivaxy/course/tree/gh-pages/hammer">参考项目</a></p>
 

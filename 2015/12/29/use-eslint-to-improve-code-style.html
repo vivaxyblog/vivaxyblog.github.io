@@ -21,7 +21,7 @@
 </a>
 <div class="card">
     <div class="content">
-        <h2 id="eslint">使用全局 eslint</h2>
+        <h2>使用全局 eslint</h2>
 
 <p>安装全局 eslint <code>&gt; npm i -g eslint</code> 。</p>
 
@@ -31,50 +31,44 @@
 
 <p>要检查项目下所有 js 文件，可以输入 <code>eslint .</code> 。</p>
 
-<h2 id="eslint-1">配置项目下的 eslint</h2>
+<h2>配置项目下的 eslint</h2>
 
-<p>在项目下执行 <code>&gt; npm i --save-dev eslint</code> ， <code>package.json</code> 中配置 <code>scripts.lint: "eslint ."</code> 。</p>
+<p>在项目下执行 <code>&gt; npm i --save-dev eslint</code> ， <code>package.json</code> 中配置 <code>scripts.lint: &quot;eslint .&quot;</code> 。</p>
 
 <p>在控制台中执行 <code>npm run lint</code> ，依然可以执行 eslint 。</p>
 
-<h2 id="eslint-">配置 eslint 不检查的文件</h2>
+<h2>配置 eslint 不检查的文件</h2>
 
 <p>在项目下创建 <code>.eslintignore</code> ，将不需要检查的文件路径添加进去。</p>
 
 <p>不需要检查的文件包括： 依赖包，编译后的文件等。</p>
 
-<h2 id="git-commit--eslint">配置 <code>git commit</code> 前执行 eslint</h2>
+<h2>配置 <code>git commit</code> 前执行 eslint</h2>
 
 <p>在项目下安装 husky ， <code>&gt; npm i --save-dev husky</code> 。</p>
 
-<p>配置 <code>package.json</code> ，添加 <code>scripts.precommit: "eslint ."</code> 。</p>
+<p>配置 <code>package.json</code> ，添加 <code>scripts.precommit: &quot;eslint .&quot;</code> 。</p>
 
-<h2 id="eslint-2">对代码禁用 eslint</h2>
+<h2>对代码禁用 eslint</h2>
 
 <ul>
-  <li>
-    <p>对于文件，配置在 <code>.eslintignore</code> 文件中</p>
-  </li>
-  <li>
-    <p>对于代码块，使用 <code>/* eslint-disable */</code> 和 <code>/* eslint-enable */</code></p>
-  </li>
-  <li>
-    <p>对于代码行，使用 <code>/* eslint-disable-line rule1, rule2 */</code></p>
-  </li>
+<li><p>对于文件，配置在 <code>.eslintignore</code> 文件中</p></li>
+<li><p>对于代码块，使用 <code>/* eslint-disable */</code> 和 <code>/* eslint-enable */</code></p></li>
+<li><p>对于代码行，使用 <code>/* eslint-disable-line rule1, rule2 */</code></p></li>
 </ul>
 
-<h2 id="section">参考项目</h2>
+<h2>参考项目</h2>
 
 <ul>
-  <li><a href="https://github.com/vivaxy/here">vivaxy/here</a></li>
-  <li><a href="https://github.com/vivaxy/front-end-scaffold">vivaxy/front-end-scaffold</a></li>
+<li><a href="https://github.com/vivaxy/here">vivaxy/here</a></li>
+<li><a href="https://github.com/vivaxy/front-end-scaffold">vivaxy/front-end-scaffold</a></li>
 </ul>
 
-<h2 id="section-1">参考文档</h2>
+<h2>参考文档</h2>
 
 <ul>
-  <li><a href="http://eslint.org/">ESLint - Pluggable JavaScript linter</a></li>
-  <li><a href="https://www.npmjs.com/package/husky">husky</a></li>
+<li><a href="http://eslint.org/">ESLint - Pluggable JavaScript linter</a></li>
+<li><a href="https://www.npmjs.com/package/husky">husky</a></li>
 </ul>
 
     </div>

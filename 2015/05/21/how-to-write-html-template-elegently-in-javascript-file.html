@@ -22,7 +22,6 @@
 <div class="card">
     <div class="content">
         <p>注释形式写在js中，然后用Function.prototype.toString方法拿到。</p>
-
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">compile</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">functionObject</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="nx">functionObject</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">match</span><span class="p">(</span><span class="sr">/\/\*([\s\S]*?)\*\//</span><span class="p">)[</span><span class="mi">1</span><span class="p">];</span>
 <span class="p">};</span>
@@ -33,39 +32,35 @@
 <span class="cm">     &lt;div class=&quot;content&quot;&gt;content&lt;/div&gt;</span>
 <span class="cm"> &lt;/div&gt;</span>
 <span class="cm"> */</span>
-<span class="p">});</span></code></pre></div>
-
+<span class="p">});</span>
+</code></pre></div>
 <p>作为模板，当然还需要关键词的替换功能。接下来实现它！</p>
 
 <p>参考ES6中的template string：</p>
-
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="err">`</span>
  <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
      <span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">$</span><span class="p">{</span><span class="nx">title</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/h2&gt;</span>
      <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;content&quot;</span><span class="o">&gt;</span><span class="nx">$</span><span class="p">{</span><span class="nx">content</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
  <span class="o">&lt;</span><span class="err">/div&gt;</span>
-<span class="err">`</span></code></pre></div>
-
+<span class="err">`</span>
+</code></pre></div>
 <p>只需要替换符合<code>/\$\{\w.+\}/g</code>这个正则的文本即可。</p>
 
 <p>用replace方法：</p>
-
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\$\{\w.+\}/g</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">variable</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="nx">otherValue</span><span class="p">;</span>
-<span class="p">});</span></code></pre></div>
-
+<span class="p">});</span>
+</code></pre></div>
 <p>去掉<code>${</code>和<code>}</code>，然后返回实际值即可。</p>
-
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">compile</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">functionObject</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">it</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">return</span> <span class="nx">functionObject</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">match</span><span class="p">(</span><span class="sr">/\/\*([\s\S]*?)\*\//</span><span class="p">)[</span><span class="mi">1</span><span class="p">].</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\$\{\w.+\}/g</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">variable</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">return</span> <span class="nx">it</span><span class="p">[</span><span class="nx">variable</span><span class="p">];</span>
         <span class="p">});</span>
     <span class="p">}</span>
-<span class="p">};</span></code></pre></div>
-
+<span class="p">};</span>
+</code></pre></div>
 <p>测试下：</p>
-
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">toHtml1</span> <span class="o">=</span> <span class="nx">compile</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="cm">/*</span>
 <span class="cm"> &lt;div&gt;</span>
 <span class="cm">     &lt;h2&gt;${title}&lt;/h2&gt;</span>
@@ -77,21 +72,19 @@
     <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;title string 2&#39;</span><span class="p">,</span>
     <span class="nx">content</span><span class="o">:</span> <span class="s1">&#39;content string 2&#39;</span>
 <span class="p">};</span>
-<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">+=</span> <span class="nx">toHtml1</span><span class="p">(</span><span class="nx">test2</span><span class="p">);</span></code></pre></div>
-
+<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">+=</span> <span class="nx">toHtml1</span><span class="p">(</span><span class="nx">test2</span><span class="p">);</span>
+</code></pre></div>
 <p>那么如果变量是这样的呢<code>&lt;h2&gt;${data.title}&lt;/h2&gt;</code>？</p>
 
 <p>只需要用<code>.</code>分割字符串，然后逐步拿到值就行了：</p>
-
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">it</span><span class="p">;</span>
 <span class="nx">variable</span> <span class="o">=</span> <span class="nx">variable</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;${&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;}&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
 <span class="nx">variable</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">section</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">value</span> <span class="o">=</span> <span class="nx">value</span><span class="p">[</span><span class="nx">section</span><span class="p">];</span>
 <span class="p">});</span>
-<span class="k">return</span> <span class="nx">value</span><span class="p">;</span></code></pre></div>
-
+<span class="k">return</span> <span class="nx">value</span><span class="p">;</span>
+</code></pre></div>
 <p>测试下：</p>
-
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">test3</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
         <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;title string 3&#39;</span><span class="p">,</span>
@@ -105,15 +98,14 @@
 <span class="cm"> &lt;/div&gt;</span>
 <span class="cm"> */</span>
 <span class="p">});</span>
-<span class="nx">toHtml3</span><span class="p">(</span><span class="nx">test3</span><span class="p">);</span></code></pre></div>
-
-<div class="highlight"><pre><code class="language-text" data-lang="text">&quot;
+<span class="nx">toHtml3</span><span class="p">(</span><span class="nx">test3</span><span class="p">);</span>
+</code></pre></div><div class="highlight"><pre><code class="language-text" data-lang="text">&quot;
 &lt;div&gt;
 &lt;h2&gt;title string 3&lt;/h2&gt;
 &lt;div class=&quot;content&quot;&gt;content string 3&lt;/div&gt;
 &lt;/div&gt;
-&quot;</code></pre></div>
-
+&quot;
+</code></pre></div>
 <p>See example <a href="http://vivaxy.github.io/course/javascript/template-engine/">here</a>.</p>
 
 <p>另：已经有人造了轮子：<a href="https://github.com/sindresorhus/multiline">multiline</a></p>
