@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="shortcut icon" href="/css/vivaxy.icon.png">
+    <link type="text/css" rel="stylesheet" href="/css/reset.css">
+    <link type="text/css" rel="stylesheet" href="/css/main.css">
+    <link type="text/css" rel="stylesheet" href="/css/syntax.css">
+    <link rel="alternate" type="application/atom+xml" title="vivaxy blog" href="/atom.xml"/>
+    <title>Post Feedback on Github Issue from Android Applications</title>
+</head>
+<body>
+<div class="container">
+    <a href="/" class="card hover-left">
+    <div class="content">
+        <h1>Post Feedback on Github Issue from Android Applications</h1>
+        <div class="date">2014-06-27</div>
+    </div>
+    <div class="icon-arrow-left"></div>
+</a>
+<div class="card">
+    <div class="content">
+        <h2>Create a github account.</h2>
+
+<p>Visit <a href="github.com">github.com</a>.</p>
+
+<h2>Create a new authorization.</h2>
+
+<p>See <a href="https://developer.github.com/v3/oauth_authorizations/#create-a-new-authorization">https://developer.github.com/v3/oauth_authorizations/#create-a-new-authorization</a>.</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Enter YOURUSERNAME.</span>
+<span class="nv">$ </span>curl -u <span class="s2">&quot;YOURUSERNAME&quot;</span> -X POST -d <span class="s1">&#39;{&quot;note&quot;:&quot;feedback&quot;}&#39;</span> https://api.github.com/authorizations
+<span class="c"># Enter YOURPASSWORD.</span>
+</code></pre></div>
+<p>Response:</p>
+<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1234</span><span class="p">,</span>
+  <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.github.com/authorizations/*******&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;app&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;feedback (API)&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://developer.github.com/v3/oauth_authorizations/&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;client_id&quot;</span><span class="p">:</span> <span class="s2">&quot;00000000000000000000&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;YOURTOKEN&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;note&quot;</span><span class="p">:</span> <span class="s2">&quot;feedback&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;note_url&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="nt">&quot;created_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2014-06-27T01:49:33Z&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2014-06-27T01:49:33Z&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;scopes&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2>Setup generated token</h2>
+
+<p>Account settings &gt; <a href="https://github.com/settings/applications">Applications</a> &gt; Personal access tokens &gt; Edit &gt; Select scopes: public_repo &gt; Update token</p>
+
+<h2>Post an issue using curl command line.</h2>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Enter YOURTOKEN USERNAME REPONAME.</span>
+<span class="c"># Repository user could be different from the previous authorised user, and it is safer to be different.</span>
+<span class="nv">$ </span>curl -X POST -u YOURTOKEN:x-oauth-basic -H <span class="s2">&quot;Content-Type: application/x-www-form-urlencoded&quot;</span> -d <span class="s1">&#39;{&quot;title&quot;:&quot;test token&quot;}&#39;</span> https://api.github.com/repos/USERNAME/REPONAME/issues
+</code></pre></div>
+<h2>Add code to your android application.</h2>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="n">Boolean</span> <span class="nf">sendFeedback</span><span class="o">(</span><span class="n">String</span> <span class="n">content</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+
+    <span class="c1">// String systemInfo = new SystemInfo().getSysInfoString();</span>
+
+    <span class="c1">// See https://developer.github.com/v3/issues/#create-an-issue.</span>
+    <span class="c1">// Replace USERNAME REPONAME with your project owner repo.</span>
+    <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">&quot;https://api.github.com/repos/USERNAME/REPONAME/issues&quot;</span><span class="o">;</span>
+
+    <span class="c1">// Post a http request in json.</span>
+    <span class="n">HttpPost</span> <span class="n">httppost</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">HttpPost</span><span class="o">(</span><span class="n">url</span><span class="o">);</span>
+    <span class="n">JSONObject</span> <span class="n">para</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">JSONObject</span><span class="o">();</span>
+    <span class="n">para</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;title&quot;</span><span class="o">,</span> <span class="n">content</span><span class="o">);</span>
+    <span class="c1">// para.put(&quot;body&quot;, &quot;Feedback from Android device.\n&quot; + systemInfo);</span>
+
+    <span class="c1">// Set StringEntity to HTTP.UTF_8 in case of Chinese garbled.</span>
+    <span class="n">StringEntity</span> <span class="n">se</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">StringEntity</span><span class="o">(</span><span class="n">para</span><span class="o">.</span><span class="na">toString</span><span class="o">(),</span> <span class="n">HTTP</span><span class="o">.</span><span class="na">UTF_8</span><span class="o">);</span>
+    <span class="n">httppost</span><span class="o">.</span><span class="na">setEntity</span><span class="o">(</span><span class="n">se</span><span class="o">);</span>
+
+    <span class="c1">// Replace YOURTOKEN with your generated token;</span>
+    <span class="n">httppost</span><span class="o">.</span><span class="na">setHeader</span><span class="o">(</span><span class="s">&quot;Authorization&quot;</span><span class="o">,</span> <span class="s">&quot;token YOURTOKEN&quot;</span><span class="o">);</span>
+    <span class="n">httppost</span><span class="o">.</span><span class="na">setHeader</span><span class="o">(</span><span class="s">&quot;Accept&quot;</span><span class="o">,</span> <span class="s">&quot;application/json&quot;</span><span class="o">);</span>
+
+    <span class="c1">// Content-type must be set as application/x-www-form-urlencoded.</span>
+    <span class="c1">// And add charset=UTF-8 in case of Chinese garbled.</span>
+    <span class="n">httppost</span><span class="o">.</span><span class="na">setHeader</span><span class="o">(</span><span class="s">&quot;Content-type&quot;</span><span class="o">,</span> <span class="s">&quot;application/x-www-form-urlencoded; charset=UTF-8&quot;</span><span class="o">);</span>
+
+    <span class="c1">// Read response.</span>
+    <span class="c1">// If exceptions throwed or false returned, submittal fails.</span>
+    <span class="n">HttpResponse</span> <span class="n">response</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">DefaultHttpClient</span><span class="o">().</span><span class="na">execute</span><span class="o">(</span><span class="n">httppost</span><span class="o">);</span>
+    <span class="n">Log</span><span class="o">.</span><span class="na">v</span><span class="o">(</span><span class="s">&quot;-------&quot;</span><span class="o">,</span> <span class="s">&quot;getStatusCode: &quot;</span> <span class="o">+</span> <span class="n">response</span><span class="o">.</span><span class="na">getStatusLine</span><span class="o">().</span><span class="na">getStatusCode</span><span class="o">());</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">response</span><span class="o">.</span><span class="na">getStatusLine</span><span class="o">().</span><span class="na">getStatusCode</span><span class="o">()</span> <span class="o">==</span> <span class="mi">201</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Log</span><span class="o">.</span><span class="na">v</span><span class="o">(</span><span class="s">&quot;-------&quot;</span><span class="o">,</span> <span class="s">&quot;response: &quot;</span> <span class="o">+</span> <span class="n">EntityUtils</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">response</span><span class="o">.</span><span class="na">getEntity</span><span class="o">()));</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="o">}</span> <span class="k">else</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div>
+<h2>Http post should be in a new thread apart of current activity.</h2>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// Add a runnable to start your post.</span>
+<span class="n">Runnable</span> <span class="n">runnable</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Runnable</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">TextView</span> <span class="n">tv</span> <span class="o">=</span> <span class="o">(</span><span class="n">TextView</span><span class="o">)</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">feedback_container</span><span class="o">);</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="n">Boolean</span> <span class="n">success</span> <span class="o">=</span> <span class="n">fu</span><span class="o">.</span><span class="na">sendFeedback</span><span class="o">(</span><span class="n">tv</span><span class="o">.</span><span class="na">getText</span><span class="o">().</span><span class="na">toString</span><span class="o">());</span>
+
+            <span class="c1">// Toast not made in current activity thread should be added to the looper.</span>
+            <span class="n">Looper</span><span class="o">.</span><span class="na">prepare</span><span class="o">();</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">success</span><span class="o">)</span> <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">HomeActivity</span><span class="o">.</span><span class="na">ha</span><span class="o">,</span> <span class="n">R</span><span class="o">.</span><span class="na">string</span><span class="o">.</span><span class="na">feedback_success</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
+            <span class="k">else</span> <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">HomeActivity</span><span class="o">.</span><span class="na">ha</span><span class="o">,</span> <span class="n">R</span><span class="o">.</span><span class="na">string</span><span class="o">.</span><span class="na">feedback_error</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
+            <span class="n">Looper</span><span class="o">.</span><span class="na">loop</span><span class="o">();</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">Looper</span><span class="o">.</span><span class="na">prepare</span><span class="o">();</span>
+            <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">HomeActivity</span><span class="o">.</span><span class="na">ha</span><span class="o">,</span> <span class="n">R</span><span class="o">.</span><span class="na">string</span><span class="o">.</span><span class="na">feedback_error</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
+            <span class="n">Looper</span><span class="o">.</span><span class="na">loop</span><span class="o">();</span>
+            <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">};</span>
+</code></pre></div>
+<h2>Call this in current activity to start your post.</h2>
+
+<p><code>new Thread(runnable).start();</code></p>
+
+<h2>Use github commit message to close issues.</h2>
+
+<p><a href="https://help.github.com/articles/closing-issues-via-commit-messages">fix #ISSUEID</a></p>
+
+    </div>
+</div>
+<div class="card">
+    <!-- 多说 start -->
+    <div class="ds-thread" data-thread-key="/2014/06/27/post-feedback-on-github-issue-from-android-applications" data-title="Post Feedback on Github Issue from Android Applications" data-url="/2014/06/27/post-feedback-on-github-issue-from-android-applications.html"></div>
+    <script type="text/javascript" charset="utf-8" src="/js/duoshuo/duoshuo.js"></script>
+    <!-- 多说  end  -->
+</div>
+
+    <a href="javascript:document.body.scrollIntoView(true)" class="card hover-top">
+        <div class="content">
+            <div class="date">© Copyright 2011 ~ 2016 by vivaxy</div>
+        </div>
+    </a>
+</div>
+</body>
+<script type="text/javascript" src="/js/analysis/ba.js"></script>
+</html>
