@@ -27,15 +27,15 @@
 
 <p>游戏的解答过程是将一个排布变成另一个排布，即从初始状态到目标状态。重新排序的方式是将空的格子和它边上的格子通过上下左右四个方向的交换来完成的。</p>
 
-<p><img src="" alt=""></p>
+<p><img src="/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/1.jpg" alt="推盘游戏"></p>
 
 <p>空的格子不能被移除出边框，因此如果它在第一列的话，空格不能往左移动；如果它在最右边的一列的话，它就不能再往右移动了。行的规定也是类似的。解的过程是这样的：</p>
 
-<p><img src="" alt=""></p>
+<p><img src="/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/2.jpg" alt="开局"></p>
 
 <p>这是开局。</p>
 
-<p><img src="" alt=""></p>
+<p><img src="/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/3.jpg" alt="胜利"></p>
 
 <p>这样就算解出了。</p>
 
@@ -121,9 +121,9 @@
     <span class="k">font-family</span><span class="o">:</span> <span class="n">Tahoma</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>我们把网格容器左浮动，因为两个同样的容器要显示在一行，一个是用来显示初始布局的，另一个是用来显示目标布局的。</p>
+<p>我们把推盘容器左浮动，因为两个同样的容器要显示在一行，一个是用来显示初始布局的，另一个是用来显示目标布局的。</p>
 
-<p>最后，我们的网格是这个样子的。</p>
+<p>最后，我们的推盘是这个样子的。</p>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;grid-container&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;h2&gt;</span> Initial Config <span class="nt">&lt;/h2&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;grid start&quot;</span><span class="nt">&gt;</span>
@@ -147,7 +147,7 @@
 </code></pre></div>
 <p>推盘游戏有三行，每行有三个滑块，这就组成了整个推盘网格。于是我们使用了以上布局，三个行容器，每个行容器有三个子元素，每个子元素是一个滑块。</p>
 
-<p>为了编程方便，我们在每个子元素上添加了 <code>data-pos</code> 这个属性，为了记录每个滑块在网格中的位置。 <code>start</code> 这个类名是为了区分初始布局的网格和目标布局的网格，后者不会绑定用户操作。以上几个类的样式如下。</p>
+<p>为了编程方便，我们在每个子元素上添加了 <code>data-pos</code> 这个属性，为了记录每个滑块在推盘中的位置。 <code>start</code> 这个类名是为了区分初始布局的推盘和目标布局的推盘，后者不会绑定用户操作。以上几个类的样式如下。</p>
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.grid</span> <span class="p">{</span>
     <span class="k">background-color</span><span class="o">:</span> <span class="k">rgb</span><span class="p">(</span><span class="m">248</span><span class="o">,</span> <span class="m">248</span><span class="o">,</span> <span class="m">248</span><span class="p">);</span>
     <span class="k">border</span><span class="o">:</span> <span class="k">solid</span> <span class="m">5px</span> <span class="k">rgb</span><span class="p">(</span><span class="m">249</span><span class="o">,</span> <span class="m">90</span><span class="o">,</span> <span class="m">0</span><span class="p">);</span>
@@ -186,9 +186,7 @@
 </code></pre></div>
 <p>最后结果如下</p>
 
-<p><img src="" alt=""></p>
-
-<p>最后的网格</p>
+<p><img src="/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/4.jpg" alt="最后的推盘"></p>
 
 <p>接下来我们把目标布局放上去，我们复制一下起始布局，把上面的 <code>start</code> 改成 <code>goal</code> 就行了。</p>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;grid-container&quot;</span><span class="nt">&gt;</span>
@@ -212,9 +210,7 @@
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
-<p><img src="" alt=""></p>
-
-<p>起始布局和目标布局</p>
+<p><img src="/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/5.jpg" alt="起始布局和目标布局"></p>
 
 <p>最后，我们把 <code>解答</code> 和 <code>显示步数</code> 这两个按钮加到第一个布局的容器中。</p>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">&quot;start()&quot;</span><span class="nt">&gt;</span> Solve <span class="nt">&lt;/button&gt;</span>
@@ -323,7 +319,7 @@
 
 <p>A* 搜寻算法能够找到从一种空间布局到另一种空间布局转换方法。搜寻是否智能是根据转换过程中操作的步数来判断的，步数越少，算法越智能。为了能方便描述布局状态，我们把问题转换成图形。我们认为状态B是状态A的下一种状态，也就是说要到状态B就要先到状态A，由状态A通过移动一个滑块就能够到达状态B了。所以一个状态节点会有如下的四中子状态节点。</p>
 
-<p><img src="" alt=""></p>
+<p><img src="/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/6.jpg" alt="A* 算法下节点示意图"></p>
 
 <p>A* 算法下节点示意图</p>
 
@@ -332,7 +328,7 @@
 </code></pre></div>
 <p>其中 g(s) 是从初始状态到状态s的总步数，h(s) 是从状态s到目标状态的总步数，所以总步数是 f(s) 。</p>
 
-<p><img src="" alt=""></p>
+<p><img src="/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/7.jpg" alt="从其实状态到目标状态的总步数"></p>
 
 <p>从其实状态到目标状态的总步数</p>
 
@@ -377,12 +373,12 @@
 <li><p><code>depth</code> 记录从起始状态到现在的步数</p></li>
 <li><p><code>strRepresentation</code> CSV 字符串的形式保存滑块布局的状态。比如目标布局的值是 1,2,3,4,5,6,7,8 。滑块游戏布局是一个可以循环的游戏，也就是说从状态 s 经过一定的移动可以回到状态 s 。因此我们需要记录下每步的布局来避免走重复的路。这里我们会用 HashSet 。</p></li>
 <li><p><code>path</code> 记录每步的移动，用 DLRU 。这个字符串保存的是从其实布局到当前布局走过的路。</p></li>
-<li><p><code>size</code> 滑块游戏网格的大小，我们假设网格是 n 乘以 m 的，n 等于 m 。</p></li>
+<li><p><code>size</code> 滑块游戏推盘的大小，我们假设推盘是 n 乘以 m 的，n 等于 m 。</p></li>
 </ul>
 
 <p>现在我们有了 Node 这个对象，我们来用个例子演示一下使用 A* 算法解题的过程。我们用最简单的启发式，根据放错位置的滑块的个数来。错位启发式返回的值就是不在自己应该在的位置的滑块的个数。这里说明了这个启发式是可接受的。</p>
 
-<p><img src="" alt=""></p>
+<p><img src="/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/8.jpg" alt="A* 搜寻算法"></p>
 
 <p>A* 搜寻算法</p>
 
@@ -506,7 +502,198 @@
     <span class="p">}</span>
 <span class="p">};</span>
 </code></pre></div>
-<p>这里的 <code>if</code> 条件语句都很像，差别只是他们针对的移动方向不同。首先，我们判断一下这步是否能够正常进行。比如向右移动，只有空滑块的列数小于网格的行数才行。如果这步能够正常移动，那么</p>
+<p>这里的 <code>if</code> 条件语句都很像，差别只是他们针对的移动方向不同。首先，我们判断一下这步是否能够正常进行。比如向右移动，只有空滑块的列数小于推盘的行数才行。如果这步能够正常移动，那么我们建立一个新的状态 <code>newState</code> ，这个状态是从当前状态复制出来的。然后我们交换空白滑块和对应元素，同时修改 <code>newState</code> ，最后我们判断一下这个状态是不是已经存在了，如果没有存在的话，把这个状态记录到队列中去。我们还要计算一下节点的值，按照之间提到过的 <code>f = g + h</code> ，然后在 <code>path</code> 变量中记录下移动的方向。</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">clone</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="k">this</span><span class="p">));</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>最后别忘了启发式方法</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">AStar</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">heuristic</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">manhattanDistance</span><span class="p">(</span><span class="nx">node</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>这里开始，我们就能比较不用启发式下的 A* 算法的效率了。我们会慢慢发现一个启发式对于算法来说是至关重要的，其智能程度极大地影响了算法的耗时。</p>
+
+<h3>错位滑块</h3>
+
+<p>在我们进入有趣的启发式之前，先记得在计算启发式的时候，我们绝对不会考虑空白滑块。否则我们就会过高估路径的步数了，那么启发式可能不能被接受了。比如下面这个情况：</p>
+
+<p><img src="/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/9.jpg" alt="错误计算启发式"></p>
+
+<p>如果们我考虑空白滑块，那么 h 就是 2 了，而事实上，我们只要把空白滑块向下移动一步就行了。因此实际的最短步数是1，而不是二，我们高估路径的步数了。</p>
+
+<p>为了测试我们的启发式，我们用一个最差情况来试一试，这个情况下需要 31 步才能完成解答。</p>
+
+<p><img src="/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/10.jpg" alt="最差情况"></p>
+
+<p>A* 算法在点击 <code>Solve</code> 按钮后会执行。<code>onclick</code> 触发的事件是执行 <code>start</code> 方法，方法的内容如下：</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">start</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">init</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Node</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]],</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">goal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Node</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+    <span class="kd">var</span> <span class="nx">aStar</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AStar</span><span class="p">(</span><span class="nx">init</span><span class="p">,</span> <span class="nx">goal</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="c1">// To measure time taken by the algorithm</span>
+    <span class="kd">var</span> <span class="nx">startTime</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+    <span class="c1">// Execute AStar</span>
+    <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">aStar</span><span class="p">.</span><span class="nx">execute</span><span class="p">();</span>
+    <span class="c1">// To measure time taken by the algorithm</span>
+    <span class="kd">var</span> <span class="nx">endTime</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Completed in: &#39;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">endTime</span> <span class="o">-</span> <span class="nx">startTime</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; milliseconds&#39;</span><span class="p">);</span>
+
+    <span class="kd">var</span> <span class="nx">panel</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;panel&#39;</span><span class="p">);</span>
+    <span class="nx">panel</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">&#39;Solution: &#39;</span> <span class="o">+</span> <span class="nx">result</span><span class="p">.</span><span class="nx">path</span> <span class="o">+</span> <span class="s1">&#39; Total steps: &#39;</span> <span class="o">+</span> <span class="nx">result</span><span class="p">.</span><span class="nx">path</span><span class="p">.</span><span class="nx">length</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+    <span class="nx">solution</span> <span class="o">=</span> <span class="nx">result</span><span class="p">.</span><span class="nx">path</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>我们用毫秒来记录算法的耗时。用这种方式来评估不同启发式之间的优劣。错位滑块启发式的代码如下：</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">AStar</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">misplacedTiles</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">node</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">node</span><span class="p">.</span><span class="nx">state</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">state</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="o">!=</span> <span class="k">this</span><span class="p">.</span><span class="nx">goal</span><span class="p">.</span><span class="nx">state</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nx">node</span><span class="p">.</span><span class="nx">state</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="o">!=</span> <span class="k">this</span><span class="p">.</span><span class="nx">empty</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">result</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>执行结果如下：</p>
+
+<p><img src="/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/11.jpg" alt="执行结果"></p>
+
+<p>算法花了将近4秒来解答，诶哟，不错哟。但是我们可以用一个更加棒的启发式来让计算更快。</p>
+
+<h3>曼哈顿距离</h3>
+
+<p>曼哈顿距离或者块距离是用来计算两点间距离的绝对值的。</p>
+
+<p>MD = | x1 - x2 | + | y1 - y2 |</p>
+
+<p>A 点 (x1, y1) 和 B 点 (x2, y2) 之间的距离</p>
+
+<p>这个结果是可接受的，因为它永远给出的是两点之间最短的路径。</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">AStar</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">manhattanDistance</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">node</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">node</span><span class="p">.</span><span class="nx">state</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nx">node</span><span class="p">.</span><span class="nx">state</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">];</span>
+            <span class="kd">var</span> <span class="nx">found</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">h</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">h</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">goal</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">h</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">k</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">goal</span><span class="p">.</span><span class="nx">state</span><span class="p">[</span><span class="nx">h</span><span class="p">].</span><span class="nx">length</span><span class="p">;</span> <span class="nx">k</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">goal</span><span class="p">.</span><span class="nx">state</span><span class="p">[</span><span class="nx">h</span><span class="p">][</span><span class="nx">k</span><span class="p">]</span> <span class="o">==</span> <span class="nx">elem</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="nx">result</span> <span class="o">+=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">h</span> <span class="o">-</span> <span class="nx">i</span><span class="p">)</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">j</span> <span class="o">-</span> <span class="nx">k</span><span class="p">);</span>
+                        <span class="nx">found</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+                        <span class="k">break</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">found</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>使用了这个启发式的结果如下：</p>
+
+<p><img src="/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/12.jpg" alt="曼哈顿距离启发式的结果"></p>
+
+<p>我们已经大大减少了计算时间，现在只要1秒不到。曼哈顿距离这个启发式更加精确地估算了离目标布局的步数，因此我们可以更快地到达目的地。</p>
+
+<h3>结合曼哈顿距离和线性冲突</h3>
+
+<p>尽管吗哈顿距离大大缩小了算法的耗时，但是依然有很多优化可以做。线性冲突启发式提供了这个关键点。如果 tj 和 tk 这两个是在用一条线上，并且他们两个的目的地都是在这条线上，并且 tj 要去 tk 那个方向，tk 要去 tj 那个方向，那么我们说 tj 和 tk 是线性冲突的。</p>
+
+<p><img src="/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/13.jpg" alt="线性冲突"></p>
+
+<p>左边的布局，滑块3和滑块1在一行中，但是不在正确的位置。为了让他们能够到正确的位置上去，我们必须把其中一块向下移动，再把它移上来，这个移动的行为在曼哈顿距离启发式中没有考虑进去。要注意，一个滑块不可能和很多个滑块产生线性冲突，因为解决了一个线性冲突后，也就解决了这一行的所有线性冲突了。因此，如果滑块1和滑块3是线性冲突的，那么滑块1和滑块2就不是线性冲突的了，否则启发式就变得不可接受，我们会高估解答的步数。线性冲突启发式的代码如下：</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">AStar</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">linearConflicts</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">state</span> <span class="o">=</span> <span class="nx">node</span><span class="p">.</span><span class="nx">state</span><span class="p">;</span>
+
+    <span class="c1">// Row Conflicts</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">state</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">result</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="nx">findConflicts</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Column Conflicts</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">state</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">result</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="nx">findConflicts</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nx">AStar</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">findConflicts</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">dimension</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">tilesRelated</span> <span class="o">=</span> <span class="p">[];</span>
+
+    <span class="c1">// Loop foreach pair of elements in the row/column</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">h</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">h</span> <span class="o">&lt;</span> <span class="nx">state</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">tilesRelated</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">h</span><span class="p">)</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="nx">h</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">k</span> <span class="o">=</span> <span class="nx">h</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">k</span> <span class="o">&lt;</span> <span class="nx">state</span><span class="p">.</span><span class="nx">length</span> <span class="o">&amp;&amp;</span> <span class="nx">tilesRelated</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">h</span><span class="p">)</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="nx">k</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">moves</span> <span class="o">=</span> <span class="nx">dimension</span> <span class="o">==</span> <span class="mi">1</span>
+                <span class="o">?</span> <span class="k">this</span><span class="p">.</span><span class="nx">inConflict</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">state</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">h</span><span class="p">],</span> <span class="nx">state</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">k</span><span class="p">],</span> <span class="nx">h</span><span class="p">,</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">dimension</span><span class="p">)</span>
+                <span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">inConflict</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">state</span><span class="p">[</span><span class="nx">h</span><span class="p">][</span><span class="nx">i</span><span class="p">],</span> <span class="nx">state</span><span class="p">[</span><span class="nx">k</span><span class="p">][</span><span class="nx">i</span><span class="p">],</span> <span class="nx">h</span><span class="p">,</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">dimension</span><span class="p">);</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="nx">moves</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">continue</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="nx">result</span> <span class="o">+=</span> <span class="mi">2</span><span class="p">;</span>
+            <span class="nx">tilesRelated</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="nx">h</span><span class="p">,</span> <span class="nx">k</span><span class="p">]);</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nx">AStar</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">inConflict</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">indexA</span><span class="p">,</span> <span class="nx">indexB</span><span class="p">,</span> <span class="nx">dimension</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">indexGoalA</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">indexGoalB</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">c</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">goal</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">c</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">dimension</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="p">.</span><span class="nx">goal</span><span class="p">.</span><span class="nx">state</span><span class="p">[</span><span class="nx">index</span><span class="p">][</span><span class="nx">c</span><span class="p">]</span> <span class="o">==</span> <span class="nx">a</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">indexGoalA</span> <span class="o">=</span> <span class="nx">c</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">dimension</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="p">.</span><span class="nx">goal</span><span class="p">.</span><span class="nx">state</span><span class="p">[</span><span class="nx">index</span><span class="p">][</span><span class="nx">c</span><span class="p">]</span> <span class="o">==</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">indexGoalB</span> <span class="o">=</span> <span class="nx">c</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">dimension</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="p">.</span><span class="nx">goal</span><span class="p">.</span><span class="nx">state</span><span class="p">[</span><span class="nx">c</span><span class="p">][</span><span class="nx">index</span><span class="p">]</span> <span class="o">==</span> <span class="nx">a</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">indexGoalA</span> <span class="o">=</span> <span class="nx">c</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">dimension</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="p">.</span><span class="nx">goal</span><span class="p">.</span><span class="nx">state</span><span class="p">[</span><span class="nx">c</span><span class="p">][</span><span class="nx">index</span><span class="p">]</span> <span class="o">==</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">indexGoalB</span> <span class="o">=</span> <span class="nx">c</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="p">(</span><span class="nx">indexGoalA</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">indexGoalB</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;&amp;</span>
+    <span class="p">((</span><span class="nx">indexA</span> <span class="o">&lt;</span> <span class="nx">indexB</span> <span class="o">&amp;&amp;</span> <span class="nx">indexGoalA</span> <span class="o">&gt;</span> <span class="nx">indexGoalB</span><span class="p">)</span> <span class="o">||</span>
+    <span class="p">(</span><span class="nx">indexA</span> <span class="o">&gt;</span> <span class="nx">indexB</span> <span class="o">&amp;&amp;</span> <span class="nx">indexGoalA</span> <span class="o">&lt;</span> <span class="nx">indexGoalB</span><span class="p">))</span>
+        <span class="o">?</span> <span class="mi">2</span>
+        <span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>既然线性冲突启发式和曼哈顿距离启发式之间不会发生冲突，那么我们可以把他们两个结合起来，来获得一个更加棒的算法。</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">AStar</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">heuristic</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">manhattanDistance</span><span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">linearConflicts</span><span class="p">(</span><span class="nx">node</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>加入了线性冲突启发式后，结果如下：</p>
+
+<p><img src="/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/14.jpg" alt="加入线性冲突启发式的结果"></p>
+
+<p>加入了线性冲突启发式后，我们在计算速度上又提高了很大一截。如果想看结果的话，我们可以看灰色的面板上显示的内容。</p>
+
+<p><img src="/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/15.jpg" alt="结果"></p>
+
+<p>按了 <code>Show Step</code> 按钮之后，我们可以看到解法的一步。按了31步之后，我们就能看到解答的整个过程了。</p>
+
+<p><img src="/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/16.jpg" alt="解答过程"></p>
+
+<p>这篇文章我们介绍了用人工智能 A* 算法解推盘游戏的方法。我们验证了不同启发式下结果的正确性，并且成功地找到了一种非常有效的启发式。现在你可以用它来打败你的朋友们了。我们体会了人工智能的神奇，我们用它来解决了生活中的问题。人工智能的最终的目的是给我们带来更加轻松而高效的生活。</p>
 
     </div>
 </div>
