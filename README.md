@@ -11,6 +11,7 @@
 - 安装环境
 
     > gem install jekyll
+    > gem install redcarpet
 
 - 发布
 
