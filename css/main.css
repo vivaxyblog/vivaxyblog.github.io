@@ -80,6 +80,11 @@ ul {
     font-size: 14px;
 }
 
+ol {
+    list-style: decimal-leading-zero;
+    margin: 20px 0 20px 15px;
+}
+
 img {
     max-width: 100%;
     display: block;
@@ -95,6 +100,7 @@ blockquote {
 p {
     line-height: 24px;
     font-size: 16px;
+    margin: 8px 0;
 }
 
 code {

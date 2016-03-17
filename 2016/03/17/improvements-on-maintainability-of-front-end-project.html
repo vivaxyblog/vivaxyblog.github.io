@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="shortcut icon" href="/css/vivaxy.icon.png">
+    <link type="text/css" rel="stylesheet" href="/css/reset.css">
+    <link type="text/css" rel="stylesheet" href="/css/main.css">
+    <link type="text/css" rel="stylesheet" href="/css/syntax.css">
+    <link rel="alternate" type="application/atom+xml" title="vivaxy blog" href="/atom.xml"/>
+    <title>提高项目可维护性的实践</title>
+</head>
+<body>
+<div class="container">
+    <a href="/" class="card hover-left">
+    <div class="content">
+        <h1>提高项目可维护性的实践</h1>
+        <div class="date">2016-03-17</div>
+    </div>
+    <div class="icon-arrow-left"></div>
+</a>
+<div class="card">
+    <div class="content">
+        <p>随着部门成员的增加，一个项目不再是单人维护，而是可能会有多人维护。之前可以完全按照自己意愿和思路写的代码有时候会让别人难以理解。</p>
+
+<p>为了改善这一状况，以下列出了几点实践。</p>
+
+<ol>
+<li><p>添加项目下的说明文档</p>
+
+<p>根目录下 README.md 文件在之前的项目中是 cortex init 命令生成好的，然而这个文件的存在是有其意义的。 我们需要发挥它的作用，把项目下的一些说明，教程，规范等添加进去。</p>
+
+<p>比如：ac-launching-static</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"># 投放系统
+
+## 进入开发
+
+- 初始化项目组件
+
+    `&gt; git submodule update --init`
+
+- 拉取 npm 依赖
+
+    `&gt; npm i`
+
+- 编译 css
+
+    `&gt; ./node_modules/.bin/stylus ./asset`
+
+## 发布上线
+
+- `&gt; grunt ftp`
+
+- 后端项目的 lion 配置中，修改 `midas-launch-web.static.launch` 的路径，改成最新的版本号
+</code></pre></div>
+<p>维护说明文档占用了开发少许时间，却大大减少了新成员进入开发、了解项目的成本，能减少沟通成本，提高工作效率。</p></li>
+<li><p>添加项目下的接口文档</p>
+
+<p>ajax 是前后端沟通的工具，口头约定之后难以记住，因此需要将文档写下来，便于前后端单独完成开发。 同时这个文档也能解释项目下一段代码的逻辑，因此在项目的 doc/ajax.md 中将项目中使用到的接口都记录了下来。</p>
+
+<p>记录的格式是：</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"># 接口用途
+
+`接口地址`
+
+```
+前端发送的参数 {参数类型} 参数说明
+```
+
+```
+后端返回的参数 {参数类型} 参数说明
+```
+
+其他说明
+</code></pre></div>
+<p>比如：app-ac-slotmanage</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"># 广告位管理/平台 查询平台列表
+
+`/midas/slot/ajax/searchPlatform`
+
+```
+platformName {String} 平台名称
+companyName {String} 公司名称
+cooperationMode {Number} 公司名称
+pageIndex {Number} 第几页，从 1 开始
+pageSize {Number} 每页显示条数
+```
+
+```
+platformId {String|Number}
+name {String}
+companyName {String}
+cooperationMode {Number}
+```
+</code></pre></div></li>
+<li><p>项目下改动日志的维护</p>
+
+<p>添加 <code>CHANGELOG.md</code> 用以记录每次上线的改动点，便于追溯代码的来源和目的。 了解项目的历史有助于对整个项目的理解，尤其是一些由于一次需求不得已添加的黑暗代码。</p></li>
+<li><p>添加代码风格检查</p>
+
+<p>前端规范建立有效的减少了成员间的代码冲突，不同人之间不需要过多的沟通就能写出近乎类似的代码，同样也提高了代码的可维护性。</p>
+
+<p>为了提高大家对于规范的实践，因此加入 <code>eslint</code> 检查。 项目下添加 <code>eslintrc.json</code> ，其内容根据之前订制的规范而来。 添加 <code>husky</code> 依赖，配置 <code>git hook</code> ，能够在提交代码的时候检查风格问题，如果有问题，那么就停止本次提交。</p></li>
+<li><p>开发时达成共识，用统一的名称命名，并且将约定写入说明文档</p>
+
+<p>比如：app-ac-slotmanage</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"># 名词解释
+
+- `platform` 平台，媒体所关联的平台
+
+- `media` 媒体，广告位所关联的媒体
+
+- `slot` 广告位
+
+- `tag` 集合，广告位集合
+
+- `template` 样式，广告位样式
+
+- `element` 元素，广告位样式中的元素
+</code></pre></div>
+<p>从而避免了之前项目中广告位变量名成有多个的问题。</p></li>
+<li><p>添加 editor config 配置文件</p>
+
+<p>该配置文件能够统一编辑器的代码风格，便于在书写的时候就使用统一的代码风格。 editor config 拥有广泛的支持度，可以在常见的编辑器中生效。</p></li>
+</ol>
+
+    </div>
+</div>
+<div class="card">
+    <!-- 多说 start -->
+    <div class="ds-thread" data-thread-key="/2016/03/17/improvements-on-maintainability-of-front-end-project" data-title="提高项目可维护性的实践" data-url="/2016/03/17/improvements-on-maintainability-of-front-end-project.html"></div>
+    <script type="text/javascript" charset="utf-8" src="/js/duoshuo/duoshuo.js"></script>
+    <!-- 多说  end  -->
+</div>
+
+    <a href="javascript:document.body.scrollIntoView(true)" class="card hover-top">
+        <div class="content">
+            <div class="date">© Copyright 2011 ~ 2016 by vivaxy</div>
+        </div>
+    </a>
+</div>
+</body>
+<script type="text/javascript" src="/js/analysis/ba.js"></script>
+</html>
