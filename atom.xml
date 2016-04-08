@@ -3,7 +3,7 @@
     <title>vivaxy's blog</title>
     <link href="http://vivaxyblog.github.io/atom.xml" rel="self" />
     <link href="http://vivaxyblog.github.io/"/>
-    <updated>2016-03-17T12:05:12+08:00</updated>
+    <updated>2016-04-08T16:31:35+08:00</updated>
     <id>http://vivaxyblog.github.io</id>
     <author>
         <name>vivaxy</name>
@@ -2688,7 +2688,7 @@ enter commit message: foobar
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;主分支：&lt;code&gt;master&lt;/code&gt;，用于发布到 ppe 和线上&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;开发分支：&lt;code&gt;yyyyMMdd-feture&lt;/code&gt;，可交付的代码，用于持续集成 ci 的构建&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;开发分支：&lt;code&gt;feture&lt;/code&gt;，可交付的代码，用于持续集成 ci 的构建&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;ul&gt;
@@ -2699,6 +2699,12 @@ enter commit message: foobar
 &lt;li&gt;&lt;p&gt;采用 &lt;code&gt;git rebase&lt;/code&gt; 合并同一分支上不同人的改动记录，避免产生多余的 commit 记录&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;提交 merge request 来将开发分支合并到主分支上。目的是为了增加代码审核流程，以减少上线后的问题&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;删除分支&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;code 上提 merge request 时，勾选删除源分支。&lt;/p&gt;
 
 &lt;h3&gt;&lt;a name=&quot;9&quot;&gt;&lt;/a&gt; 9 版本号&lt;/h3&gt;
 

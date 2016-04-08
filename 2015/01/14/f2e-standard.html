@@ -517,7 +517,7 @@
 
 <ol>
 <li><p>主分支：<code>master</code>，用于发布到 ppe 和线上</p></li>
-<li><p>开发分支：<code>yyyyMMdd-feture</code>，可交付的代码，用于持续集成 ci 的构建</p></li>
+<li><p>开发分支：<code>feture</code>，可交付的代码，用于持续集成 ci 的构建</p></li>
 </ol>
 
 <ul>
@@ -528,6 +528,12 @@
 <li><p>采用 <code>git rebase</code> 合并同一分支上不同人的改动记录，避免产生多余的 commit 记录</p></li>
 <li><p>提交 merge request 来将开发分支合并到主分支上。目的是为了增加代码审核流程，以减少上线后的问题</p></li>
 </ol>
+
+<ul>
+<li>删除分支</li>
+</ul>
+
+<p>code 上提 merge request 时，勾选删除源分支。</p>
 
 <h3><a name="9"></a> 9 版本号</h3>
 
