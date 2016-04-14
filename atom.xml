@@ -3,12 +3,47 @@
     <title>vivaxy's blog</title>
     <link href="http://vivaxyblog.github.io/atom.xml" rel="self" />
     <link href="http://vivaxyblog.github.io/"/>
-    <updated>2016-04-14T10:14:09+08:00</updated>
+    <updated>2016-04-14T10:36:08+08:00</updated>
     <id>http://vivaxyblog.github.io</id>
     <author>
         <name>vivaxy</name>
         <email>xyxuye2007@126.com</email>
     </author>
+    
+    <entry>
+        <title>打包 cortex 项目为 standalone 的工具</title>
+        <link href="http://vivaxyblog.github.io/2016/04/14/browserify-cortex.html" />
+        <updated>2016-04-14T00:00:00+08:00</updated>
+        <id>http://vivaxyblog.github.io/2016/04/14/browserify-cortex</id>
+        <content type="html">&lt;p&gt;为了更加方便地使用 cortex 组件。我实现了一个工具： browserify-cortex 。&lt;/p&gt;
+
+&lt;p&gt;browserify-cortex 可以把一个 cortex 项目打包成单独的 js ，使用 script 标签插入 html 后，即可调用。不再依赖后端的 ftl ，不再依赖 neuron 加载器。&lt;/p&gt;
+
+&lt;p&gt;项目地址：&lt;a href=&quot;https://github.com/vivaxy/browserify-cortex&quot;&gt;https://github.com/vivaxy/browserify-cortex&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;使用方式&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;安装全局的 browserify-cortex&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;gt; sudo npm i -g browserify-cortex&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;git clone 下来想使用的 cortex 项目&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;进入到 cortex 项目的根目录&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;执行 &lt;code&gt;&amp;gt; bcortex&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;项目下会打包出来一个 js 文件，直接使用即可。&lt;/p&gt;
+
+&lt;p&gt;如果你想了解更多高级用法，或者是发现了问题，或者有意见和建议，请移步 &lt;a href=&quot;https://github.com/vivaxy/browserify-cortex&quot;&gt;github&lt;/a&gt; 。&lt;/p&gt;
+
+&lt;h2&gt;FUN FACTS&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;下载依赖没找到的问题已经解决，不再使用 git clone ，而采用 cortex 自己的下载方式下载依赖&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;打包出来的入口函数指向不对的问题已经解决，不再使用 browserify ，而采用 webpack 。然而这个项目的名字已经叫 browserify 了&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    </entry>
     
     <entry>
         <title>在一级目录中批量执行命令</title>
