@@ -3,12 +3,41 @@
     <title>vivaxy's blog</title>
     <link href="http://vivaxyblog.github.io/atom.xml" rel="self" />
     <link href="http://vivaxyblog.github.io/"/>
-    <updated>2016-04-08T16:31:35+08:00</updated>
+    <updated>2016-04-14T10:14:09+08:00</updated>
     <id>http://vivaxyblog.github.io</id>
     <author>
         <name>vivaxy</name>
         <email>xyxuye2007@126.com</email>
     </author>
+    
+    <entry>
+        <title>在一级目录中批量执行命令</title>
+        <link href="http://vivaxyblog.github.io/2016/03/29/execute-commands-in-level-one-direcotries.html" />
+        <updated>2016-03-29T00:00:00+08:00</updated>
+        <id>http://vivaxyblog.github.io/2016/03/29/execute-commands-in-level-one-direcotries</id>
+        <content type="html">&lt;p&gt;想要修改 100 多个的项目的 git 配置，这 100 多个项目在同一个目录下。&lt;/p&gt;
+
+&lt;p&gt;可以用 shell 脚本来实现。&lt;/p&gt;
+
+&lt;p&gt;新建一个 &lt;code&gt;change-user.sh&lt;/code&gt; ，添加以下的内容。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;#/usr/env/sh&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; dir in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;find ./* -type d -maxdepth 0&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+    git config user.name stephen.xu
+    git config user.email stephen.xu@dianping.com
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;pwd&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ..
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;使用 &lt;code&gt;find&lt;/code&gt; 来遍历文件&lt;/p&gt;
+
+&lt;p&gt;使用 &lt;code&gt;find ./*&lt;/code&gt; 而不是 &lt;code&gt;find .&lt;/code&gt; 来剔除 &lt;code&gt;.&lt;/code&gt; 目录&lt;/p&gt;
+
+&lt;p&gt;使用 &lt;code&gt;-type d&lt;/code&gt; 来保证搜索到的结果是目录&lt;/p&gt;
+
+&lt;p&gt;使用 &lt;code&gt;-maxdepth 0&lt;/code&gt; 来保证搜索到的目录是当前目录下的一级目录&lt;/p&gt;
+</content>
+    </entry>
     
     <entry>
         <title>提高项目可维护性的实践</title>

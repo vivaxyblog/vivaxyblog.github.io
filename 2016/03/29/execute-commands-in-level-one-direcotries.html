@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="shortcut icon" href="/css/vivaxy.icon.png">
+    <link type="text/css" rel="stylesheet" href="/css/reset.css">
+    <link type="text/css" rel="stylesheet" href="/css/main.css">
+    <link type="text/css" rel="stylesheet" href="/css/syntax.css">
+    <link rel="alternate" type="application/atom+xml" title="vivaxy blog" href="/atom.xml"/>
+    <title>在一级目录中批量执行命令</title>
+</head>
+<body>
+<div class="container">
+    <a href="/" class="card hover-left">
+    <div class="content">
+        <h1>在一级目录中批量执行命令</h1>
+        <div class="date">2016-03-29</div>
+    </div>
+    <div class="icon-arrow-left"></div>
+</a>
+<div class="card">
+    <div class="content">
+        <p>想要修改 100 多个的项目的 git 配置，这 100 多个项目在同一个目录下。</p>
+
+<p>可以用 shell 脚本来实现。</p>
+
+<p>新建一个 <code>change-user.sh</code> ，添加以下的内容。</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#/usr/env/sh</span>
+<span class="k">for</span> dir in <span class="sb">`</span>find ./* -type d -maxdepth 0<span class="sb">`</span><span class="p">;</span> <span class="k">do</span>
+    <span class="nb">cd</span> <span class="k">${</span><span class="nv">dir</span><span class="k">}</span>
+    git config user.name stephen.xu
+    git config user.email stephen.xu@dianping.com
+    <span class="nb">echo</span> <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>
+    <span class="nb">cd</span> ..
+<span class="k">done</span>
+</code></pre></div>
+<p>使用 <code>find</code> 来遍历文件</p>
+
+<p>使用 <code>find ./*</code> 而不是 <code>find .</code> 来剔除 <code>.</code> 目录</p>
+
+<p>使用 <code>-type d</code> 来保证搜索到的结果是目录</p>
+
+<p>使用 <code>-maxdepth 0</code> 来保证搜索到的目录是当前目录下的一级目录</p>
+
+    </div>
+</div>
+<div class="card">
+    <!-- 多说 start -->
+    <div class="ds-thread" data-thread-key="/2016/03/29/execute-commands-in-level-one-direcotries" data-title="在一级目录中批量执行命令" data-url="/2016/03/29/execute-commands-in-level-one-direcotries.html"></div>
+    <script type="text/javascript" charset="utf-8" src="/js/duoshuo/duoshuo.js"></script>
+    <!-- 多说  end  -->
+</div>
+
+    <a href="javascript:document.body.scrollIntoView(true)" class="card hover-top">
+        <div class="content">
+            <div class="date">© Copyright 2011 ~ 2016 by vivaxy</div>
+        </div>
+    </a>
+</div>
+</body>
+<script type="text/javascript" src="/js/analysis/ba.js"></script>
+</html>
