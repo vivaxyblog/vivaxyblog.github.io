@@ -15,4 +15,12 @@
 
 - 发布
 
-    `> sh ./release.sh`
+    > sh ./release.sh
+
+- 本地测试
+
+    > jekyll serve
+
+- 构建
+
+    > jekyll build
