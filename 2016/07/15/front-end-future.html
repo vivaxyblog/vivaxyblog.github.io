@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="shortcut icon" href="/css/vivaxy.icon.png">
+    <link type="text/css" rel="stylesheet" href="/css/reset.css">
+    <link type="text/css" rel="stylesheet" href="/css/main.css">
+    <link type="text/css" rel="stylesheet" href="/css/syntax.css">
+    <link rel="alternate" type="application/atom+xml" title="vivaxy blog" href="/atom.xml"/>
+    <title>未来的前端结构</title>
+</head>
+<body>
+<div class="container">
+    <a href="/" class="card hover-left">
+    <div class="content">
+        <h1>未来的前端结构</h1>
+        <div class="date">2016-07-15</div>
+    </div>
+    <div class="icon-arrow-left"></div>
+</a>
+<div class="card">
+    <div class="content">
+        <p>未来的前端开发应该是将页面样式和逻辑统一放在 js 中的。</p>
+
+<h2>css</h2>
+
+<p>现在的 css 存在以下的问题：</p>
+
+<h3>优先级混乱</h3>
+
+<p>先声明的样式可能被覆盖也可能不被覆盖。</p>
+
+<p>对于一个大项目来说，同时引入的 css 会有很多，然而不同的开发者并不知道别人是如何声明样式的。</p>
+
+<p>所以我经常在写 css 的时候忧心慌慌，生怕动到了别人的样式。</p>
+
+<p>当然我们可以在写 css 的时候用不同的 class 名称，然后指定每一层的路径来让我们写的样式只对我们的元素生效。</p>
+
+<p>我们还可以用 css modules 来解决这个问题，生成唯一的名称来避免冲突。</p>
+
+<p>但是这样做成本太高。</p>
+
+<h3>无法快速定位出最终生效的样式</h3>
+
+<p>有些样式是全局声明的，会对所有元素生效，所以最后写出来的页面上的样式是什么样的呢？我们很难在读代码的时候看出来。往往需要在浏览器中运行才能知道结果。</p>
+
+<h3>比较差的模块化</h3>
+
+<p>目前的 css 可以比较方便的实现继承，但是对于一个模块来说，需要引用模块的默认 css，然后再写我们要的 css 来覆盖，做起来还是很麻烦。</p>
+
+<p>当然我们可以用 less 等预编译 css 工具来实现更好的继承。</p>
+
+<p>但是为什么不直接把 css 声明到 style 属性中呢？如果我们把所有样式都写在 js 中，然后用 对象的继承，依然可以实现 css 样式的继承。而且解决了上面提到的优先级，定位最终样式和模块化的问题。</p>
+
+<p>你会说：style 属性上的样式难维护，性能差。但是这几年浏览器性能越来越优秀，终端设备的性能也是越来越优秀了，那么我们为了提高开发效率，当然可以尝试一下这样的做法了。</p>
+
+<h2>html</h2>
+
+<h3>非常差的模块化</h3>
+
+<p>如果我要写一个控件组件，我让使用者来填写 html 结构，那么使用者会抄下来我提供的 demo，然后改一改，改成他们要用的内容。如果我的组件没有 demo 呢？</p>
+
+<p>如果我把 html 写在 js 中，用 js 来做渲染，那么就能解决这个问题了。使用组件的人再也不需要关心组件的 html 结构，生怕改到了不该改的东西，导致组件无法使用。</p>
+
+<h2>js</h2>
+
+<p>所以我认为未来的前端一定都是用 js 做渲染的。react 提供了这样一种封装方式，我们可以用它在 js 中写 html 结构，写 css 样式，做继承和封装。</p>
+
+<p>react 解决了用 js 渲染的性能问题，但是110K的体积还是太大了。如果浏览器能原生支持 react，那就完美了。</p>
+
+<p>Facebook 重新定义了前端。</p>
+
+    </div>
+</div>
+<div class="card">
+    <!-- 多说 start -->
+    <div class="ds-thread" data-thread-key="/2016/07/15/front-end-future" data-title="未来的前端结构" data-url="/2016/07/15/front-end-future.html"></div>
+    <script type="text/javascript" charset="utf-8" src="/js/duoshuo/duoshuo.js"></script>
+    <!-- 多说  end  -->
+</div>
+
+    <a href="javascript:document.body.scrollIntoView(true)" class="card hover-top">
+        <div class="content">
+            <div class="date">© Copyright 2011 ~ 2016 by vivaxy</div>
+        </div>
+    </a>
+</div>
+</body>
+<script type="text/javascript" src="/js/analysis/ba.js"></script>
+</html>
