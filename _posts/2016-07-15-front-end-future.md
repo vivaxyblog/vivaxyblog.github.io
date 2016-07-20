@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 未来的前端结构
+title: 未来的前端
 tag: pattern
 ---
 
