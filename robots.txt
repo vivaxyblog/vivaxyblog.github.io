@@ -4,4 +4,3 @@ Disallow: /image
 Disallow: /index
 Disallow: /js
 Disallow: /README.md
-Disallow: /release.sh

@@ -1,71 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <link rel="shortcut icon" href="/css/vivaxy.icon.png">
-    <link type="text/css" rel="stylesheet" href="/css/reset.css">
-    <link type="text/css" rel="stylesheet" href="/css/main.css">
-    <link type="text/css" rel="stylesheet" href="/css/syntax.css">
-    <link rel="alternate" type="application/atom+xml" title="vivaxy blog" href="/atom.xml"/>
-    <title>vivaxy</title>
-</head>
-<body>
-<div class="container">
-    <div class="card">
-    <h1 class="title">vivaxy</h1>
+---
+layout: frame
+title: vivaxy
+---
+
+<div class="card">
+    <h1 class="title">{{ page.title }}</h1>
 </div>
-
-<a href="/2016/07/15/front-end-future.html" class="card">
-    <h2>未来的前端结构</h2>
-    <p class="date">2016-07-15</p>
+{% for _post in paginator.posts %}
+<a href="{{ site.baseurl }}{{ _post.url }}" class="card">
+    <h2>{{ _post.title }}</h2>
+    <p class="date">{{ _post.date | date: "%Y-%m-%d" }}</p>
 </a>
-
-<a href="/2016/07/02/front-end-mvc.html" class="card">
-    <h2>前端 MVC 开发模式</h2>
-    <p class="date">2016-07-02</p>
-</a>
-
-<a href="/2016/05/27/script-ready-state.html" class="card">
-    <h2>script 标签的 load 事件在不同浏览器中的表现</h2>
-    <p class="date">2016-05-27</p>
-</a>
-
-<a href="/2016/04/14/browserify-cortex.html" class="card">
-    <h2>打包 cortex 项目为 standalone 的工具</h2>
-    <p class="date">2016-04-14</p>
-</a>
-
-<a href="/2016/03/29/execute-commands-in-level-one-direcotries.html" class="card">
-    <h2>在一级目录中批量执行命令</h2>
-    <p class="date">2016-03-29</p>
-</a>
-
-<a href="/2016/03/17/improvements-on-maintainability-of-front-end-project.html" class="card">
-    <h2>提高项目可维护性的实践</h2>
-    <p class="date">2016-03-17</p>
-</a>
-
-<a href="/2016/02/05/javascript-ai-for-an-html-sliding-tiles-puzzle.html" class="card">
-    <h2>用 javascript 编写基于 HTML 的数字推盘游戏的 AI</h2>
-    <p class="date">2016-02-05</p>
-</a>
-
-<a href="/2015/12/29/use-eslint-to-improve-code-style.html" class="card">
-    <h2>用 eslint 管理 js 的代码风格</h2>
-    <p class="date">2015-12-29</p>
-</a>
-
-<a href="/2015/12/29/use-editor-config-file-to-unify-code-style.html" class="card">
-    <h2>用 editor config 配置统一编辑器配置</h2>
-    <p class="date">2015-12-29</p>
-</a>
-
-<a href="/2015/12/08/writing-modular-javascript-with-ecmascript-6.html" class="card">
-    <h2>用 ECMAScript 6 编写模块化的 js</h2>
-    <p class="date">2015-12-08</p>
-</a>
-
+{% endfor %}
 
 <!-- pagination links -->
 <div class="footer">
@@ -73,20 +19,12 @@
         <a href="/atom.xml" class="icon"></a>
     </div>
     <div class="pagination">
-        
-        <span class="page-number ">1 / 5</span>
-        
-        <a href="/index/page2/" class="icon"></a>
-        
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}" class="icon"></a>
+        {% endif %}
+        <span class="page-number ">{{ paginator.page }} / {{ paginator.total_pages }}</span>
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}" class="icon"></a>
+        {% endif %}
     </div>
 </div>
-
-    <a href="javascript:document.body.scrollIntoView(true)" class="card hover-top">
-        <div class="content">
-            <div class="date">© Copyright 2011 ~ 2016 by vivaxy</div>
-        </div>
-    </a>
-</div>
-</body>
-<script type="text/javascript" src="/js/analysis/ba.js"></script>
-</html>

@@ -1,0 +1,23 @@
+# debug
+host: 127.0.0.1
+port: 4000
+
+# site
+baseurl:
+name: vivaxy's blog
+url: http://vivaxyblog.github.io
+author:
+    name: vivaxy
+    email: xyxuye2007@126.com
+
+# plugin
+markdown: redcarpet
+redcarpet:
+    extensions: [tables]
+
+# pagination
+paginate: 10
+paginate_path: /index/page:num/
+
+#
+future: true
