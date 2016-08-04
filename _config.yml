@@ -11,9 +11,7 @@ author:
     email: xyxuye2007@126.com
 
 # plugin
-markdown: redcarpet
-redcarpet:
-    extensions: [tables]
+markdown: kramdown
 
 # pagination
 paginate: 10
