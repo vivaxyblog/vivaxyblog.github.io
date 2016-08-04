@@ -136,7 +136,7 @@ css, js中，`{` 之间必须包含空格，如：
 ```
 
 ```js
-var example = function (arg1, arg2) {
+var example = function(arg1, arg2) {
 };
 ```
 
@@ -178,24 +178,26 @@ var example = [0, 1, 2, 3];
 `[]` ， `()` 中的值，开头没有空格， `,` 前没有空格， `,` 后一个空格，最后没有空格，如：
 
 ```js
-var example = function (arg1, arg2) {
+var example = function(arg1, arg2) {
     return 'example';
 };
 ```
 
 #### <a name="1.7"></a> 1.7 `(` 前空格
 
-`控制语句`和声明的`函数名` 与 `(` 之间有空格，用于区分函数的调用，如：
-
-```js
-var example = function () {
-    return 'example';
-};
-```
+`控制语句`与 `(` 之间有空格，如：
 
 ```js
 if (true) {
 }
+```
+
+方法声明的 function 关键字和后面的括号之间没有空格
+
+```js
+var example = function() {
+    return 'example';
+};
 ```
 
 #### <a name="1.8"></a> 1.8 `{` 在行末
