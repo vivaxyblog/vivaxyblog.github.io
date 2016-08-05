@@ -20,6 +20,8 @@ iOS webview 中会有双击居中功能，自动将不在屏幕中心的文本�
 
 ![异常情况](/image/2016-08-05-ios-webview-double-click-position-bug/2.png)
 
+[点我在 APP webview 中试试有没有这个 bug](http://vivaxy.github.io/course/pitfall/ios-double-click-fixed-position-error-on-webview)
+
 贴上这部分的代码
 
 ```js
