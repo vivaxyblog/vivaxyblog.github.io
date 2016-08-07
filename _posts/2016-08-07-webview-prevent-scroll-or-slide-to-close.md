@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 在 webview 中关闭默认滚动和侧滑返回
+title: 在 webview 中禁用默认滚动和侧滑返回
 tag: problem
 ---
 
@@ -22,4 +22,4 @@ element.addEventListener('touchmove', function(e) {
 
 例如，在弹窗（或者弹窗的背景）上绑定这个方法可以让 webview 不响应用户上下滚动。
 
-在轮播图最外层容器上绑定这个方法可以让 webview 不响 webview 的侧滑返回
+在轮播图最外层容器上绑定这个方法可以让 webview 不响 webview 的侧滑返回。
