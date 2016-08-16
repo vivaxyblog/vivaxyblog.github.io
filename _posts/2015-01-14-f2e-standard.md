@@ -192,10 +192,10 @@ if (true) {
 }
 ```
 
-方法声明的 function 关键字和后面的括号之间没有空格
+方法声明的 function 关键字和后面的括号之间有空格
 
 ```js
-var example = function() {
+var example = function () {
     return 'example';
 };
 ```
@@ -582,7 +582,7 @@ js 文档
 
 1. 主分支：`master`，用于发布到 ppe 和线上
 
-2. 开发分支：`feture`，可交付的代码，用于持续集成 ci 的构建
+2. 开发分支：`feature`，可交付的代码，用于持续集成 ci 的构建
 
 - 分支合并
 
