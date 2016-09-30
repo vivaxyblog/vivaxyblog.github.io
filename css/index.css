@@ -623,6 +623,18 @@ table tbody tr:nth-child(2n) {
  * @since 2016-09-30 14:51
  * @author vivaxy
  */
+.container .highlighter-rouge .highlight {
+  background-color: #f7f7f7;
+  border: 0.1rem solid #efefef;
+}
+.container .highlighter-rouge .highlight code {
+  background-color: transparent;
+  border: 0;
+}
+/**
+ * @since 2016-09-30 14:51
+ * @author vivaxy
+ */
 .footer {
   color: #999;
   font-size: 1.5rem;
