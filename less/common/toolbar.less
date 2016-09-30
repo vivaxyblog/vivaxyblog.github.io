@@ -1,0 +1,44 @@
+/**
+ * @since 2016-09-30 14:51
+ * @author vivaxy
+ */
+
+.toolbar() {
+    margin: 3rem 0;
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .accessories {
+        float: left;
+        .icomoon {
+            line-height: 1.5rem;
+            font-size: 1.5rem;
+            vertical-align: top;
+        }
+    }
+    .pagination {
+        float: left;
+        margin-left: 1rem;
+        .page-number {
+            line-height: 1.5rem;
+            font-size: 1.5rem;
+            vertical-align: top;
+        }
+        .icomoon {
+            line-height: 1.5rem;
+            font-size: 1.5rem;
+            vertical-align: top;
+        }
+    }
+}
+
+.container {
+    .toolbar-top {
+        .toolbar();
+    }
+    .toolbar-bottom {
+        .toolbar();
+    }
+}

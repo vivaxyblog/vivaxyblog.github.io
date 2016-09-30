@@ -19,3 +19,17 @@ paginate_path: /index/page:num/
 
 #
 future: true
+
+exclude: [less, node_modules, package.json, README.md, Gemfile]
+
+lsi: false
+safe: true
+incremental: false
+highlighter: rouge
+gist:
+    noscript: false
+kramdown:
+    math_engine: mathjax
+gems:
+   - jekyll-coffeescript
+   - jekyll-paginate

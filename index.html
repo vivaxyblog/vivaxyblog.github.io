@@ -1,30 +1,16 @@
 ---
 layout: frame
-title: vivaxy
+title: VIVAXY
 ---
-
-<div class="card">
-    <h1 class="title">{{ page.title }}</h1>
+<div class="toolbar-top">
+    {% include toolbar-index.html %}
 </div>
 {% for _post in paginator.posts %}
-<a href="{{ site.baseurl }}{{ _post.url }}" class="card">
-    <h2>{{ _post.title }}</h2>
-    <p class="date">{{ _post.date | date: "%Y-%m-%d" }}</p>
+<a href="{{ site.baseurl }}{{ _post.url }}" class="article">
+    <div class="article-title">{{ _post.title }}</div>
+    <div class="article-date">{{ _post.date | date: "%Y-%m-%d" }}</div>
 </a>
 {% endfor %}
-
-<!-- pagination links -->
-<div class="footer">
-    <div class="accessories">
-        <a href="/atom.xml" class="icon"></a>
-    </div>
-    <div class="pagination">
-        {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path }}" class="icon"></a>
-        {% endif %}
-        <span class="page-number ">{{ paginator.page }} / {{ paginator.total_pages }}</span>
-        {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path }}" class="icon"></a>
-        {% endif %}
-    </div>
+<div class="toolbar-bottom">
+    {% include toolbar-index.html %}
 </div>

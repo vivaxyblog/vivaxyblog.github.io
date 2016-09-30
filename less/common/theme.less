@@ -1,0 +1,167 @@
+/**
+ * @since 2016-09-30 14:51
+ * @author vivaxy
+ */
+
+@import './colors';
+
+* {
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* selection */
+*::selection {
+    background: @highlight;
+    color: @white;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: @white;
+    font-family: "\5b8b\4f53", "georgia", "times new roman", "times", "serif";
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+    color: @dark;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "Helvetica Neue", "Helvetica", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "SimSun", "sans-serif";
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 2.6rem;
+    line-height: 2.8rem;
+    margin: 2.6rem 0;
+}
+
+h2 {
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    margin: 2.4rem 0;
+}
+
+h3 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    margin: 2rem 0;
+}
+
+h4 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    margin: 1.8rem 0;
+}
+
+h5 {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    margin: 1.6rem 0;
+}
+
+textarea, input, a {
+    -webkit-tap-highlight-color: rgba(217, 217, 217, 0.5);
+}
+
+a, a:visited {
+    color: @dark;
+    transition: color 0.5s;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+a:hover {
+    color: @highlight;
+    text-decoration: none;
+}
+
+ul {
+    list-style: disc;
+    margin: 1.5rem 0 1.5rem 1.5rem;
+}
+
+ol {
+    list-style: decimal-leading-zero;
+    margin: 2rem 0 2rem 1.5rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+blockquote {
+    padding: 1.6rem;
+    overflow: auto;
+    background-color: @background;
+    border-radius: 0.3rem;
+}
+
+p {
+    line-height: 2.4rem;
+    margin: 0.8rem 0;
+}
+
+code {
+    color: @code;
+    background-color: @background;
+    border: 0.1rem solid @border;
+    border-radius: 0.3rem;
+    padding: 0.1rem 0.3rem;
+    word-wrap: normal;
+}
+
+table thead tr, table tbody tr {
+    background-color: @white;
+    border-top: 0.1rem solid @border;
+}
+
+table thead tr th, table tbody tr td {
+    padding: 0.6rem 1.4rem;
+    border: 0.1rem solid @border;
+}
+
+table tbody tr:nth-child(2n) {
+    background-color: @background;
+}
+
+.container {
+    position: relative;
+    width: 600px;
+    margin: 2rem auto;
+    transition: width 0.5s;
+    -webkit-transition: width 0.5s;
+}
+
+/* media screen */
+@media screen and (max-width: 600px) {
+    .container {
+        width: auto;
+        margin: 2rem;
+    }
+}
+
+/* fonts */
+@font-face {
+    font-family: 'icomoon';
+    src: url('/css/resource/icomoon/icomoon.eot?m0nlrt');
+    src: url('/css/resource/icomoon/icomoon.eot?#iefixm0nlrt') format('embedded-opentype'),
+    url('/css/resource/icomoon/icomoon.woff?m0nlrt') format('woff'),
+    url('/css/resource/icomoon/icomoon.ttf?m0nlrt') format('truetype'),
+    url('/css/resource/icomoon/icomoon.svg?m0nlrt#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icomoon {
+    font-family: icomoon;
+}
