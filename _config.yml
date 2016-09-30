@@ -19,3 +19,5 @@ paginate_path: /index/page:num/
 
 #
 future: true
+
+exclude: [less, node_modules, package.json, README.md]

@@ -1,0 +1,12 @@
+<div class="accessories">
+    <a href="/atom.xml" class="icomoon"></a>
+</div>
+<div class="pagination">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="icomoon"></a>
+    {% endif %}
+    <span class="page-number">{{ paginator.page }} / {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="icomoon"></a>
+    {% endif %}
+</div>

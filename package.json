@@ -1,0 +1,27 @@
+{
+  "name": "vivaxyblog.github.io",
+  "version": "1.0.0",
+  "description": "vivaxy's blog",
+  "scripts": {
+    "build": "npm run build:less && npm run build:copy",
+    "build:copy": "cp -r less/resource css",
+    "build:less": "lessc less/index.less css/index.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vivaxyblog/vivaxyblog.github.io.git"
+  },
+  "keywords": [
+    "vivaxy",
+    "blog"
+  ],
+  "author": "vivaxy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vivaxyblog/vivaxyblog.github.io/issues"
+  },
+  "homepage": "https://github.com/vivaxyblog/vivaxyblog.github.io#readme",
+  "dependencies": {
+    "less": "^2.7.1"
+  }
+}
