@@ -6,6 +6,10 @@
  * @since 2016-09-30 14:18
  * @author vivaxy
  */
+/**
+ * @since 2016-09-30 15:52
+ * @author vivaxy
+ */
 body,
 h1,
 h2,
@@ -83,7 +87,7 @@ sub {
   vertical-align: text-bottom;
 }
 legend {
-  color: #000;
+  color: #333;
 }
 fieldset,
 img {
@@ -445,7 +449,7 @@ a:visited {
   outline: none;
 }
 a:hover {
-  color: #c0392b;
+  color: #e74c3c;
   text-decoration: none;
 }
 ul {
@@ -493,13 +497,13 @@ table tbody tr:nth-child(2n) {
 }
 .container {
   position: relative;
-  width: 800px;
+  width: 600px;
   margin: 2rem auto;
   transition: width 0.5s;
   -webkit-transition: width 0.5s;
 }
 /* media screen */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   .container {
     width: auto;
     margin: 2rem;
@@ -594,9 +598,34 @@ table tbody tr:nth-child(2n) {
  * @since 2016-09-30 14:51
  * @author vivaxy
  */
+.container .article {
+  display: block;
+  margin: 2rem 0;
+}
+.container .article .article-title {
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #333;
+}
+.container .article .article-date {
+  text-align: right;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: #999;
+}
+.container .article:hover .article-title {
+  color: #e74c3c;
+}
+.container .article:hover .article-date {
+  color: #e74c3c;
+}
+/**
+ * @since 2016-09-30 14:51
+ * @author vivaxy
+ */
 .footer {
   color: #999;
   font-size: 1.5rem;
-  line-height: 1.5rem;
+  line-height: 2rem;
   text-align: center;
 }

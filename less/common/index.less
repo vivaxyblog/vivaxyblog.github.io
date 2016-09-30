@@ -2,18 +2,31 @@
  * @since 2016-09-30 14:51
  * @author vivaxy
  */
+
+@import './colors';
+
 .container {
     .article {
+        display: block;
+        margin: 2rem 0;
         .article-title {
             font-size: 2rem;
-            line-height: 2rem;
-            color: #666;
+            line-height: 3rem;
+            color: @dark;
         }
         .article-date {
             text-align: right;
-            font-size: 2rem;
-            line-height: 2rem;
-            color: #999;
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            color: @lighter;
+        }
+    }
+    .article:hover {
+        .article-title {
+            color: @highlight;
+        }
+        .article-date {
+            color: @highlight;
         }
     }
 }

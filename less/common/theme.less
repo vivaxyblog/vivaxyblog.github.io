@@ -3,6 +3,8 @@
  * @author vivaxy
  */
 
+@import './colors';
+
 * {
     box-sizing: border-box;
     -webkit-touch-callout: none;
@@ -11,8 +13,8 @@
 
 /* selection */
 *::selection {
-    background: #e74c3c;
-    color: #fff;
+    background: @highlight;
+    color: @white;
 }
 
 html {
@@ -22,12 +24,12 @@ html {
 body {
     width: 100%;
     height: 100%;
-    background: #fff;
+    background: @white;
     font-family: "\5b8b\4f53", "georgia", "times new roman", "times", "serif";
     -webkit-font-smoothing: antialiased;
     font-size: 1.5rem;
     line-height: 1.6rem;
-    color: #333;
+    color: @dark;
 }
 
 h1, h2, h3, h4, h5 {
@@ -70,7 +72,7 @@ textarea, input, a {
 }
 
 a, a:visited {
-    color: #333;
+    color: @dark;
     transition: color 0.5s;
     text-decoration: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
@@ -78,7 +80,7 @@ a, a:visited {
 }
 
 a:hover {
-    color: #c0392b;
+    color: @highlight;
     text-decoration: none;
 }
 
@@ -100,7 +102,7 @@ img {
 blockquote {
     padding: 1.6rem;
     overflow: auto;
-    background-color: #f7f7f7;
+    background-color: @background;
     border-radius: 0.3rem;
 }
 
@@ -110,38 +112,38 @@ p {
 }
 
 code {
-    color: #d14;
-    background-color: #f7f7f7;
-    border: 0.1rem solid #efefef;
+    color: @code;
+    background-color: @background;
+    border: 0.1rem solid @border;
     border-radius: 0.3rem;
     padding: 0.1rem 0.3rem;
     word-wrap: normal;
 }
 
 table thead tr, table tbody tr {
-    background-color: #fff;
-    border-top: 0.1rem solid #efefef;
+    background-color: @white;
+    border-top: 0.1rem solid @border;
 }
 
 table thead tr th, table tbody tr td {
     padding: 0.6rem 1.4rem;
-    border: 0.1rem solid #efefef;
+    border: 0.1rem solid @border;
 }
 
 table tbody tr:nth-child(2n) {
-    background-color: #f7f7f7;
+    background-color: @background;
 }
 
 .container {
     position: relative;
-    width: 800px;
+    width: 600px;
     margin: 2rem auto;
     transition: width 0.5s;
     -webkit-transition: width 0.5s;
 }
 
 /* media screen */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
     .container {
         width: auto;
         margin: 2rem;
