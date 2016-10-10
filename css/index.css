@@ -43,7 +43,7 @@ button,
 input,
 select,
 textarea {
-  font: 12px/1.5 "arial", "\5b8b\4f53";
+  font: 1.2rem/1.5 "arial", "\5b8b\4f53";
   /* \5b8b\4f53 => 宋体 */
 }
 h1,
@@ -399,7 +399,7 @@ body {
   font-family: "\5b8b\4f53", "georgia", "times new roman", "times", "serif";
   -webkit-font-smoothing: antialiased;
   font-size: 1.5rem;
-  line-height: 1.6rem;
+  line-height: 1.5;
   color: #333;
 }
 h1,
@@ -412,27 +412,22 @@ h5 {
 }
 h1 {
   font-size: 2.6rem;
-  line-height: 2.8rem;
   margin: 2.6rem 0;
 }
 h2 {
   font-size: 2.4rem;
-  line-height: 2.6rem;
   margin: 2.4rem 0;
 }
 h3 {
   font-size: 2rem;
-  line-height: 2.4rem;
   margin: 2rem 0;
 }
 h4 {
   font-size: 1.8rem;
-  line-height: 2rem;
   margin: 1.8rem 0;
 }
 h5 {
   font-size: 1.6rem;
-  line-height: 1.8rem;
   margin: 1.6rem 0;
 }
 textarea,
@@ -471,7 +466,6 @@ blockquote {
   border-radius: 0.3rem;
 }
 p {
-  line-height: 2.4rem;
   margin: 0.8rem 0;
 }
 code {
@@ -526,7 +520,6 @@ table tbody tr:nth-child(2n) {
  */
 .container .title {
   font-size: 3rem;
-  line-height: 3rem;
   text-align: center;
   margin: 3rem 0;
 }
@@ -546,7 +539,6 @@ table tbody tr:nth-child(2n) {
   float: left;
 }
 .container .toolbar-top .accessories .icomoon {
-  line-height: 1.5rem;
   font-size: 1.5rem;
   vertical-align: top;
 }
@@ -555,12 +547,10 @@ table tbody tr:nth-child(2n) {
   margin-left: 1rem;
 }
 .container .toolbar-top .pagination .page-number {
-  line-height: 1.5rem;
   font-size: 1.5rem;
   vertical-align: top;
 }
 .container .toolbar-top .pagination .icomoon {
-  line-height: 1.5rem;
   font-size: 1.5rem;
   vertical-align: top;
 }
@@ -576,7 +566,6 @@ table tbody tr:nth-child(2n) {
   float: left;
 }
 .container .toolbar-bottom .accessories .icomoon {
-  line-height: 1.5rem;
   font-size: 1.5rem;
   vertical-align: top;
 }
@@ -585,12 +574,10 @@ table tbody tr:nth-child(2n) {
   margin-left: 1rem;
 }
 .container .toolbar-bottom .pagination .page-number {
-  line-height: 1.5rem;
   font-size: 1.5rem;
   vertical-align: top;
 }
 .container .toolbar-bottom .pagination .icomoon {
-  line-height: 1.5rem;
   font-size: 1.5rem;
   vertical-align: top;
 }
@@ -604,13 +591,11 @@ table tbody tr:nth-child(2n) {
 }
 .container .article .article-title {
   font-size: 2rem;
-  line-height: 3rem;
   color: #333;
 }
 .container .article .article-date {
   text-align: right;
   font-size: 1.4rem;
-  line-height: 1.6rem;
   color: #999;
 }
 .container .article:hover .article-title {
@@ -638,6 +623,5 @@ table tbody tr:nth-child(2n) {
 .footer {
   color: #999;
   font-size: 1.5rem;
-  line-height: 2rem;
   text-align: center;
 }

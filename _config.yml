@@ -17,9 +17,6 @@ markdown: kramdown
 paginate: 10
 paginate_path: /index/page:num/
 
-#
-future: true
-
 exclude: [less, node_modules, package.json, README.md, Gemfile]
 
 lsi: false

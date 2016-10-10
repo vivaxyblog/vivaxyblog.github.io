@@ -4,23 +4,13 @@
 
 - h1 为文章标题，文章内容不能包含 h1 ，只能使用 h2 ~ h5
 
-- 分支
-
-    开发分支 src ，输出站点分支 master
-
 - 安装环境
 
-    > gem install jekyll
-    > gem install redcarpet
-
-- 发布
-
-    > sh ./release.sh
+    > gem install bundler
+    > bundle install
+    > npm install
 
 - 本地测试
 
-    > jekyll serve
-
-- 构建
-
-    > jekyll build
+    > npm run build
+    > bundle exec jekyll serve
