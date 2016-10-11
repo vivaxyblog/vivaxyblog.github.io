@@ -437,14 +437,14 @@ a {
 }
 a,
 a:visited {
-  color: #333;
+  color: #e74c3c;
   transition: color 0.5s;
   text-decoration: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
   outline: none;
 }
 a:hover {
-  color: #e74c3c;
+  color: #c0392b;
   text-decoration: none;
 }
 ul {
