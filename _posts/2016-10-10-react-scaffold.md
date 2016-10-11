@@ -54,3 +54,7 @@ Built project files will be in the `release` folder. With `build.log`, you can s
 - If you want to build release version of the project, just run `npm run build`.
 
 Feel free to submit any issue.
+
+## Project base
+
+[react-scaffold](https://github.com/vivaxy/react-scaffold)
