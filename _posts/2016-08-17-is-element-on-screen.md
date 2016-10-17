@@ -72,3 +72,7 @@ var isOnScreen = function (element) {
 
 [demo 页面](http://vivaxy.github.io/course/javascript/is-element-on-screen/)
 可以在浏览器中拖动测试，页面变黄表示元素出现在页面中。元素宽高都是100，出现在页面中的条件是左右出现50px，上线出现50px。
+
+## 相似模块
+
+- [onscreen](https://www.npmjs.com/package/onscreen)
