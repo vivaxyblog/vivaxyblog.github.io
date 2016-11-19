@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Might be the simplest generator tool for scaffolding ever: GT
+title: GT, Might be the simplest generator tool for scaffolding ever
 tag: project
 ---
 
