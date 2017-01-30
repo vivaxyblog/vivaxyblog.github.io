@@ -10,7 +10,7 @@ webpack 通过 loader 解析 require 语句引入的文件。常用的 loader �
 - [style-loader](https://github.com/webpack-contrib/style-loader) style 标签加载样式文件
 - [css-loader](https://github.com/webpack-contrib/css-loader) 处理 css 文件
 - [postcss-loader](https://github.com/postcss/postcss-loader) 处理样式
-- [json-loader](https://github.com/webpack-contrib/json-loader) 处理 json 文件 _2.x 版本不再需要_
+- [json-loader](https://github.com/webpack-contrib/json-loader) 处理 json 文件，_2.x 版本不再需要_
 - [url-loader](https://github.com/webpack-contrib/url-loader) 处理图片字体等，合适的文件会被编译成 base64 URL，否则则使用 file-loader
 - [file-loader](https://github.com/webpack-contrib/file-loader) 处理图片字体等，拿到文件的相对路径
 - [raw-loader](https://github.com/webpack-contrib/raw-loader) 读取文件，可以获得字符串内容
