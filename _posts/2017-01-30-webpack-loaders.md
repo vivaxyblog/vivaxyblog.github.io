@@ -4,7 +4,7 @@ title: webpack loaders 简介
 tag: tools
 ---
 
-webpack 通过 loader 解析 require 语句引入的文件。常用的 loader 有：
+webpack 通过 loaders 解析 require 语句引入的文件。常用的 loader 有：
 
 - [babel-loader](https://github.com/babel/babel-loader) js 文件编译
 - [style-loader](https://github.com/webpack-contrib/style-loader) style 标签加载样式文件
