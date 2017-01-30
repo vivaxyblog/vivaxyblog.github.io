@@ -1,6 +1,6 @@
 ---
 layout: post
-title: webpack 的 loader 简介
+title: webpack loaders 简介
 tag: tools
 ---
 
@@ -75,3 +75,5 @@ require('!!style-loader!css-loader!../css/index.css');
 ```
 
 在 require 前添加 `!!` 用来禁用所有在 config 中配置的 loader。
+
+在 1.x 的 wepback 中可以省略 loader 名称中后面的 `-loader`，但是 2.x 中不能省略。
