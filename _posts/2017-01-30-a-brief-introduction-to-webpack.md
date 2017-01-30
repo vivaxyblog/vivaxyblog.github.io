@@ -12,7 +12,7 @@ webpack 是 2016 年兴起的一个前端打包工具。看了 [github](https://
 
 ![what is webpack](/image/2017-01-30-a-brief-introduction-to-webpack/what-is-webpack.png)
 
-webpack 通过加载器和插件的形式可以支持多种语法和打包方式。除了此之外，webpack 还有 devServer 来支持调式。devServer 支持热更新，大大提升了开发效率。
+webpack 通过加载器和插件的形式可以支持多种语法和打包方式。除了此之外，webpack 还有 devServer 支持调式，可以热更新，大大提升了开发效率。
 
 webpack 的配置是通过项目根目录下的 `webpack.config.js` 来完成的。
 
@@ -82,7 +82,7 @@ module.exports = {
 
 ```json
 {
-"scripts": {
+  "scripts": {
     "build": "webpack --progress"
   }
 }
