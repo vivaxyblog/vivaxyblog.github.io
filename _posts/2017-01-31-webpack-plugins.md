@@ -127,8 +127,30 @@ module.exports = {
 
 可以看到这里用到了 lodash.merge 占了 56.8k。如果引入整个 lodash 则整个体积会大很多。
 
-如果代码中 `import _ from 'lodash'; _.merge({}, {/* ... */})` 会导致引入整个 lodash 库。可以修改成 `import _merge from 'lodash.merge'; _merge({}, {/* ... */});`。
+代码中
 
-类似地，`import { RaisedButton } from 'material-ui';` 会引入所有的 [material-ui](http://www.material-ui.com/#/get-started/usage) 组件，应该修改成 `import RaisedButton from 'material-ui/RaisedButton';`。
+```js
+import _ from 'lodash';
+_.merge({}, {/* ... */});
+```
+
+会导致引入整个 lodash 库。可以修改成
+
+```js
+import _merge from 'lodash.merge';
+_merge({}, {/* ... */});
+```
+
+类似地
+
+```js
+import { RaisedButton } from 'material-ui';
+```
+
+会引入所有的 [material-ui](http://www.material-ui.com/#/get-started/usage) 组件，应该修改成
+
+```js
+import RaisedButton from 'material-ui/RaisedButton';
+```
 
 [ant-design](https://ant.design/) 提供了 [babel-plugin-import](https://github.com/ant-design/babel-plugin-import) 以工具的形式处理了上面的写法。
