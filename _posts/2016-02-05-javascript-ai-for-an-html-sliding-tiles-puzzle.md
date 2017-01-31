@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 用 javascript 编写基于 HTML 的数字推盘游戏的 AI
+title: 用 javascript 编写基于 html 的数字推盘游戏的 AI
 tag: game translation
 ---
 

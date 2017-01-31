@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 用animation的step属性实现帧动画
+title: 用 animation 的 step 属性实现帧动画
 ---
 
 准备一张长图，包含动画内的所有帧。如下图：

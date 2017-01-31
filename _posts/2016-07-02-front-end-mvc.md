@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端 MVC 开发模式
+title: 前端 mvc 开发模式
 tag: pattern
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Javascript 异步编程
+title: javascript 异步编程
 tag: language
 ---
 

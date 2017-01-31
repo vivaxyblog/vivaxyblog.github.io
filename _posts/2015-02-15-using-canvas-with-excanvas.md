@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 使用excanvas实现canvas在IE7~8的兼容
+title: 使用 excanvas 实现 canvas 在 IE7~8 的兼容
 ---
 
-IE8及以下的浏览器上不兼容canvas，可以使用[ExplorerCanvas](https://code.google.com/p/explorercanvas/)做兼容性的替代。
+IE8 及以下的浏览器上不兼容 canvas，可以使用 [ExplorerCanvas](https://code.google.com/p/explorercanvas/) 做兼容性的替代。
 
 ## 兼容性检测
 

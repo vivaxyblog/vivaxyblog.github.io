@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 把CapsLock改成Hyper键
+title: 把 CapsLock 改成 Hyper 键
 ---
 
 ## CapsLock按键的位置
