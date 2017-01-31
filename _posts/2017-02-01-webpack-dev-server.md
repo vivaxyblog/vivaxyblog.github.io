@@ -70,33 +70,38 @@ listen 中传入 ip 和 port，为了能够同时开发多个项目，我试用�
 使用下面的配置可以支持默认的热更新：
 
 - 在 dev server 配置中添加 `hot: true` 和 `inline: true`
+
 - 在 plugins 中添加 HotModuleReplacementPlugin
-    ```js
-    const webpack = require('webpack');
-    module.exports = {
+
+```js
+const webpack = require('webpack');
+module.exports = {
+    // ...
+    plugins: [
         // ...
-        plugins: [
-            // ...
-            new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin()
+    ]
+    // ...
+}
+```
+
+- 在每个 entry 的顶部添加文件 `webpack/hot/dev-server` 和 `webpack-dev-server/client?http://${DEVELOPMENT_IP}:${DEVELOPMENT_PORT}`
+
+```js
+module.exports = {
+    entry: {
+        page1: [
+            'webpack/hot/dev-server', // 或者 webpack/hot/only-dev-server
+            'webpack-dev-server/client?http://' + DEVELOPMENT_IP + ':' + DEVELOPMENT_PORT
+            // ... 其他 entry
         ]
         // ...
     }
-    ```
-- 在每个 entry 的顶部添加文件 `webpack/hot/dev-server` 和 `webpack-dev-server/client?http://${DEVELOPMENT_IP}:${DEVELOPMENT_PORT}`
-    ```js
-    module.exports = {
-        entry: {
-            page1: [
-                'webpack/hot/dev-server', // 或者 webpack/hot/only-dev-server
-                'webpack-dev-server/client?http://' + DEVELOPMENT_IP + ':' + DEVELOPMENT_PORT
-                // ... 其他 entry
-            ]
-            // ...
-        }
-        // ...
-    }
-    ```
-    `webpack/hot/dev-server` 和 `webpack/hot/only-dev-server` 的区别是在某些模块不支持热更新的情况下，前者会自动刷新页面，后者不会刷新页面，而是在控制台输出热更新失败。
+    // ...
+}
+```
+
+`webpack/hot/dev-server` 和 `webpack/hot/only-dev-server` 的区别是在某些模块不支持热更新的情况下，前者会自动刷新页面，后者不会刷新页面，而是在控制台输出热更新失败。
 
 ## 针对 react 模块的热更新
 
@@ -107,71 +112,79 @@ listen 中传入 ip 和 port，为了能够同时开发多个项目，我试用�
 为了使用 react-hot-loader@3.x 你需要这样修改配置：
 
 - 安装 react-hot-loader@next。`yarn add react-hot-loader@next -D`
+
 - 在 react 主入口的顶部添加 `<AppContainer>{/*  */}</AppContainer>`。从原先的 `render(<App/>)` 修改为
-    ```js
-    import { render } from 'react-dom';
-    import { AppContainer } from 'react-hot-loader';
-    import App from '../entry/App';
-    render(
-        <AppContainer>
-          <App/>
-        </AppContainer>,
-        document.getElementById('root')
-    );
-    ```
-- 添加 `react-hot-loader/webpack` loader。
-    ```js
-    module.exports = {
-        loaders: [
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loaders: [
-                    'babel-loader',
-                    'react-hot-loader/webpack'
-                ]
-            }
-        ]
-    }
-    ```
-- 在每个 entry 的最前面添加 `react-hot-loader/patch`
-    ```js
-    module.exports = {
-        entry: {
-            page1: [
-                'react-hot-loader/patch',
-                'webpack/hot/dev-server', // 或者 webpack/hot/only-dev-server
-                'webpack-dev-server/client?http://' + DEVELOPMENT_IP + ':' + DEVELOPMENT_PORT
-                // ... 其他 entry
+
+```js
+import { render } from 'react-dom';
+import { AppContainer } from 'react-hot-loader';
+import App from '../entry/App';
+render(
+    <AppContainer>
+      <App/>
+    </AppContainer>,
+    document.getElementById('root')
+);
+```
+
+- 添加 `react-hot-loader/webpack` loader
+
+```js
+module.exports = {
+    loaders: [
+        {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loaders: [
+                'babel-loader',
+                'react-hot-loader/webpack'
             ]
-            // ...
         }
+    ]
+}
+```
+
+- 在每个 entry 的最前面添加 `react-hot-loader/patch`
+
+```js
+module.exports = {
+    entry: {
+        page1: [
+            'react-hot-loader/patch',
+            'webpack/hot/dev-server', // 或者 webpack/hot/only-dev-server
+            'webpack-dev-server/client?http://' + DEVELOPMENT_IP + ':' + DEVELOPMENT_PORT
+            // ... 其他 entry
+        ]
         // ...
     }
-    ```
+    // ...
+}
+```
+
 - 在 react 主入口 js 文件中实现 `module.hot.accept`
-    ```js
-    // page/index.js
-    import { render } from 'react-dom';
-    import { AppContainer } from 'react-hot-loader';
-    import App from '../entry/App';
-    render(
-        <AppContainer>
-            <App/>
-        </AppContainer>,
-        document.getElementById('root')
-    );
-    
-    if (module.hot) {
-        module.hot.accept('./page/index', () => {
-            const RootContainer = require('../entry/App').default;
-            render(
-                <AppContainer>
-                    <App/>
-                </AppContainer>,
-                document.getElementById('root')
-            );
-      });
-    ```
+
+```js
+// page/index.js
+import { render } from 'react-dom';
+import { AppContainer } from 'react-hot-loader';
+import App from '../entry/App';
+render(
+    <AppContainer>
+        <App/>
+    </AppContainer>,
+    document.getElementById('root')
+);
+
+if (module.hot) {
+    module.hot.accept('./page/index', () => {
+        const RootContainer = require('../entry/App').default;
+        render(
+            <AppContainer>
+                <App/>
+            </AppContainer>,
+            document.getElementById('root')
+        );
+  });
+```
 
 注意 react-hot-loader 不支持 decorate 过的组件，比如不能使用 `@connect`。
