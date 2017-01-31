@@ -123,7 +123,7 @@ module.exports = {
 
 构建输出目录下会有一个 stats.html 文件，其中包含了各个依赖来源和大小。
 
-![webpack visualizer plugin](/image/2017-02-01-webpack-plugins/webpack-visualizer-plugin.png)
+![webpack visualizer plugin](/image/2017-01-31-webpack-plugins/webpack-visualizer-plugin.png)
 
 可以看到这里用到了 lodash.merge 占了 56.8k。如果引入整个 lodash 则整个体积会大很多。
 
