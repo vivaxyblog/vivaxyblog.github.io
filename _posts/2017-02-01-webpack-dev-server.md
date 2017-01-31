@@ -185,6 +185,7 @@ if (module.hot) {
             document.getElementById('root')
         );
   });
+}
 ```
 
 注意 react-hot-loader 不支持 decorate 过的组件，比如不能使用 `@connect`。
