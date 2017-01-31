@@ -15,9 +15,10 @@ webpack 通过 loaders 解析 require 语句引入的文件。常用的 loader �
 - [file-loader](https://github.com/webpack-contrib/file-loader) 处理图片字体等，拿到文件的相对路径
 - [raw-loader](https://github.com/webpack-contrib/raw-loader) 读取文件，可以获得字符串内容
 
-loader 的使用方法是在 `webpack.config.js` 根据一定规则配置，或者针对特定文件使用。
+loader 的使用方法是在 `webpack.config.js` 配置，或者针对特定文件使用。
 
 ```js
+const path = require('path');
 module.exports = {
     module: {
         loaders: [
@@ -40,12 +41,14 @@ module.exports = {
 - `test`: 用来判断文件是否使用本 loader 的正则，通常根据文件后缀区分
 - `include`: 包含的文件路径，数组形式的，wepback 只会在这些目录下找需要处理的文件
 - `loaders`: 数组的形式来表示符合条件的文件需要使用哪些 loader 进行处理
+- `loader`: 字符串的形式串联起来多个 loader
 
 loader 可以串联使用，比如 less 文件需要先使用 `less-loader`，再使用 `css-loader`，最后使用 `style-loader`。
 
 在配置中 loaders 的书写顺序是：
 
 ```js
+const path = require('path');
 module.exports = {
     module: {
         loaders: [
