@@ -28,5 +28,4 @@ gist:
 kramdown:
     math_engine: mathjax
 gems:
-   - jekyll-coffeescript
    - jekyll-paginate
