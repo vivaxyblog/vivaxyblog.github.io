@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Pitfall in Label Input Click Events
+tag: bug
 ---
 
 Labels and inputs are associated with `for`, `id` attribute.
