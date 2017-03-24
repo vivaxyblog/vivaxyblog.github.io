@@ -623,4 +623,13 @@ table tbody tr:nth-child(2n) {
   color: #999;
   font-size: 1.5rem;
   text-align: center;
+  margin: 1.5rem 0;
+}
+/**
+ * @since 2017-03-24 15:21:20
+ * @author vivaxy
+ */
+#footer {
+  height: 0;
+  overflow: hidden;
 }
