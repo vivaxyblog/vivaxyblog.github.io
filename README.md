@@ -6,11 +6,21 @@
 
 - 安装环境
 
-    > gem install bundler
-    > bundle install
-    > npm install
+```sh
+gem install bundler
+bundle install
+npm install
+```
 
 - 本地测试
 
-    > npm run build
-    > bundle exec jekyll serve
+```sh
+npm run build
+bundle exec jekyll serve
+```
+
+- 本地构建
+
+```sh
+bundle exec jekyll build
+```
