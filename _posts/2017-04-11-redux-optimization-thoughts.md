@@ -81,6 +81,12 @@ export const clearNewsList = () => {
 
 同时使用 action 时通过 `import { getMoreNews, clearNewsList } from '../redux/newsList';` 拿到 function。
 
+## action 和 reducer 的对应关系
+
+action 和 reducer 并不一定是一一对应的，部分场景下一个 action 可以触发多个 reducer 的处理。
+
+因此 actionTypes 定义在 config 文件中作为常量管理可以方便在多个文件中使用。
+
 ## redux-thunk 的 dispatch 并不一定是必须的
 
 在上面的例子中，我们试用了 redux-thunk 中间件来支持异步 action，并且推迟 action 的执行。有些人会以为这里写同步 action 的时候也需要嵌套一层 dispatch
