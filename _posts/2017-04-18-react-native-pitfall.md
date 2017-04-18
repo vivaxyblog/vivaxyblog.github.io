@@ -6,7 +6,7 @@ tag: framework
 
 以下问题基于 0.42 版本
 
-## keyboard 事件不触发
+## Keyboard 事件不触发
 
 在安卓上 keyboardWillShow 和 keyboardWillHide 不触发，iOS 上都可用。
 
@@ -16,7 +16,7 @@ tag: framework
 
 默认 flex: 'column', 表现是两个元素纵向排列
 
-## text 不支持 border 样式
+## Text 不支持 border 样式
 
 通过外层包一个 View 来实现
 
@@ -84,3 +84,7 @@ const resp = await fetch({
 
 - iOS 下最主要的 padding, lineHeight 的 style 属性都正常支持
 - android 下 padding, lineHeight 无效，包括单独支持 android 的 textAlignVertical enum('auto', 'top', 'bottom', 'center') 也不支持，解决办法是设置 text 的 height，并且在父元素上设置 justifyContent: 'center'
+
+## Modal 在 debug 模式下不能弹起
+
+由于源码存在 bug，参考 https://github.com/JodiWarren/react-native/pull/1/files 修改源码即可
