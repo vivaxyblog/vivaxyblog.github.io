@@ -103,6 +103,14 @@ export const clearNewsList = () => {
 
 这种写法有点多余，我们可以直接 return action 对象。
 
+```js
+export const clearNewsList = () => {
+    return {
+        type: types.CLEAR_NEWS_LIST,
+    };
+};
+```
+
 ## Redux 的性能问题
 
 很多人都认为 react 组件的 props 和 state 没有变更的时候不会执行组件的 render 方法，但是这个看法是不正确的。默认的，只要父组件 render 方法执行了，子组件的 render 是会执行的。
