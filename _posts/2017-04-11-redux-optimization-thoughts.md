@@ -114,3 +114,4 @@ export const clearNewsList = () => {
 - [refactor for gt-react-scaffold](https://github.com/vivaxy/gt-react-scaffold/commit/2e09aedb7f846d8742efffc23b2207d5439e163b)
 - [ducks-modular-redux](https://github.com/erikras/ducks-modular-redux)
 - [duxjs](https://github.com/duxjs/duxjs)
+- [flux-standard-action](https://github.com/acdlite/flux-standard-action)
