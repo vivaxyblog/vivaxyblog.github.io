@@ -60,7 +60,6 @@ ScrollView 上设置 keyboardDismissMode={'on-drag'}，点击在键盘位置下�
 ## 获取图片 File 对象
 
 ```js
-
 const data = new FormData();
 data.append('files', {
     uri: imageURI,
