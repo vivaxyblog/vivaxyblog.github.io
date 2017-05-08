@@ -4,5 +4,5 @@
  */
 
 document.addEventListener('turbolinks:before-render', function(event) {
-    DISQUS.reset();
+    DISQUS && DISQUS.reset && DISQUS.reset();
 });

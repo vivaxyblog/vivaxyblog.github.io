@@ -644,6 +644,6 @@ table tbody tr:nth-child(2n) {
  * @author vivaxy
  */
 .turbolinks-progress-bar {
-  height: 5px;
+  height: 2px;
   background-color: #e74c3c;
 }
