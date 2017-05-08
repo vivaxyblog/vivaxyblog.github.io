@@ -3,6 +3,8 @@
  * @author vivaxy
  */
 
-document.addEventListener('turbolinks:before-render', function(event) {
-    DISQUS && DISQUS.reset && DISQUS.reset();
+document.addEventListener('turbolinks:before-render', function() {
+    if (window.DISQUS) {
+        DISQUS.reset();
+    }
 });
