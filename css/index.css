@@ -639,3 +639,11 @@ table tbody tr:nth-child(2n) {
 .friends-sites a:before {
   content: '🔗';
 }
+/**
+ * @since 2017-05-08 10:58:13
+ * @author vivaxy
+ */
+.turbolinks-progress-bar {
+  height: 5px;
+  background-color: #e74c3c;
+}
