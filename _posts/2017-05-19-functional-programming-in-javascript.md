@@ -127,6 +127,16 @@ img.src = imageURL;
 
 应该考虑成生成一个新的数组，其中的数据是原来的数组的一部分。参考上面的 `filter` 用法。
 
+### 向数组中添加几项
+
+```js
+// not good
+users.push(...newUsers);
+
+// good
+const finalUsers = [...users, ...newUsers];
+```
+
 ### 删除对象中的一个值
 
 ```js
