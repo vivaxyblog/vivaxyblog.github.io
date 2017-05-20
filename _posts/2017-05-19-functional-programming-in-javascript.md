@@ -4,7 +4,7 @@ title: JavaScript 中的函数式编程
 tag: paradigm
 ---
 
-这里不多介绍函数式编程了，下面从函数式编程的几点原则开始给大家提供一些代码风格的转换思路。
+不赘述函数式编程，从函数式编程的几点原则开始给大家提供一些代码风格的转换思路。
 
 ## 函数式编程的原则是不可变数据
 
@@ -93,12 +93,12 @@ const propsMap = props.reduce((currentMap, prop) => {
 // not good
 const propsArray = [];
 for (let key in propsMap) {
-    propsArray.push({[key]: propsMap[key]});
+    propsArray.push({ [key]: propsMap[key] });
 }
 
 // good
 const propsArray = Object.keys(propsMap).map((key) => {
-    return {[key]: propsMap[key]};
+    return { [key]: propsMap[key] };
 });
 ```
 
@@ -147,5 +147,5 @@ delete user.name;
 Reflect.deleteProperty(user, 'name');
 
 // good
-const {name: $, userWithoutName} = user;
+const { name: $_1, ...userWithoutName } = user; // 把 `user` 变量解构，除了 `name` 之外的属性都赋值给 `userWithoutName` 变量
 ```
