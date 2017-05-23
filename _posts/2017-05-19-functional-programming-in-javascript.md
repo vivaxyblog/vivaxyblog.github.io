@@ -149,3 +149,11 @@ Reflect.deleteProperty(user, 'name');
 // good
 const { name: $_1, ...userWithoutName } = user; // 把 `user` 变量解构，除了 `name` 之外的属性都赋值给 `userWithoutName` 变量
 ```
+
+### 生成长度为 N 的数组
+
+```js
+Array.from({ length: N }, (item, index) => {
+    return index;
+});
+```
