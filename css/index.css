@@ -528,63 +528,55 @@ table tbody tr:nth-child(2n) {
  */
 .container .toolbar-top {
   margin: 3rem 0;
+  font-size: 1.5rem;
 }
 .container .toolbar-top:after {
   content: '';
   display: block;
   clear: both;
 }
-.container .toolbar-top .accessories {
+.container .toolbar-top .pagination {
   float: left;
+}
+.container .toolbar-top .pagination .page-number {
+  vertical-align: top;
+}
+.container .toolbar-top .accessories {
+  float: right;
 }
 .container .toolbar-top .accessories .icomoon {
   font-size: 1.5rem;
   vertical-align: top;
 }
-.container .toolbar-top .pagination {
-  float: left;
-  margin-left: 1rem;
-}
-.container .toolbar-top .pagination .page-number {
-  font-size: 1.5rem;
-  vertical-align: top;
-}
-.container .toolbar-top .pagination .icomoon {
-  font-size: 1.5rem;
-  vertical-align: top;
-}
 .container .toolbar-top .about {
   float: right;
+  margin-left: 1rem;
 }
 .container .toolbar-bottom {
   margin: 3rem 0;
+  font-size: 1.5rem;
 }
 .container .toolbar-bottom:after {
   content: '';
   display: block;
   clear: both;
 }
-.container .toolbar-bottom .accessories {
+.container .toolbar-bottom .pagination {
   float: left;
+}
+.container .toolbar-bottom .pagination .page-number {
+  vertical-align: top;
+}
+.container .toolbar-bottom .accessories {
+  float: right;
 }
 .container .toolbar-bottom .accessories .icomoon {
   font-size: 1.5rem;
   vertical-align: top;
 }
-.container .toolbar-bottom .pagination {
-  float: left;
-  margin-left: 1rem;
-}
-.container .toolbar-bottom .pagination .page-number {
-  font-size: 1.5rem;
-  vertical-align: top;
-}
-.container .toolbar-bottom .pagination .icomoon {
-  font-size: 1.5rem;
-  vertical-align: top;
-}
 .container .toolbar-bottom .about {
   float: right;
+  margin-left: 1rem;
 }
 /**
  * @since 2016-09-30 14:51
