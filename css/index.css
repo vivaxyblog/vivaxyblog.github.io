@@ -639,11 +639,12 @@ table tbody tr:nth-child(2n) {
  * @since 2017-03-27 10:01:58
  * @author vivaxy
  */
-.friends-sites {
+.about-section {
   margin: 1.5rem 0;
 }
-.friends-sites a:before {
+.about-section a:before {
   content: '🔗';
+  margin-right: 4px;
 }
 /**
  * @since 2017-05-08 10:58:13
