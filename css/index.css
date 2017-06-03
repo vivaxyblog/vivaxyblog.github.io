@@ -553,6 +553,9 @@ table tbody tr:nth-child(2n) {
   font-size: 1.5rem;
   vertical-align: top;
 }
+.container .toolbar-top .about {
+  float: right;
+}
 .container .toolbar-bottom {
   margin: 3rem 0;
 }
@@ -579,6 +582,9 @@ table tbody tr:nth-child(2n) {
 .container .toolbar-bottom .pagination .icomoon {
   font-size: 1.5rem;
   vertical-align: top;
+}
+.container .toolbar-bottom .about {
+  float: right;
 }
 /**
  * @since 2016-09-30 14:51
