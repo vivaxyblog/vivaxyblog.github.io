@@ -502,17 +502,6 @@ table tbody tr:nth-child(2n) {
     margin: 2rem;
   }
 }
-/* fonts */
-@font-face {
-  font-family: 'icomoon';
-  src: url('/css/resource/icomoon/icomoon.eot?m0nlrt');
-  src: url('/css/resource/icomoon/icomoon.eot?#iefixm0nlrt') format('embedded-opentype'), url('/css/resource/icomoon/icomoon.woff?m0nlrt') format('woff'), url('/css/resource/icomoon/icomoon.ttf?m0nlrt') format('truetype'), url('/css/resource/icomoon/icomoon.svg?m0nlrt#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-.icomoon {
-  font-family: icomoon;
-}
 /**
  * @since 2016-09-30 15:06
  * @author vivaxy
@@ -535,20 +524,11 @@ table tbody tr:nth-child(2n) {
   display: block;
   clear: both;
 }
-.container .toolbar-top .pagination {
+.container .toolbar-top .toolbar-left {
   float: left;
+  margin-right: 1rem;
 }
-.container .toolbar-top .pagination .page-number {
-  vertical-align: top;
-}
-.container .toolbar-top .accessories {
-  float: right;
-}
-.container .toolbar-top .accessories .icomoon {
-  font-size: 1.5rem;
-  vertical-align: top;
-}
-.container .toolbar-top .about {
+.container .toolbar-top .toolbar-right {
   float: right;
   margin-left: 1rem;
 }
@@ -561,20 +541,11 @@ table tbody tr:nth-child(2n) {
   display: block;
   clear: both;
 }
-.container .toolbar-bottom .pagination {
+.container .toolbar-bottom .toolbar-left {
   float: left;
+  margin-right: 1rem;
 }
-.container .toolbar-bottom .pagination .page-number {
-  vertical-align: top;
-}
-.container .toolbar-bottom .accessories {
-  float: right;
-}
-.container .toolbar-bottom .accessories .icomoon {
-  font-size: 1.5rem;
-  vertical-align: top;
-}
-.container .toolbar-bottom .about {
+.container .toolbar-bottom .toolbar-right {
   float: right;
   margin-left: 1rem;
 }

@@ -1,3 +1,21 @@
-<div class="pagination">
-    <a href="/">👈 Back</a>
+<div class="toolbar-left">
+    {% if page.previous.url %}
+    <a href="{{page.previous.url}}">👈 Previous</a>
+    {% endif %}
+    <span>
+        {% for post in site.posts %}
+            {% if post.id == page.id %}
+            {{ site.posts | size | minus:forloop.index | plus:1 }}
+            {% endif %}
+        {% endfor %}
+         /
+        {{ site.posts | size }}
+    </span>
+    {% if page.next.url %}
+    <a href="{{page.next.url}}">👉 Next</a>
+    {% endif %}
+</div>
+
+<div class="toolbar-right">
+    <a href="/">🏠 Home</a>
 </div>

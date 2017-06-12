@@ -1,16 +1,16 @@
-<div class="pagination">
+<div class="toolbar-left">
     {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path }}">👈 Previous</a>
     {% endif %}
-    <span class="page-number">{{ paginator.page }} / {{ paginator.total_pages }}</span>
+    <span>{{ paginator.page }} / {{ paginator.total_pages }}</span>
     {% if paginator.next_page %}
     <a href="{{ paginator.next_page_path }}">👉 Next</a>
     {% endif %}
 </div>
 
-<div class="about">
+<div class="toolbar-right">
     <a href="/about.html">ℹ️ About</a>
 </div>
-<div class="accessories">
+<div class="toolbar-right">
     <a href="/atom.xml"><svg t="1496465691829" class="icon" style="width: 20px; height: 20px; display: inline; vertical-align: top;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="997" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><defs><style type="text/css"></style></defs><path d="M319.9 364.8c231.3 0 339.2 108 339.2 339.2 0 24.7 20.1 44.8 44.8 44.8s44.8-20.1 44.8-44.8c0-280.8-148.1-428.8-428.8-428.8-24.7 0-44.8 20.1-44.8 44.8s20.1 44.8 44.8 44.8z m0 192c103.3 0 147.2 43.9 147.2 147.2 0 24.7 20.1 44.8 44.8 44.8 24.7 0 44.8-20.1 44.8-44.8 0-152.8-84.1-236.8-236.8-236.8-24.7 0-44.8 20.1-44.8 44.8 0 24.8 20.1 44.8 44.8 44.8z m0 211.3c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zM223.9 96h576c70.7 0 128 57.3 128 128v576c0 70.7-57.3 128-128 128h-576c-70.7 0-128-57.3-128-128V224c0-70.7 57.3-128 128-128z" fill="#5D5D5D" p-id="998"></path></svg> RSS</a>
 </div>
