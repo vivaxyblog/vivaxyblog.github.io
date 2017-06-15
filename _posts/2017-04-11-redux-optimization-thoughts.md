@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Redux 优化的一些思考
-tag: framework
+tag: framework redux javascript
 ---
 
 ## Redux 的书写分离

@@ -1,6 +1,7 @@
 ---
 layout: post
-title: javascript 模块化探索
+title: JavaScript 模块化探索
+tag: javascript
 ---
 
 前端模块化的实现意味着要将一个模块中的数据，逻辑和渲染合并在一个单元中，往往这个单元是一个js文件。本文采用的方法也是如此。

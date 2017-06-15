@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Alfred Workflows for MacOS
+tag: mac alfred
 ---
 
 ## Alfred

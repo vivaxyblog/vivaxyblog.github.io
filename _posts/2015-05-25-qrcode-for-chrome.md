@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 谷歌浏览器二维码插件
+tag: chrome qrcode
 ---
 
 本浏览器插件为了方便直接扫描链接进入各种APP，如大众点评，点评管家等。

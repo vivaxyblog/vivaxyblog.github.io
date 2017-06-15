@@ -1,9 +1,10 @@
 ---
 layout: post
-title: Post Feedback on Github Issue from Android Applications
+title: Post Feedback on GitHub Issue from Android Applications
+tag: github
 ---
 
-## Create a github account.
+## Create a GitHub account.
 
 Visit [github.com](github.com).
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Super Miners HighScores 的修改
+tag: symbian
 ---
 
 ## 记录文件：

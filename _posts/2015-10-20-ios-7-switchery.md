@@ -1,6 +1,7 @@
 ---
 layout: post
-title: IOS 7 Switchery
+title: iOS 7 Switchery
+tag: ios css
 ---
 
 ## Result Preview and Live Example

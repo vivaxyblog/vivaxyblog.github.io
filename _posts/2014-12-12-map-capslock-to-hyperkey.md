@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 把 CapsLock 改成 Hyper 键
+tag: mac
 ---
 
 ## CapsLock按键的位置

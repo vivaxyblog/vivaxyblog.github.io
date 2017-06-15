@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Node Gyp Rebuild Too Slow
+tag: npm
 ---
 
 In China, node-gyp always building too slow or failing because of connection.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: H5 Flappy Bird 游戏制作 (1)
-tag: game
+tag: game javascript web
 ---
 
 ## 前言

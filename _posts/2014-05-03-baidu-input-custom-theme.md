@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 百度手机输入法自定义主题
+tag: android
 ---
 
 根据ejiepe的cmgt926黑白修改。

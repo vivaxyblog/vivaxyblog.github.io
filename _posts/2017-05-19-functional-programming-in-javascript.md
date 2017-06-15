@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JavaScript 中的函数式编程
-tag: paradigm
+tag: paradigm javascript
 ---
 
 不赘述函数式编程，从函数式编程的几点原则开始给大家提供一些代码风格的转换思路。

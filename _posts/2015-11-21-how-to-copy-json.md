@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to Copy JSON Object
+tag: javascript
 ---
 
 ## Why we need to copy JSON object?

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: casio fx-82MS 暂时升级方法
+tag: hardware
 ---
 
 ## 按键顺序

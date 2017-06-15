@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Genymotion Android Emulator
+tag: android
 ---
 
 ## Why is Genymotion?

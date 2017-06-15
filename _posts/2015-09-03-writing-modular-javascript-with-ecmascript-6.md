@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Writing Modular Javascript with ECMAScript 6
+title: Writing Modular JavaScript with ECMAScript 6
+tag: javascript
 ---
 
 We need [babel](https://www.npmjs.com/package/babel) and [browserify](https://www.npmjs.com/package/browserify).
@@ -103,7 +104,7 @@ export default (() => {
 
 ## Build the project
 
-`make` will generate `./dest/index.js` with runnable javascript.
+`make` will generate `./dest/index.js` with runnable JavaScript.
 
 ## Using git submodule
 
