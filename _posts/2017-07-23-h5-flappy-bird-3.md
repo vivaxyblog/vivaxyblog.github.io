@@ -6,7 +6,7 @@ tag: game javascript web
 
 ## 前言
 
-[上期](https://vivaxyblog.github.io/2017/03/30/h5-flappy-bird-2.html)，我们实现了 `canvas`, `Background` 模块，这期我们将实现 `Bird` 和 `StickManager` 模块。
+[上期](https://vivaxyblog.github.io/2017/07/22/h5-flappy-bird-2.html)，我们实现了 `canvas`, `Background` 模块，这期我们将实现 `Bird` 和 `StickManager` 模块。
 
 ## `Bird`
 
