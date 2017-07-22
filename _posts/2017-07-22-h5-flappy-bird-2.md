@@ -6,7 +6,7 @@ tag: game javascript web
 
 ## 前言
 
-[上期](/2017/03/30/h5-flappy-bird-1.html)，我们介绍了 `canvas`, `GameManager` 模块，这期我们实现一下上次拆分的 `canvas` 和 `Background` 模块。
+[上期](https://vivaxyblog.github.io/2017/03/30/h5-flappy-bird-1.html)，我们介绍了 `canvas`, `GameManager` 模块，这期我们实现一下上次拆分的 `canvas` 和 `Background` 模块。
 
 ## `canvas`
 
