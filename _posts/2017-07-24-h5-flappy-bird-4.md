@@ -6,7 +6,7 @@ tag: game javascript web
 
 ## 前言
 
-[上期](https://vivaxyblog.github.io/2017/07/23/h5-flappy-bird-3.html)，我们实现了 `Bird`, `StickManager` 模块，这期我们将实现 `Input` 和碰撞检测。
+[上期](https://vivaxyblog.github.io/2017/07/23/h5-flappy-bird-3.html)，我们实现了 `Bird`, `StickManager` 模块，这期我们将实现 `Input`，碰撞检测和完成整个游戏。
 
 ## `Input`
 
