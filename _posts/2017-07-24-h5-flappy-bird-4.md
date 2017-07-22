@@ -16,6 +16,8 @@ tag: game javascript web
 npm install eventemitter3
 ```
 
+在 `Input.js` 中添加代码：
+
 ```js
 // 引入事件中心
 import EventEmitter from 'eventemitter3';
