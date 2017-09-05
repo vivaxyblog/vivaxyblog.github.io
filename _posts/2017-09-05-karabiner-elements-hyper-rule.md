@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Karabiner Elements hyper 改键设置
+title: Karabiner Elements Hyper 改键设置
 tag: config
 ---
 
