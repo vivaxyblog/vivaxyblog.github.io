@@ -36,6 +36,10 @@ export const count = 1;
 
 查看[例子](https://vivaxy.github.io/course/native-api/script-type-module/)。
 
+可见规范的落实对前端发展有这举足轻重的作用。在前端现有能力范畴内，我们做了再多的优化，能做到的比起在浏览器和操作系统的改动带来的优化也要小很多。因此，作为前端开发只关注现有 API 和框架的话，能做的就很少了。
+
+前端主要关注两点：用户体验和研发效率。其他所有问题都可以被归到以上两个问题的范畴内。兼容性是由不同的客户端导致的，客户端的升级是为了提升用户体验。真正能够提升用户体验和研发效率的是增加新的特性。
+
 ## 参考资料
 
 - [ES6 Modules: Micro Tip #15 - Supercharged](https://www.youtube.com/watch?v=GWmO88hBbKY)
