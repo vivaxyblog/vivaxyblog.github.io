@@ -43,3 +43,4 @@ export const count = 1;
 ## 参考资料
 
 - [ES6 Modules: Micro Tip #15 - Supercharged](https://www.youtube.com/watch?v=GWmO88hBbKY)
+- [Deploying ES2015+ Code in Production Today](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/)
