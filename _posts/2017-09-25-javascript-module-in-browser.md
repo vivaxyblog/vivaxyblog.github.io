@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 在浏览器中使用 JavaScript 模块
-tag: config
+tag: javascript
 ---
 
 ## 背景
