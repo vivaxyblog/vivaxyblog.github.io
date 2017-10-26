@@ -55,5 +55,5 @@ tag: css
 
 ## 参考链接
 
-- [在线例子](https://vivaxy.github.io/course/cascading-style-sheets/target/)
+- [在线例子](https://vivaxy.github.io/course/cascading-style-sheets/target/index.html)
 - [Light-Modal](https://hunzaboy.github.io/Light-Modal/)
