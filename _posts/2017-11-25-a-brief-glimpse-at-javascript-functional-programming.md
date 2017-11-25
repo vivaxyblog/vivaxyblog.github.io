@@ -22,7 +22,7 @@ tag: javascript fp
 
 ### 不同的编程范式有不同的代码表现
 
-![elevator](/image/2017-11-25-a-brief-glimpse-at-javascript-functional-programming/elevator.png)
+<img src="/image/2017-11-25-a-brief-glimpse-at-javascript-functional-programming/elevator.png" alt="elevator" style="max-width: 10%; margin: 0 auto;" />
 
 比如从来没有坐过电梯的人，第一次坐电梯，电梯在 10 楼，人在 1 楼，他会按下，让电梯下来。按错按钮是因为他用了祈使语，而不是把自己的想法提交出去。
 
@@ -617,7 +617,8 @@ getValue(getNext(getNext(linkedList2)));    // => 1
 ### 参考资料
 
 - [Anjana Vakil: Learning Functional Programming with JavaScript - JSUnconf 2016](https://www.youtube.com/watch?v=e-5obm1G_FY)
-- [Anjana Vakil: Immutable data structures for functional JS | JSConf EU 2017](https://www.youtube.com/watch?v=Wo0qiGPSV-s)
+- [Anjana Vakil: Immutable data structures for functional JS - JSConf EU 2017](https://www.youtube.com/watch?v=Wo0qiGPSV-s)
 - [JavaScript 轻量级函数式编程](https://github.com/ikcamp/Functional-Light-JS)
 - [Douglas Crockford: Monads and Gonads (YUIConf Evening Keynote)](https://www.youtube.com/watch?v=dkZFtimgAcM)
 - [A Brief Intro to Functional Programming](https://io-meter.com/2017/05/29/A-Brief-Intro-to-Functional-Programming/)
+- [JavaScript 中的函数式编程](https://vivaxyblog.github.io/2017/05/19/functional-programming-in-javascript.html)

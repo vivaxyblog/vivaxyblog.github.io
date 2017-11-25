@@ -411,23 +411,23 @@ h5 {
 }
 h1 {
   font-size: 2.6rem;
-  margin: 2.6rem 0;
+  margin: 5rem 0 2.6rem 0;
 }
 h2 {
   font-size: 2.4rem;
-  margin: 2.4rem 0;
+  margin: 4rem 0 2.4rem 0;
 }
 h3 {
   font-size: 2rem;
-  margin: 2rem 0;
+  margin: 3rem 0 2rem 0;
 }
 h4 {
   font-size: 1.8rem;
-  margin: 1.8rem 0;
+  margin: 2rem 0 1.8rem 0;
 }
 h5 {
   font-size: 1.6rem;
-  margin: 1.6rem 0;
+  margin: 1.8rem 0 1.6rem 0;
 }
 textarea,
 input,
