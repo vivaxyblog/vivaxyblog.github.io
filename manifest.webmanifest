@@ -1,0 +1,15 @@
+{
+    "name": "Blog - vivaxy",
+    "short_name": "Blog vivaxy",
+    "start_url": "./?utm_source=web_app_manifest",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "Blog posts from vivaxy.",
+    "icons": [
+        {
+            "src": "css/resource/vivaxy.icon.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        }
+    ]
+}
