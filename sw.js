@@ -3,7 +3,7 @@
  * @author vivaxy
  */
 
-var CACHE_NAME = 'cache-datetime-20171214142734443';
+var CACHE_NAME = 'cache-datetime-20171214204349538';
 
 // looping through all of the caches in the service worker
 // and deleting any caches that aren't defined in the cache whitelist.
