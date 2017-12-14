@@ -3,7 +3,8 @@
     "short_name": "Blog vivaxy",
     "start_url": "./?utm_source=web_app_manifest",
     "display": "standalone",
-    "background_color": "#fff",
+    "background_color": "#ffffff",
+    "theme_color": "#e74c3c",
     "description": "Blog posts from vivaxy.",
     "icons": [
         {
