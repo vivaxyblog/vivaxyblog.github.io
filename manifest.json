@@ -1,6 +1,6 @@
 {
     "name": "Blog - vivaxy",
-    "short_name": "Blog vivaxy",
+    "short_name": "Blog - vivaxy",
     "start_url": "./?utm_source=web_app_manifest",
     "display": "standalone",
     "background_color": "#ffffff",
