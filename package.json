@@ -3,11 +3,7 @@
   "version": "1.0.0",
   "description": "vivaxy's blog",
   "scripts": {
-    "build": "npm run build:less && npm run build:copy && npm run min:css && npm run min:js",
-    "build:copy": "cp -r less/resource css",
-    "build:less": "lessc less/index.less css/index.css",
-    "min:css": "cssmin css/index.css > css/index.min.css",
-    "min:js": "rm -rf js/index.min.js && cat js/turbolinks/turbolinks.js >> js/index.min.js && uglifyjs --compress --mangle -- js/turbolinks/index.js >> js/index.min.js && uglifyjs --compress --mangle -- js/analysis/ba.js >> js/index.min.js && uglifyjs --compress --mangle -- js/sw/index.js >> js/index.min.js"
+    "build": "node ./scripts/build.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +21,8 @@
   "homepage": "https://github.com/vivaxyblog/vivaxyblog.github.io#readme",
   "devDependencies": {
     "cssmin": "^0.4.3",
-    "less": "^2.7.1",
+    "fs-extra": "^5.0.0",
+    "less": "^2.7.3",
     "uglify-js": "^3.2.2"
   }
 }
