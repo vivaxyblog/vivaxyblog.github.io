@@ -61,7 +61,7 @@ gulp.task('run', shell.task('egret startserver'));
 
 ## Example
 
-[http://github.com/vivaxy/eliminate/](http://github.com/vivaxy/eliminate/)
+[http://github.com/vivaxy/game/eliminate/](https://github.com/vivaxy/game/eliminate/)
 
 ## Problems
 

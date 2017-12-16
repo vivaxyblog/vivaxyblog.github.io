@@ -6,7 +6,7 @@ tag: css
 
 准备一张长图，包含动画内的所有帧。如下图：
 
-![sprite](http://vivaxy.github.io/course/native-api/animation-steps/sprite.png)
+![sprite](https://vivaxy.github.io/course/native-api/animation-steps/sprite.png)
 
 其中共有13帧。
 
@@ -37,4 +37,4 @@ tag: css
 
 手机端点击人物可以看到动画，电脑端鼠标悬浮在人物上会看到动画，点击空白处可以重置。
 
-See example [here](http://vivaxy.github.io/course/native-api/animation-steps/).
+See example [here](https://vivaxy.github.io/course/native-api/animation-steps/).
