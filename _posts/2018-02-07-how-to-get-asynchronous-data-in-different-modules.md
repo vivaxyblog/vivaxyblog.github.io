@@ -86,7 +86,7 @@ const checkInterval = setInterval(() => {
 }, 100);
 ```
 
-只发送一次请求，有多余的代码实现，`script2` 中的数据获取性能较差。
+只发送一次请求，`script2` 中的数据获取性能较差。
 
 ### 方案3：数据检测和回调方式
 
@@ -134,6 +134,8 @@ whenDataReady((savedData) => {
 });
 ```
 
+只发送一次请求。
+
 ### 方案4：共享 promise 对象
 
 `script1`：
@@ -162,6 +164,8 @@ fetchRemoteDataPromise.then((data) => {
     console.log('Use data in script2', data);
 });
 ```
+
+只发送一次请求。
 
 ## 总结
 
