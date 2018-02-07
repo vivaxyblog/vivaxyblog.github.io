@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 如何在多个模块中获取异步数据
+title: 如何在多个模块中共享异步数据
 tag: javascript promise async
 ---
 
