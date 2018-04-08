@@ -1,16 +1,16 @@
 # [vivaxyblog.github.io](https://vivaxyblog.github.io)
 
-## 规范
+## Rules
 
-### 标题
+### Headers
 
-- h1 为文章标题，文章内容不能包含 h1 ，只能使用 h2 ~ h5
+- Use `h1` as post header. `h1` cannot be included in the post content, and `h2` ~ `h5` are acceptable.
 
-### 更新文章
+### Update posts
 
-- 修改 `js/common/sw.js` 中的 `CACHE_NAME`
+- Run `npm run build`.
 
-## 安装环境
+## Install Dependencies
 
 ```sh
 gem install bundler
@@ -18,14 +18,14 @@ bundle install
 npm install
 ```
 
-## 本地测试
+## Test Locally
 
 ```sh
 npm run build
 bundle exec jekyll serve
 ```
 
-## 本地构建
+## Build Locally
 
 ```sh
 bundle exec jekyll build

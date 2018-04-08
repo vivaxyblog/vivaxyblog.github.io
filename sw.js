@@ -3,7 +3,12 @@
  * @author vivaxy
  */
 
-var CACHE_NAME = 'cache-datetime-1517974366462';
+var CACHE_NAME = 'cache-datetime-1518679920793';
+
+// @see https://davidwalsh.name/service-worker-claim
+self.addEventListener('install', function () {
+    return self.skipWaiting();
+});
 
 // looping through all of the caches in the service worker
 // and deleting any caches that aren't defined in the cache whitelist.
@@ -15,6 +20,8 @@ self.addEventListener('activate', function(event) {
                 return caches.delete(cacheName);
             }
         }));
+    }).then(function () {
+        return self.clients.claim();
     }));
 });
 
