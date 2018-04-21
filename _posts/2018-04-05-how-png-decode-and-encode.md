@@ -83,12 +83,12 @@ PNG 的渐进式加载采用了 [Adam7](https://en.wikipedia.org/wiki/Adam7_algo
 ## 参考资料
 
 - [Portable Network Graphics - Wikipedia](https://en.wikipedia.org/wiki/Portable_Network_Graphics)
-- [ImageData - Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API/ImageData)
-- [Uint8ClampedArray - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)
-- [TypedArray - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)
-- [Uint8Array - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
-- [Int8Array - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)
-- [Buffer | Node.js](https://nodejs.org/api/buffer.html)
+- [ImageData - Web APIs](https://developer.mozilla.org/en-US/docs/Web/API/ImageData)
+- [Uint8ClampedArray - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)
+- [TypedArray - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)
+- [Uint8Array - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
+- [Int8Array - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)
+- [Buffer](https://nodejs.org/api/buffer.html)
 - [Portable Network Graphics (PNG) Specification (Second Edition)](https://www.w3.org/TR/PNG/)
 - [png - What does the interlaced option in Photoshop do?](https://graphicdesign.stackexchange.com/questions/6677/what-does-the-interlaced-option-in-photoshop-do)
 - [Adam7 algorithm - Wikipedia](https://en.wikipedia.org/wiki/Adam7_algorithm)
