@@ -27,5 +27,5 @@ gist:
     noscript: false
 kramdown:
     math_engine: mathjax
-gems:
+plugins:
    - jekyll-paginate

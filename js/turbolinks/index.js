@@ -4,7 +4,7 @@
  */
 
 document.addEventListener('turbolinks:before-render', function() {
-    if (window.DISQUS) {
-        DISQUS.reset();
-    }
+  if (window.DISQUS) {
+    DISQUS.reset();
+  }
 });

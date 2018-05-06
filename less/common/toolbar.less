@@ -4,28 +4,35 @@
  */
 
 .toolbar() {
-    margin: 3rem 0;
-    font-size: 1.5rem;
-    &:after {
-        content: '';
-        display: block;
-        clear: both;
-    }
-    .toolbar-left {
-        float: left;
-        margin-right: 1rem;
-    }
-    .toolbar-right {
-        float: right;
-        margin-left: 1rem;
-    }
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  height: 3rem;
+  line-height: 3rem;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  left: 0;
+  right: 0;
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .toolbar-left {
+    float: left;
+    margin-right: 1rem;
+  }
+  .toolbar-right {
+    float: right;
+    margin-left: 1rem;
+  }
 }
 
 .container {
-    .toolbar-top {
-        .toolbar();
-    }
-    .toolbar-bottom {
-        .toolbar();
-    }
+  .toolbar-top {
+    .toolbar();
+  }
+  .toolbar-bottom {
+    .toolbar();
+  }
 }
