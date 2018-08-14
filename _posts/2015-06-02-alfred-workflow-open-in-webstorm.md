@@ -23,13 +23,13 @@ tag: alfred
 
 ### Create Blank Workflow
 
-Workflow Name: `open in webstrom`
+Workflow Name: `open in WebStorm`
 
-Description: `open in webstorm`
+Description: `open in WebStorm`
 
 Category: `productivity`
 
-Drop a webstorm icon into it.
+Drop a WebStorm icon into it.
 
 You can download icon from [official website](https://www.jetbrains.com/products.html)
 
