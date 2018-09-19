@@ -10,13 +10,13 @@ const updateServiceWorkerCacheName = require('./build/update-service-worker-cach
 const uglifyAndConcatJsFiles = require('./build/uglify-and-concat-js-files');
 
 const main = async() => {
-    await cleanDistFiles();
-    await copyCssResources();
-    await compileLessToMinCssFile();
-    await uglifyAndConcatJsFiles();
-    await updateServiceWorkerCacheName();
+  await cleanDistFiles();
+  await copyCssResources();
+  await compileLessToMinCssFile();
+  await uglifyAndConcatJsFiles();
+  await updateServiceWorkerCacheName();
 };
 
 main().catch((ex) => {
-    console.error(ex);
+  console.error(ex);
 });
