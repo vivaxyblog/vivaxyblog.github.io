@@ -6,7 +6,7 @@ tag: customElements components
 
 [customElements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) 是 Web Components 规范下的新 API，可以用来实现组件化开发。
 
-如果你的应用只用兼容最新的浏览器，那么用它来替代 React 或者 Vue 是一个不错的选择。
+如果你的应用只用兼容最新的 Chrome 浏览器，那么用它来替代 React 或者 Vue 是一个不错的选择。
 
 ## 基本用法
 
