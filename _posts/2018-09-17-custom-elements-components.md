@@ -144,7 +144,7 @@ class Component extends HTMLElement {
       shadow.appendChild(content);
       const button = shadow.querySelector('button');
       button.addEventListener('click', () => {
-        document.dispatchEvent(new CustomEvent(Component.BUTTON_CLICK, { button }));
+        this.dispatchEvent(new CustomEvent(Component.BUTTON_CLICK, { button }));
       });
     }
   }
