@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MI2S 刷 CM
-tag: android
+tags: [android]
 ---
 
 更新了[MIUI 4.5.9][1]开发版后，系统自带程序越来越多，自己做的主题也无法使用了……

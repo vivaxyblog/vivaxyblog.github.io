@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 同步 kindle 的文章剪贴
-tag: kindle
+tags: [kindle]
 ---
 
 ## 国内的 kindle 少了一个好用的官方服务

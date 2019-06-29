@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 如何在 js 中优雅地写 html 模板
-tag: javascript
+tags: [javascript]
 ---
 
 注释形式写在js中，然后用Function.prototype.toString方法拿到。

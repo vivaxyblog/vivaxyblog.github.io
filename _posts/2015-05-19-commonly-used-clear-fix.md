@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Commonly used clear fix
-tag: css
+tags: [css]
 ---
 
 ```css

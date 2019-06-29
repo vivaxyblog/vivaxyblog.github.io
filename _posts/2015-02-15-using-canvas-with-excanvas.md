@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 使用 excanvas 实现 canvas 在 IE7~8 的兼容
-tag: canvas ie
+tags: [canvas, ie]
 ---
 
 IE8 及以下的浏览器上不兼容 canvas，可以使用 [ExplorerCanvas](https://code.google.com/p/explorercanvas/) 做兼容性的替代。

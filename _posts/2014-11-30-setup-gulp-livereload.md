@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Setup Gulp Livereload
-tag: gulp
+tags: [gulp]
 ---
 
 ## Gulp

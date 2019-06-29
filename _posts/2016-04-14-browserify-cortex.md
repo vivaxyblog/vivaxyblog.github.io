@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 打包 cortex 项目为 standalone 的工具
-tag: tools
+tags: [tools]
 ---
 
 为了更加方便地使用 cortex 组件。我实现了一个工具： browserify-cortex 。

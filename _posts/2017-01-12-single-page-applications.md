@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 单页应用
-tag: pattern
+tags: [pattern]
 ---
 
 ## 单页应用是什么？

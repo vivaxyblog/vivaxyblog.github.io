@@ -1,7 +1,7 @@
 ---
 layout: post
 title: react scaffold
-tag: project
+tags: [project, react]
 ---
 
 React project scaffold with redux and material-ui.

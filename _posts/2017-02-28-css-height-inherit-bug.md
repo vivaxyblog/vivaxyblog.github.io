@@ -1,7 +1,7 @@
 ---
 layout: post
 title: css 高度继承的问题
-tag: css
+tags: [css]
 ---
 
 按照 [移动端全兼容的flexbox速成班](https://isux.tencent.com/flexbox.html) 一文给出的 flex 布局方案下，为了兼容旧版 box flex，会强行指定 `height: 0`。

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 面向 JavaScript 程序员的 Python 教程
-tag: javascript python language
+tags: [javascript, python, language]
 ---
 
 本文翻译自：[Python for JavaScript Developers](https://dev.to/underdogio/python-for-javascript-developers)，作者：[Mario Pabon](https://dev.to/restlessbit)。

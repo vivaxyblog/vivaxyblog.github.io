@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pitfall Delegate Event on ios safari not working
-tag: bug ios
+tags: [bug, ios]
 ---
 
 ## Event delegation not available on body

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 用 editor config 配置统一编辑器配置
+tags: [code style, standard]
 ---
 
 ## 配置 editor config

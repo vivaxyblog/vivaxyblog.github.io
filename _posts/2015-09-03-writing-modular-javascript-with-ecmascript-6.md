@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Writing Modular JavaScript with ECMAScript 6
-tag: javascript
+tags: [javascript]
 ---
 
 We need [babel](https://www.npmjs.com/package/babel) and [browserify](https://www.npmjs.com/package/browserify).

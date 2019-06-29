@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 基于 Custom Elements 的组件化开发
-tag: customElements components
+tags: [custom elements, components]
 ---
 
 [customElements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) 是 Web Components 规范下的新 API，可以用来实现组件化开发。

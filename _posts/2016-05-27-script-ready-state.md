@@ -1,7 +1,7 @@
 ---
 layout: post
 title: script 标签的 load 事件在不同浏览器中的表现
-tag: compatibility
+tags: [compatibility]
 ---
 
 ## 起因

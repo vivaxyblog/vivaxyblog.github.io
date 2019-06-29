@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JavaScript 函数式编程初窥
-tag: javascript fp
+tags: [javascript, fp]
 ---
 
 ## 编程范式

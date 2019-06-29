@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 提高项目可维护性的实践
-tag: project maintainability
+tags: [project, maintainability]
 ---
 
 随着部门成员的增加，一个项目不再是单人维护，而是可能会有多人维护。之前可以完全按照自己意愿和思路写的代码有时候会让别人难以理解。

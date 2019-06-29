@@ -1,7 +1,7 @@
 ---
 layout: post
 title: textarea 的 maxlength 长度计算不正确
-tag: html
+tags: [html]
 ---
 
 chrome 下的 textarea 的长度限制后，如果其中包括换行的话，能输入的字符会少于 maxlength 中限定的长度。

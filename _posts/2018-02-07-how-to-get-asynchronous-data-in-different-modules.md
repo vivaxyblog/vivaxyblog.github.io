@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 如何在多个模块中共享异步数据
-tag: javascript promise async
+tags: [javascript, promise, async]
 ---
 
 ## 背景

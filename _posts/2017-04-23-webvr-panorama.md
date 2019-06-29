@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 使用 webvr 制作全景图 
-tag: vr web a-frame
+tags: [vr, web, a-frame]
 ---
 
 webvr 是一种在浏览器中体验 vr 的技术，由 w3c 官方制定规范，各浏览器实现。由于目前各浏览器对 webvr 的支持不一，因此现在使用这项技术时需要额外使用一个右谷歌提供的向下兼容库 [webvr-polyfill](https://github.com/googlevr/webvr-polyfill)。

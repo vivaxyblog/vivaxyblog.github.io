@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Git Commit Script
-tag: zsh git
+tags: [zsh, git]
 ---
 
 When using [git](https://git-scm.com/), I always typed following command in order:

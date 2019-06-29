@@ -1,7 +1,7 @@
 ---
 layout: post
 title: webpack 简介
-tag: tools
+tags: [tools]
 ---
 
 webpack 是 2016 年兴起的一个前端打包工具。看了 [github](https://github.com/webpack/webpack) 上最早的一次 [commit](https://github.com/webpack/webpack/commit/2e1460036c5349951da86c582006c7787c56c543) 是 2012 年 3 月 10 日提交的。作者 [sokra(Tobias Koppers)](https://github.com/sokra) fork 了 [medikoo](https://github.com/medikoo) 的 [modules-webmake](https://github.com/medikoo/modules-webmake)，modules-webmake 解决了 web 打包中的模块化的问题，把 nodejs 中的 cmd 带到了浏览器中。但是 webpack 在 modules-webmake 的基础上添加了代码切分，也就是可以把打包出来的 js 拆分成多个 js。

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: javascript 异步编程
-tag: language
+tags: [language, javascript]
 ---
 
 提到前端，与后端区别最大之处莫过于用于交互，交互中最需要开发人员额外关心的则是用户体验。如何保证在用户多个操作下，界面依然流畅？这里就要说到异步编程了。

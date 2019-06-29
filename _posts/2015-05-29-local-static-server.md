@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 本地静态资源服务器
-tag: npm javascript
+tags: [npm, javascript]
 ---
 
 适用于前端开发的静态资源服务器。

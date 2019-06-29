@@ -8,20 +8,20 @@
 
 ### Update posts
 
-- Run `npm run build`.
+- Run `yarn build`.
 
 ## Install Dependencies
 
 ```sh
 gem install bundler
 bundle install
-npm install
+yarn
 ```
 
 ## Test Locally
 
 ```sh
-npm run build
+yarn build
 bundle exec jekyll serve
 ```
 

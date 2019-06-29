@@ -1,7 +1,7 @@
 ---
 layout: post
 title: javascript 中浮点运算的误差
-tag: problem
+tags: [problem, javascript]
 ---
 
 ## 问题描述

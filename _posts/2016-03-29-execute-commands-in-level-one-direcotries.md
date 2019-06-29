@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 在一级目录中批量执行命令
-tag: shell
+tags: [shell]
 ---
 
 想要修改 100 多个的项目的 git 配置，这 100 多个项目在同一个目录下。

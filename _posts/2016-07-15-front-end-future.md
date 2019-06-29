@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 未来的前端
-tag: pattern
+tags: [pattern]
 ---
 
 未来的前端开发应该是将页面样式和逻辑统一放在 js 中的。

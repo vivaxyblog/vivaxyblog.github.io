@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 用纯 CSS 实现弹窗
-tag: css
+tags: [css]
 ---
 
 ## 知识点

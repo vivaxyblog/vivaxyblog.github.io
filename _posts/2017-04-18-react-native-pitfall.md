@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Native 的一些问题记录
-tag: framework javascript react-native
+tags: [framework, javascript, react-native]
 ---
 
 以下问题基于 0.42 版本

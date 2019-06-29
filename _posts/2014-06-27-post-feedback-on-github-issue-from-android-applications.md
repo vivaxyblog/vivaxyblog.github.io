@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Post Feedback on GitHub Issue from Android Applications
-tag: github
+tags: [github]
 ---
 
 ## Create a GitHub account.

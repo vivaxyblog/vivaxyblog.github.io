@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Karabiner Elements Hyper 改键设置
-tag: config
+tags: [config]
 ---
 
 ## 简介

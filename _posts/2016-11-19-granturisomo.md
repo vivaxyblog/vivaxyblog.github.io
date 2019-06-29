@@ -1,7 +1,7 @@
 ---
 layout: post
 title: GT, Might be the simplest generator tool for scaffolding ever
-tag: project
+tags: [project]
 ---
 
 ![gt](/image/2016-11-19-granturisomo/gt.png)

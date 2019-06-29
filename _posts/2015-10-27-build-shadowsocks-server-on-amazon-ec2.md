@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 如何在亚马逊 EC2 上搭建 Shadowsocks 服务器
-tag: server aws
+tags: [server, aws]
 ---
 
 以下过程需要代理支持。

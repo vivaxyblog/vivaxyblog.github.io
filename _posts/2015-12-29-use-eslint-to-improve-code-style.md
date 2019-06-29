@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 用 eslint 管理 js 的代码风格
+tags: [code style, standard]
 ---
 
 ## 使用全局 eslint

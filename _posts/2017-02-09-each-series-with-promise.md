@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 用 Promise 实现 eachSeries
-tag: tools
+tags: [tools]
 ---
 
 [async](https://caolan.github.io/async/docs.html) 的 [eachSeries](https://caolan.github.io/async/docs.html#eachSeries) 方法实现了多个异步方法的顺序调用，一次只执行一个异步方法。

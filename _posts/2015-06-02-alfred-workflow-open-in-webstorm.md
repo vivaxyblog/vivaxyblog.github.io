@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Alfred Workflow Open in WebStorm
-tag: alfred
+tags: [alfred]
 ---
 
 ## ScreenShots

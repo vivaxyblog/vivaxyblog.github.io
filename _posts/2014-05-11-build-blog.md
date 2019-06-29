@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 搭建博客
-tag: blog jekyll
+tags: [blog, jekyll]
 ---
 
 ## 工具

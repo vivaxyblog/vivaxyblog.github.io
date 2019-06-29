@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 一个 reveal.js 的 Node 命令行工具
-tag: tools nodejs
+tags: [tools, nodejs]
 ---
 
 最近经常做分享，怎么用更科学的方式维护演讲稿呢？

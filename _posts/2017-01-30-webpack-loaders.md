@@ -1,7 +1,7 @@
 ---
 layout: post
 title: webpack loaders 简介
-tag: tools
+tags: [tools]
 ---
 
 webpack 通过 loaders 解析 require 语句引入的文件。常用的 loader 有：

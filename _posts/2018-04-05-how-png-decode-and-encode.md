@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JavaScript PNG 图片编码和解码
-tag: png javascript
+tags: [png, javascript]
 ---
 
 [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) 解码是指将一张 PNG 图片的二进制数据转换成像素点数据 [ImageData](https://developer.mozilla.org/en-US/docs/Web/API/ImageData)。

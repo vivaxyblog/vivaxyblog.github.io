@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Levenshtein 距离
-tag: algorithms
+tags: [algorithms]
 ---
 
 ## 简介

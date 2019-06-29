@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 判断元素是否在屏幕中出现
-tag: snippet
+tags: [snippet]
 ---
 
 ## 场景

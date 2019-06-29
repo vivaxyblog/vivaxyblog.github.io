@@ -1,7 +1,7 @@
 ---
 layout: post
 title: serve here 新特性和问题修复
-tag: tools
+tags: [tools]
 ---
 
 [serve-here](https://github.com/vivaxy/here) 最新版本 3.1.0。

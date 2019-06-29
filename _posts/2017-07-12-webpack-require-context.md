@@ -1,7 +1,7 @@
 ---
 layout: post
 title: webpack require.context 的一些说明
-tag: tools
+tags: [tools]
 ---
 
 使用 `require.context` 可以动态引入文件。参考[官方文档](https://webpack.js.org/guides/dependency-management/#require-context)，但是文档中的表述不甚清晰，因此我整理了几种用法和结果。

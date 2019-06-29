@@ -1,7 +1,7 @@
 ---
 layout: post
 title: webpack plugins 简介
-tag: tools
+tags: [tools]
 ---
 
 webpack 通过 plugins 实现各种功能。常见的 plugins 如下：

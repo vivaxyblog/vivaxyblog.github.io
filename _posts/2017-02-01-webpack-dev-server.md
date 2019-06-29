@@ -1,7 +1,7 @@
 ---
 layout: post
 title: webpack dev server 简介
-tag: tools
+tags: [tools]
 ---
 
 ## 基本用法

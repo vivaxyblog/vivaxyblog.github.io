@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 用 ECMAScript 6 编写模块化的 js
-tag: javascript
+tags: [javascript]
 ---
 
 ## 阶段一

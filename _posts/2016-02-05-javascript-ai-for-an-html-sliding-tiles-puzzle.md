@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 用 javascript 编写基于 html 的数字推盘游戏的 AI
-tag: game translation
+tags: [game, translation]
 ---
 
 本文翻译自 [JavaScript AI For An HTML Sliding Tiles Puzzle By Arnaldo Perez Castano](https://www.smashingmagazine.com/2016/02/javascript-ai-html-sliding-tiles-puzzle/) 。
