@@ -2,14 +2,25 @@
  * @since 2016-09-30 15:52
  * @author vivaxy
  */
+:root {
+  --white: #fff;
+  --dark: #333;
+  --lighter: #999;
+  --highlight: #e74c3c;
+  --highlight-darker: #c0392b;
 
-@white: #fff;
-@dark: #333;
-@lighter: #999;
-@highlight: #e74c3c;
-@highlight-darker: #c0392b;
+  --border: #efefef;
+  --background: #f7f7f7;
 
-@border: #efefef;
-@background: #f7f7f7;
+  --code: #d14;
+}
 
-@code: #d14;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: #333;
+    --dark: #ddd;
+    --lighter: #999;
+    --border: #222;
+    --background: #181818;
+  }
+}

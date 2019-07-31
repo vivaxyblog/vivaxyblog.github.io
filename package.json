@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "vivaxy's blog",
   "scripts": {
-    "build": "node ./scripts/build.js"
+    "build": "node ./scripts/build.js && bundle exec jekyll build",
+    "postinstall": "gem install bundler && bundle install",
+    "dev": "yarn build && bundle exec jekyll serve"
   },
   "repository": {
     "type": "git",

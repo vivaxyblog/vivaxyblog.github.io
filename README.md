@@ -13,20 +13,17 @@
 ## Install Dependencies
 
 ```sh
-gem install bundler
-bundle install
-yarn
+yarn install
 ```
 
 ## Test Locally
 
 ```sh
-yarn build
-bundle exec jekyll serve
+yarn dev
 ```
 
 ## Build Locally
 
 ```sh
-bundle exec jekyll build
+yarn build
 ```
