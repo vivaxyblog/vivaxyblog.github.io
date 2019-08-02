@@ -4,7 +4,7 @@
   "description": "vivaxy's blog",
   "scripts": {
     "build": "node ./scripts/build.js && bundle exec jekyll build",
-    "postinstall": "gem install bundler && bundle install",
+    "postinstall": "sudo gem install bundler && bundle install",
     "dev": "yarn build && bundle exec jekyll serve"
   },
   "repository": {
@@ -24,7 +24,13 @@
   "devDependencies": {
     "cssmin": "^0.4.3",
     "fs-extra": "^5.0.0",
+    "husky": "^3.0.2",
     "less": "^2.7.3",
     "uglify-js": "^3.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build && git add ."
+    }
   }
 }
