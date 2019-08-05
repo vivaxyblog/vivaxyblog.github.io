@@ -2,7 +2,8 @@
  * @since 2019-07-31 11:22
  * @author vivaxy
  */
-if (window.ENABLE_COMMENT) {
+var commentContainer = document.querySelector('.comment-container');
+if (commentContainer) {
   var script = document.createElement('script');
   script.src = 'https://utteranc.es/client.js';
   script.crossorigin = 'anonymous';
@@ -16,5 +17,5 @@ if (window.ENABLE_COMMENT) {
   Object.keys(attributes).forEach(function(key) {
     script.setAttribute(key, attributes[key]);
   });
-  document.body.appendChild(script);
+  commentContainer.appendChild(script);
 }
