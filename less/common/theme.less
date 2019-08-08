@@ -65,7 +65,7 @@ textarea, input, a {
 
 a, a:visited {
   color: var(--highlight);
-  transition: color 0.5s;
+  transition: color var(--transition-time);
   text-decoration: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
   outline: none;
@@ -129,8 +129,7 @@ table tbody tr:nth-child(2n) {
   position: relative;
   width: 600px;
   margin: 2rem auto;
-  transition: width 0.5s;
-  -webkit-transition: width 0.5s;
+  transition: width var(--transition-time);
 }
 
 /* media screen */

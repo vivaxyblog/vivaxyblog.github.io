@@ -2,15 +2,17 @@
 layout: frame
 title: Blog
 ---
-<div class="toolbar-top">
+<nav class="toolbar-top">
   {% include toolbar-index.html %}
-</div>
-{% for _post in paginator.posts %}
-<a href="{{ site.baseurl }}{{ _post.url }}" class="article">
-  <div class="article-title">{{ _post.title }}</div>
-  <div class="article-date">{{ _post.date | date: "%Y-%m-%d" }}</div>
-</a>
-{% endfor %}
-<div class="toolbar-bottom">
+</nav>
+<main>
+  {% for _post in paginator.posts %}
+  <a href="{{ site.baseurl }}{{ _post.url }}" class="article">
+    <div class="article-title">{{ _post.title }}</div>
+    <div class="article-date">{{ _post.date | date: "%Y-%m-%d" }}</div>
+  </a>
+  {% endfor %}
+</main>
+<nav class="toolbar-bottom">
   {% include toolbar-index.html %}
-</div>
+</nav>
