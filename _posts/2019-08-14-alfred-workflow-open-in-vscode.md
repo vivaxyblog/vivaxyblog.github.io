@@ -30,5 +30,6 @@ Open Alfred.
 
 ## Reference
 
+- [alfy](https://github.com/sindresorhus/alfy)
 - [Alfred Workflow Open in WebStorm - Blog Post](/2015/06/02/alfred-workflow-open-in-webstorm.html)
 - [Alfred Workflow Open in WebStorm - Alfred Workflow](https://www.dropbox.com/s/o4olpcovhcdxgw5/Open%20in%20WebStorm.alfredworkflow?dl=0)
