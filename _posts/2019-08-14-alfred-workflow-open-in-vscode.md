@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Alfred Workflow: Open in VSCode
+title: Alfred Workflow Open in VSCode
 tags: [alfred, alfred-workflow, workflow, productivity, vscode, code, open-in-vscode, vivaxy]
 ---
 
