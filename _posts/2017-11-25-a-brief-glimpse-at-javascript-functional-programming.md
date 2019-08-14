@@ -22,7 +22,7 @@ tags: [javascript, fp]
 
 ### 不同的编程范式有不同的代码表现
 
-<img src="/image/2017-11-25-a-brief-glimpse-at-javascript-functional-programming/elevator.png" alt="elevator" style="max-width: 10%; margin: 0 auto;" />
+<img src="/assets/2017-11-25-a-brief-glimpse-at-javascript-functional-programming/elevator.png" alt="elevator" style="max-width: 10%; margin: 0 auto;" />
 
 比如从来没有坐过电梯的人，第一次坐电梯，电梯在 10 楼，人在 1 楼，他会按下，让电梯下来。按错按钮是因为他用了祈使语，而不是把自己的想法提交出去。
 
@@ -114,7 +114,7 @@ console.log(greet('github'));
 
 对于复杂计算的场景下，使用函数式编程相比于命令式编程有更好的可读性。
 
-![why](/image/2017-11-25-a-brief-glimpse-at-javascript-functional-programming/why.png)
+![why](/assets/2017-11-25-a-brief-glimpse-at-javascript-functional-programming/why.png)
 
 从命令式的编程到函数式编程转换的道路上，可读性会变低，但是一旦度过了一个坎，也就是在你大量使用函数式编程时，可读性便会大大提升。可是我们往往会被这个坎阻挠，在发现可读性下降后放弃学习函数式编程。
 
@@ -260,15 +260,15 @@ function add(a, b) {
 
 不可变数据有更多内存开销。
 
-![修改数据](/image/2017-11-25-a-brief-glimpse-at-javascript-functional-programming/mutable-data.png)
+![修改数据](/assets/2017-11-25-a-brief-glimpse-at-javascript-functional-programming/mutable-data.png)
 
 修改数据的情况下，直接替换了变量的值，内存开销不变。
 
-![复制数据](/image/2017-11-25-a-brief-glimpse-at-javascript-functional-programming/immutable-data.png)
+![复制数据](/assets/2017-11-25-a-brief-glimpse-at-javascript-functional-programming/immutable-data.png)
 
 使用不可变数据后，我们复制了一个对象，内存开销翻倍。
 
-![使用库复制数据](/image/2017-11-25-a-brief-glimpse-at-javascript-functional-programming/immutable-data-with-helpers.png)
+![使用库复制数据](/assets/2017-11-25-a-brief-glimpse-at-javascript-functional-programming/immutable-data-with-helpers.png)
 
 使用 immutableJS 等辅助库后，可以更好地利用之前的数据，优化了内存开销。
 

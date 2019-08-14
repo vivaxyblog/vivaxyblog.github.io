@@ -10,7 +10,7 @@ webpack 是 2016 年兴起的一个前端打包工具。看了 [github](https://
 
 不同于 gulp/grunt 的思想，webpack 将所有资源编译成 js，然后合并成一个 js，当然因为它具有代码拆分功能，我们还可以把这一个大 js 拆分成多个文件。
 
-![what is webpack](/image/2017-01-30-a-brief-introduction-to-webpack/what-is-webpack.png)
+![what is webpack](/assets/2017-01-30-a-brief-introduction-to-webpack/what-is-webpack.png)
 
 webpack 通过加载器和插件的形式可以支持多种语法和打包方式。除了此之外，webpack 还有 devServer 支持调式，可以热更新，大大提升了开发效率。
 

@@ -6,8 +6,8 @@ tags: [alfred]
 
 ## ScreenShots
 
-![find folder](/image/2015-06-02-alfred-workflow-open-in-webstorm/find-folder.png)
-![find folder](/image/2015-06-02-alfred-workflow-open-in-webstorm/open-selected-file.png)
+![find folder](/assets/2015-06-02-alfred-workflow-open-in-webstorm/find-folder.png)
+![find folder](/assets/2015-06-02-alfred-workflow-open-in-webstorm/open-selected-file.png)
 
 ## Supported
 

@@ -21,7 +21,7 @@ Best used for client side projects.
 
 ## Project structure
 
-![flowchart](/image/2016-10-10-react-scaffold/flowchart.png)
+![flowchart](/assets/2016-10-10-react-scaffold/flowchart.png)
 
 As we find out html are mostly same in react projects, we extract the same html into a template file which lays in `html` folder.
 

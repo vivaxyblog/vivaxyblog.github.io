@@ -10,15 +10,15 @@ Sam Loud (1841 - 1911) 美国国际象棋手，智力游戏设计师，在1870�
 
 游戏的解答过程是将一个排布变成另一个排布，即从初始状态到目标状态。重新排序的方式是将空的格子和它边上的格子通过上下左右四个方向的交换来完成的。
 
-![推盘游戏](/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/1.jpg)
+![推盘游戏](/assets/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/1.jpg)
 
 空的格子不能被移除出边框，因此如果它在第一列的话，空格不能往左移动；如果它在最右边的一列的话，它就不能再往右移动了。行的规定也是类似的。解的过程是这样的：
 
-![开局](/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/2.jpg)
+![开局](/assets/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/2.jpg)
 
 这是开局。
 
-![胜利](/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/3.jpg)
+![胜利](/assets/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/3.jpg)
 
 这样就算解出了。
 
@@ -196,7 +196,7 @@ arnaldo.skywalker@gmail.com
 
 最后结果如下
 
-![最后的推盘](/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/4.jpg)
+![最后的推盘](/assets/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/4.jpg)
 
 接下来我们把目标布局放上去，我们复制一下起始布局，把上面的 `start` 改成 `goal` 就行了。
 
@@ -223,7 +223,7 @@ arnaldo.skywalker@gmail.com
 </div>
 ```
 
-![起始布局和目标布局](/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/5.jpg)
+![起始布局和目标布局](/assets/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/5.jpg)
 
 最后，我们把 `Solve` 和 `Show Step` 这两个按钮加到第一个布局的容器中。
 
@@ -344,7 +344,7 @@ A* 搜寻算法（ Hart 等人在 1968 年提出）是用来计算多节点路�
 
 A* 搜寻算法能够找到从一种空间布局到另一种空间布局转换方法。搜寻是否智能是根据转换过程中操作的步数来判断的，步数越少，算法越智能。为了能方便描述布局状态，我们把问题转换成图形。我们认为状态 B 是状态 A 的下一种状态，也就是说要到状态 B 就要先到状态 A ，由状态 A 通过移动一个滑块就能够到达状态 B 了。所以一个状态节点会有如下的四中子状态节点。
 
-![A* 算法下节点示意图](/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/6.jpg)
+![A* 算法下节点示意图](/assets/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/6.jpg)
 
 A* 算法下节点示意图
 
@@ -356,7 +356,7 @@ f(s) = g(s) + h(s)
 
 其中 g(s) 是从初始状态到状态 s 的总步数，h(s) 是从状态 s 到目标状态的总步数，所以总步数是 f(s) 。
 
-![从其实状态到目标状态的总步数](/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/7.jpg)
+![从其实状态到目标状态的总步数](/assets/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/7.jpg)
 
 从其实状态到目标状态的总步数
 
@@ -414,7 +414,7 @@ var Node = function (value, state, emptyRow, emptyCol, depth) {
 
 现在我们有了 Node 这个对象，我们来用个例子演示一下使用 A* 算法解题的过程。我们用最简单的启发式，根据放错位置的滑块的个数来。错位启发式返回的值就是不在自己应该在的位置的滑块的个数。这里说明了这个启发式是可接受的。
 
-![A* 搜寻算法](/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/8.jpg)
+![A* 搜寻算法](/assets/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/8.jpg)
 
 A* 搜寻算法
 
@@ -570,13 +570,13 @@ AStar.prototype.heuristic = function (node) {
 
 在我们进入有趣的启发式之前，先记得在计算启发式的时候，我们绝对不会考虑空白滑块。否则我们就会过高估路径的步数了，那么启发式可能不能被接受了。比如下面这个情况：
 
-![错误计算启发式](/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/9.jpg)
+![错误计算启发式](/assets/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/9.jpg)
 
 如果们我考虑空白滑块，那么 h 就是 2 了，而事实上，我们只要把空白滑块向下移动一步就行了。因此实际的最短步数是 1 ，而不是二，我们高估路径的步数了。
 
 为了测试我们的启发式，我们用一个最差情况来试一试，这个情况下需要 31 步才能完成解答。
 
-![最差情况](/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/10.jpg)
+![最差情况](/assets/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/10.jpg)
 
 A* 算法在点击 `Solve` 按钮后会执行。`onclick` 触发的事件是执行 `start` 方法，方法的内容如下：
 
@@ -620,7 +620,7 @@ AStar.prototype.misplacedTiles = function (node) {
 
 执行结果如下：
 
-![执行结果](/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/11.jpg)
+![执行结果](/assets/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/11.jpg)
 
 算法花了将近 4 秒来解答，诶哟，不错哟。但是我们可以用一个更加棒的启发式来让计算更快。
 
@@ -663,7 +663,7 @@ AStar.prototype.manhattanDistance = function (node) {
 
 使用了这个启发式的结果如下：
 
-![曼哈顿距离启发式的结果](/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/12.jpg)
+![曼哈顿距离启发式的结果](/assets/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/12.jpg)
 
 我们已经大大减少了计算时间，现在只要 1 秒不到。曼哈顿距离这个启发式更加精确地估算了离目标布局的步数，因此我们可以更快地到达目的地。
 
@@ -671,7 +671,7 @@ AStar.prototype.manhattanDistance = function (node) {
 
 尽管吗哈顿距离大大缩小了算法的耗时，但是依然有很多优化可以做。线性冲突启发式提供了这个关键点。如果 tj 和 tk 这两个是在用一条线上，并且他们两个的目的地都是在这条线上，并且 tj 要去 tk 那个方向，tk 要去 tj 那个方向，那么我们说 tj 和 tk 是线性冲突的。
 
-![线性冲突](/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/13.jpg)
+![线性冲突](/assets/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/13.jpg)
 
 左边的布局，滑块 3 和滑块 1 在一行中，但是不在正确的位置。为了让他们能够到正确的位置上去，我们必须把其中一块向下移动，再把它移上来，这个移动的行为在曼哈顿距离启发式中没有考虑进去。要注意，一个滑块不可能和很多个滑块产生线性冲突，因为解决了一个线性冲突后，也就解决了这一行的所有线性冲突了。因此，如果滑块 1 和滑块 3 是线性冲突的，那么滑块 1 和滑块 2 就不是线性冲突的了，否则启发式就变得不可接受，我们会高估解答的步数。线性冲突启发式的代码如下：
 
@@ -751,14 +751,14 @@ AStar.prototype.heuristic = function (node) {
 
 加入了线性冲突启发式后，结果如下：
 
-![加入线性冲突启发式的结果](/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/14.jpg)
+![加入线性冲突启发式的结果](/assets/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/14.jpg)
 
 加入了线性冲突启发式后，我们在计算速度上又提高了很大一截。如果想看结果的话，我们可以看灰色的面板上显示的内容。
 
-![结果](/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/15.jpg)
+![结果](/assets/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/15.jpg)
 
 按了 `Show Step` 按钮之后，我们可以看到解法的一步。按了 31 步之后，我们就能看到解答的整个过程了。
 
-![解答过程](/image/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/16.jpg)
+![解答过程](/assets/2016-02-05-javascript-ai-for-an-html-sliding-tiles-puzzle/16.jpg)
 
 这篇文章我们介绍了用人工智能 A* 算法解推盘游戏的方法。我们验证了不同启发式下结果的正确性，并且成功地找到了一种非常有效的启发式。现在你可以用它来打败你的朋友们了。我们体会了人工智能的神奇，我们用它来解决了生活中的问题。人工智能的最终的目的是给我们带来更加轻松而高效的生活。

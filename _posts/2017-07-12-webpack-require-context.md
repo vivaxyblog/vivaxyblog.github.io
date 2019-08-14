@@ -8,7 +8,7 @@ tags: [tools]
 
 先新建一个测试目录，安装 webpack。目录结构如下：
 
-![folder-preview](/image/2017-07-12-webpack-require-context/folder-preview.png)
+![folder-preview](/assets/2017-07-12-webpack-require-context/folder-preview.png)
 
 ## 使用 `require`
 

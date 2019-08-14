@@ -4,7 +4,7 @@ title: IMPRESSION, Telling A Viewable Impression on A Web Page
 tags: [project]
 ---
 
-![impression](/image/2016-11-20-impression/impression.png)
+![impression](/assets/2016-11-20-impression/impression.png)
 
 When dealing with advertisements, we need to tell if an user has seen our ads on our websites. So we can make profit from showing ads.
 

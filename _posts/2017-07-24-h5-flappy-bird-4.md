@@ -92,7 +92,7 @@ export default class Bird extends Movable {
 
 我们把 `Bird` 抽象成椭圆，把 `Stick` 抽象成矩形。
 
-![collide](/image/2017-07-24-h5-flappy-bird-4/collide.png)
+![collide](/assets/2017-07-24-h5-flappy-bird-4/collide.png)
 
 上图黑色表示碰撞检测的图形，我们可以简单地认为椭圆的中心在红框内，则碰撞上了黑色的矩形。
 

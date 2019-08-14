@@ -20,7 +20,7 @@ tags: [snippet]
 6. 获得屏幕大小需要考虑浏览器兼容性，这里使用 `window.innerHeight || document.documentElement.clientHeight` 和 `window.innerWidth || document.documentElement.clientWidth` 。
 7. 考虑出现在屏幕中的几种情况：位置在屏幕之外；位置在屏幕中，但是样式上隐藏(`opacity: 0;`, `display: none;`, `z-index: 0`)。目前函数只能判断元素位置，没有考虑元素的隐藏样式。
 
-![getBoundingClientRect 兼容性](/image/2016-08-17-is-element-on-screen/caniuse.png)
+![getBoundingClientRect 兼容性](/assets/2016-08-17-is-element-on-screen/caniuse.png)
 [getBoundingClientRect 兼容性](http://caniuse.com/#search=getBoundingClientRect)
 
 ## 代码

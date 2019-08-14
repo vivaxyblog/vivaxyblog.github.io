@@ -10,11 +10,11 @@ Mac上的CapsLock占据了一个非常顺手的位置，可是却提供了一个
 
 > HHKB的键盘布局：
 >
-> ![hhkb](/image/2014-12-12-map-capslock-to-hyperkey/hhkb.jpg)
+> ![hhkb](/assets/2014-12-12-map-capslock-to-hyperkey/hhkb.jpg)
 >
 > VIM键盘图：
 >
-> ![vim](/image/2014-12-12-map-capslock-to-hyperkey/vim.png)
+> ![vim](/assets/2014-12-12-map-capslock-to-hyperkey/vim.png)
 >
 > 对于UNIX程序员来说HHKB绝对是完美的。UNIX程序员只有键盘以及快捷键的设置都遵循一个标准：“手移动最少的距离，作更多的操作”。
 >
@@ -24,7 +24,7 @@ Mac上的CapsLock占据了一个非常顺手的位置，可是却提供了一个
 
 > Caps Lock，大写锁定键，现实中使用到的频率相当小（至少对于我来说是这样），但它却占用了一个风水很不错的位置，实在是浪费。Chromebook 把它直接换成了一个搜索键。
 >
-> ![chromebook](/image/2014-12-12-map-capslock-to-hyperkey/chromebook.png)
+> ![chromebook](/assets/2014-12-12-map-capslock-to-hyperkey/chromebook.png)
 
 以上转自：[http://lucifr.com/2013/02/16/caps-lock-to-hyper-key/](http://lucifr.com/2013/02/16/caps-lock-to-hyper-key/)
 
@@ -42,9 +42,9 @@ Mac上的CapsLock占据了一个非常顺手的位置，可是却提供了一个
 
 打开`seil`，勾选`change ths caps lock key`，`keycode`填写80，即`F19`，根据下方提示到系统选项中禁用CapsLock键的默认功能。
 
-![seil](/image/2014-12-12-map-capslock-to-hyperkey/seil.png)
+![seil](/assets/2014-12-12-map-capslock-to-hyperkey/seil.png)
 
-![system](/image/2014-12-12-map-capslock-to-hyperkey/system.png)
+![system](/assets/2014-12-12-map-capslock-to-hyperkey/system.png)
 
 打开`karabiner`，选择`Misc & uninstall`，`Open private xml`，把以下的xml贴进去。可以将`F19`改为`ctrl+shift+command+opt`。
 
@@ -68,6 +68,6 @@ Mac上的CapsLock占据了一个非常顺手的位置，可是却提供了一个
 
 保存后，到`Change Key`的标签，点击`ReloadXML`，即可生效。
 
-![karabiner](/image/2014-12-12-map-capslock-to-hyperkey/karabiner.png)
+![karabiner](/assets/2014-12-12-map-capslock-to-hyperkey/karabiner.png)
 
 最后在alfred中修改启动按键为`F19`。

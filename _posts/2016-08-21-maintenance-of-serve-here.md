@@ -14,4 +14,4 @@ tags: [tools]
 
 - 修复了多实例情况下，watch 功能失效的问题。
 
-![here](/image/2016-08-21-maintenance-of-serve-here/vivaxy-here-local-static-server.png)
+![here](/assets/2016-08-21-maintenance-of-serve-here/vivaxy-here-local-static-server.png)

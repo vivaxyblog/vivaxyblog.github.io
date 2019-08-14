@@ -10,7 +10,7 @@ iOS webview 中会有双击居中功能，自动将不在屏幕中心的文本�
 
 我们使用 `position: fixed;` 对弹出元素进行定位，并且给予屏幕大小一样对宽高。
 
-![正常情况](/image/2016-08-05-ios-webview-double-click-position-bug/1.png)
+![正常情况](/assets/2016-08-05-ios-webview-double-click-position-bug/1.png)
 
 上图是正常情况。
 
@@ -18,7 +18,7 @@ iOS webview 中会有双击居中功能，自动将不在屏幕中心的文本�
 
 此时双击下面的某个元素，然后再点击按钮出弹窗。这是我们看到的背景色已经错位了。
 
-![异常情况](/image/2016-08-05-ios-webview-double-click-position-bug/2.png)
+![异常情况](/assets/2016-08-05-ios-webview-double-click-position-bug/2.png)
 
 [点我在 APP webview 中试试有没有这个 bug](http://vivaxy.github.io/course/pitfall/ios-double-click-fixed-position-error-on-webview)
 

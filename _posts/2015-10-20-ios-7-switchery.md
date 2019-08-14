@@ -6,7 +6,7 @@ tags: [ios, css]
 
 ## Result Preview and Live Example
 
-![preview](/image/2015-10-20-ios-7-switchery/preview.png)
+![preview](/assets/2015-10-20-ios-7-switchery/preview.png)
 
 [example](http://vivaxy.github.io/design/switchery/)
 

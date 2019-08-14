@@ -4,7 +4,7 @@ title: GT, Might be the simplest generator tool for scaffolding ever
 tags: [project]
 ---
 
-![gt](/image/2016-11-19-granturisomo/gt.png)
+![gt](/assets/2016-11-19-granturisomo/gt.png)
 
 GT, aka granturismo, also the generator tool, might be the simplest generator tool for scaffolding ever.
 
@@ -29,7 +29,7 @@ Hopefully, a better tool for a better world.
 
 ## Project structure
 
-![flowchart](/image/2016-11-19-granturisomo/flowchart.png)
+![flowchart](/assets/2016-11-19-granturisomo/flowchart.png)
 
 ## Project repository
 

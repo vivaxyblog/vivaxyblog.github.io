@@ -6,9 +6,9 @@ tags: [android]
 
 根据ejiepe的cmgt926黑白修改。
 
-![en](/image/2014-05-03-baidu-input-custom-theme/en.jpg)
+![en](/assets/2014-05-03-baidu-input-custom-theme/en.jpg)
 
-![ch](/image/2014-05-03-baidu-input-custom-theme/ch.jpg)
+![ch](/assets/2014-05-03-baidu-input-custom-theme/ch.jpg)
 
 复制到`/sdcard/baidu/ime/skins/`，在皮肤中启用。
 

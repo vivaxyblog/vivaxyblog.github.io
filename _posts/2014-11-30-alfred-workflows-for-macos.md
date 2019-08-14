@@ -16,131 +16,131 @@ tags: [mac, alfred]
 
 1. Baidu Map
 
-    ![map](/image/2014-11-30-alfred-workflows-for-macos/map.png)
+    ![map](/assets/2014-11-30-alfred-workflows-for-macos/map.png)
 
 2. Baidu Weather
 
-    ![tq](/image/2014-11-30-alfred-workflows-for-macos/tq.png)
+    ![tq](/assets/2014-11-30-alfred-workflows-for-macos/tq.png)
 
 3. Chrome Bookmarks
 
-    ![chrome](/image/2014-11-30-alfred-workflows-for-macos/chrome.png)
+    ![chrome](/assets/2014-11-30-alfred-workflows-for-macos/chrome.png)
 
 4. CopyPath
 
-    ![path](/image/2014-11-30-alfred-workflows-for-macos/path.png)
+    ![path](/assets/2014-11-30-alfred-workflows-for-macos/path.png)
 
 5. Douban
 
-    ![movie](/image/2014-11-30-alfred-workflows-for-macos/movie.png)
+    ![movie](/assets/2014-11-30-alfred-workflows-for-macos/movie.png)
 
 6. Emoji codes
 
-    ![emoji](/image/2014-11-30-alfred-workflows-for-macos/emoji.png)
+    ![emoji](/assets/2014-11-30-alfred-workflows-for-macos/emoji.png)
 
 7. Encode / Decode
 
-    ![encode](/image/2014-11-30-alfred-workflows-for-macos/encode.png)
+    ![encode](/assets/2014-11-30-alfred-workflows-for-macos/encode.png)
 
 8. Hash
 
-    ![hash](/image/2014-11-30-alfred-workflows-for-macos/hash.png)
+    ![hash](/assets/2014-11-30-alfred-workflows-for-macos/hash.png)
 
 9. javascript api
 
-    ![js](/image/2014-11-30-alfred-workflows-for-macos/js.png)
+    ![js](/assets/2014-11-30-alfred-workflows-for-macos/js.png)
 
 10. jQuery API
 
-    ![jq](/image/2014-11-30-alfred-workflows-for-macos/jq.png)
+    ![jq](/assets/2014-11-30-alfred-workflows-for-macos/jq.png)
 
 11. Kill Process
 
-    ![kill](/image/2014-11-30-alfred-workflows-for-macos/kill.png)
+    ![kill](/assets/2014-11-30-alfred-workflows-for-macos/kill.png)
 
 12. o3o
 
-    ![o3o](/image/2014-11-30-alfred-workflows-for-macos/o3o.png)
+    ![o3o](/assets/2014-11-30-alfred-workflows-for-macos/o3o.png)
 
 13. Recent Downloads
 
-    ![recent](/image/2014-11-30-alfred-workflows-for-macos/recent.png)
+    ![recent](/assets/2014-11-30-alfred-workflows-for-macos/recent.png)
 
 14. StackOverflow
 
-    ![st](/image/2014-11-30-alfred-workflows-for-macos/st.png)
+    ![st](/assets/2014-11-30-alfred-workflows-for-macos/st.png)
 
 15. TerminalFinder
 
-    ![tf](/image/2014-11-30-alfred-workflows-for-macos/tf.png)
+    ![tf](/assets/2014-11-30-alfred-workflows-for-macos/tf.png)
 
 16. VPN Toggle
 
-    ![vpn](/image/2014-11-30-alfred-workflows-for-macos/vpn.png)
+    ![vpn](/assets/2014-11-30-alfred-workflows-for-macos/vpn.png)
 
 17. Wi-Fi Toggle
 
-    ![wifi](/image/2014-11-30-alfred-workflows-for-macos/wifi.png)
+    ![wifi](/assets/2014-11-30-alfred-workflows-for-macos/wifi.png)
 
 18. Youdao Translate
 
-    ![yd](/image/2014-11-30-alfred-workflows-for-macos/yd.png)
+    ![yd](/assets/2014-11-30-alfred-workflows-for-macos/yd.png)
 
 19. 百度云
 
-    ![pan](/image/2014-11-30-alfred-workflows-for-macos/pan.png)
+    ![pan](/assets/2014-11-30-alfred-workflows-for-macos/pan.png)
 
 20. HTTP codes
 
-    ![http](/image/2014-11-30-alfred-workflows-for-macos/http.png)
+    ![http](/assets/2014-11-30-alfred-workflows-for-macos/http.png)
 
 21. Mimetypes by Extension
 
-    ![mime](/image/2014-11-30-alfred-workflows-for-macos/mime.png)
+    ![mime](/assets/2014-11-30-alfred-workflows-for-macos/mime.png)
 
 22. caniuse
 
-    ![caniuse](/image/2014-11-30-alfred-workflows-for-macos/caniuse.png)
+    ![caniuse](/assets/2014-11-30-alfred-workflows-for-macos/caniuse.png)
 
 23. Open in Sublime
 
-    ![subl](/image/2014-11-30-alfred-workflows-for-macos/subl.png)
+    ![subl](/assets/2014-11-30-alfred-workflows-for-macos/subl.png)
 
 24. PHP Manual
 
-    ![php](/image/2014-11-30-alfred-workflows-for-macos/php.png)
+    ![php](/assets/2014-11-30-alfred-workflows-for-macos/php.png)
 
 25. QRCode 生成器
 
-    ![qr](/image/2014-11-30-alfred-workflows-for-macos/qr.png)
+    ![qr](/assets/2014-11-30-alfred-workflows-for-macos/qr.png)
 
 26. iOS Simulator
 
-    ![ios](/image/2014-11-30-alfred-workflows-for-macos/ios.png)
+    ![ios](/assets/2014-11-30-alfred-workflows-for-macos/ios.png)
 
 27. IP Address
 
-    ![ip](/image/2014-11-30-alfred-workflows-for-macos/ip.png)
+    ![ip](/assets/2014-11-30-alfred-workflows-for-macos/ip.png)
 
 28. Todo
 
-    ![todo](/image/2014-11-30-alfred-workflows-for-macos/todo.png)
+    ![todo](/assets/2014-11-30-alfred-workflows-for-macos/todo.png)
 
 29. Urban Dictionary
 
-    ![urban](/image/2014-11-30-alfred-workflows-for-macos/urban.png)
+    ![urban](/assets/2014-11-30-alfred-workflows-for-macos/urban.png)
 
 30. Package Managers
 
-    ![npm](/image/2014-11-30-alfred-workflows-for-macos/npm.png)
+    ![npm](/assets/2014-11-30-alfred-workflows-for-macos/npm.png)
 
 31. Colors
 
-    ![rgb](/image/2014-11-30-alfred-workflows-for-macos/rgb.png)
+    ![rgb](/assets/2014-11-30-alfred-workflows-for-macos/rgb.png)
 
 32. Stopwatch
 
-    ![stopwatch](/image/2014-11-30-alfred-workflows-for-macos/stop.png)
+    ![stopwatch](/assets/2014-11-30-alfred-workflows-for-macos/stop.png)
 
 
 ## Automatically paste to front most app
