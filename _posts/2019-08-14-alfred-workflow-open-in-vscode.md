@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Alfred Workflow Open in VSCode
-tags: [alfred, alfred-workflow, workflow, productivity, vscode, code, open-in-vscode, vivaxy]
+title: Alfred 4 Workflow Open in VSCode
+tags: [alfred, alfred-workflow, workflow, productivity, vscode, code, open-in-vscode, vivaxy, alfred-4]
 ---
 
 ## Feature
 
-![Alfred Workflow: Open in VSCode](/assets/2019-08-14-alfred-workflow-open-in-vscode/alfred-workflow-open-in-vscode.png)
+![Alfred 4 Workflow Open in VSCode](/assets/2019-08-14-alfred-workflow-open-in-vscode/alfred-workflow-open-in-vscode.png)
 
 - Search projects, press `enter` to open in VSCode.
 - Search projects, press `command + enter` to reveal in Finder.
@@ -14,7 +14,7 @@ tags: [alfred, alfred-workflow, workflow, productivity, vscode, code, open-in-vs
 
 ## Installation
 
-- Download [Alfred Workflow Open in VSCode](https://www.dropbox.com/s/8tf7vae3djsos55/Open%20in%20VSCode.alfredworkflow?dl=0)
+- Download [Alfred Workflow 4 Open in VSCode](https://www.dropbox.com/s/8tf7vae3djsos55/Open%20in%20VSCode.alfredworkflow?dl=0)
 - Open workflow in Alfred.
 - Set workflow environment `wds` to your project base folders (split with `,`).
     e.g. `wds`: `/Users/vivaxy/Developers/github,/Users/vivaxy/Developers/gitlab`.
@@ -32,4 +32,4 @@ Open Alfred.
 
 - [alfy](https://github.com/sindresorhus/alfy)
 - [Alfred Workflow Open in WebStorm - Blog Post](/2015/06/02/alfred-workflow-open-in-webstorm.html)
-- [Alfred Workflow Open in WebStorm - Alfred Workflow](https://www.dropbox.com/s/o4olpcovhcdxgw5/Open%20in%20WebStorm.alfredworkflow?dl=0)
+- [Alfred 4 Workflow Open in WebStorm - Alfred 4 Workflow](https://www.dropbox.com/s/o4olpcovhcdxgw5/Open%20in%20WebStorm.alfredworkflow?dl=0)
