@@ -4,19 +4,19 @@ title: JavaScript 模块化探索
 tags: [javascript]
 ---
 
-前端模块化的实现意味着要将一个模块中的数据，逻辑和渲染合并在一个单元中，往往这个单元是一个js文件。本文采用的方法也是如此。
+前端模块化的实现意味着要将一个模块中的数据，逻辑和渲染合并在一个单元中，往往这个单元是一个 JS 文件。本文采用的方法也是如此。
 
-## [reactjs](https://github.com/facebook/react)的实现
+## [React.js](https://github.com/facebook/react) 的实现
 
-reactjs采用单向的数据流：通过mudule层上的数据更新，触发view层的更新。使用`state`保存数据状态。reactjs会算出那些view需要重新渲染，然后再做DOM上的重绘。
+React.js 采用单向的数据流：通过 mudule 层上的数据更新，触发 view 层的更新。使用 `state` 保存数据状态。React.js 会算出那些 view 需要重新渲染，然后再做 DOM 上的重绘。
 
-## [crystal](https://github.com/youngjay/crystal-template)的实现
+## [crystal](https://github.com/youngjay/crystal-template) 的实现
 
-采用knockoutjs作为MVVM，使用browserify作为模块管理器。页面状态由hash记录。html方式书写view，`<script></script>`中书写module，然后编译成js文件，模块化加载到应用中。
+采用 Knockout.js 作为 MVVM，使用 browserify 作为模块管理器。页面状态由 hash 记录。html 方式书写 view，`<script></script>`中书写 module，然后编译成 JS 文件，模块化加载到应用中。
 
-## 原生js的实现
+## 原生 JS 的实现
 
-基于事件机制的`on`和`fire`方法传递数据，js的渲染方式实现view，原型链方式继承。
+基于事件机制的 `on` 和 `fire` 方法传递数据，JS 的渲染方式实现 view，原型链方式继承。
 
 ### 基础类：`Base`
 
@@ -96,11 +96,11 @@ p.update = function (data) {
 };
 ```
 
-包含`on`, `off`, `fire`的事件方法，和`render`, `template`, `update`的渲染方法。
+包含 `on`, `off`, `fire` 的事件方法，和 `render`, `template`, `update` 的渲染方法。
 
-其中事件方法需要用到module中的`events`对象，而渲染方法需要用到module中的`container`, `data`对象。
+其中事件方法需要用到 module 中的 `events` 对象，而渲染方法需要用到 module 中的 `container`, `data` 对象。
 
-### 组件类`Module`
+### 组件类 `Module`
 
 ```js
 var Module = function(options){
@@ -123,40 +123,40 @@ p.template = function(){
 
 继承了基础类的中的事件方法和渲染方法，同时可以在原型上重写两类方法中的具体方法。
 
-组件需要定义`this.events = {}`, `this.data`, `this.container`以使用基础类中的方法。
+组件需要定义 `this.events = {}`, `this.data`, `this.container` 以使用基础类中的方法。
 
-组件需要调用`this.render()`实现渲染。
+组件需要调用 `this.render()` 实现渲染。
 
-组件中可以包含其他自定义方法，只需要在原型`p`上添加对象即可。
+组件中可以包含其他自定义方法，只需要在原型 `p` 上添加对象即可。
 
 ### 继承
 
 `var module = new Module({});`
 
-`module.render`将寻找`module`构造函数上的`render`方法；如果没有找到，会寻找`module`原型链上的`render`方法，由于`module`原型链是基础类的实体`base`，所以相当于在`base`中找字面量`render`；如果没有找到，会寻找`base`原型链上的`render`方法。这样继承能最大化js原型链的使用，复用相同的函数，以减少内存开销；同时，还保证了方法重写的可能性，提高了方便性，可以在继承的对象中的任意一个构造函数上重写。
+`module.render` 将寻找 `module` 构造函数上的 `render` 方法；如果没有找到，会寻找 `module` 原型链上的 `render` 方法，由于 `module` 原型链是基础类的实体 `base`，所以相当于在 `base` 中找字面量 `render`；如果没有找到，会寻找 `base` 原型链上的 `render` 方法。这样继承能最大化 JS 原型链的使用，复用相同的函数，以减少内存开销；同时，还保证了方法重写的可能性，提高了方便性，可以在继承的对象中的任意一个构造函数上重写。
 
 ### 渲染
 
-可以根据不同试用场景修改`render`方法的具体实现方式，如：`innerHTML`, `appendChild`, jquery的`html`等。
+可以根据不同试用场景修改 `render` 方法的具体实现方式，如：`innerHTML`, `appendChild`, jQuery 的 `html` 等。
 
-可以根据更改内容的影响范围修改`update`方法，实现局部渲染，以减少浏览器重绘，提高性能。
+可以根据更改内容的影响范围修改 `update` 方法，实现局部渲染，以减少浏览器重绘，提高性能。
 
 ### 事件
 
-父级对象中使用`new`方式构造子对象，并且可以在子对象上使用`on`方法添加事件监听。
+父级对象中使用 `new` 方式构造子对象，并且可以在子对象上使用 `on` 方法添加事件监听。
 
-子对象内采用底层的事件监听方式，如`addEventListener`, jquery的`on`等方法监听用户输入等触发事件后，执行`fire`方法，就可以把响应数据传递到父级对象中。
+子对象内采用底层的事件监听方式，如 `addEventListener`, jQuery的 `on` 等方法监听用户输入等触发事件后，执行 `fire` 方法，就可以把响应数据传递到父级对象中。
 
-子对象在任何过程中都可以执行`fire`方法，并传递数据。
+子对象在任何过程中都可以执行 `fire` 方法，并传递数据。
 
-`off`可以去掉采用函数名绑定的事件。
+`off` 可以去掉采用函数名绑定的事件。
 
 ### 数据流
 
-父级对象将拿到的数据用`options`的方式在`new`子对象的时候传入。
+父级对象将拿到的数据用 `options` 的方式在 `new` 子对象的时候传入。
 
-子对象将完整数据，或者变化的数据用`fire`的形式传递到父级对象中。
+子对象将完整数据，或者变化的数据用 `fire` 的形式传递到父级对象中。
 
 如果修改的是用一个对象，则在任何时候拿到的数据都是完整的，并且实时的。子对象内的修改数据操作会反馈到父级对象中！
 
-## [例子](https://vivaxy.github.io/fragment/module-view/#)
+## [例子](https://vivaxy.github.io/course/javascript/module-view/#)
