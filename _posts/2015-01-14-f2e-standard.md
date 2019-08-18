@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 前端规范
-tags: [javascript, css, html]
+tags: [javascript, css, html, f2e, frontend]
 ---
 
 ### 说明

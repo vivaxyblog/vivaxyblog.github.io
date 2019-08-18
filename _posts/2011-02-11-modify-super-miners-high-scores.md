@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Super Miners HighScores 的修改
-tags: [symbian]
+tags: [symbian, game]
 ---
 
 ## 记录文件：

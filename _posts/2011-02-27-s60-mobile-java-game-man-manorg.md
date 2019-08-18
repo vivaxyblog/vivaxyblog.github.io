@@ -1,7 +1,7 @@
 ---
 layout: post
 title: s60 手机 java 小游戏 Man(Manorg)
-tags: [symbian]
+tags: [symbian, mobile, game]
 ---
 
 ## 操作

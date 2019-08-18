@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Setup Gulp Livereload
-tags: [gulp]
+tags: [gulp, npm]
 ---
 
 ## Gulp
@@ -70,4 +70,3 @@ When destination files compiled one by one, livereload will be triggered each ti
 ## Reference
 
 [Gulp Livereload](https://www.npmjs.org/package/gulp-livereload)
-

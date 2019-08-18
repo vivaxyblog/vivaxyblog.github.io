@@ -1,16 +1,16 @@
 ---
 layout: post
 title: 百度手机输入法自定义主题
-tags: [android]
+tags: [android, input-method, baidu-input]
 ---
 
-根据ejiepe的cmgt926黑白修改。
+根据 ejiepe 的 cmgt926 黑白修改。
 
 ![en](/assets/2014-05-03-baidu-input-custom-theme/en.jpg)
 
 ![ch](/assets/2014-05-03-baidu-input-custom-theme/ch.jpg)
 
-复制到`/sdcard/baidu/ime/skins/`，在皮肤中启用。
+复制到 `/sdcard/baidu/ime/skins/`，在皮肤中启用。
 
 [点我下载][1]
 
@@ -20,11 +20,11 @@ tags: [android]
 
 [下载cmgt926黑白.bds][3]
 
-用百度官方皮肤编辑器修改好按键后打包，会导致输入键码时键盘与cmg原先的设定不同，因此只好手动解压和打包。
+用百度官方皮肤编辑器修改好按键后打包，会导致输入键码时键盘与 cmg 原先的设定不同，因此只好手动解压和打包。
 
-用解压软件解压`cmgt926黑白.bds`。
+用解压软件解压 `cmgt926黑白.bds`。
 
-修改`Info.txt`
+修改 `Info.txt`
 
 ```
 Name=vivaxy@20140503
@@ -52,7 +52,7 @@ CENTER #短按
 HOLDSYM #长按出现候选列表
 ```
 
-改好后用zip格式压缩，改后缀为`.bds`。
+改好后用 zip 格式压缩，改后缀为 `.bds`。
 
 ## 参考资料
 

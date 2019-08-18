@@ -84,7 +84,7 @@ const func = require('./dir/' + filename + '.js'); // => Success
 const context = require.context('./dir', true, /\.js$/);
 const keys = context.keys(); // => ["./another-first-level.js", "./first-level.js", "./sub-dir/second-level.js"]
 const filename = './first-level.js';
-const func = context(); // => Success
+const func = context(filename); // => Success
 ```
 
 结果：成功获取文件中的内容。

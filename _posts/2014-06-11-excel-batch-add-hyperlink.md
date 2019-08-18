@@ -1,6 +1,6 @@
 ---
 layout: post
-title: EXCEL 批量添加文件超链接
+title: Excel 批量添加文件超链接
 tags: [excel, windows]
 ---
 
