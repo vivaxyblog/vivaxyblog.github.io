@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Preload Images
-tags: [npm, javascript]
+tags: [npm, javascript, images]
 ---
 
 Sites with big images always encounter slow loading.

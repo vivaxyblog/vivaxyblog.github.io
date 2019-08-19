@@ -1,7 +1,7 @@
 ---
 layout: post
-title: casio fx-82MS 暂时升级方法
-tags: [hardware, casio, calculator]
+title: Casio FX-82MS 暂时升级方法
+tags: [Hardware, Casio, Calculator]
 ---
 
 ## 按键顺序

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 前端规范
-tags: [javascript, css, html, f2e, frontend]
+tags: [javascript, css, html, f2e, frontend, standard]
 ---
 
 ### 说明
@@ -34,19 +34,19 @@ tags: [javascript, css, html, f2e, frontend]
 
     1.8 [`{` 在行末](#1.8)
 
-2. [html](#2)
+2. [HTML](#2)
 
     2.1 [文件头](#2.1)
 
-    2.2 [js和css文件的引用](#2.2)
+    2.2 [JavaScript 和 CSS 文件的引用](#2.2)
 
-    2.3 [js和css句柄的使用](#2.3)
+    2.3 [JavaScript 和 CSS 句柄的使用](#2.3)
 
     2.4 [标签关闭](#2.4)
 
     2.5 [特殊符号](#2.5)
 
-3. [js](#3)
+3. [JavaScript](#3)
 
     3.1 [全局变量](#3.1)
 
@@ -60,7 +60,7 @@ tags: [javascript, css, html, f2e, frontend]
 
     3.6 [其他](#3.6)
 
-4. [css](#4)
+4. [CSS](#4)
 
     4.1 [浏览器前缀](#4.1)
 
@@ -90,7 +90,7 @@ tags: [javascript, css, html, f2e, frontend]
 
     7.2 [*文档注释*](#7.2)
 
-8. [git 版本管理](#8)
+8. [Git 版本管理](#8)
 
 9. [版本号](#9)
 
@@ -227,7 +227,7 @@ var foo = function () {
 ```
 
 
-### <a name="2"></a> 2 html
+### <a name="2"></a> 2 HTML
 
 #### <a name="2.1"></a> 2.1 文件头
 
@@ -244,13 +244,13 @@ var foo = function () {
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 ```
 
-#### <a name="2.2"></a> 2.2 js和css文件的引用
+#### <a name="2.2"></a> 2.2 JavaScript 和 CSS 文件的引用
 
 css文件引用 `<link type="text/css" rel="stylesheet" href="...">` 放置于 `</head>` 前，不使用 `<style>` ，便于使用缓存
 
 js文件引用 `<script type="text/javascript" src="..."></script>` 放置于 `</body>` 前，不使用 `<script>` ，便于使用缓存
 
-#### <a name="2.3"></a> 2.3 js和css句柄的使用
+#### <a name="2.3"></a> 2.3 JavaScript 和 CSS 句柄的使用
 
 css样式附着于 `class="..."` ，不使用 `style="..."`
 
@@ -267,7 +267,7 @@ js操作句柄附着于 `class="js-xxx"`，遵循`github`代码规范
 特殊符号采用[HTML符号实体](http://www.w3school.com.cn/tags/html_ref_entities.html)
 
 
-### <a name="3"></a> 3 js
+### <a name="3"></a> 3 JavaScript
 
 #### <a name="3.1"></a> 3.1 全局变量
 
@@ -361,7 +361,7 @@ b.on('touchstart', function () {
 
 - *使用requestAnimationFrame动画代替setTimeout*
 
-### <a name="4"></a> 4 css
+### <a name="4"></a> 4 CSS
 
 #### <a name="4.1"></a> 4.1 浏览器前缀
 
@@ -577,7 +577,7 @@ js 文档
 
 参见[JSDoc](http://usejsdoc.org/index.html)
 
-### <a name="8"></a> 8 git分支
+### <a name="8"></a> 8 Git 版本管理
 
 - 分支命名
 

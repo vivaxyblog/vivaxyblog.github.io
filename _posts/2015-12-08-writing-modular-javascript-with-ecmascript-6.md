@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 用 ECMAScript 6 编写模块化的 js
+title: 用 ECMAScript 6 编写模块化的 JavaScript
 tags: [javascript]
 ---
 
 ## 阶段一
 
-用 babel 5.0 的 [cli](https://babeljs.io/docs/setup/#babel_cli) 将单个 es6 文件编译成 umd 形式的 es5
+用 babel 5.0 的 [cli](https://babeljs.io/en/setup/#babel_cli) 将单个 es6 文件编译成 umd 形式的 es5
 
 将文件拼接在一起 `> cat ./build/a.js ./build/b.js > ./dest/index.js`
 
@@ -14,7 +14,7 @@ tags: [javascript]
 
 使用到了 [babel](https://www.npmjs.com/package/babel) 和 [browserify](https://www.npmjs.com/package/browserify)
 
-用 babel 5.0 的 [cli](https://babeljs.io/docs/setup/#babel_cli) 将单个 es6 文件编译成 cmd 形式的 es5
+用 babel 5.0 的 [cli](https://babeljs.io/en/setup/#babel_cli) 将单个 es6 文件编译成 cmd 形式的 es5
 
 用 browserify 输出为同一个文件
 
@@ -67,9 +67,9 @@ babel 升级到了 6.0 ，对所有功能进行了细化拆分，如果用到 es
 
 ## 阶段五
 
-使用 [webpack](https://webpack.github.io/) 和 babel
+使用 [webpack](https://webpack.js.org/) 和 babel
 
-上个阶段中每次编译的时间都是漫长的，不便于调试，使用 [webpack-dev-server](https://webpack.github.io/docs/webpack-dev-server.html) 可以解决调试慢的问题
+上个阶段中每次编译的时间都是漫长的，不便于调试，使用 [webpack-dev-server](https://webpack.js.org/guides/development/#using-webpack-dev-server) 可以解决调试慢的问题
 
 安装依赖 `npm i --save-dev webpack webpack-dev-server babel-loader babel-core babel-preset-es2015`
 
@@ -99,10 +99,10 @@ module.exports = {
 };
 ```
 
-loader 中的配置可以参考[这里](https://webpack.github.io/docs/configuration.html#module-loaders)
+loader 中的配置可以参考[这里](https://webpack.js.org/configuration/module/#ruleloader)
 
 配置完成后，在命令行中执行 `> webpack` 就能得到输出的文件，执行 `> webpack-dev-server` 就能在 8080 端口启动本地服务，调试 es6 代码
 
 如果想在文件变动后自动刷新页面，可以在 html 中加入 `<script src="http://localhost:8080/webpack-dev-server.js"></script>`
 
-[参考项目](https://github.com/vivaxy/course/tree/gh-pages/hammer)
+[参考项目](https://github.com/vivaxy/course/tree/master/libraries/hammer)

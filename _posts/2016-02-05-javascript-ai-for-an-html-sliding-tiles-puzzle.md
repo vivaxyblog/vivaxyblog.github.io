@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 用 javascript 编写基于 html 的数字推盘游戏的 AI
+title: 用 JavaScript 编写基于 HTML 的数字推盘游戏的 AI
 tags: [game, translation]
 ---
 
-本文翻译自 [JavaScript AI For An HTML Sliding Tiles Puzzle By Arnaldo Perez Castano](https://www.smashingmagazine.com/2016/02/javascript-ai-html-sliding-tiles-puzzle/) 。
+本文翻译自 [JavaScript AI For An HTML Sliding Tiles Puzzle By Arnaldo Perez Castano](https://www.smashingmagazine.com/2016/02/javascript-ai-html-sliding-tiles-puzzle/)。
 
 Sam Loud (1841 - 1911) 美国国际象棋手，智力游戏设计师，在1870年代发明了数字推盘游戏。这个游戏由 m 行 n 列的网格组成，每个格子可以是任何有规律的事物，比如数字，字母，图片等。
 

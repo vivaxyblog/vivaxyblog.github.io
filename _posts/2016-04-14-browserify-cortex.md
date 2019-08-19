@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 打包 cortex 项目为 standalone 的工具
+title: 打包 Cortex 项目为 Standalone 的工具
 tags: [tools]
 ---
 

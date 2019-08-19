@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pitfall Delegate Event on ios safari not working
+title: Pitfall Delegate Event on iOS Safari Not Working
 tags: [bug, ios]
 ---
 

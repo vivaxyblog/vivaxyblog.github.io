@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 同步 kindle 的文章剪贴
+title: 同步 Kindle 的文章剪贴
 tags: [kindle]
 ---
 

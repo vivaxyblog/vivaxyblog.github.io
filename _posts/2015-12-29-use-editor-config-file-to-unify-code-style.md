@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 用 editor config 配置统一编辑器配置
+title: 用 Editor Config 配置统一编辑器配置
 tags: [code style, standard]
 ---
 
-## 配置 editor config
+## 配置 Editor Config
 
 在项目下创建文件 [`.editorconfig`](https://github.com/vivaxy/front-end-scaffold/blob/master/.editorconfig)
 

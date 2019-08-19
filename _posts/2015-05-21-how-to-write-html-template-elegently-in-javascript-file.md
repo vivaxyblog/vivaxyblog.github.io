@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 如何在 js 中优雅地写 html 模板
-tags: [javascript]
+title: 如何在 JavaScript 中优雅地写 HTML 模板
+tags: [JavaScript, Template]
 ---
 
-注释形式写在js中，然后用Function.prototype.toString方法拿到。
+注释形式写在 JavaScript 中，然后用 `Function.prototype.toString` 方法拿到。
 
 ```js
 var compile = function (functionObject) {
@@ -22,7 +22,7 @@ var html = compile(function () {/*
 
 作为模板，当然还需要关键词的替换功能。接下来实现它！
 
-参考ES6中的template string：
+参考 ES6 中的 Template String：
 
 ```js
 `
@@ -33,9 +33,9 @@ var html = compile(function () {/*
 `
 ```
 
-只需要替换符合`/\$\{\w.+\}/g`这个正则的文本即可。
+只需要替换符合 `/\$\{\w.+\}/g` 这个正则的文本即可。
 
-用replace方法：
+用 Replace 方法：
 
 ```js
 .replace(/\$\{\w.+\}/g, function (variable) {
@@ -43,7 +43,7 @@ var html = compile(function () {/*
 });
 ```
 
-去掉`${`和`}`，然后返回实际值即可。
+去掉 `${`和`}`，然后返回实际值即可。
 
 ```js
 var compile = function (functionObject) {
@@ -72,9 +72,9 @@ var test2 = {
 document.body.innerHTML += toHtml1(test2);
 ```
 
-那么如果变量是这样的呢`<h2>${data.title}</h2>`？
+那么如果变量是这样的呢 `<h2>${data.title}</h2>`？
 
-只需要用`.`分割字符串，然后逐步拿到值就行了：
+只需要用 `.` 分割字符串，然后逐步拿到值就行了：
 
 ```js
 var value = it;

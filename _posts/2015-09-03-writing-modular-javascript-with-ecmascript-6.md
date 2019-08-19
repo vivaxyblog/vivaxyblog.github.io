@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Writing Modular JavaScript with ECMAScript 6
-tags: [javascript]
+tags: [javascript, module, es6]
 ---
 
 We need [babel](https://www.npmjs.com/package/babel) and [browserify](https://www.npmjs.com/package/browserify).
@@ -132,4 +132,4 @@ Create `.gitignore` to keep `node_module`, `.DS_Store` and your git submodules o
 
 ## Example projects
 
-[ink](https://github.com/vivaxy/design/tree/gh-pages/ink)
+[ink](https://vivaxy.github.io/design/ink/)

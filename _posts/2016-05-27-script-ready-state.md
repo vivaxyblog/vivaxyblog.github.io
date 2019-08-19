@@ -1,6 +1,6 @@
 ---
 layout: post
-title: script 标签的 load 事件在不同浏览器中的表现
+title: Script 标签的 Load 事件在不同浏览器中的表现
 tags: [compatibility]
 ---
 

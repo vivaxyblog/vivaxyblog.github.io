@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CapsLock 改为 Hyper 键
-tags: [macOS, CapsLock, Hyper]
+tags: [macOS, CapsLock, Hyper, Alfred, Keyboard]
 ---
 
 ## CapsLock 按键的位置
