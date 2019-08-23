@@ -1,7 +1,7 @@
 ---
 layout: post
 title: iOS UIWebview 中双击文本触发页面自动滚动导致弹窗错位
-tags: [problem]
+tags: [Bug, iOS, UIWebview]
 ---
 
 ## 问题描述
@@ -20,7 +20,7 @@ iOS webview 中会有双击居中功能，自动将不在屏幕中心的文本�
 
 ![异常情况](/assets/2016-08-05-ios-webview-double-click-position-bug/2.png)
 
-[点我在 APP webview 中试试有没有这个 bug](http://vivaxy.github.io/course/pitfall/ios-double-click-fixed-position-error-on-webview)
+[点我在 APP webview 中试试有没有这个 bug](https://vivaxy.github.io/course/pitfall/ios-double-click-fixed-position-error-on-webview/)
 
 贴上这部分的代码
 
