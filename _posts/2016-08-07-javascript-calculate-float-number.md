@@ -1,6 +1,6 @@
 ---
 layout: post
-title: javascript 中浮点运算的误差
+title: JavaScript 中浮点运算的误差
 tags: [problem, javascript]
 ---
 
