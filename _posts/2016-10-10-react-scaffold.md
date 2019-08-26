@@ -1,6 +1,6 @@
 ---
 layout: post
-title: react scaffold
+title: React Scaffold
 tags: [project, react]
 ---
 
@@ -41,7 +41,7 @@ Built project files will be in the `release` folder. With `build.log`, you can s
 
 ## How to use
 
-- Clone project from [github](https://github.com/vivaxy/react-scaffold).
+- Clone project from [GitHub](https://github.com/vivaxy/gt-react-scaffold).
 
 - Change directory into project, remove .git folder to make it out of my scaffold version control.
 
@@ -55,6 +55,6 @@ Built project files will be in the `release` folder. With `build.log`, you can s
 
 Feel free to submit any issue.
 
-## Project base
+## Project Code Base
 
-[react-scaffold](https://github.com/vivaxy/react-scaffold)
+[gt-react-scaffold](https://github.com/vivaxy/gt-react-scaffold)
