@@ -1,18 +1,18 @@
 ---
 layout: post
-title: javascript 异步编程
+title: JavaScript 异步编程
 tags: [language, javascript]
 ---
 
 提到前端，与后端区别最大之处莫过于用于交互，交互中最需要开发人员额外关心的则是用户体验。如何保证在用户多个操作下，界面依然流畅？这里就要说到异步编程了。
 
-Javascript 中的一大特性就是支持异步编程，异步编程能够让多个用户输入在后台同时执行，从而带来流畅的界面交互。但是开发人员却为此付出了沉重的代价。
+JavaScript 中的一大特性就是支持异步编程，异步编程能够让多个用户输入在后台同时执行，从而带来流畅的界面交互。但是开发人员却为此付出了沉重的代价。
 
-Java 中默认一个线程中的代码就是同步的，通过另起线程或者进程，可以做到并行处理。而 Javascript 中只有一个线程，为了不让一个网络请求阻塞了用户操作，Javascript 天生就有同步和异步两种编程方式。
+Java 中默认一个线程中的代码就是同步的，通过另起线程或者进程，可以做到并行处理。而 JavaScript 中只有一个线程，为了不让一个网络请求阻塞了用户操作，JavaScript 天生就有同步和异步两种编程方式。
 
 异步的实现方式是在调用第三方资源（网络请求）时，发起和回传被分成了两个指令，等到第三方资源有结果后，通过预先约定的一个事件或者回调函数等方式完成数据传递。
 
-Javascript 中的异步通常有下面六种方式：
+JavaScript 中的异步通常有下面六种方式：
 
 ## 回调函数
 
@@ -218,7 +218,7 @@ job1(function(err, data) {
 
 ## 抛出异常
 
-Javascript 中一个线程有异常抛出会阻止了下面的所有语句的执行。
+JavaScript 中一个线程有异常抛出会阻止了下面的所有语句的执行。
 
 ```js
 try {
@@ -231,5 +231,5 @@ try {
 
 ## 参考资料
 
-- [Javascript异步编程的4种方法](http://www.ruanyifeng.com/blog/2012/12/asynchronous%EF%BC%BFjavascript.html)
+- [JavaScript 异步编程的4种方法](http://www.ruanyifeng.com/blog/2012/12/asynchronous%EF%BC%BFjavascript.html)
 - [谈谈异步编程](http://www.cnblogs.com/bigbrother1984/p/4140685.html)
