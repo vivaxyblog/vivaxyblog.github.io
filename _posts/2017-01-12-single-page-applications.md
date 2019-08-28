@@ -10,7 +10,7 @@ tags: [pattern]
 
 ## 单页的几种路由管理方式
 
-- hash。路径会记录在 URL 的 hash 部分中。参见 http://event.dianping.com/vivaxy/test-page/hash-history/html/index.html#/pageA 。
+- hash。路径会记录在 URL 的 hash 部分中。
 - 内存管理。路径会记录在一个变量上，不体现在 URL 上。对于分享和直接打开到特定页面有一定的限制。
 - history API。路由体现在 url 的 path 部分，需要服务端支持。用户刷新页面后需要从服务端取到和之前一样的 html 和 js。
 
