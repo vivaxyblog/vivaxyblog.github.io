@@ -1,10 +1,10 @@
 ---
 layout: post
-title: ftp 上传模式
+title: FTP 上传模式
 tags: [tools]
 ---
 
-在使用 nodejs 实现 ftp 文件上传的过程中，我发现文本文件可以正常上传，但是图片文件则不行。图片被上传后，文件内容被更改了，无法正常打开了，文件大小也不一致了。
+在使用 Node.js 实现 FTP 文件上传的过程中，我发现文本文件可以正常上传，但是图片文件则不行。图片被上传后，文件内容被更改了，无法正常打开了，文件大小也不一致了。
 
 使用的是 [jsftp](https://github.com/sergi/jsftp) 包。参考了 [ftp-deploy](https://github.com/rickbergfalk/ftp-deploy) 包。
 
@@ -16,7 +16,7 @@ tags: [tools]
 
 在尝试后发现问题是由上传模式导致的，上传非文本文件时应该是用 binary 模式，即在登录后键入 `type I`。
 
-使用命令行时，登录后默认会开启 binary 模式，可能是 ftp 服务器配置的，但是通过 jsftp 客户端登录时却没有默认开启，所以需要手动指定一下。
+使用命令行时，登录后默认会开启 binary 模式，可能是 FTP 服务器配置的，但是通过 jsftp 客户端登录时却没有默认开启，所以需要手动指定一下。
 
 简单的代码如下：
 
