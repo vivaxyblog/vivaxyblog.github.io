@@ -240,4 +240,4 @@ button {
 
 到这里，我们完成了 Flappy Bird 游戏的制作。
 
-线上体验的地址：[https://vivaxy.github.io/flappy-bird/dist/html/flappy-bird.html](https://vivaxy.github.io/flappy-bird/dist/html/flappy-bird.html)
+线上体验的地址：[https://vivaxy.github.io/game/flappy-bird/](https://vivaxy.github.io/game/flappy-bird/)
