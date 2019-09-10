@@ -1,30 +1,30 @@
 ---
 layout: post
-title: 使用 webvr 制作全景图 
+title: 使用 WebVR 制作全景图
 tags: [vr, web, a-frame]
 ---
 
-webvr 是一种在浏览器中体验 vr 的技术，由 w3c 官方制定规范，各浏览器实现。由于目前各浏览器对 webvr 的支持不一，因此现在使用这项技术时需要额外使用一个右谷歌提供的向下兼容库 [webvr-polyfill](https://github.com/googlevr/webvr-polyfill)。
+WebVR 是一种在浏览器中体验 VR 的技术，由 W3C 官方制定规范，各浏览器实现。由于目前各浏览器对 WebVR 的支持不一，因此现在使用这项技术时需要额外使用一个右谷歌提供的向下兼容库 [webvr-polyfill](https://github.com/googlevr/webvr-polyfill)。
 
-目前有不少框架可以让我们很方便的做 webvr 应用。
+目前有不少框架可以让我们很方便的做 WebVR 应用。
 
 ## 几个例子
 
-我们先看看 webVR 能做什么：
+我们先看看 WebVR 能做什么：
 
 - [东方明珠空中全景](https://vivaxy.github.io/course/webvr/a-frame-shanghai-oriental-pearl/)
 - [我的世界](https://vivaxy.github.io/course/webvr/a-frame-minecraft/)
 - [香港海洋公园全景](https://vivaxy.github.io/course/webvr/a-frame-panorama/)
 
-上面几个例子用的都是 [A-Frame](https://github.com/aframevr/aframe)，由 mozilla 提供。
+上面几个例子用的都是 [A-Frame](https://github.com/aframevr/aframe)，由 Mozilla 提供。
 
 ## 全景图片
 
 一般的，我们需要专业摄像设备来获取全景图片。比如[东方明珠空中全景](https://vivaxy.github.io/course/webvr/a-frame-shanghai-oriental-pearl/)一例中，我们用了 96 张图片，组成了一个立方体空间，在这个空间中，我们可以看到上下左右的图像。
 
-我们使用相机在同一地点，多个角度下拍摄多张照片，通过图片拼接处理，再裁剪开。图片拼接可以通过 Photoshop 的 Photomerge 来实现(File > Automate > Photomerge)。
+我们使用相机在同一地点，多个角度下拍摄多张照片，通过图片拼接处理，再裁剪开。图片拼接可以通过 PhotoShop 的 PhotoMerge 来实现(File > Automate > PhotoMerge)。
 
-还可以用手机的全景模式拍摄图片，然后用 Photoshop 制作出来。下面就详细介绍下这个全景图片的制作。
+还可以用手机的全景模式拍摄图片，然后用 PhotoShop 制作出来。下面就详细介绍下这个全景图片的制作。
 
 ## 全景图片制作
 
