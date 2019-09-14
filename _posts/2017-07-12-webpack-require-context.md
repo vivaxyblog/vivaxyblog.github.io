@@ -1,12 +1,12 @@
 ---
 layout: post
-title: webpack require.context 的一些说明
+title: Webpack require.context 的一些说明
 tags: [tools]
 ---
 
 使用 `require.context` 可以动态引入文件。参考[官方文档](https://webpack.js.org/guides/dependency-management/#require-context)，但是文档中的表述不甚清晰，因此我整理了几种用法和结果。
 
-先新建一个测试目录，安装 webpack。目录结构如下：
+先新建一个测试目录，安装 Webpack。目录结构如下：
 
 ![folder-preview](/assets/2017-07-12-webpack-require-context/folder-preview.png)
 
@@ -37,9 +37,9 @@ const filename = './dir/first-level.js';
 const func = require('' + filename); // => Error
 ```
 
-结果：编译超时或内存溢出导致 webpack 进程退出。
+结果：编译超时或内存溢出导致 Webpack 进程退出。
 
-这时 webpack 尝试引入 `.` 目录下的所有文件，由于 `node_modules` 存在，因此会引入非常多的文件导致问题。
+这时 Webpack 尝试引入 `.` 目录下的所有文件，由于 `node_modules` 存在，因此会引入非常多的文件导致问题。
 
 第二种：
 
@@ -50,7 +50,7 @@ const func = require('./dir' + filename); // => Success
 
 结果：成功获取文件中的内容。
 
-这时 webpack 自动创建了一个 context，引入了所有路径符合 `^\.\/dir.*$` 的文件。生成的 `bundle.js` 中打包了所有的文件的内容。如果目录下存在非 js 文件，则需要通过配置正确的 loader 来引入。
+这时 Webpack 自动创建了一个 context，引入了所有路径符合 `^\.\/dir.*$` 的文件。生成的 `bundle.js` 中打包了所有的文件的内容。如果目录下存在非 js 文件，则需要通过配置正确的 loader 来引入。
 
 第三种：
 
@@ -61,7 +61,7 @@ const func = require('./di' + filename); // => Success
 
 结果：成功获取文件中的内容。
 
-这时 webpack 自动创建了一个 context，引入了所有路径符合 `^\.\/di.*$` 的文件。生成的 `bundle.js` 中打包了所有的文件的内容。
+这时 Webpack 自动创建了一个 context，引入了所有路径符合 `^\.\/di.*$` 的文件。生成的 `bundle.js` 中打包了所有的文件的内容。
 
 第四种：
 
@@ -72,11 +72,11 @@ const func = require('./dir/' + filename + '.js'); // => Success
 
 结构：成功获取文件中的内容。
 
-这时 webpack 自动创建了一个 context，引入了所有路径符合 `./dir ^\.\/.*\.js$` 的文件。生成的 `bundle.js` 中打包了所有的文件的内容。
+这时 Webpack 自动创建了一个 context，引入了所有路径符合 `./dir ^\.\/.*\.js$` 的文件。生成的 `bundle.js` 中打包了所有的文件的内容。
 
 ## 使用 `require.context`
 
-在刚才的过程中，webpack 会创建一个 `require.context`，通过正则匹配到可能的文件，全部引入。如果我们想自定义这个正则规则的话，可以自己写一个 `require.context`。
+在刚才的过程中，Webpack 会创建一个 `require.context`，通过正则匹配到可能的文件，全部引入。如果我们想自定义这个正则规则的话，可以自己写一个 `require.context`。
 
 第一种：
 
