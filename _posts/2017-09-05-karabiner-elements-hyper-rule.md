@@ -11,4 +11,4 @@ tags: [config]
 
 ## 配置文件
 
-[点击这里导入](karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fvivaxyblog.github.io%2Fimage%2F2017-09-05-karabiner-elements-hyper-rule%2Fcaps-lock-to-hyper.json)。
+[点击这里导入](karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fvivaxyblog.github.io%2Fassets%2F2017-09-05-karabiner-elements-hyper-rule%2Fcaps-lock-to-hyper.json)。
