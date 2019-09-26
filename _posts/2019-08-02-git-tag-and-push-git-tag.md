@@ -7,7 +7,7 @@ tags: [git, tag, annotated-tag, lightweight-tag, follow-tags]
 - Why my git tags cannot be pushed sometimes?
 - What's the difference between `git push --follow-tags` and `git push --tag`?
 
-There are concepts beneath the questions actually. Firstly, We will talk about `lightweight tag` and `annotated tag`.
+There are concepts beneath the questions. Firstly, We will talk about `lightweight tag` and `annotated tag`.
 
 ## Lightweight Tag And Annotated Tag.
 
@@ -15,14 +15,14 @@ Quote from [Git - Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging)
 
 > Git supports two types of tags: lightweight and annotated.
 >
-> A lightweight tag is very much like a branch that doesn’t change — it’s just a pointer to a specific commit.
+> A lightweight tag is very much like a branch that doesn’t change — it’s just a pointer to a specific commit.
 >
 > Annotated tags, however, are stored as full objects in the Git database. They’re checksummed; contain the tagger name,
 > email, and date; have a tagging message; and can be signed and verified with GNU Privacy Guard (GPG). It’s generally
 > recommended that you create annotated tags so you can have all this information; but if you want a temporary tag or
 > for some reason don’t want to keep the other information, lightweight tags are available too.
 
-As we can see, annotated tags are the tags that really matters. They should be taking good care of.
+As we can see, annotated tags are the tags that matter. They should be taking good care of.
 
 ### How To Tag?
 
@@ -56,7 +56,7 @@ Quote from [cli/version.js · npm/cli](https://github.com/npm/cli/blob/39d473adf
 > // ...
 > ```
 
-It is really an annotated tag.
+It is an annotated tag.
 
 ### So How Do We Push Tags?
 
@@ -85,12 +85,12 @@ How do we push tags? `git push --follow-tags`!
 
 When you can't push tags, you probably:
 
-- are using lightweight tag, and `git push --follow-tags`.
+- are using a lightweight tag, and `git push --follow-tags`.
 
 While you can push tags, you probably:
 
-- are using lightweight tag, and `git push --tags`. (Not recommended!)
-- are using annotated tag, and `git push --follow-tags`.
+- are using a lightweight tag, and `git push --tags`. (Not recommended!)
+- are using an annotated tag, and `git push --follow-tags`.
 
 ## Reference
 

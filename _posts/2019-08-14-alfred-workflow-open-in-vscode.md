@@ -15,7 +15,7 @@ tags: [alfred, alfred-workflow, workflow, productivity, vscode, code, open-in-vs
 ## Installation
 
 - Download [Alfred Workflow 4 Open in VSCode](https://www.dropbox.com/s/8tf7vae3djsos55/Open%20in%20VSCode.alfredworkflow?dl=0)
-- Open workflow in Alfred.
+- Open the workflow in Alfred.
 - Set workflow environment `wds` to your project base folders (split with `,`).
     e.g. `wds`: `/Users/vivaxy/Developers/github,/Users/vivaxy/Developers/gitlab`.
     Workflow searches only first level folders, so make sure `wds` point to them.
@@ -25,7 +25,7 @@ tags: [alfred, alfred-workflow, workflow, productivity, vscode, code, open-in-vs
 
 Open Alfred.
 
-- Type `code ` (with a space) to search. Press enter to open selected project in VSCode. Hold `command` and press `enter` to reveal in Finder.
+- Type `code ` (with space) to search. Press enter to open the selected project in VSCode. Hold `command` and press `enter` to reveal in Finder.
 - Select a folder in Finder, type `code` (without space) and `enter` to open this folder in VSCode.
 
 ## Reference
