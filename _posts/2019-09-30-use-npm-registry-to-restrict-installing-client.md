@@ -33,4 +33,4 @@ In project `.npmrc`, we have `registry="https://npm-registry-proxy.vivaxy.now.sh
 - When using `yarn add`, dependencies installed successfully.
 - When using `npm i`, install error occurred.
 
-It works fine. But when we publishing packages, `PUT` requests are not successfully forwarded to the target registry.
+It works fine. But when we publishing packages, `PUT` requests are not successfully forwarded to the target registry. It does not apply to npm packages as well.
