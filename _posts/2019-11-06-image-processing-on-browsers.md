@@ -6,6 +6,8 @@ tags: [image, browser, file, blob, data urls, http urls, object urls, typedarray
 
 Images can be represented in different types. They can be summarized as 5 types: DOM, URL, `File`, `ImageData` and Buffer.
 
+## Image Types
+
 ### DOM
 
 #### Image
