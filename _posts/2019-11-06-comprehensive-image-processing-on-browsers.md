@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Image Processing on Browsers
+title: Comprehensive Image Processing on Browsers
 tags: [image, browser, file, blob, data urls, http urls, object urls, typedarray, buffer, dataview, arraybuffer]
 ---
 
 Images can be represented in different types. They can be summarized as 5 types: DOM, URL, `File`, `ImageData` and Buffer.
 
-## Image Types
+## Image Data Types
 
 ### DOM
 
@@ -58,11 +58,11 @@ In Node.js, [`Buffer`](https://nodejs.org/api/buffer.html) is a special `Uint8Ar
 
 ## Convert within `ArrayBuffer`, `DataView`, TypedArray and `Buffer`.
 
-![How to convert within `ArrayBuffer`, `DataView`, TypedArray and `Buffer`](/assets/2019-11-06-image-processing-on-browsers/ArrayBuffer-TypedArray-Buffer-DataView.svg)
+![How to convert within `ArrayBuffer`, `DataView`, TypedArray and `Buffer`](/assets/2019-11-06-comprehensive-image-processing-on-browsers/ArrayBuffer-TypedArray-Buffer-DataView.svg)
 
 ## Conver within DOM, URL, File, `ImageData` and Buffer
 
-![How to conver within DOM, URL, File, `ImageData` and Buffer](/assets/2019-11-06-image-processing-on-browsers/DOM-URL-File-Data.svg)
+![How to conver within DOM, URL, File, `ImageData` and Buffer](/assets/2019-11-06-comprehensive-image-processing-on-browsers/DOM-URL-File-Data.svg)
 
 ## Reference
 
