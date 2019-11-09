@@ -10,13 +10,13 @@ Images can be represented in different types. They can be summarized as 5 types:
 
 ### DOM
 
-#### Image
+#### `<img>`
 
 [`<img>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) elements load images from URL(e.g. Data URLs, HTTP URLs or Object URLs).
 
-#### Canvas
+#### `<canvas>`
 
-[`<canvas>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas) elements draw images by canvas API [`drawImage`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage) from `img` elements.
+[`<canvas>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas) elements draw images by canvas API [`drawImage`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage) from `<img>` elements.
 
 ### URL
 
@@ -44,7 +44,7 @@ A [`File`](https://developer.mozilla.org/en-US/docs/Web/API/File) object is a sp
 
 ### `ImageData`
 
-A [`ImageData`](https://developer.mozilla.org/en-US/docs/Web/API/ImageData) object is a JSON object containing `width`, `height` and `data` properties, represents the image width, height and pixel data. `data` property is an one-dimensional array, containing data like `[R, G, B, A, R, G, B, A]`. Each `[R, G, B, A]` represents a pixel. You can create a `ImageData` by `<canvas>` API [`createImageData`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createImageData) or the `ImageData` constructor.
+A [`ImageData`](https://developer.mozilla.org/en-US/docs/Web/API/ImageData) object is a JavaScript object containing `width`, `height` and `data` properties, represents the image width, height and pixel data. `data` property is an one-dimensional array, containing data like `[R, G, B, A, R, G, B, A]`. Each `[R, G, B, A]` represents a pixel. You can create a `ImageData` by `<canvas>` API [`createImageData`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createImageData) or the `ImageData` constructor.
 
 ### Buffer
 
@@ -56,7 +56,7 @@ There is only one way of accessing the binary data on browsers [`ArrayBuffer`](h
 
 In Node.js, [`Buffer`](https://nodejs.org/api/buffer.html) is a special `Uint8Array` with some optimizations.
 
-## Convert within `ArrayBuffer`, `DataView`, TypedArray and `Buffer`.
+## Convert within `ArrayBuffer`, `DataView`, TypedArray and `Buffer`
 
 ![How to convert within `ArrayBuffer`, `DataView`, TypedArray and `Buffer`](/assets/2019-11-06-comprehensive-image-processing-on-browsers/ArrayBuffer-TypedArray-Buffer-DataView.svg)
 
