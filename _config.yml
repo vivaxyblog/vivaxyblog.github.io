@@ -4,7 +4,7 @@ port: 4000
 
 # site
 baseurl:
-name: vivaxy's blog
+name: vivaxy's Blog
 url: http://vivaxyblog.github.io
 author:
     name: vivaxy
