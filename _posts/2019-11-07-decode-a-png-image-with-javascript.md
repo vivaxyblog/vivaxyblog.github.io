@@ -105,10 +105,10 @@ This chunk is `IHDR` with `13` bytes.
 
 - `width` and `height` means image width and height.
 - `depth` represents how many bits contains in a channel. A image composed of pixels, and a pixel composed of channels, and a channel composed of bits.
-- `colorType`: There are 5 color types, 0 is greyscale, 2 is RGB triple, 3 is palette, 4 is greyscale and alpha, 6 is RGB triple and alpha. The palette color type supports 1 channel per pixel.
-- `compression` represents the compression method. Only 0 is supported currently. 0 represents deflate/inflate. Deflate/inflate is a lossless compression method that uses a combination of LZSS and Huffman coding. It is used widely in `7-zip`, `zlib`, `gzip`.
-- `filter` represents the filter method used before compression. Only 0 is supported currently. Filter method 0 has 5 filter functions. We will talk about it later.
-- `interlace` represents if the image is loaded interlaced. 0 means without interlaced. 1 means with interlaced.
+- `colorType`. There are 5 color types, `0` is greyscale, `2` is RGB triple, `3` is palette, `4` is greyscale and alpha, `6` is RGB triple and alpha. The palette color type supports 1 channel per pixel.
+- `compression` represents the compression method. Only `0` is supported currently. `0` represents deflate/inflate. Deflate/inflate is a lossless compression method that uses a combination of LZ77 and Huffman coding. It is used widely in `7-zip`, `zlib`, `gzip`.
+- `filter` represents the filter method used before compression. Only `0` is supported currently. Filter method `0` has 5 filter functions. We will talk about it later.
+- `interlace` represents if the image is loaded interlaced. `0` means without interlaced. `1` means with interlaced.
 
 This image is 2 \* 2 pixels, has palette color type, 1 channel per pixel and 2 bit per channel. The compression method is deflate/inflate. The filter method is 0. And the image is without interlaced.
 
@@ -140,10 +140,10 @@ Notice that `sRGB` starts with lowercase letter `s`. This means that this chunk 
 
 The `sRGB` chunk value represents the color space of the image.
 
-- 0 for perceptual, like photographs.
-- 1 for relative colorimetric, like icons.
-- 2 for sturation, like graphs and charts.
-- 3 for absolute colorimetric, to show the absolute color of an image.
+- `0` for perceptual, like photographs.
+- `1` for relative colorimetric, like icons.
+- `2` for sturation, like graphs and charts.
+- `3` for absolute colorimetric, to show the absolute color of an image.
 
 ## Chunk End 2
 
