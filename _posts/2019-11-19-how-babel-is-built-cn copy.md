@@ -49,7 +49,7 @@ console.log(c);
 
 #### @babel/parser 的 9 层继承
 
-![@babel/parser 的 9 层继承](/assets/2019-11-19-how-babel-is-built-cn/9-extend.svg)
+![@babel/parser 的 9 层继承](/assets/2019-11-19-how-babel-is-built-cn/9-extends.svg)
 
 - Parser：初始化
 - StatementParser：解析语句，拼装成 program，代码大约有 2100+ 行
@@ -84,7 +84,7 @@ traverse(ast, {
 });
 ```
 
-path 对象上有下面的属性和方法：
+`path` 对象上有下面的属性和方法：
 
 - 属性
   - node：节点
@@ -107,7 +107,7 @@ path 对象上有下面的属性和方法：
 
 ### @babel/generator
 
-将 ast 转为代码文本。示例用法：
+将 AST 转为代码文本。示例用法：
 
 ```js
 import { parse } from '@babel/parser';
@@ -415,28 +415,40 @@ babel-node -e script.js # script.js 里面可以使用高级语法
 提供在 Node.js 运行环境内编译和执行高级语法。不适合生产环境使用。
 
 ```js
-jarequire("@babel/register")();
-require("./script.js"); 					// => script.js 里面可以使用高级语法
+require("@babel/register")();
+require("./script.js"); 					// script.js 里面可以使用高级语法
 ```
 
 ## 常见的语法转换结果
 
-### `Array.from([1, 2, 3])`
+### `Array.from`
 
 ```js
+// input
+Array.from([1, 2, 3])
+
+// output
 var _array_from_ = require('@babel/runtime-corejs3/core-js-stable/array/from');
 _array_from_([1, 2, 3]);
 ```
 
-### `<div className="text">{content}</div>`
+### JSX
 
 ```js
+// input
+<div className="text">{content}</div>
+
+// output
 React.createElement('div', { className: 'text' }, content);
 ```
 
-### `class Example extends Component { constructor(props) { super(props) } }`
+### `class`
 
 ```js
+// input
+class Example extends Component { constructor(props) { super(props) } }
+
+// output
 var _inherits_ = require('@babel/runtime-corejs3/helpers/interits');
 var _class_call_check_ = require('@babel/runtime-corejs3/helpers/classCallCheck');
 var _possible_constructor_return_ = require('@babel/runtime-corejs3/helpers/possibleConstructorReturn');
