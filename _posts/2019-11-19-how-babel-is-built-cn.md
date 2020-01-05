@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Babel 工程化的实现
+title: Babel 的工程化实现
 tags: [babel]
 ---
 
