@@ -5,6 +5,7 @@ tags: [babel]
 ---
 
 ## Introduction
+
 [Babel](https://github.com/babel/babel) is a Node.js tool to use next-generation JavaScript now. This article will explain how Babel is designed to solve this problem, based on the source codes on the master branch in November 2019.
 
 ## How is Babel designed?
