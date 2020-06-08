@@ -22,4 +22,4 @@ tags: [vscode, extension, conventional-commits]
 1. `Command + Shift + P` 或 `Ctrl + Shift + P`，输入 `Conventional Commits`，然后按 `Enter`。
 2. 点击 Source Control 操作面板上的图标。见下图：
 
-<img src="/assets/2020-04-29-vscode-conventional-commits-extension/icon-on-the-source-control-menu.png" alt="Icon on the Source Control menu" style="width: 50%">
+<img src="/assets/2020-04-29-vscode-conventional-commits-extension/icon-on-the-source-control-menu.png" alt="操作面板上的图标" style="width: 50%">
