@@ -4,12 +4,14 @@ title: VSCode Conventional Commits 插件
 tags: [vscode, extension, conventional-commits]
 ---
 
-[VSCode Conventional Commits](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits) 插件可以帮助你轻松按照 [Conventional Commits](https://www.conventionalcommits.org/) 规范生成提交信息。
+[VSCode Conventional Commits](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits) 插件可以帮助你轻松按照 [Conventional Commits](https://www.conventionalcommits.org/) 规范编写提交信息。
 
 ## 功能
 
-- 支持 commitlint 规范。
+- 支持使用项目下的 commitlint 规范。
+- 支持自动 add 和 push（需要结合 VSCode 的 git 插件，详见插件文档）。
 - 支持项目级别的 scope 管理。
+- 支持 Gitmoji。
 
 ## 使用方式
 

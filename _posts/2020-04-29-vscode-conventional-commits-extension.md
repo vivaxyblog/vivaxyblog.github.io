@@ -9,7 +9,9 @@ tags: [vscode, extension, conventional-commits]
 ## Features
 
 - Respect commitlint configs.
+- Support auto add and push (with the configutation of VSCode git extension, see detail in readme).
 - Support project level scope management.
+- Support Gitmoji.
 
 ## Usage
 
