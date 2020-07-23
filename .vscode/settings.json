@@ -1,6 +1,7 @@
 {
   "conventionalCommits.scopes": [
     "post",
-    "about"
+    "about",
+    "site"
   ]
 }
