@@ -34,7 +34,7 @@ ImageData.data 是一个 [Uint8ClampedArray](https://developer.mozilla.org/en-US
 
 Uint8ClampedArray 是一种 [TypedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)，存储了 0-255 的数据。其中 U 表示 unsigned，也就是无符号（都是正值）。8 表示 8 位，也就是其中的数据值不能超过 2 ^ 8 = 256。Clamped 表示如果数据值小于 0，则变成 0，如果大于 255，则变成 255。与之类似的 TypedArray 还有 [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)，初始化的值如果不在 0-255 之间，则加或减 256，直到符合要求。还有 [Int8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)，里面的值可以带符号，也就是说可以是负数。
 
-TypedArray 是 JavaScript 中用来存储二进制数据的一种数据格式，类似于数组。但是 TypedArray 中存放的数据类型已经确定，执行引擎很容易分配内存，所以 TypedArray 更快。在 Node.js 中，在 Int8Array 的基础上实现了 [Buffer](https://nodejs.org/api/buffer.html)，提供了二进制数据流的存储和操作。
+TypedArray 是 JavaScript 中用来存储二进制数据的一种数据格式，类似于数组。但是 TypedArray 中存放的数据类型已经确定，执行引擎很容易分配内存，所以 TypedArray 更快。在 Node.js 中，在 Uint8Array 的基础上实现了 [Buffer](https://nodejs.org/api/buffer.html)，提供了二进制数据流的存储和操作。
 
 ## 解码
 
