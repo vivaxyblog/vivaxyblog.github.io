@@ -2,6 +2,7 @@
   "conventionalCommits.scopes": [
     "post",
     "about",
-    "site"
+    "site",
+    "frame"
   ]
 }
