@@ -19,4 +19,4 @@ tags: [css]
 }
 ```
 
-See example [here](https://vivaxy.github.io/course/cascading-style-sheets/clear-fix/).
+See example [here](https://vivaxy.github.io/samples/cascading-style-sheets/clear-fix/).

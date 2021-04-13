@@ -113,6 +113,6 @@ toHtml3(test3);
 "
 ```
 
-See example [here](https://vivaxy.github.io/course/javascript/template-engine/).
+See example [here](https://vivaxy.github.io/samples/javascript/template-engine/).
 
 另：已经有人造了轮子：[multiline](https://github.com/sindresorhus/multiline)

@@ -159,4 +159,4 @@ p.template = function(){
 
 如果修改的是用一个对象，则在任何时候拿到的数据都是完整的，并且实时的。子对象内的修改数据操作会反馈到父级对象中！
 
-## [例子](https://vivaxy.github.io/course/javascript/module-view/#)
+## [例子](https://vivaxy.github.io/samples/javascript/module-view/#)

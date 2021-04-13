@@ -105,4 +105,4 @@ loader 中的配置可以参考[这里](https://webpack.js.org/configuration/mod
 
 如果想在文件变动后自动刷新页面，可以在 html 中加入 `<script src="http://localhost:8080/webpack-dev-server.js"></script>`
 
-[参考项目](https://github.com/vivaxy/course/tree/master/libraries/hammer)
+[参考项目](https://github.com/vivaxy/samples/tree/master/libraries/hammer)

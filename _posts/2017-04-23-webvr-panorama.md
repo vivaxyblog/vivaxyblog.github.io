@@ -12,15 +12,15 @@ WebVR 是一种在浏览器中体验 VR 的技术，由 W3C 官方制定规范�
 
 我们先看看 WebVR 能做什么：
 
-- [东方明珠空中全景](https://vivaxy.github.io/course/webvr/a-frame-shanghai-oriental-pearl/)
-- [我的世界](https://vivaxy.github.io/course/webvr/a-frame-minecraft/)
-- [香港海洋公园全景](https://vivaxy.github.io/course/webvr/a-frame-panorama/)
+- [东方明珠空中全景](https://vivaxy.github.io/samples/webvr/a-frame-shanghai-oriental-pearl/)
+- [我的世界](https://vivaxy.github.io/samples/webvr/a-frame-minecraft/)
+- [香港海洋公园全景](https://vivaxy.github.io/samples/webvr/a-frame-panorama/)
 
 上面几个例子用的都是 [A-Frame](https://github.com/aframevr/aframe)，由 Mozilla 提供。
 
 ## 全景图片
 
-一般的，我们需要专业摄像设备来获取全景图片。比如[东方明珠空中全景](https://vivaxy.github.io/course/webvr/a-frame-shanghai-oriental-pearl/)一例中，我们用了 96 张图片，组成了一个立方体空间，在这个空间中，我们可以看到上下左右的图像。
+一般的，我们需要专业摄像设备来获取全景图片。比如[东方明珠空中全景](https://vivaxy.github.io/samples/webvr/a-frame-shanghai-oriental-pearl/)一例中，我们用了 96 张图片，组成了一个立方体空间，在这个空间中，我们可以看到上下左右的图像。
 
 我们使用相机在同一地点，多个角度下拍摄多张照片，通过图片拼接处理，再裁剪开。图片拼接可以通过 PhotoShop 的 PhotoMerge 来实现(File > Automate > PhotoMerge)。
 
@@ -75,7 +75,7 @@ WebVR 是一种在浏览器中体验 VR 的技术，由 W3C 官方制定规范�
 </html>
 ```
 
-实际效果可以参考[香港海洋公园全景](https://vivaxy.github.io/course/webvr/a-frame-panorama/)，这个全景效果就是这么做出来的。
+实际效果可以参考[香港海洋公园全景](https://vivaxy.github.io/samples/webvr/a-frame-panorama/)，这个全景效果就是这么做出来的。
 
 虽然比不上东方明珠的效果，但是也有一定的效果了。
 

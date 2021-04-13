@@ -34,7 +34,7 @@ export default 'base';
 export const count = 1;
 ```
 
-查看[例子](https://vivaxy.github.io/course/native-api/script-type-module/)。
+查看[例子](https://vivaxy.github.io/samples/native-api/script-type-module/)。
 
 可见规范的落实对前端发展有这举足轻重的作用。在前端现有能力范畴内，我们做了再多的优化，能做到的比起在浏览器和操作系统的改动带来的优化也要小很多。因此，作为前端开发只关注现有 API 和框架的话，能做的就很少了。
 

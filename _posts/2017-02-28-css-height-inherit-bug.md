@@ -8,7 +8,7 @@ tags: [css]
 
 如果其中的自元素采用了 `height: 100%` 的话，在 safari 中则引起了高度为 0 的问题。然而在 Chrome 下则无此问题。Safari 下横向 flex 也没有这个问题。
 
-例子：[点我](https://vivaxy.github.io/course/cascading-style-sheets/flex-bug/)
+例子：[点我](https://vivaxy.github.io/samples/cascading-style-sheets/flex-bug/)
 
 ## 参考资料
 

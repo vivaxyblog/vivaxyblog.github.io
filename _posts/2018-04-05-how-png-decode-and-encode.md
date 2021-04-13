@@ -78,7 +78,7 @@ PNG 的渐进式加载采用了 [Adam7](https://en.wikipedia.org/wiki/Adam7_algo
 
 编码过程是一个逆向的解码。先写入文件签名，写入 IHDR 数据（文件宽高等），写入 GAMA 信息，将 ImageData 进行过滤（通过过滤可以提升压缩率），将过滤后的数据用 zlib 压缩，作为 IDAT 写入，最后写入 IEND。
 
-源码可以参考 [png](https://github.com/vivaxy/course/tree/master/png)，基于 [pngjs](https://github.com/lukeapage/pngjs) 的同步源码将 Node.js 的 zlib 替换成了浏览器端可以运行的 [pako](https://github.com/nodeca/pako)。再添加 [buffer](https://github.com/feross/buffer) 以来就可以在浏览器上运行了。
+源码可以参考 [png](https://github.com/vivaxy/samples/tree/master/png)，基于 [pngjs](https://github.com/lukeapage/pngjs) 的同步源码将 Node.js 的 zlib 替换成了浏览器端可以运行的 [pako](https://github.com/nodeca/pako)。再添加 [buffer](https://github.com/feross/buffer) 以来就可以在浏览器上运行了。
 
 ## 参考资料
 
@@ -98,6 +98,6 @@ PNG 的渐进式加载采用了 [Adam7](https://en.wikipedia.org/wiki/Adam7_algo
 - [node-pngjs](https://github.com/jin-sandbox/node-pngjs)
 - [png-async](https://github.com/kanreisa/node-png-async)
 - [pngparse](https://github.com/darkskyapp/pngparse)
-- [png-demo](https://github.com/vivaxy/course/tree/master/png)
+- [png-demo](https://github.com/vivaxy/samples/tree/master/png)
 - [pako](https://github.com/nodeca/pako)
 - [buffer](https://github.com/feross/buffer)

@@ -156,5 +156,5 @@ class Component extends HTMLElement {
 
 ## 例子
 
-- [customElements 的基本例子](https://github.com/vivaxy/course/tree/master/native-api/custom-elements)
-- [用 customElements 实现的 indexedDB 示例](https://github.com/vivaxy/course/tree/master/native-api/custom-elements)
+- [customElements 的基本例子](https://github.com/vivaxy/samples/tree/master/native-api/custom-elements)
+- [用 customElements 实现的 indexedDB 示例](https://github.com/vivaxy/samples/tree/master/native-api/custom-elements)

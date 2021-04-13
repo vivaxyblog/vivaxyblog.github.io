@@ -40,7 +40,7 @@ JavaScript 写在页面最下方的情况下，只能采用动态添加 Canvas �
 
 ## canvas-polyfill
 
-See on [Github](https://vivaxy.github.io/course/javascript/canvas-polyfill/).
+See on [Github](https://vivaxy.github.io/samples/javascript/canvas-polyfill/).
 
 ## 参考资料
 
