@@ -32,4 +32,4 @@ listenClickEvent(input1, function (e) {
 
 A click on label will trigger events on both label and input!
 
-Try it [here](https://vivaxy.github.io/samples/pitfall/click-event-on-label-with-input/).
+Try it [here](https://vivaxy.github.io/samples/web-api/click-event-on-label-with-input/).

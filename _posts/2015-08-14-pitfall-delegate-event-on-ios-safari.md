@@ -6,7 +6,7 @@ tags: [bug, ios]
 
 ## Event delegation not available on body
 
-see [example](http://vivaxy.github.io/samples/pitfall/event-delegation-on-ios-safari/)
+see [example](http://vivaxy.github.io/samples/web-api/event-delegation-on-ios-safari/)
 
 ```js
 $('body').on('click', '.J_button', function(e){
