@@ -4,7 +4,7 @@
   "description": "vivaxy's blog",
   "scripts": {
     "build": "node ./scripts/build.js && bundle exec jekyll build",
-    "postinstall": "gem install bundler --user-install && bundle install",
+    "postinstall": "gem install bundler --user-install --source https://gems.ruby-china.com && bundle install",
     "dev": "yarn build && bundle exec jekyll serve"
   },
   "repository": {
