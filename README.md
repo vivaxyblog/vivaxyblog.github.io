@@ -8,22 +8,22 @@
 
 ### Update posts
 
-- Run `yarn build`.
+- Run `npm run build`.
 
 ## Install Dependencies
 
 ```sh
-yarn install
+npm install
 ```
 
 ## Test Locally
 
 ```sh
-yarn dev
+npm run dev
 ```
 
 ## Build Locally
 
 ```sh
-yarn build
+npm run build
 ```

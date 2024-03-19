@@ -11,6 +11,7 @@ const { projectRootPath } = require('./configs');
 module.exports = async() => {
   const uglifyJsFilePathList = [
     path.join(projectRootPath, 'js', 'comment', 'index.js'),
+    path.join(projectRootPath, 'js', 'analysis', 'gtag.js'),
     path.join(projectRootPath, 'js', 'analysis', 'ba.js'),
     path.join(projectRootPath, 'js', 'sw', 'index.js'),
   ];

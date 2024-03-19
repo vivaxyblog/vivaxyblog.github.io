@@ -5,7 +5,8 @@
   "scripts": {
     "build": "node ./scripts/build.js && bundle exec jekyll build",
     "postinstall": "gem install bundler --user-install --source https://gems.ruby-china.com && bundle install",
-    "dev": "yarn build && bundle exec jekyll serve"
+    "dev": "npm run build && bundle exec jekyll serve",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -22,23 +23,13 @@
   },
   "homepage": "https://github.com/vivaxyblog/vivaxyblog.github.io#readme",
   "devDependencies": {
-    "@commitlint/cli": "^8.1.0",
-    "@commitlint/config-conventional": "^8.1.0",
+    "@commitlint/cli": "^19.2.1",
+    "@commitlint/config-conventional": "^19.1.0",
     "cssmin": "^0.4.3",
     "fs-extra": "^5.0.0",
-    "husky": "^3.1.0",
+    "husky": "^9.0.11",
     "less": "^3.9.0",
     "uglify-js": "^3.2.2"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run build && git add .",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  }
+  "packageManager": "npm@8.19.4"
 }
