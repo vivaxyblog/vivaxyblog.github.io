@@ -13,6 +13,7 @@ module.exports = async() => {
     path.join(projectRootPath, 'js', 'comment', 'index.js'),
     path.join(projectRootPath, 'js', 'analysis', 'gtag.js'),
     path.join(projectRootPath, 'js', 'analysis', 'ba.js'),
+    path.join(projectRootPath, 'js', 'analysis', 'clarity.js'),
     path.join(projectRootPath, 'js', 'sw', 'index.js'),
   ];
   const results = await Promise.all(uglifyJsFilePathList.map(async(jsFilePath) => {
