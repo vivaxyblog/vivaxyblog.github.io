@@ -15,6 +15,7 @@ module.exports = async() => {
     path.join(projectRootPath, 'js', 'analysis', 'ba.js'),
     path.join(projectRootPath, 'js', 'analysis', 'clarity.js'),
     path.join(projectRootPath, 'js', 'sw', 'index.js'),
+    path.join(projectRootPath, 'js', 'ads', 'adsense.js'),
   ];
   const results = await Promise.all(uglifyJsFilePathList.map(async(jsFilePath) => {
     const jsFileContent = await fse.readFile(jsFilePath, 'utf8');
