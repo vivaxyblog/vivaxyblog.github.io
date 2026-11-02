@@ -3,7 +3,7 @@
  * @author vivaxy
  */
 
-var CACHE_NAME = 'cache-datetime-1724046032737';
+var CACHE_NAME = 'cache-datetime-1793599359110';
 
 // @see https://davidwalsh.name/service-worker-claim
 self.addEventListener('install', function() {
